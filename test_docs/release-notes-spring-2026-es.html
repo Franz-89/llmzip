@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Plataforma Sapiens — Novedades (Primavera 2026)</title>
+<style>
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px 30px;
+    font-size: 15px;
+  }
+  h1 { color: #2c3e50; border-bottom: 3px solid #3498db; padding-bottom: 10px; margin-top: 40px; font-size: 28px; }
+  h2 { color: #2980b9; margin-top: 35px; font-size: 22px; border-bottom: 1px solid #eee; padding-bottom: 5px; }
+  h3 { color: #27ae60; margin-top: 20px; font-size: 17px; }
+  strong { color: #2c3e50; }
+  em { color: #7f8c8d; }
+  code { background: #f8f9fa; padding: 2px 6px; border-radius: 3px; font-size: 13px; color: #e74c3c; }
+  hr { border: none; border-top: 2px solid #ecf0f1; margin: 30px 0; }
+  table { border-collapse: collapse; width: 100%%; margin: 15px 0; }
+  th, td { border: 1px solid #ddd; padding: 8px 12px; text-align: left; font-size: 14px; }
+  th { background: #f2f2f2; font-weight: 600; }
+  ul, ol { padding-left: 25px; }
+  li { margin-bottom: 5px; }
+  p { margin: 10px 0; }
+  @media print {
+    body { font-size: 12px; padding: 0; }
+    h1 { font-size: 22px; page-break-before: always; }
+    h1:first-of-type { page-break-before: avoid; }
+    h2 { font-size: 18px; page-break-after: avoid; }
+  }
+</style>
+</head>
+<body>
+<h1>Plataforma Sapiens — Novedades (Primavera 2026)</h1>
+<p>Hola a todos,</p>
+<p>Preparaos un cafe. Mejor que sea doble. Hemos estado ocupados los ultimos dos meses y este documento se ha hecho... largo. Intentamos que fuera corto. Fracasamos. Pero todo lo que hay aqui es real, funcionando en produccion, y haciendoos la vida mas facil. Asi que serviros ese cafe, sentaos, y vamos alla.</p>
+<p><em>(Si vais cortos de tiempo, leed lo que esta en negrita. Si teneis curiosidad, leedlo todo. Si trabajais en contabilidad, id directamente a la seccion de IVA — nos lo agradecereis.)</em></p>
+<hr />
+<h1>Parte 1 — Marzo</h1>
+<hr />
+<h2>1. Reservas — Ahora Con Superpoderes</h2>
+<h3>Las Reservas Online Tienen Sus Propias Reglas</h3>
+<p>Ahora podeis establecer <strong>reglas diferentes para las reservas online</strong> en comparacion con las del local. Pero primero, vamos a aclarar como funciona esto — porque es importante:</p>
+<p><strong>Online y presencial comparten la misma capacidad fisica.</strong> Si teneis 10 pistas de bolos, teneis 10 pistas — punto. Lo que hemos anadido es la posibilidad de establecer un <strong>limite online mas bajo</strong> sobre ese mismo conjunto.</p>
+<p>Aqui teneis un ejemplo real con 10 pistas y un limite online de 3:</p>
+<table>
+<thead>
+<tr>
+<th>Que ha pasado</th>
+<th>Lo que ve el personal del local</th>
+<th>Lo que ve el cliente online</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Nada reservado aun</td>
+<td>10 disponibles</td>
+<td>3 disponibles</td>
+</tr>
+<tr>
+<td>2 pistas reservadas (en local)</td>
+<td>8 disponibles</td>
+<td>1 disponible</td>
+</tr>
+<tr>
+<td>3 pistas reservadas (cualquier origen)</td>
+<td>7 disponibles</td>
+<td><strong>Completo</strong></td>
+</tr>
+<tr>
+<td>8 pistas reservadas (en local)</td>
+<td>2 disponibles</td>
+<td><strong>Completo</strong></td>
+</tr>
+</tbody>
+</table>
+<p>El cliente online ve como maximo 3 disponibles, pero a medida que las reservas totales (de CUALQUIER origen) aumentan, ese numero baja. Las reservas presenciales consumen la disponibilidad online — porque esas pistas estan fisicamente ocupadas. Mientras tanto, el personal del local siempre ve la capacidad real restante.</p>
+<p><strong>¿Por que es util?</strong> Os permite controlar cuanta capacidad exponeis online, mientras siempre reservais hueco para clientes sin cita y reservas del personal. Nunca fue posible hacer overbooking, y sigue sin serlo — esto simplemente os da un control mas preciso sobre el reparto.</p>
+<p>Lo que podeis configurar de forma separada para online:
+- <strong>Capacidad diferente</strong> — mostrar menos salas/pistas/turnos online, reservar el resto para clientes sin cita
+- <strong>Maximo de personas por franja horaria diferente</strong> — los clientes online pueden reservar hasta X personas, mientras que el personal del local puede llegar hasta Y
+- <strong>Ventanas de reserva diferentes</strong> — por ejemplo, online debe reservar con 2 horas de antelacion, pero en el local se puede reservar para el mismo dia
+- <strong>Horario dia a dia</strong> — online puede tener horarios de apertura diferentes a los del local si es necesario</p>
+<p>Todo esto es configurable por Paquete de Actividad. Sin cambios de codigo, sin apaños — solo configuracion.</p>
+<h3>Pistas VIP y Paquetes VIP</h3>
+<p>Ahora podeis designar algunas de vuestras pistas como <strong>VIP</strong>. Se gestionan por separado de la capacidad normal, y los Paquetes de Actividad pueden marcarse como VIP para requerirlas.</p>
+<p>Asi es como funcionan los ajustes — usando bolos como ejemplo con 10 pistas en total, 2 de las cuales son VIP:</p>
+<p><strong>Uso individual de pista VIP (ON/OFF)</strong>
+Esto controla como se asignan las pistas VIP:
+- <strong>ON (Individual)</strong> — cada pista VIP se gestiona por separado. Si teneis 2 pistas VIP, dos fiestas de cumpleanos VIP diferentes pueden tener una cada una. Varias reservas VIP pueden coexistir.
+- <strong>OFF (Bloque)</strong> — todas las pistas VIP se tratan como un solo bloque. En cuanto un grupo VIP reserva, TODAS las pistas VIP se reservan para ellos. Una sola reserva VIP por franja horaria — el cumpleanero se queda con toda la zona VIP para el solo. Sin compartir con desconocidos.</p>
+<p><strong>Permitir desbordamiento VIP (ON/OFF)</strong>
+Esto controla que pasa con las pistas VIP cuando ninguna reserva VIP las esta usando:
+- <strong>OFF</strong> — las pistas VIP estan estrictamente reservadas para paquetes VIP. Si las pistas normales estan llenas pero las VIP estan vacias, a un cliente no VIP se le dice "completo". Las pistas VIP se quedan vacias, esperando a un VIP.
+- <strong>ON</strong> — las reservas no VIP pueden desbordar a las pistas VIP que no se esten usando. Asi que si vuestras 8 pistas normales estan llenas pero las 2 pistas VIP estan libres, un cliente normal puede reservar. En cuanto llega un paquete VIP, las pistas VIP se priorizan para ellos.</p>
+<p><em>Escenario: Sabado por la tarde, 8 pistas normales reservadas, 2 pistas VIP vacias, sin fiestas VIP hoy. Con desbordamiento ON, los clientes normales pueden reservar — Sapiens les asigna una pista VIP. Con desbordamiento OFF, la web dice "completo" y esas 2 pistas VIP se quedan vacias.</em></p>
+<p><strong>Paquetes VIP</strong> — Un Paquete de Actividad (como "Fiesta de Cumpleanos VIP") puede marcarse como <code>requireVipLane</code>. Cuando un cliente reserva este paquete, Sapiens comprueba la disponibilidad de pistas VIP en lugar de las normales. Si las VIP estan llenas, el paquete aparece como no disponible — incluso si las pistas normales estan libres.</p>
+<h3>Reglas de Reserva Maxima (Limites por Franja Horaria)</h3>
+<p>Ahora podeis crear reglas como: "Maximo 3 reservas entre las 10:00 y las 12:00 los sabados". Esto evita una situacion en la que todos los turnos se los lleven en una unica franja punta. Definid el rango horario, el dia de la semana y el maximo — Sapiens se encarga del resto.</p>
+<h3>Web Publica — Ayudando a los Clientes a Ayudarse</h3>
+<p>La web de reservas ahora muestra <strong>disponibilidad con codigo de colores</strong>:
+- 🟢 Verde = mucho sitio, adelante
+- 🟡 Amarillo/Naranja = llenandose, mejor reservar pronto
+- 🔴 Rojo/Completo = lo sentimos, este turno esta ocupado</p>
+<p>Los clientes lo ven en tiempo real. Esto empuja de forma natural a la gente hacia los horarios menos concurridos (que es exactamente lo que queremos) y nadie pierde el tiempo intentando reservar un turno que ya esta completo. No es que antes fuera posible, pero dar informacion clara sobre disponibilidad hace que las reservas suban de forma natural.</p>
+<h3>Grupos Grandes y Reservas de Grupo — Gestionadas Directamente Desde Core</h3>
+<p>Las reservas de grupo ahora se pueden crear y confirmar <strong>directamente desde Core</strong> — sin necesidad de pedir al local que lo haga, sin necesidad de conectarse a su PC.</p>
+<p>Esto es lo que ha cambiado:</p>
+<ul>
+<li><strong>Opcion de Pago Externo</strong> — al crear una reserva, ahora podeis seleccionar "Pago Externo". Esto confirma la reserva inmediatamente sin requerir que el cliente pague a traves de Sapiens. El pago se realiza fuera del sistema (p.ej., transferencia bancaria). La reserva se crea, se confirma y el cliente recibe la notificacion — todo en un solo paso.</li>
+<li><strong>Descuentos</strong> — podeis aplicar un porcentaje o importe fijo de descuento durante la creacion. Importante: los descuentos solo estan disponibles en reservas creadas a traves de Core con Pago Externo. Un local no puede decidir de forma autonoma aplicar un descuento aleatorio en una reserva sin cita previa.</li>
+<li><strong>Las modificaciones de reserva se rastrean</strong> — cuando se edita una reserva, Sapiens mantiene la original vinculada a la nueva version. El historial de pagos se mantiene.</li>
+<li><strong>Codigos de vale/promocion</strong> se pueden aplicar a cualquier reserva, online o presencial, para calculo automatico de descuentos</li>
+</ul>
+<p><em>Escenario: Una empresa llama para reservar una fiesta de cumpleanos para 25 ninos. Abris Core, creais la reserva, seleccionais Pago Externo, aplicais un 10% de descuento de grupo, confirmais. El cliente recibe el email de confirmacion. Paga por transferencia bancaria. Listo — no habeis tocado el sistema del local.</em></p>
+<h3>Cancelaciones y Reembolsos — Se Acabaron las Aventuras en el Dashboard de Stripe</h3>
+<p>Las reservas online ahora se pueden <strong>cancelar y reembolsar directamente desde Core</strong>. Sin necesidad de ir a buscar en Stripe.</p>
+<ul>
+<li>Pulsad cancelar, <strong>escribid un comentario explicando por que</strong> (obligatorio — trazabilidad)</li>
+<li>Sapiens cancela la reserva y <strong>envia automaticamente un email de cancelacion</strong> al cliente</li>
+<li>Podeis <strong>iniciar un reembolso</strong> en el mismo paso. Sapiens se comunica con Stripe, procesa el reembolso y actualiza todo. No necesitais abrir Stripe nunca.</li>
+</ul>
+<p><strong>Importante:</strong> las cancelaciones y reembolsos de reservas online solo estan disponibles desde Core — no desde el local. Ningun local deberia decidir de forma autonoma cancelar o reembolsar un pago online. Esta es una decision de diseno deliberada para proteger los ingresos y mantener la responsabilidad.</p>
+<p><em>Escenario: Un cliente llama para cancelar su fiesta de cumpleanos. Abris Core, encontrais la reserva, pulsais "Cancelar y Reembolsar", escribis "El cliente solicito la cancelacion", y listo. Dinero devuelto, email enviado. 30 segundos.</em></p>
+<h3>Perfiles de Cliente — Encuentra a Cualquiera, Actua Sobre Cualquier Cosa</h3>
+<p>La <strong>pestana de Clientes</strong> ahora esta activa en Core. Podeis encontrar a cualquier cliente usando la barra de busqueda global (arriba a la izquierda en cada pagina) — solo escribid su email.</p>
+<p>Esto tiene <strong>efecto retroactivo</strong>: hemos estado recogiendo emails de clientes desde el primer dia. Cada reserva online, cada creacion de cuenta — todo esta ahi.</p>
+<p>En el perfil de un cliente encontrareis:
+- <strong>Datos basicos</strong> — nombre, email, informacion de contacto
+- <strong>Todas sus reservas</strong> — con la posibilidad de actuar sobre ellas directamente (cancelar, modificar, ver historial de pagos)
+- <strong>Todos sus pagos</strong> — con la posibilidad de <strong>emitir un reembolso sin cancelar la reserva</strong></p>
+<p>Este ultimo punto es importante. A veces un reembolso es necesario — quizas hubo un problema con el servicio — pero la reserva en si debe seguir activa. Sapiens ahora soporta esto: reembolsar el importe, mantener la reserva.</p>
+<p>---</p>
+<h2>2. Payment Terminal y PulseBox — La Manera Inteligente</h2>
+<h3>Tipos de Juegos</h3>
+<p>Los juegos en Sapiens ahora tienen tres tipos:</p>
+<ul>
+<li><strong>Fisico</strong> — una maquina recreativa real. Un precio, aceptador de monedas, PulseBox para activarlo. El clasico.</li>
+<li><strong>Virtual</strong> — un juego sin maquina fisica (experiencia VR, atraccion). Igualmente rastreado y con precio, pero sin aceptador de monedas.</li>
+<li><strong>Atendido</strong> — operado por el personal, con soporte para <strong>multiples precios</strong>. Pensad en un parque de camas elasticas: "30 min — 8€", "1 hora — 12€", "Pack Familiar — 35€". Cada precio tiene su propio codigo, descripcion y color.</li>
+</ul>
+<h3>La Filosofia: El Juego Es El Jefe</h3>
+<p>Esto es fundamentalmente diferente de Nayax. Con Nayax, configuras cada dispositivo de forma independiente. Con Sapiens, <strong>el Juego es el centro de todo</strong>.</p>
+<p>Configurais un Juego con sus precios, diseno y ajustes. Luego le asignais un Payment Terminal o PulseBox. Sapiens genera y envía automaticamente la configuracion correcta. Y ya esta.</p>
+<p><strong>Ejemplo concreto.</strong> Teneis una cama elastica con un precio: "30 min — 8€". El terminal esta en modo "toca y juega". Ahora anadis dos precios mas. Con Nayax, tendriamos que reconfigurar el dispositivo, definir precios, probar, etc. Con Sapiens: <strong>simplemente anadid los precios.</strong> Sapiens detecta multiples precios, cambia el terminal a modo seleccion, genera la pantalla y la envia. En vivo en segundos.</p>
+<p><strong>¿Quereis mover un terminal del Juego A al Juego B?</strong> Un clic. Nueva configuracion enviada al instante. Sin visita de tecnico. Si el dispositivo esta offline, recoge los cambios cuando se enciende.</p>
+<h3>Todo Esta Separado (A Proposito)</h3>
+<ul>
+<li><strong>Precios</strong> — gestionados por el equipo de negocio</li>
+<li><strong>Diseno</strong> — gestionado por el equipo de marketing (logos, colores, skins)</li>
+<li><strong>Ajustes tecnicos</strong> — gestionados por el equipo tecnico (temporizacion de pulsos, configuracion del aceptador)</li>
+</ul>
+<p>Cada equipo trabaja de forma independiente. Cambiar un logo no afecta al precio. Cambiar un precio no rompe la temporizacion de pulsos.</p>
+<h3>Control Remoto — En Tiempo Real, Desde Cualquier Lugar</h3>
+<p>Todos los Payment Terminals y PulseBoxes estan <strong>conectados en tiempo real</strong>. Los cambios de configuracion se envian al instante. Los cambios de precio surten efecto en segundos. Actualizaciones de diseno, temporizacion de pulsos, cambios de modo — todo remoto, todo inmediato.</p>
+<p><em>Escenario: Viernes por la noche, local a tope. El propietario anade un precio "Especial Viernes Noche" desde su portatil. Cada terminal muestra la nueva opcion en segundos. Sin tecnico. Sin reinicio.</em></p>
+<h3>Cuatro Modos de Operacion</h3>
+<ul>
+<li><strong>Atendido</strong> — un miembro del equipo opera el terminal. Selecciona el producto, elige la cantidad, y el cliente ve el precio con una descripcion antes de acercar su tarjeta. Perfecto para actividades donde un humano necesita estar involucrado: camas elasticas, experiencias VR, cualquier cosa con briefing.</li>
+<li><strong>Arcade</strong> — completamente automatico. El cliente se acerca, acerca su tarjeta o telefono, y el juego arranca. Sin personal necesario. Un precio, un toque, una partida. La experiencia arcade clasica, solo que sin monedas.</li>
+<li><strong>Selector</strong> — el cliente elige entre multiples juegos mostrados en la pantalla de un terminal. Util cuando un terminal sirve a varios juegos en la misma zona. Toca el juego que quieras, acerca tu tarjeta, juega.</li>
+<li><strong>Kiosk</strong> — el modo autoservicio completo. Cuando se empareja con un kiosco real (proximamente), gestiona pagos y lee tarjetas de fidelizacion. Por si solo, funciona como punto de consulta — los clientes pueden acercar su tarjeta para consultar su saldo y recargarlo. Sin interaccion con el personal.</li>
+</ul>
+<h3>Pago de Tickets Multiples</h3>
+<p>Algunos juegos pagan tickets en bloques mientras juegas. Sapiens ahora acumula todos los bloques en la misma transaccion, con registro completo. Se activa por juego, desactivado por defecto.</p>
+<hr />
+<h2>3. Gestion de Juegos y Ubicacion de Juegos</h2>
+<h3>Multiples Precios por Juego</h3>
+<p>Los juegos ahora soportan multiples precios activos con codigo, descripcion, color y orden. Anadid o eliminad precios y el terminal se adapta automaticamente.</p>
+<h3>Historial de Precios</h3>
+<p>Cada cambio de precio se registra — quien lo cambio, cuando, y cual era el precio anterior.</p>
+<h3>Mover Juegos — Controlado y Rastreado</h3>
+<p>Si alguien mueve fisicamente un juego pero no actualiza Sapiens, <strong>el dispositivo no funcionara</strong>. Esto es intencionado. Un clic para arreglarlo — pero ese clic tiene que ocurrir. Se acabaron los movimientos fantasma.</p>
+<h3>Fechas Efectivas — ¿Cuando Cambiaron Las Cosas Realmente?</h3>
+<p>Tres tipos de cambios en una Ubicacion de Juego ahora requieren una <strong>fecha efectiva</strong> — no podeis guardar sin una:</p>
+<p><strong>1. Cambio de local</strong> — cuando moveis un juego de un local a otro, debeis seleccionar <em>desde que fecha</em> el juego esta en el nuevo local. Sapiens usa esto para construir un historial completo de movimientos de cada juego. Esto importa porque los informes son conscientes de las fechas: cuando mirais un informe de recaudacion del 15 de marzo, Sapiens muestra cada juego en el local donde estaba fisicamente en esa fecha — no donde esta hoy. Si un juego estuvo en el Local A hasta el 10 de marzo y se traslado al Local B el 11 de marzo, aparece bajo el Local A para cualquier informe anterior al 11 y bajo el Local B despues. Se acabaron las confusiones retroactivas sobre de donde venian los ingresos o las monedas.</p>
+<p><strong>2. Cambio de estado</strong> — cuando cambieis un juego entre Activo, Mantenimiento, Inactivo, etc., introducis la fecha en que el cambio tomo efecto. Esto crea una linea temporal operativa clara: podeis ver exactamente cuando un juego entro en mantenimiento, cuanto tiempo estuvo ahi y cuando volvio a funcionar. Esto es esencial para el analisis de rendimiento — si un juego estuvo en mantenimiento dos semanas, sus cifras de ingresos de ese periodo deberian reflejarlo, no parecer una caida misteriosa.</p>
+<p><strong>3. Cambio de aceptador de monedas</strong> — cuando activais o desactivais la aceptacion de monedas en un juego, introducis la fecha efectiva. Esto impacta directamente en el flujo de recaudacion: cuando el equipo de recaudacion va a recoger monedas un dia concreto, Sapiens muestra <strong>solo los juegos que estaban configurados para aceptar monedas en esa fecha especifica</strong>. Si un juego tuvo su aceptador de monedas desactivado el martes pasado, no aparecera en la lista de recaudacion del miercoles — porque no deberia haber monedas que recoger. Por el contrario, si un juego se activo el lunes, aparecera a partir de la lista del lunes aunque el equipo visite mas tarde esa semana. Esto elimina dos problemas comunes: recoger de juegos que no aceptaban monedas (tiempo perdido), y saltarse juegos que si lo hacian (ingresos perdidos).</p>
+<p>Todos los cambios se registran con su fecha efectiva y el usuario que los realizo. Podeis ver la linea temporal completa de cualquier juego — cada movimiento de local, cada cambio de estado, cada activacion/desactivacion del aceptador — y comparar dos versiones lado a lado. Sapiens resalta exactamente lo que cambio entre ellas, asi que la auditoria es instantanea.</p>
+<hr />
+<h2>4. Nuevos Informes</h2>
+<h3>Informe de Rendimiento de Ubicacion de Juego</h3>
+<p>Dashboard completo: total de partidas, ingresos, jugadores unicos, comparacion de periodos, grafico de tendencia diaria, distribucion por horas, ingresos por fuente, transacciones recientes e historial de precios.</p>
+<h3>Informe Contable</h3>
+<p>Disenado para el equipo de contabilidad y la generacion de informes para centros comerciales. Muestra <strong>ingresos contables</strong> (no operativos) desglosados por dia, con cada tipo de ingreso (ventas regulares, uso de tarjeta de fidelizacion, recaudacion de efectivo, pagos online, Nayax, reembolsos) mostrando importe bruto, desglose de IVA por tipo y importe neto.</p>
+<p><strong>Exportacion a Excel</strong> con tres hojas: Desglose Diario, IVA por Tipo y Detalle Diario de IVA. Formato europeo. Listo para el contable/centro comercial si es necesario.</p>
+<h3>Dashboard de Comparacion de Ventas</h3>
+<p>Vistas Semanal, Mensual y Acumulado Anual. Desglose por local, por fuente de ingresos, totales generales, indicadores de cambio porcentual. Tambien en el dashboard principal (si esta activado). Ahora compara fecha movil: si es miercoles, comparara lun-mie con el lun-mie anterior.</p>
+<h3>Informe de Productos</h3>
+<p>Nuevo informe que muestra <strong>ventas de productos y canjes de recompensas</strong> lado a lado. Para cada producto: cuantos se vendieron, a que precio, y cuantos se canjearon mediante recompensas de tarjeta de fidelizacion. Filtrad por local, rango de fechas o todos los locales. Por fin responde a la pregunta: "¿Que productos estan realmente generando dinero y cuales simplemente se estan regalando?"</p>
+<h3>Informe de Tarjeta de Fidelizacion e Informe de Rendimiento del Personal</h3>
+<p>Actividad detallada de tarjetas por local y seguimiento de ventas del personal con actualizacion automatica cada 20 minutos.</p>
+<hr />
+<h2>5. Interfaz del Vendedor</h2>
+<h3>Payment Terminal (IM30/25) y Transacciones POS (A920 Pro)</h3>
+<p>Nuevas paginas que muestran todas las transacciones en tiempo real. Filtrad por fecha, ved el estado, detalles de la tarjeta, y saltad entre la transaccion y su venta vinculada. Reimpresion de recibos disponible.</p>
+<hr />
+<h2>6. Rendimiento</h2>
+<p>El dashboard carga significativamente mas rapido — los calculos pesados se cachean durante 20 minutos. La Comparacion de Ventas se cachea durante 30 minutos. Menos de un segundo para la mayoria de usuarios.</p>
+<hr />
+<h2>7. Correccion de Errores (Marzo)</h2>
+<ul>
+<li>Los informes historicos de recaudacion ahora muestran los juegos en el local correcto para esa fecha</li>
+<li>La activacion de PulseBox gestiona correctamente los modos operativos</li>
+<li>Corregidos los botones de Anadir Invitados y Cambiar Sala despues del check-in de la reserva</li>
+<li>Corregido el simbolo del Euro en impresoras termicas</li>
+<li>Auto-actualizacion de vista materializada cada 20 minutos (esto significa que todo el bloque de datos se actualiza al menos una vez cada 20 minutos para permitir acceso instantaneo. Los locales en cambio siempre ven sus datos en tiempo real)</li>
+</ul>
+<hr />
+<h1>Parte 2 — Abril</h1>
+<p><em>(¿Seguis aqui? Impresionante. Aqui es donde la cosa se pone realmente interesante.)</em></p>
+<hr />
+<h2>8. Monitorizacion Centralizada de Dispositivos — Ve Todo, Desde Cualquier Lugar</h2>
+<p>De esta estamos mas orgullosos. Ahora podeis monitorizar y controlar <strong>cada PulseBox y Payment Terminal de todos vuestros locales</strong> desde una sola pagina en Core. En vivo. Desde el sofa si quereis.</p>
+<h3>Como Funciona</h3>
+<p>Cada local ya ejecuta un daemon local que gestiona sus dispositivos. Esos daemons ahora se conectan a un servicio centralizado (daemon-core) que conecta todos vuestros locales con vuestro navegador. Abrid la pagina de monitorizacion y tendreis:</p>
+<ul>
+<li><strong>Estado en vivo</strong> — ved que dispositivos estan online u offline, actualizado en tiempo real</li>
+<li><strong>Feeds de actividad por dispositivo</strong> — ved inserciones de monedas, inicios de partida, pagos de tickets y pagos con tarjeta ocurriendo en vivo, organizados por maquina (no todo mezclado)</li>
+<li><strong>Comandos remotos</strong> — iniciar una partida, reiniciar un terminal, bloquear un dispositivo, reiniciar, actualizar firmware — todo desde vuestro navegador</li>
+</ul>
+<h3>El Dashboard</h3>
+<p>Cada local como una tarjeta. Verde = todo bien. Amarillo = algo esta offline. Rojo = problemas. Haced clic para ver el detalle. Todo se actualiza en tiempo real — sin necesidad de boton de refrescar.</p>
+<h3>Comandos Remotos</h3>
+<p><strong>Para PulseBox:</strong> Handshake, Obtener Estado, Iniciar Partida (configurable para pagar tickets en papel o virtual en tarjeta de fidelizacion), Dispensar Tickets, Reiniciar, Buscar Actualizacion, Comando personalizado.</p>
+<p><strong>Para Payment Terminal:</strong> Recargar Configuracion, Actualizar Precios, Cambiar Modo, Bloquear/Desbloquear, Reiniciar.</p>
+<p><em>Escenario: Sabado por la tarde, un PulseBox se desconecta en el Local 7. Recibis la alerta, abris el dashboard en vuestro movil, veis que es la Grua de la entrada. Intentais un reinicio remoto. 1,5 segundos despues, esta de nuevo online. Arreglado desde el sofa. Los clientes ni se enteraron.</em></p>
+<hr />
+<h2>9. Bloqueo y Desbloqueo Automatico de Terminales</h2>
+<p>Esta evita perdidas de dinero reales.</p>
+<p><strong>El problema:</strong> un PulseBox controla el juego, un Payment Terminal recibe el pago. Si el PulseBox se cae (porque el juego tiene un problema fisico que corta la alimentacion del PulseBox) pero el terminal sigue activo, los clientes pagan — pero el juego no arranca. Hola, reembolsos.
+Por supuesto, incluso antes la pantalla mostraba un error. El problema es que, especialmente para los pagos EMV (Visa/Mastercard), no podemos detectarlo de antemano a menos que queramos que el sistema sea lento. Ademas no pasa a menudo.</p>
+<p><strong>La solucion:</strong> Sapiens ahora <strong>bloquea automaticamente el terminal</strong> cuando su PulseBox emparejado se desconecta, y lo <strong>desbloquea</strong> cuando el PulseBox vuelve. En cuestion de segundos.</p>
+<p>Esto es lo que pasa:
+1. El PulseBox se desconecta
+2. En ~5 segundos, el sistema lo detecta y envia un comando de bloqueo al terminal
+3. El terminal muestra "Espere al Servicio Tecnico" en multiples idiomas — nadie puede pagar por un juego roto
+4. El PulseBox vuelve → el terminal se desbloquea automaticamente → vuelta a la normalidad</p>
+<p><strong>Dos sistemas trabajan juntos:</strong>
+- <strong>Reaccion instantanea</strong> — activada por el daemon en el momento en que un PulseBox se conecta o desconecta. Gestiona el 99% de los casos en segundos.
+- <strong>Red de seguridad periodica</strong> — se ejecuta cada pocos minutos y captura cualquier cosa que la comprobacion instantanea no haya detectado.</p>
+<p>Solo <em>bloqueamos</em> cuando el local esta abierto (no creamos problemas a las 3 de la manana), pero <em>siempre desbloqueamos</em> cuando el PulseBox se recupera. El dispositivo esta sano de nuevo — limpialo, independientemente de la hora.</p>
+<h3>Pagina de Salud de Dispositivos</h3>
+<p>Nueva pagina en el cliente (justo despues del Dashboard, visible para todos). Muestra problemas activos agrupados por incidencia — no "PulseBox offline" y "Terminal bloqueado" como dos cosas separadas, sino una tarjeta: "Este juego tiene un problema. El PulseBox esta offline y el terminal fue bloqueado automaticamente."</p>
+<p>Insignia roja en el menu que se actualiza cada 30 segundos. ¿Cero problemas? La insignia desaparece. Nunca os olvidareis de comprobarlo — esta ahi cada vez que usais Sapiens.
+Esto permite al equipo ser proactivo, en lugar de esperar a que un cliente se queje o peor: quizas un juego llevaba apagado 1 hora pero nadie habia jugado, y no lo sabiamos. Ya no mas.</p>
+<h3>Activacion/Desactivacion por Local</h3>
+<p>¿No quereis bloqueo automatico en un local concreto? Ahora hay un ajuste en Local (solo SYS, bajo Sapiens Pulse): <strong>Auto-bloqueo de terminal — Si/No</strong>. Activado por defecto. Desactivadlo y el health checker de ese local simplemente salta la logica de bloqueo — sin reinicio de daemon, sin cambio de codigo, efecto instantaneo. Volved a activarlo y se reanuda. Util para locales donde aun estais configurando cosas, o donde la conectividad del PulseBox es inestable y preferis gestionarlo manualmente.</p>
+<hr />
+<h2>10. Ubicacion de Juego — Mas Clara, Mas Rapida, Mas Inteligente</h2>
+<h3>Vista de Detalle Rediseñada</h3>
+<p>El formulario de Ubicacion de Juego era... funcional. Pero era una pared larga de campos sin agrupacion visual. Ahora esta organizado en secciones claras: QR Code, Info, Ajustes de Negocio, Aceptador de Monedas, Etiquetas, Estado. Cada una con un encabezado con codigo de colores. Lo mismo para el formulario de "Nuevo".</p>
+<h3>Se Acabo Recargar Toda la Tabla al Guardar</h3>
+<p>Antes se recargaba la tabla entera cada vez que guardabais. Posicion del scroll perdida, la pagina parpadeaba, molesto. Ahora solo se actualiza la fila modificada. El panel de detalle se queda abierto. Suave.</p>
+<h3>Resaltado de Fila Activa</h3>
+<p>Haced clic en un juego → la fila se pone azul → el detalle se desplaza a la vista. Pequeno detalle, gran diferencia.</p>
+<hr />
+<h2>11. PulseBox — Registro y Gestion Inteligente</h2>
+<h3>Registro por QR Code — Escanea, Haz Clic, Listo</h3>
+<p>Cada PulseBox ahora viene con un QR code pegado (si, incluyendo los 800 que acabamos de recibir). Para registrar un dispositivo:</p>
+<ol>
+<li>Escaneais el QR code con vuestro telefono</li>
+<li>Sapiens se abre con todo pre-rellenado — MAC address, informacion del dispositivo, todo</li>
+<li>Seleccionais el juego, confirmais, listo</li>
+</ol>
+<p>Sin teclear MAC addresses. Sin confundir "B" con "8". El dispositivo se puede configurar completamente offline — ni siquiera necesita estar conectado al WiFi todavia. Simplemente escaneais la pegatina y seguid las instrucciones. Asi es como estamos registrando 130 dispositivos en Sabadell esta semana: escanear, asignar, siguiente. Proximo.</p>
+<h3>Configuraciones por Defecto Inteligentes — Configuralo Una Vez, Olvidate Para Siempre</h3>
+<p>Aqui teneis un problema que hemos resuelto: habeis pasado 20 minutos encontrando la temporizacion de pulso perfecta para una maquina de garras. Relay pin 7, pulso de 100ms, pago en papel. Precioso. Ahora necesitais configurar 15 maquinas de garras mas. ¿Os acordais de esos ajustes? ¿Quereis buscarlos cada vez?</p>
+<p><strong>Sapiens se acuerda por vosotros.</strong> Las configuraciones se guardan automaticamente por tipo de juego. Cuando registrais un nuevo PulseBox y seleccionais el juego, Sapiens rellena automaticamente todos los ajustes de hardware con los valores por defecto para ese tipo de juego. La primera maquina de garras tardo 20 minutos en configurarse. Las siguientes 14 tardan 10 segundos cada una.</p>
+<p>¿Necesitais una configuracion personalizada para una maquina especifica? Simplemente cambiadla — Sapiens la guarda automaticamente como una nueva opcion por defecto. Tambien hay una pagina dedicada donde podeis gestionar todas las configuraciones por defecto por juego: verlas, editarlas, crear nuevas. La idea es simple: <strong>encontrad la configuracion perfecta una vez, y no volveis a pensar en ella.</strong></p>
+<h3>Un Juego = Un PulseBox (Obligatorio)</h3>
+<p>El desplegable ahora muestra que ubicaciones de juego estan disponibles y cuales ya tienen un PulseBox. Si elegis una que esta ocupada, el sistema automaticamente la libera del PulseBox antiguo, sincroniza ambos y la asigna al nuevo. Sin conflictos. Sin dispositivos huerfanos.</p>
+<h3>Versiones de Firmware Selectivas</h3>
+<p>Nuevo ajuste de Local (solo SYS): fijar un local a una version de firmware especifica. ¿Quereis probar nuevo firmware en un local antes de desplegarlo? Fijadlo. ¿Teneis un local con un problema raro? Mantenedlo en una version estable conocida. Todos los demas siguen la version estable automaticamente.</p>
+<hr />
+<h2>12. IVA — La Funcionalidad de Canarias (Y Todos los Demas Tambien se Benefician)</h2>
+<h3>El Contexto</h3>
+<p>Las Islas Canarias usan IGIC (7%) en lugar del IVA peninsular (21%). Hasta ahora, Sapiens gestionaba esto con un apaño hardcodeado — una regla especifica que detectaba locales de Canarias y aplicaba un tipo diferente. Funcionaba, pero era fragil, feo y no escalaba. ¿Y Portugal? ¿Y un producto exento de impuestos en un local con un tipo especial? El apaño no podia manejar nada de eso.</p>
+<p>Ya era hora de hacerlo bien.</p>
+<h3>El Problema</h3>
+<p>Cambiar el IVA de un producto en un local concreto requeria activar "Configuracion Personalizada" — lo que os obligaba a establecer manualmente precio, estado, recompensa, visibilidad y todo lo demas. Solo para cambiar un tipo impositivo. Y si teniais un local en Canarias, teniais que hacer esto para cada. uno. de. los. productos.</p>
+<h3>La Solucion: Cascada de Tres Niveles</h3>
+<p>El IVA ahora fluye: <strong>Producto-Local → Local → Pais</strong>. La palabra magica es <strong>"Sapiens"</strong> — que significa "heredar del nivel superior".</p>
+<table>
+<thead>
+<tr>
+<th>IVA Producto-Local</th>
+<th>IVA Local</th>
+<th>Lo que paga el cliente</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Sapiens</td>
+<td>Sapiens</td>
+<td>Tipo del pais (21% en Espana, etc.)</td>
+</tr>
+<tr>
+<td>Sapiens</td>
+<td>7% IGIC</td>
+<td><strong>7%</strong> — gana el local</td>
+</tr>
+<tr>
+<td>0% (exento)</td>
+<td>7% IGIC</td>
+<td><strong>0%</strong> — anulacion especifica del producto</td>
+</tr>
+</tbody>
+</table>
+<p><strong>En la practica:</strong> estableced el IVA una vez en el local de Canarias → cada producto ahi usa automaticamente el 7%. ¿Nuevos productos anadidos despues? Tambien el 7%. Un ajuste. Listo. El viejo apaño hardcodeado ha desaparecido.</p>
+<p>El selector de IVA ahora siempre es visible en el formulario del producto (no escondido detras de Configuracion Personalizada), y por defecto es "Sapiens" para nuevos productos.</p>
+<hr />
+<h2>13. Local — Calidad de Vida</h2>
+<h3>Vista Previa de Horarios de Apertura</h3>
+<p>Nueva funcionalidad en el detalle del Local. La pestana de Horarios de Apertura ahora incluye una <strong>vista previa del horario</strong> en la parte superior: carga automaticamente el horario de hoy, y podeis elegir cualquier fecha — pasada o futura — para ver que horarios aplicara Sapiens. Esta es vuestra herramienta de verificacion: los horarios de apertura son el resultado de superponer <strong>Horario por Defecto → Anulaciones por Periodo → Reglas de Festivos</strong>, y no siempre es obvio cual es el resultado final. La vista previa os muestra exactamente lo que Sapiens calcula para cualquier dia dado. Los festivos y visperas de festivos se muestran con etiquetas adecuadas ("Festivo", "Horario Festivo", "Horario Vispera de Festivo").</p>
+<h3>Abierto/Cerrado — Siempre Visible</h3>
+<p>La esquina superior derecha del detalle del Local ahora muestra si el establecimiento esta <strong>abierto ahora mismo</strong> en este preciso instante. Verde = abierto, rojo = cerrado. Siempre visible, sin necesidad de comprobarlo manualmente.</p>
+<hr />
+<h2>14. Pago QR/NFC — Paga Con Tu Telefono, Juega Al Instante</h2>
+<p>Esta es una de las grandes. Los clientes ahora pueden <strong>pagar un juego escaneando un QR code con su telefono</strong>. Sin app. Sin descarga. Sin cuenta. Solo escanear y jugar.</p>
+<h3>Como Funciona</h3>
+<ol>
+<li><strong>Creais QR codes en Core</strong> — los generais, descargais el PDF, lo mandais a imprimir. Cada codigo es una pegatina pequena.</li>
+<li><strong>Pegais el codigo en el juego</strong> — un codigo por juego, asignado en Core con un clic.</li>
+<li><strong>El cliente escanea el codigo</strong> — su telefono abre una pagina de pago. Sin necesidad de app — es una pagina web.</li>
+<li><strong>Sapiens detecta el mejor metodo de pago</strong> — Apple Pay, Google Pay, o tarjeta. Lo que soporte el telefono del cliente, lo mostramos. ¿Usuario de Apple? El boton de Apple Pay aparece primero. ¿Android? Google Pay. ¿Ninguno? Formulario de tarjeta. El cliente elige la opcion mas rapida.</li>
+<li><strong>Sapiens comprueba si el juego esta online</strong> — antes de cobrar nada, verificamos que el PulseBox esta conectado y listo. Si esta offline, se lo decimos al cliente inmediatamente. Sin cobrar por un juego roto.</li>
+<li><strong>El cliente paga, el juego arranca</strong> — todo tarda segundos.</li>
+</ol>
+<h3>La Red de Seguridad — Por Que Importa la Pre-autorizacion</h3>
+<p>Unas palabras sobre chargebacks, porque esto importa mas de lo que la mayoria piensa. Los chargebacks ocurren cuando un cliente disputa un cargo — y para pagos online, son un riesgo real. Los numeros son brutales: si solo el <strong>1% de vuestras transacciones</strong> reciben un chargeback (eso es 1 de cada 100), vuestro procesador de pagos muy probablemente <strong>bloqueara vuestra cuenta</strong>. La mayoria de procesadores empiezan a ponerse nerviosos al 0,75%. Un mes malo puede cortaros la capacidad de aceptar pagos online por completo.</p>
+<p>Da la casualidad de que esta es una de nuestras areas de mayor experiencia, asi que construimos el sistema para eliminar este riesgo desde el principio:</p>
+<ul>
+<li><strong>Paso 1: Pre-autorizar</strong> — ponemos una retencion en la tarjeta del cliente. El dinero esta reservado pero no cobrado todavia. <strong>Las pre-autorizaciones no pueden recibir chargeback.</strong> Esta es la clave.</li>
+<li><strong>Paso 2: Iniciar el juego</strong> — enviamos el comando al PulseBox.</li>
+<li><strong>Paso 3: ¿El juego arranco correctamente?</strong> → Capturar el pago (ahora es un cobro real). <strong>¿El juego fallo?</strong> → Liberar la retencion (el dinero del cliente se devuelve automaticamente).</li>
+</ul>
+<p>Si una pre-autorizacion no se confirma nunca, expira sola despues de 7 dias — el dinero del cliente se libera automaticamente. Sin cobros huerfanos. Sin limpieza manual.</p>
+<p><em>El resultado: el cliente paga 2€ con su telefono, la maquina de garras arranca antes de que se guarde el movil en el bolsillo, y si algo sale mal, nunca le cobran. Vuestra tasa de chargebacks se queda en cero. Asi es como deberia funcionar.</em></p>
+<h3>En Vivo en el Local — Feed de Pagos NFC en Tiempo Real</h3>
+<p>A pesar de ser pagos online, las transacciones QR/NFC aparecen <strong>en tiempo real en el local</strong> bajo el nuevo menu <strong>NFC Payments</strong>. El personal puede ver cada pago a medida que ocurre — quien pago, cuando, que juego, y el nombre del cliente cuando esta disponible (de su tarjeta o wallet). Sin retraso, sin sincronizacion necesaria. El pago aparece en el momento en que el cliente toca.</p>
+<h3>Comprobacion Instantanea de PulseBox</h3>
+<p>Cuando alguien escanea el QR code, Sapiens comprueba si el PulseBox esta online a traves de la ruta mas rapida disponible. El tiempo de respuesta paso de 1-3 segundos a menos de 5 milisegundos. La pagina carga, el estado del juego ya esta ahi. Sin spinner, sin esperas.</p>
+<h3>Paquetes Filtrados por Local</h3>
+<p>Los paquetes de recarga ahora se filtran por local. Un paquete disponible solo en Espana no aparecera para un cliente en Portugal.</p>
+<h3>Tarjeta de Servicio = Tickets de Papel</h3>
+<p>Cuando una tarjeta de servicio (tarjeta del personal) inicia un juego, los tickets salen en papel en lugar de virtuales. Porque nadie va a canjear tickets virtuales en una tarjeta de prueba, y preferimos no corromper los datos.</p>
+<hr />
+<h2>15. Contabilidad</h2>
+<h3>Redondeo de IVA</h3>
+<p>Corregido un problema sutil de redondeo donde el calculo del IVA podia desviarse 1 centimo en ciertos importes. Ahora coincide con lo que esperan las autoridades fiscales. Afecta a transacciones Nayax, uso de tarjeta de fidelizacion y asientos contables de recaudacion en efectivo.</p>
+<hr />
+<h2>16. Inteligencia de Festivos</h2>
+<p>Los horarios de apertura ahora gestionan correctamente los festivos y visperas de festivos al calcular el horario para una fecha especifica. Cuando una fecha cae en festivo, Sapiens aplica el horario festivo; cuando es vispera de festivo, aplica el horario de vispera. La vista previa muestra claramente que regla esta activa con etiquetas: "Festivo", "Horario Festivo" u "Horario Vispera de Festivo".</p>
+<hr />
+<h2>17. Gestion de Usuarios — Mas Simple, Mas Segura, Mas Rapida</h2>
+<h3>Creacion de Cuenta — Se Acabaron las Contraseñas Temporales</h3>
+<p>Crear un nuevo usuario ya no genera una contrasena temporal. En su lugar, el usuario recibe un <strong>unico enlace de activacion</strong> por email. Haz clic, elige tu contrasena y PIN. Listo.</p>
+<p>Esto corrige un problema real que encontramos en produccion: algunos dispositivos Android (particularmente versiones antiguas con navegadores no estandar) tenian problemas con el flujo anterior. La pagina dependia de funcionalidades del navegador que no estaban universalmente soportadas. Hemos reconstruido la pagina de activacion usando estandares web mas simples y ampliamente soportados — del tipo que funcionan en todo, desde un Android economico de 2018 hasta el ultimo iPhone.</p>
+<p>Tambien corregimos un bug donde, en ciertas circunstancias, el PIN de un usuario no se propagaba correctamente a traves de la red — obligando a resets repetidos. Eso ya no pasa.</p>
+<h3>Reset de PIN — Dos Caminos, Reglas Claras</h3>
+<p>Dos nuevas opciones para la gestion del PIN:</p>
+<p><strong>1. Reset con PIN actual (el usuario conoce su PIN):</strong> Disponible en el local o por email. Si se hace por email, el usuario recibe un enlace. Si se hace en el local: la proxima vez que inicie sesion con su PIN actual, Sapiens le pide inmediatamente que elija uno nuevo. Sin interrupcion de su sesion — simplemente elige un nuevo PIN y continua.</p>
+<p><strong>2. Reset sin PIN actual (el usuario lo ha olvidado):</strong> Solo por email. Esta es una accion sensible a nivel de seguridad — Sapiens invalida inmediatamente el PIN actual. El usuario no puede iniciar sesion hasta que haga clic en el enlace del email y establezca un nuevo PIN. Esto evita que alguien que no deberia tener acceso siga usando un PIN comprometido.</p>
+<p><strong>3. Cambio de PIN por cuenta propia:</strong> Los usuarios tambien pueden cambiar su propio PIN en cualquier momento desde su perfil en la app del local — sin necesidad de un manager, sin flujo de reset. Simplemente abrid vuestro perfil, introducid vuestro PIN actual, elegid uno nuevo.</p>
+<h3>Desactivacion Instantanea de Cuenta en Toda la Red</h3>
+<p>Cuando un usuario se elimina o bloquea en Core, el cambio se propaga <strong>al instante</strong> a cada local conectado. Si ese usuario esta actualmente con sesion iniciada en un local, Sapiens destruye su sesion activa — se le cierra la sesion inmediatamente, a mitad de turno si es necesario. Sin esperar al siguiente ciclo de sincronizacion, sin "todavia tiene acceso durante 30 minutos". La sesion desaparece en el momento en que pulsais eliminar.</p>
+<hr />
+<h2>18. Local y Organizacion — Mejor Visibilidad</h2>
+<h3>Pestana de Usuarios en el Detalle del Local</h3>
+<p>La lista de usuarios estaba antes enterrada en el formulario del Local junto con todos los demas ajustes. Ahora vive en su propia <strong>pestana de Usuarios</strong> dedicada con un diseno mas limpio — mas facil ver de un vistazo quien tiene acceso a un local, anadir nuevas asignaciones o eliminar las existentes.</p>
+<p>La misma mejora se aplica al <strong>detalle de Organizacion</strong>: los usuarios se muestran ahora con mas informacion (rol, estado, ultimo inicio de sesion) y en un formato mas claro.</p>
+<hr />
+<h2>19. Bajo el Capo</h2>
+<ul>
+<li>Mejor diseno de base de datos para el seguimiento de salud de dispositivos</li>
+<li>Las alertas rastrean quien las resolvio y se vinculan a su causa raiz</li>
+<li>Nuevas traducciones en ingles, espanol y portugues</li>
+<li>Busquedas de dispositivos mas rapidas mediante cache en memoria</li>
+<li>Limpieza general de codigo y mejoras de consistencia</li>
+</ul>
+<hr />
+<p>Eso son dos meses de trabajo. 19 secciones. Necesitamos vacaciones. (No nos las vamos a tomar.)</p>
+<p>¿El tema? <strong>Hacer los problemas visibles y arreglarlos antes de que nadie se de cuenta.</strong> El sistema de monitorizacion, el bloqueo automatico de terminales, las alertas de salud, los pagos por QR, el IVA en cascada — todo va de eliminar trabajo manual y detectar problemas antes que los clientes. Un juego roto antes significaba un cliente enfadado, un empleado confundido y una negociacion de reembolso. Ahora significa una insignia roja que se limpia sola en 5 segundos mientras todos siguen comiendo pizza.</p>
+<p>Pero no hemos terminado. Ni de lejos. De hecho, solo estamos calentando. Asi que antes de que os vayais...</p>
+<hr />
+<h1>Parte 3 — Lo Que Viene</h1>
+<p><em>(Esta es la parte donde nos emocionamos e intentamos no prometer de mas. Lo intentaremos. Probablemente fracasaremos.)</em></p>
+<hr />
+<h2>Modo Kiosk — El Grande</h2>
+<p>Hemos empezado a construir la experiencia de Kiosk real — una estacion de autoservicio completa donde los clientes pueden hacer todo por si mismos: recargar su tarjeta de fidelizacion, comprar una tarjeta nueva, consultar su saldo, explorar juegos y actividades, hacer una reserva y pagar. Todo sin ninguna interaccion con el personal.</p>
+<p>El Payment Terminal ya soporta el modo Kiosk (ved la seccion 2). Lo que estamos construyendo ahora es el cerebro detras — la interfaz completa orientada al cliente que transforma un terminal de "toca para pagar" a "explora, elige, paga, juega." Este es el proximo gran hito y esta activamente en desarrollo.</p>
+<hr />
+<h2>Sapiens PDA — Ya en Pruebas Finales</h2>
+<p>Esta lleva cocinandose un tiempo y esta casi lista. De hecho, esta tan cerca de estar lista que la estamos usando <strong>esta semana</strong> para instalar 130 PulseBoxes en Sabadell. Esto no es una demo — es produccion.</p>
+<h3>Lo Que Hace Hoy</h3>
+<p>La Sapiens PDA es una herramienta portatil dedicada para operaciones de campo. Conectadla a un PulseBox mediante cable USB-C y tendreis:</p>
+<ul>
+<li><strong>Logs en pantalla en vivo</strong> — ved exactamente lo que esta haciendo el PulseBox, en tiempo real, ahi en vuestra mano</li>
+<li><strong>Instalar firmware</strong> — flashear un PulseBox con el firmware correcto directamente desde la PDA</li>
+<li><strong>Borrar dispositivo</strong> — borrado completo al retirar o reparar sectores danados</li>
+<li><strong>Auto-generar QR code</strong> — la PDA lee la informacion del dispositivo y crea un QR code + enlace que abre directamente en Core. Escaneadlo con vuestro telefono o pulsad el enlace — estais en la pagina de registro con todo pre-rellenado</li>
+<li><strong>Modo puente</strong> — este es el que lo cambia todo. ¿El PulseBox esta offline? ¿El WiFi no funciona? ¿No hay manera de ver que pasa? Conectad la PDA. Hace de puente de los logs del PulseBox a Core. Vuestro experto en la oficina ve lo que esta pasando como si estuviera al lado de la maquina.</li>
+</ul>
+<h3>Por Que Esto Importa</h3>
+<p>Esta es la vision: <strong>no deberiamos necesitar un tecnico senior en cada local.</strong> La realidad de gestionar mas de 40 locales es que no puedes tener un experto en todas partes. El experto deberia estar en la oficina — disenando, optimizando, resolviendo los problemas dificiles. La PDA es lo que les conecta con el campo.</p>
+<p>Un miembro del equipo en el local — no un tecnico, simplemente alguien que sabe enchufar un cable USB — conecta la PDA al dispositivo problematico. El experto en la oficina ve los logs, entiende el problema, y o lo arregla remotamente o da instrucciones claras. Sin desplazamientos. Sin adivinar. Sin "¿puedes decirme que estan haciendo las luces?"</p>
+<p>No estamos diciendo que cada local tendra una PDA manana. Pero estamos muy cerca de esa realidad.</p>
+<hr />
+<h2>Sapiens AI — La PDA Recibe un Cerebro</h2>
+<p>Esta es la que nos quita el sueno — en el buen sentido.</p>
+<p>Estamos construyendo un sistema de IA que vive dentro de la PDA. Cuando un PulseBox tiene un problema, <strong>antes de abrir un ticket, antes de llamar a nadie</strong>, la IA analiza los logs del dispositivo, identifica el problema e intenta arreglarlo automaticamente.</p>
+<p>Pensadlo:
+- El PulseBox no se conecta al WiFi → la IA comprueba la configuracion, la compara con dispositivos que funcionan bien en el mismo local, identifica la discrepancia y envia la correccion
+- El firmware esta atascado en un bucle de arranque → la IA reconoce el patron de casos anteriores, vuelve a la ultima version estable
+- La temporizacion de pulsos es incorrecta para el tipo de juego → la IA detecta la discrepancia con la configuracion esperada y la corrige</p>
+<p>Solo cuando la IA no puede resolver el problema lo escala a un humano — e incluso entonces, proporciona el diagnostico completo: "Probe X, Y y Z. Esto es lo que encontre. Esto es lo que no pude arreglar."</p>
+<p>Esto es complejo. Muy complejo. Requiere entender el comportamiento de los dispositivos, patrones historicos y la relacion entre configuracion y sintomas. No estara listo el mes que viene. Pero se esta construyendo activamente, y la arquitectura esta disenada para que podamos ensenarle de forma incremental — cada problema resuelto la hace mas inteligente.</p>
+<p>El objetivo final: un miembro del equipo se acerca a un juego roto, conecta la PDA, y la IA lo arregla. Sin experto humano necesario. Sin ticket. Sin esperas. El juego vuelve a funcionar en minutos. ¿No se puede arreglar? La IA guiara al usuario sobre que hacer a continuacion.</p>
+<p><em>Si, lo sabemos. Suena a ciencia ficcion. Lo estamos construyendo de todas formas.</em></p>
+<hr />
+<h2>Monitorizacion Mas Inteligente — Consciencia de Apertura y Cierre</h2>
+<p>El sistema de monitorizacion de dispositivos se esta volviendo aun mas inteligente. Como Sapiens ya conoce los horarios de apertura de cada local (hasta festivos y visperas de festivos), el siguiente paso es obvio:</p>
+<p><strong>Comprobacion de apertura:</strong> Cuando un local deberia abrir a las 10:00, ¿estan todos los juegos realmente online a las 10:00? Si un PulseBox sigue offline a la hora de apertura — alerta. Se acabaron los "la maquina de garras de la entrada lleva apagada desde esta manana y nadie se dio cuenta hasta las 3 de la tarde."</p>
+<p><strong>Comprobacion de cierre:</strong> Si un local cierra a las 23:00 pero un dispositivo se desconecto a las 22:30, eso no es necesariamente un error — pero deberiais saberlo. Quizas el equipo apago las cosas antes de hora. Quizas hay un problema. En cualquier caso, la consciencia es mejor que la sorpresa.</p>
+<p><strong>Terminales fuera del local:</strong> Cuando empecemos a desplegar terminales iM25 fuera del local (en otros establecimientos, en centros comerciales), esto se vuelve critico. ¿Un terminal que lleva offline una semana sin que nadie se de cuenta? Eso son ingresos perdidos. Sapiens lo detectara — automaticamente, desde el primer dia.</p>
+<hr />
+<h2>Web y Apps para Clientes</h2>
+<p>Es hora de acelerar la parte orientada al cliente. La web de reservas, la app del cliente, el autoservicio de tarjeta de fidelizacion — todo esto es lo siguiente en la lista. El backend esta listo (es todo lo que acabais de leer). Ahora construimos la puerta de entrada.</p>
+<hr />
+<p>Eso es todo. De verdad esta vez.</p>
+<p>Dos meses de lo que esta hecho, y una hoja de ruta de lo que viene. Si mirais la trayectoria — de configuracion manual a automatica, de reactivo a predictivo, de "un humano noto un problema" a "el sistema lo arreglo antes de que nadie se enterara" — ahi es donde vamos.</p>
+<p>Sabemos lo complejo que es. Sabemos cuantas piezas moviles hay. Y sabemos que cada funcionalidad que sacamos hace posible la siguiente. La monitorizacion habilita el bloqueo automatico. El bloqueo automatico habilita las alertas de salud. Las alertas de salud habilitan la PDA. La PDA habilita la IA. Todo esta conectado. Igual que la plataforma en si.</p>
+<p>Gracias por leer hasta aqui. En serio. Significa mucho.</p>
+<p><em>— El Equipo Sapiens</em></p>
+<p><em>P.D. — Si habeis leido todo esto, os mereceis un aumento. O al menos un cafe. Invitamos nosotros. Si ademas habeis entendido la seccion del IVA en cascada a la primera, que sea un espresso doble.</em></p>
+</body>
+</html>

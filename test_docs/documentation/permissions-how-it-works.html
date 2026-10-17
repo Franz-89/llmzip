@@ -1,0 +1,51 @@
+<p style="color: #5d6d7e; margin: 0 0 20px 0;">How the application decides, for one specific person, exactly which areas they can open &mdash; starting from their role, adjusted by the company, then fine-tuned per person.</p>
+
+<div style="border-left: 4px solid #2980b9; background: #eaf2f8; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0;"><strong style="color: #2980b9;">New to this?</strong> Read <a class="doc-link" data-doc-id="">Permissions &mdash; Overview</a> first for what an <em>area</em> and a <em>level</em> are. This page is about how they get assigned.</p>
+</div>
+
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">It's built in layers</h2>
+<p>Nobody's access is typed out one permission at a time. It's assembled in four layers, each building on the one before:</p>
+<ol>
+    <li><strong>The role default.</strong> Every user has a <strong>type</strong> &mdash; Manager, Local Manager, IT Support, Accounting, Reservation, Customer Service, and so on. Each type comes with a ready-made bundle of permissions: the sensible starting set for that job.</li>
+    <li><strong>The company override.</strong> A company (owner) can adjust what a type gets <em>for them</em> &mdash; &ldquo;our Managers also handle Marketing.&rdquo; This replaces the standard bundle for that one type, in that one company.</li>
+    <li><strong>Per-person grants and revokes.</strong> On an individual's page you can <strong>grant</strong> an extra area they wouldn't normally have, or <strong>revoke</strong> one they normally would. This is the fine-tuning layer.</li>
+    <li><strong>Implied permissions.</strong> Finally, the &ldquo;contains&rdquo; rules fill in the rest automatically: Manage adds View, a whole Location adds each of its tabs, &ldquo;all reports&rdquo; adds each report.</li>
+</ol>
+<p>Put simply:</p>
+<div style="border-left: 4px solid #2980b9; background: #eaf2f8; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0;"><strong style="color: #2980b9;">Effective access</strong> = the role's bundle (or the company's version of it) <strong>+</strong> anything granted to the person <strong>&minus;</strong> anything revoked from them, then <strong>+</strong> everything those imply.</p>
+</div>
+
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">Grant and revoke &mdash; the per-person layer</h2>
+<p>Most people never need this &mdash; their role bundle is the whole story. You reach for grant/revoke when one person is an exception:</p>
+<ul>
+    <li><strong>Grant</strong> gives an area this person's role wouldn't include &mdash; e.g. letting one trusted shop lead see a company report.</li>
+    <li><strong>Revoke</strong> takes away an area the role normally includes &mdash; e.g. a manager who should <em>not</em> touch pricing.</li>
+</ul>
+<p>A revoke always wins: if a person's role grants an area but you've revoked it from them, they don't have it. That's what makes revoke a dependable way to lock one person out of one thing without redesigning the role.</p>
+
+<div style="border-left: 4px solid #e67e22; background: #fef5e7; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0;"><strong style="color: #b9770e;">Prefer fixing the role over patching people.</strong> If you find yourself granting the same extra area to five people, that's a sign their role default (or the company override) should include it. Per-person grants are for genuine exceptions, not for rebuilding a role one user at a time.</p>
+</div>
+
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">Some access is scoped to <em>which</em> locations</h2>
+<p>Having an area is one question; <em>where</em> it applies is another. A Local Manager with the Locations area doesn't manage <em>every</em> location &mdash; only the ones assigned to them. The permission opens the screen; the assignment decides which rows they see. Fiscal years work the same way: whoever manages Organizations can reach them, but only for the organizations they're allowed to see.</p>
+
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">Two roles that always have everything</h2>
+<p>Two special types are never limited, on purpose:</p>
+<ul>
+    <li><strong>System</strong> &mdash; the built-in superuser. Holds every permission, always.</li>
+    <li><strong>Integration (API)</strong> &mdash; the account other systems connect through. It's held to a &ldquo;has everything&rdquo; floor so an integration can never be accidentally locked out of a call it depends on.</li>
+</ul>
+<div style="border-left: 4px solid #27ae60; background: #eafaf1; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0;"><strong style="color: #1e8449;">Why the floor matters.</strong> People come and go and get their access trimmed; a live integration must not break when that happens. Guaranteeing the integration account always passes every check keeps connected systems stable no matter how tightly you lock down everyone else.</p>
+</div>
+
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">Where each layer lives</h2>
+<ul>
+    <li><strong>Role defaults</strong> are the built-in starting bundles &mdash; see <a class="doc-link" data-doc-id="">Permissions &mdash; The default starting point</a>.</li>
+    <li><strong>Company overrides</strong> are managed by System users on the owner-defaults screen.</li>
+    <li><strong>Grants and revokes</strong> live on each person's user page.</li>
+</ul>
+<p>When someone &ldquo;can't get into a screen they should,&rdquo; walk the layers in order: does their <strong>role</strong> include the area? Has the <strong>company</strong> changed that role? Is there a <strong>revoke</strong> on the person? Nine times out of ten the answer is one of those three.</p>

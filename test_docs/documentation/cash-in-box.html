@@ -1,0 +1,36 @@
+<p style="color: #5d6d7e; margin: 0 0 20px 0;">See exactly how much cash is sitting in every machine right now, so you know what to collect before a box fills or a game gets blocked.</p>
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">Introduction</h2>
+<p>The <strong>Cash in Box</strong> report is a live snapshot of the money currently inside your acceptors &mdash; the coin-in each machine has logged <strong>since its last confirmed collection</strong> and that has not yet been counted. It answers a single, practical question: <strong>where is the cash, and how much is there right now?</strong></p>
+<div style="border-left: 4px solid #2980b9; background: #eaf2f8; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0;"><strong style="color: #2980b9;">This is a snapshot, not a date range.</strong> There is no date filter &mdash; the report always shows the current state. The window for each machine is "from its last confirmed collection until now". A machine that has never been collected shows everything it has ever logged.</p>
+</div>
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">Opening the report</h2>
+<p>Go to <strong>Analysis &rarr; Cash in Box</strong>. Pick a <strong>location</strong> (or leave it on all), and press <strong>Show</strong>. That's the only filter &mdash; because the report is always "as of now".</p>
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">Reading the numbers</h2>
+<p>The top row summarises everything currently in the boxes for your selection: the total amount, the number of coins, how many machines and locations hold cash, and how many coins are <strong>unpriced</strong>.</p>
+<p>Below that, the same money is broken down three ways:</p>
+<p><strong>By location</strong> &mdash; total cash waiting at each shop. This is what you compare against a shop's collection threshold.</p>
+<p><strong>By game</strong> &mdash; cash grouped by game across its machines, so you can see which titles fill up fastest.</p>
+<p><strong>By machine</strong> &mdash; the detailed list, <strong>biggest box first</strong>. This is the "what to collect" list. Each row shows the amount inside, the coin count, and <strong>since when</strong> it has been accumulating. Click a row to open that machine's full report.</p>
+<div style="border-left: 4px solid #e67e22; background: #fef5e7; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0;"><strong style="color: #b9770e;">"Never collected".</strong> A machine tagged this way has no confirmed collection on record, so its figure covers its <strong>entire history</strong>, not just recent activity. Confirm a collection for it and the report will start counting from that point onward.</p>
+</div>
+<div style="border-left: 4px solid #2980b9; background: #eaf2f8; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0;"><strong style="color: #2980b9;">Unpriced coins.</strong> A machine may show a small number of coins with a "+N?" next to the count. Those are coins logged before its pin values were configured &mdash; counted, but of unknown value, so they add nothing to the amount. This is a data gap, not missing cash, and it only affects old coins.</p>
+</div>
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">Collection thresholds on the report</h2>
+<p>If collection thresholds are configured for a shop, the report shows them in context:</p>
+<ul>
+    <li>Each location row shows its <strong>threshold</strong>, and turns red with a <strong>Collect</strong> tag when the cash in the boxes has reached it.</li>
+    <li>Each machine that has passed its <strong>per-machine cap</strong> is flagged with an <strong>over cap</strong> tag.</li>
+    <li>A red banner at the top counts how many locations and machines are currently over.</li>
+</ul>
+<div style="border-left: 4px solid #27ae60; background: #eafaf1; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0;"><strong style="color: #1e8449;">These flags are the same signal the collection alerts use.</strong> What you see marked in red on this report is exactly what will trigger a notification. Setting the thresholds up is covered in the Collection Thresholds guide.</p>
+</div>
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">When to use it</h2>
+<ul>
+    <li><strong>Planning a collection run</strong> &mdash; sort by machine, start from the top, and you're always emptying the fullest boxes first.</li>
+    <li><strong>Checking a shop is not overflowing</strong> &mdash; a quick glance at the by-location totals.</li>
+    <li><strong>Reacting to an alert</strong> &mdash; the notification links straight here so you can see exactly which machines pushed a shop over its threshold.</li>
+</ul>

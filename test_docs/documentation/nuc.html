@@ -1,0 +1,177 @@
+<p style="color: #5d6d7e; margin: 0 0 20px 0;">How to bring a new terminal from the box to a fully operational device on a game.</p>
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">Introduction</h2>
+<p>This guide walks you through the <strong>first installation</strong> of an IM25/IM30 terminal, from powering it on for the first time to having it fully provisioned and running on a specific game. Most of the work described here is technical and is best performed <strong>before</strong> the device is physically installed on a game.</p>
+<div style="border-left: 4px solid #e67e22; background: #fef5e7; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0 0 6px 0;"><strong style="color: #b9770e;">A quick word before you start.</strong></p>
+    <p style="margin: 0;">These terminals are powerful and capable, and they reward a calm, unhurried approach. Give the install the time it needs, and double-check before confirming any action &mdash; a few of the steps here (firmware updates) can't simply be undone from the shop floor, so it's worth getting them right the first time. None of this is difficult; it just deserves your attention.</p>
+</div>
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">Base concepts</h2>
+<p>Before starting, make sure these terms are completely clear. They come up at every step.</p>
+<p><strong>IM25 / IM30</strong> &mdash; This is the reader and payment terminal.</p>
+<p><strong>TID (Terminal ID)</strong> &mdash; The Terminal ID, which is <strong>specific to a single location</strong>. A location is tied to a company, so you <strong>cannot and must not</strong> use the TID of shop A in shop B.</p>
+<div style="border-left: 4px solid #c0392b; background: #fdecea; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0;"><strong style="color: #c0392b;">⚠ This is not a formality.</strong> Using a TID in the wrong location has <strong>legal repercussions</strong>. Ignoring this rule can lead to serious legal consequences, including&nbsp;<strong>losing the right to operate any device at all</strong>. Always confirm the TID belongs to the shop where the device will be used.</p>
+</div>
+<p><strong>PulseBox</strong> &mdash; This is the PCB that connects to the physical game. The PulseBox and the IM25/IM30 are <strong>never physically connected to each other</strong>.</p>
+<div style="border-left: 4px solid #2980b9; background: #eaf2f8; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0;"><strong style="color: #2980b9;">Scope of this guide:</strong> the PulseBox is mentioned here only so the term is clear. <strong>This guide does not cover the PulseBox</strong>, and it does not need to be installed to complete this procedure.</p>
+</div>
+<div style="border-left: 4px solid #2980b9; background: #eaf2f8; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0;"><strong style="color: #2980b9;">The three components you will install</strong></p>
+    <ol style="margin: 8px 0 0 0;">
+        <li><strong>Android / PAX firmware</strong> &mdash; covered in Part 1.</li>
+        <li><strong>Integra (Planet)</strong> &mdash; the payment terminal firmware, covered in Part 2.</li>
+        <li><strong>SapiensCore app (SmartMonkey)</strong> &mdash; covered in Part 3.</li>
+    </ol>
+</div>
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">Before you begin</h2>
+<p>To perform this first configuration you need to know <strong>which shop the device will go to</strong>, and you must have a <strong>TID available for each device</strong>.</p>
+<p><strong>What you need before starting:</strong></p>
+<ul>
+    <li>The <strong>device</strong> and its <strong>power supply</strong>.</li>
+    <li>A way to get online: a <strong>LAN cable</strong> or <strong>Wi-Fi access</strong> (plus a <strong>Wi-Fi QR code</strong> if you want to use QR activation).</li>
+    <li>The <strong>TID</strong> for this specific device.</li>
+    <li>The <strong>three terminal passwords</strong> (see note below).</li>
+    <li><strong>For the final in-shop step only:</strong> the <strong>NUC</strong> on and connected to the same network, and the <strong>QR code of the game</strong> the device will be installed on.</li>
+</ul>
+<div style="border-left: 4px solid #2980b9; background: #eaf2f8; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0;"><strong style="color: #2980b9;">You will be asked for three different passwords</strong> during this process: the <strong>installer password</strong>, the <strong>common password</strong>, and the <strong>device password</strong>. This is simply how the terminal works &mdash; each one unlocks a different stage. Make sure you have all three before you start. If you don't have the passwords, you can get them&nbsp;<a class="doc-link" data-doc-id="56">IM25/IM30 &mdash; Terminal Passwords (Quick Reference)</a> giving that you have the proper access. If you are denied the access please ask your IT manager.</p>
+</div>
+<div style="border-left: 4px solid #e67e22; background: #fef5e7; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0 0 6px 0;"><strong style="color: #b9770e;">Stable connection and stable power are mandatory.</strong> You need a stable internet connection <strong>and</strong> a stable power source throughout. Turning the terminal off during a firmware update can <strong>permanently block the device</strong>.</p>
+    <p style="margin: 0;">A permanent block is not something that can be cleared in the shop. The device must be <strong>physically shipped back to the payment provider</strong> and re-enabled by them on request. This is a requirement of the <strong>PCI rules</strong>, not a SmartMonkey/Planet/Pax limitation &mdash; so it cannot be bypassed.</p>
+</div>
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">Part 1 &mdash; Power on and internet connection</h2>
+<p>This step installs and updates the Android / PAX firmware. It runs largely on its own once the device is online.</p>
+<h3>1a. Power and connectivity</h3>
+<p>Connect the power supply provided with the device. Then connect the device to the internet using <strong>either</strong> a LAN cable <strong>or</strong> Wi-Fi.</p>
+<p><strong>Option A &mdash; LAN cable</strong></p>
+<ul>
+    <li>Connect a LAN cable to the port at the back of the device labelled <strong>lan</strong>.</li>
+</ul>
+<div style="border-left: 4px solid #e67e22; background: #fef5e7; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0;"><strong style="color: #b9770e;">Careful:</strong> the device has <strong>two RJ45 ports</strong>, but only one is named <strong>lan </strong>on the device. Use that one.</p>
+</div>
+<p><strong>Option B &mdash; Wi-Fi</strong></p>
+<ul>
+    <li>Tap the <strong>Settings</strong> icon.</li>
+</ul>
+<p><img src="https://imagedelivery.net/GsPRZXOY_RZTgV8SOGAdKw/94352350-6259-4a38-39c9-7a6689ba0700/original" alt="" width="265" height="367"></p>
+<ul>
+    <li>Enter the <strong>installer password</strong> you were provided.</li>
+    <li>Go to <strong>Network &amp; internet</strong>. Check that <strong>both Wi-Fi and Ethernet are ON</strong>, and turn them on if they are not.
+        <div style="border-left: 4px solid #2980b9; background: #eaf2f8; padding: 10px 14px; margin: 8px 0; border-radius: 4px;">
+            <p style="margin: 0;"><strong style="color: #2980b9;">This step is mandatory regardless of which connection type you choose.</strong></p>
+        </div>
+    </li>
+    <li>Open&nbsp;<strong>Wi-Fi</strong>.</li>
+    <li>Either select a Wi-Fi SSID and type the password, <strong>or</strong> use the <strong>QR code activation</strong> (recommended &mdash; it is much better).</li>
+    <li>For QR code: you first need a <strong>QR-code version of your Wi-Fi</strong> ready (the standard Wi-Fi QR-code format, the same one most phones and routers can generate). Select QR code, then move the screen slightly higher so you can clearly see what the device webcam sees. Scan the Wi-Fi code and wait for the device to connect.</li>
+</ul>
+<div style="border-left: 4px solid #27ae60; background: #eafaf1; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0;"><strong style="color: #1e8449;">If you use Wi-Fi:</strong> connect to the <strong>same SSID and password used at the shop</strong>.</p>
+</div>
+<p>Once connected, a <strong>Wi-Fi icon</strong> or a <strong>LAN connection indicator</strong> (depending on your method) appears at the <strong>top-right</strong> of the screen.</p>
+<h3>1b. Let the device start up</h3>
+<p>Exit this menu using the <strong>square icon at the bottom-right</strong>, then exit Settings. The device will now begin its operations in the background.</p>
+<p><img src="https://imagedelivery.net/GsPRZXOY_RZTgV8SOGAdKw/f49948c7-46fc-450c-7be9-5c71d0bccf00/original" alt="" width="256" height="367"><img src="https://imagedelivery.net/GsPRZXOY_RZTgV8SOGAdKw/d4081f33-5613-49ee-cdab-15b860857a00/original" alt="" width="258" height="367"></p>
+<p>To confirm you are online and to push the device to start immediately, open the <strong>MaxStore</strong> app. If apps load on the screen, everything is fine up to this point.</p>
+<p><img src="https://imagedelivery.net/GsPRZXOY_RZTgV8SOGAdKw/25c15b14-a15e-44ee-edeb-e9b7be47b600/original" alt="" width="265" height="367"></p>
+<p>&nbsp;</p>
+<div style="border-left: 4px solid #c0392b; background: #fdecea; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0 0 6px 0;"><strong style="color: #c0392b;">If you get an error:</strong></p>
+    <ul style="margin: 0;">
+        <li><strong>A timeout</strong> &rarr; the device is not connected to the internet.</li>
+        <li><strong>An error showing the IM25 Serial Number</strong> &rarr; this indicates a configuration issue at a higher level. Note down the full error (including the Serial Number) and request assistance from SmartMonkey.</li>
+    </ul>
+</div>
+<div style="border-left: 4px solid #2980b9; background: #eaf2f8; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0;"><strong style="color: #2980b9;">During installation/update the device may show several screens.</strong> You don't have to do anything. Even prompts that look like questions are answered correctly by the device itself within a short time.</p>
+</div>
+<h3>1c. When Part 1 is complete</h3>
+<p>This first step ends when the device displays the following screen:</p>
+<div style="border: 1px solid #34495e; background: #2c3e50; color: #ecf0f1; padding: 14px 16px; margin: 14px 0; border-radius: 6px; font-family: monospace;">Invalid terminal configuration: Please download a configuration.<br><br>HID: &lt;terminal Serial Number&gt;<br>TID: 0000000000&nbsp;&nbsp;(or ZZZZZZZZZZ)</div>
+<p>Below the message you should see a <strong>HID:</strong> followed by the terminal Serial Number, and a <strong>TID:</strong> showing all zeros. Sometimes it shows all <strong>Z's</strong> (for example <strong>ZZZZZZZZ</strong>) instead of zeros &mdash; this means the same thing.</p>
+<p><img src="https://imagedelivery.net/GsPRZXOY_RZTgV8SOGAdKw/07954e8d-6b02-4357-b031-539feabb5400/original" width="252" height="367"></p>
+<div style="border-left: 4px solid #2980b9; background: #eaf2f8; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0;"><strong style="color: #2980b9;">Note:</strong> if the TID shows a <strong>real number</strong> (anything other than all zeros or all Z's), check the status of this terminal with SmartMonkey. Virgin terminals usually do <strong>not</strong> have a pre-installed TID. Occasionally it can happen because terminals are randomly tested before shipping &mdash; that is not a problem.</p>
+</div>
+<p>The device is now ready to download the second configuration: the one for the payment integration.</p>
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">Part 2 &mdash; Integra (Planet) firmware</h2>
+<p>This step downloads the Integra firmware from Planet, the payment processor, and binds the device to its TID.</p>
+<ol>
+    <li>Long-tap on the <strong>Planet logo</strong>.</li>
+    <li>Enter the <strong>common password</strong>.</li>
+    <li>Follow: <strong>Config &rarr; Update &rarr; Firmware</strong>.</li>
+    <li>The first screen asks for a <strong>TMS IP / DNS</strong>. <strong>Do not change this value</strong> &mdash; it is set automatically. Tap the <strong>green button</strong> to continue.</li>
+    <li>The next screen asks for the <strong>TMS port</strong>. Again, <strong>do not change it</strong> &mdash; it is configured automatically. Tap the <strong>green button</strong> to continue.</li>
+    <li>Now enter the <strong>TID</strong> you were provided.</li>
+</ol>
+<div style="border-left: 4px solid #c0392b; background: #fdecea; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0;"><strong style="color: #c0392b;">Enter every digit of the TID.</strong> Many TIDs start with one or more zeros, for example <strong>00139123</strong>. You <strong>must</strong> enter all the digits. Double-check the number is correct before continuing.</p>
+</div>
+<ol start="7">
+    <li>Tap the <strong>green button</strong> to continue.</li>
+</ol>
+<p>The device will start downloading the <strong>Integra firmware</strong> (Planet, the payment processor). It may or may not reboot, depending on its status. No action is needed &mdash; simply wait. This can take from a few seconds to a few minutes.</p>
+<div style="border-left: 4px solid #27ae60; background: #eafaf1; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0;"><strong style="color: #1e8449;">Part 2 is complete</strong> when the screen shows a large <strong>Planet logo</strong>, with the <strong>TID</strong> you entered written at the bottom and the <strong>shop's name</strong> below it.</p>
+</div>
+<p><img src="https://imagedelivery.net/GsPRZXOY_RZTgV8SOGAdKw/6dcc00ff-545a-4f65-e247-20062094b300/original" alt="" width="256" height="367"></p>
+<p>Notice that at no point did you type the shop's name. This is because&nbsp;<strong>the TID is already connected to a specific shop beforehand</strong>.</p>
+<div style="border-left: 4px solid #2980b9; background: #eaf2f8; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0;"><strong style="color: #2980b9;">Moving a device to a different shop:</strong> you will need to <strong>unbind</strong> it from this TID and rebind it to a new/different TID. An unbound TID can be reused without any issue. However, at any given moment a TID can be used in <strong>one device and one device only</strong> &mdash; otherwise it simply will not work. A separate guide for the unbinding procedure will follow soon.</p>
+</div>
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">Part 3 &mdash; Install the SapiensCore app</h2>
+<p>Congratulations &mdash; you are now ready to install the SapiensCore app.</p>
+<ol>
+    <li>Long-tap on the <strong>logo</strong> again.</li>
+    <li>Enter the <strong>common password</strong> you were provided.</li>
+    <li>Follow: <strong>Config &rarr; System &rarr; Go to the Launcher</strong> (it is the very last option).</li>
+    <li>Now, <strong>quickly</strong>, long-tap again on the <strong>Planet logo</strong>. The terminal will prompt you for the <strong>device password</strong> you were provided. Enter it and tap the green button.</li>
+    <li>Scroll down in the new menu and tap <strong>Open PAX Launcher</strong>.</li>
+    <li>Check whether <strong>SapiensCore is already installed</strong>. If it is, skip ahead to step 11 (Open). If it is not, continue:</li>
+    <li>Open <strong>MaxStore</strong>.</li>
+    <li>Scroll down until you see the <strong>SapiensCore app</strong>. Note: the <strong>store listing name may differ</strong> from "SapiensCore" &mdash; at the moment it appears as <strong>Sould Park</strong>. It is the correct app regardless of the listing name.</li>
+    <li>Tap <strong>Get</strong>, then <strong>Install</strong>.</li>
+    <li>Wait for the installation to complete.</li>
+    <li>Tap <strong>Open</strong>.</li>
+    <li>The app will ask you to enter the <strong>same TID</strong> as the device. Be very careful and double-check you are entering the right TID.</li>
+    <li>Type the TID and select <strong>OK</strong>.</li>
+</ol>
+<h3>Provisioning</h3>
+<p>SapiensCore will now collect all the relevant information and perform the terminal provisioning. The device will show a QR code. If everything goes well, you can ignore it and simply wait &mdash; we pre-authorise devices based on their Serial Number.</p>
+<div style="border-left: 4px solid #2980b9; background: #eaf2f8; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0;"><strong style="color: #2980b9;">SapiensCore may decide to reboot the device on its own.</strong> This is normal and, in some cases, expected &mdash; it happens when the device's operational mode is something other than <strong>Arcade</strong>. No action is needed; let the device finish.</p>
+</div>
+<div style="border-left: 4px solid #e67e22; background: #fef5e7; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0;"><strong style="color: #b9770e;">If a yellow message appears:</strong> "Device is in installation mode. Please contact support." &rarr; send a message to SmartMonkey with the <strong>Serial Number</strong> and <strong>TID</strong> shown on the device screen. If you take a picture, make sure it is clear and in focus.</p>
+</div>
+<p>SapiensCore will send the correct configuration for this device, including the Wi-Fi SSID and password if you did the configuration over LAN. A counter will appear on screen, counting down from <strong>10 to 0</strong>. At 0, the on-screen configuration is applied. The terminal shows which SSID, Wi-Fi password, auth server and domain the device will connect to.</p>
+<div style="border-left: 4px solid #27ae60; background: #eafaf1; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0;">If all is well, a <strong>Config Saved</strong> message appears.</p>
+</div>
+<p>Two options will appear: <strong>Reboot</strong> and <strong>Shutdown</strong>. Both lead to the same final configuration &mdash; the only difference is the power cycle:</p>
+<ul>
+    <li>Choose <strong>Reboot</strong> if you are <strong>already in the shop</strong>, the device is installed on its game, and the NUC is ready. The device comes straight back up, ready for the final step &mdash; no need to shut down and power on again.</li>
+    <li>Choose <strong>Shutdown</strong> if you are <strong>not finishing now</strong> (for example, the device still has to be transported and installed on the game). You will power it on again at the shop to do the final step.</li>
+</ul>
+<div style="border-left: 4px solid #2980b9; background: #eaf2f8; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0 0 6px 0;"><strong style="color: #2980b9;">The final configuration can only be completed when all of the following are true:</strong></p>
+    <ul style="margin: 0;">
+        <li>the device is <strong>in the shop</strong> and physically installed on the game;</li>
+        <li>the <strong>QR code of that specific game</strong> (the one the device is installed on) is available;</li>
+        <li>the <strong>NUC</strong> is on, ready, and connected to the <strong>same network</strong> as the device.</li>
+    </ul>
+</div>
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">Part 4 &mdash; Final configuration on a specific game</h2>
+<p>This last step is performed in the shop, after the device is physically installed on the game. You reach it either by choosing <strong>Reboot</strong> in the previous step (the device comes straight back up) or by powering the device on after a <strong>Shutdown</strong> &mdash; either way, the device starts up and SapiensCore launches on its own.</p>
+<ol>
+    <li>If you chose Shutdown earlier, turn the device on now. <strong>SapiensCore starts automatically</strong> within a few seconds (if you rebooted, it is already starting).</li>
+    <li>If the device is not yet configured for a specific game, a <strong>QR code</strong> appears.</li>
+    <li>Scan the QR code and follow the link. It brings you into your <strong>SapiensCore instance</strong>. Log in if needed.</li>
+    <li>The page asks you to select the <strong>location</strong> of this terminal and the <strong>specific game</strong>. Select both and tap <strong>Save</strong>.</li>
+</ol>
+<div style="border-left: 4px solid #27ae60; background: #eafaf1; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0;"><strong style="color: #1e8449;">Done.</strong> Within about 30 seconds the device is approved and the final configuration is installed. The terminal is now operational.</p>
+</div>

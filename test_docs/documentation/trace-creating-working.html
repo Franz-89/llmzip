@@ -1,0 +1,67 @@
+<p style="color: #5d6d7e; margin: 0 0 20px 0;">The hands-on guide: how to open a trace the right way, and how to drive it day to day &mdash; comments, the solution, checklists, costs and the people involved.</p>
+<div style="border-left: 4px solid #2980b9; background: #eaf2f8; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0;"><strong style="color: #2980b9;">New to Trace?</strong> Read <a class="doc-link" data-doc-id="">Trace &mdash; Overview &amp; how to use it</a> first for the big picture. This guide is the practical detail.</p>
+</div>
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">Creating a trace</h2>
+<p>Click <strong>New</strong> to open the create form. It is a short, guided sequence &mdash; you only fill what's relevant.</p>
+<h3>1. What is it about? (scope)</h3>
+<p>Pick the <strong>kind of thing</strong> the trace concerns: a <strong>Game</strong>, <strong>Kiosk</strong>, <strong>NUC</strong>, <strong>POS&nbsp;Terminal</strong>, <strong>Nayax</strong>, <strong>Reservation</strong>, <strong>Customer</strong>, <strong>Location</strong>, <strong>Payment</strong>, <strong>Cash</strong>, or <strong>Other</strong>. This is the <strong>scope</strong>, and it decides what you'll pick next.</p>
+<h3>2. Which one? (the entity)</h3>
+<p>Now choose the <strong>specific</strong> thing &mdash; the entity. How you pick depends on the scope:</p>
+<ul>
+    <li><strong>Things tied to a location</strong> (a game, a NUC, a kiosk): choose the <strong>location first</strong> to narrow the list, then pick from it.</li>
+    <li><strong>Larger sets</strong> (a customer, a payment, a terminal): just <strong>start typing</strong> to search by name, serial, code, etc.</li>
+    <li><strong>Cash, Location and Other</strong> need no specific entity &mdash; skip straight on.</li>
+</ul>
+<div style="border-left: 4px solid #2980b9; background: #eaf2f8; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0;"><strong style="color: #2980b9;">Why the entity matters.</strong> Attaching the trace to the real thing is what gives it context &mdash; anyone opening it knows exactly which machine, terminal or customer, and all the history against that entity is linked together. A trace without an entity is just a sticky note.</p>
+</div>
+<h3>3. Describe it</h3>
+<p>Give it a short, clear <strong>title</strong> and, if it helps, a longer <strong>description</strong>. Because the context is already attached, the title can focus on the <em>problem</em> &mdash; "Note acceptor rejects &euro;10" rather than "machine issue".</p>
+<h3>4. Classify</h3>
+<ul>
+    <li><strong>Type</strong> &mdash; Maintenance, Incident, Complaint, Request, Fraud, or Other.</li>
+    <li><strong>Priority</strong> &mdash; Low, Normal, High, Critical.</li>
+    <li><strong>Operational status</strong> &mdash; for hardware only: is the thing <strong>Operational</strong>, <strong>Degraded</strong>, or <strong>Offline</strong>?</li>
+</ul>
+<h3>5. Who &amp; when</h3>
+<p>Optionally set an <strong>assignee</strong> (the one person responsible), a <strong>due date</strong>, and an <strong>effort</strong> estimate (how much work it is). None are required &mdash; you can add them later.</p>
+<h3>6. Optional: checklist &amp; files</h3>
+<p>You can seed a starting <strong>checklist</strong> of steps and attach <strong>files</strong> (a photo of the fault, a document) right away.</p>
+<div style="border-left: 4px solid #27ae60; background: #eafaf1; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0;"><strong style="color: #1e8449;">Don't over-think it.</strong> A scope, an entity and a good title are enough to create a useful trace. Everything else can be filled in as the work goes.</p>
+</div>
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">The detail view</h2>
+<p>Click any card to open it. At the top you'll see the trace <strong>#number</strong> and title, and a row of controls to change the <strong>status</strong>, <strong>priority</strong>, <strong>assignee</strong>, <strong>due date</strong> and <strong>effort</strong> at any time. Click the title (the pencil) to rename it.</p>
+<p>Just below, when the trace connects to others, a <strong>relationship bar</strong> shows its parent, blockers, what it blocks, and its sub-tasks &mdash; covered in <a class="doc-link" data-doc-id="">Trace &mdash; Sub-tasks &amp; dependencies</a>. The rest of the work is organised into tabs.</p>
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">Timeline &mdash; the conversation &amp; history</h2>
+<p>The Timeline is where the work is recorded &mdash; your comments plus automatic entries (status changes and the like). The <strong>newest entry is at the top</strong>.</p>
+<h3>Writing</h3>
+<p>Use the composer to <strong>post a message</strong> &mdash; progress, a question, what you found. You can attach <strong>files</strong> to any message.</p>
+<h3>Mentioning people</h3>
+<ul>
+    <li><strong>@name</strong> &mdash; notifies that person. Use it to pull the right colleague in, rather than writing into the void.</li>
+    <li><strong>@name!</strong> (with an exclamation mark) &mdash; a <strong>help request</strong>: a stronger, higher-priority ping when you actually need someone to step in.</li>
+</ul>
+<h3>Marking the solution</h3>
+<div style="border-left: 4px solid #27ae60; background: #eafaf1; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0;">When a message describes how the problem was fixed, mark it as the <strong>solution</strong>. This flags the answer for next time <strong>and</strong> automatically moves the trace to <strong>Resolved</strong>. (If the trace still has open sub-tasks or blockers, the solution is recorded and it resolves once those are done.) See <a class="doc-link" data-doc-id="">Trace &mdash; The lifecycle</a>.</p>
+</div>
+<h3>Waiting for something</h3>
+<p>When a trace is paused waiting on a part, a reply or a delivery, record what you're <strong>waiting for</strong>. The trace moves to the <strong>Waiting</strong> column so it's clear it's not abandoned &mdash; just blocked on the outside world. When what you were waiting for arrives, mark it <strong>arrived</strong> and carry on.</p>
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">Checklist</h2>
+<p>A simple list of steps to work through. Add items, tick them off, and the card shows the progress (<strong>☑ 2/4</strong>). It's perfect for a repeatable procedure &mdash; "check fuse, clean lens, reseat cable, test".</p>
+<div style="border-left: 4px solid #2980b9; background: #eaf2f8; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0;"><strong style="color: #2980b9;">When a step is really its own job</strong> &mdash; "order a new part" &mdash; you can <strong>promote</strong> it into a sub-task: its own trace, linked back to this one. See <a class="doc-link" data-doc-id="">Trace &mdash; Sub-tasks &amp; dependencies</a>.</p>
+</div>
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">Cost</h2>
+<p>Record what the fix costs &mdash; <strong>parts</strong>, <strong>consumables</strong>, <strong>labour</strong>, <strong>external service</strong> &mdash; with a quantity and a unit cost. The total shows on the card. It's a small habit that, over time, answers a big question: <strong>which machines are quietly costing the most?</strong></p>
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">Members</h2>
+<p>Add the people involved in the trace. Members stay in the loop and make it clear later who worked on what. (Being a member is about collaboration and notifications &mdash; it is separate from the single <strong>assignee</strong>, who is the one person responsible.)</p>
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">Good habits</h2>
+<ul>
+    <li><strong>Always set the scope and entity</strong> &mdash; the context is the whole point.</li>
+    <li><strong>Write what you tried, even when it failed</strong> &mdash; it saves the next person, and makes any escalation far stronger.</li>
+    <li><strong>Mark the solution</strong> &mdash; one click, it resolves the trace and builds a memory of how you fixed it.</li>
+    <li><strong>Mention the right person</strong> instead of hoping someone notices.</li>
+</ul>

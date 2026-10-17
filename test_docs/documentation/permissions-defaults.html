@@ -1,0 +1,53 @@
+<p style="color: #5d6d7e; margin: 0 0 20px 0;">What each role can do the moment it's created &mdash; the ready-made bundles you start from, laid out from the narrowest job to the widest, so you can pick a type and adjust rather than build access from nothing.</p>
+
+<div style="border-left: 4px solid #2980b9; background: #eaf2f8; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0;"><strong style="color: #2980b9;">These are starting points, not cages.</strong> Every bundle below can be widened or narrowed &mdash; per company, or per person &mdash; as described in <a class="doc-link" data-doc-id="">Permissions &mdash; How it works</a>. Pick the closest role, then adjust.</p>
+</div>
+
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">Front-line roles</h2>
+<ul>
+    <li><strong>Customer Service (shop staff)</strong> &mdash; the floor team. By default just <strong>Trace</strong> (the issue board), plus the always-open basics everyone has: the dashboard and the knowledge base. Deliberately minimal &mdash; extra shop tools get added as they're needed.</li>
+    <li><strong>Reservation</strong> &mdash; the bookings/phone desk. <strong>Reservations</strong> to take and manage bookings, <strong>Customers &middot; View</strong> to look people up, and <strong>Trace</strong>. No loyalty, no money, no admin.</li>
+</ul>
+
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">Accounting roles</h2>
+<ul>
+    <li><strong>Accounting (Helper)</strong> &mdash; reads the books. The finance reports (accounting, VAT, sales comparison, coin reconciliation), the fiscal sync <strong>as View only</strong>, and Trace. Everything to check the numbers, nothing to change them.</li>
+    <li><strong>Accounting (Admin)</strong> &mdash; the same, but with the fiscal sync at <strong>Manage</strong> &mdash; they can actually run it, not just look.</li>
+</ul>
+<div style="border-left: 4px solid #2980b9; background: #eaf2f8; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0;"><strong style="color: #2980b9;">Helper vs Admin is the View/Manage split in action.</strong> Same area, two levels: the Helper sees the fiscal pipeline, the Admin operates it. That one difference is the whole reason the two roles exist.</p>
+</div>
+
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">Management roles</h2>
+<ul>
+    <li><strong>Local Manager</strong> &mdash; runs their assigned locations. Full <strong>Locations</strong>, plus Reservations, Loyalty cards (view), Customers, Users, Organizations, Clusters, Scheduling, game Pricing, Content and Loyalty tiers, and Trace. Broad &mdash; but remember it's <em>scoped</em>: they manage their locations, not everyone's.</li>
+    <li><strong>Manager</strong> &mdash; a Local Manager's spread plus <strong>Events</strong>, the technician group, and NFC tag assignment. The senior operational role.</li>
+</ul>
+
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">Technical roles</h2>
+<ul>
+    <li><strong>IT Support</strong> &mdash; the device and infrastructure role. Everything a Manager-style operator has, plus <strong>Devices</strong> (NUC, PDA, Headwind, Kiosk), <strong>Monitoring</strong> and its commands, the Nayax and technician groups, and the internal tooling.</li>
+    <li><strong>IT Support (Tech)</strong> &mdash; a field-technician slice: technician access and monitoring commands, the shared admin areas (Users, Organizations, Customers, Locations, Scheduling, Pricing, Content, Loyalty tiers), and Trace &mdash; without the full device-fleet management.</li>
+</ul>
+
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">Wide roles</h2>
+<ul>
+    <li><strong>Sapiens</strong> &mdash; the head-office/back-office role. Effectively the whole operational application: everything above, plus Marketing, Products, Warehouse, dynamic Pricing rules, Cash management, the QR generator, bulk vouchers, and Trace escalation to SmartMonkey.</li>
+    <li><strong>Integration (API)</strong> &mdash; the account other systems connect through. Held to a &ldquo;has everything&rdquo; floor so a connected system can never be locked out. Not a person.</li>
+    <li><strong>System</strong> &mdash; the built-in superuser. Every permission, always.</li>
+</ul>
+
+<div style="border-left: 4px solid #e67e22; background: #fef5e7; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0;"><strong style="color: #b9770e;">HQ-only by default.</strong> A handful of areas &mdash; Warehouse, Cash, dynamic Pricing rules, the QR generator &mdash; start out with <strong>Sapiens only</strong>. That's a deliberate default, not a limit: if your Managers should handle one of them, widen it for that role (company override) rather than granting it person by person.</p>
+</div>
+
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">How to use this list</h2>
+<ol>
+    <li>Find the role whose <em>job</em> matches the person &mdash; not the one with the most access.</li>
+    <li>Create them as that type; they get the bundle above automatically.</li>
+    <li>Only if they're a genuine exception, add one area (grant) or remove one (revoke) on their page.</li>
+</ol>
+<div style="border-left: 4px solid #27ae60; background: #eafaf1; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0;"><strong style="color: #1e8449;">Start narrow.</strong> It's always easier to add an area someone turns out to need than to discover, later, that half the team could see something they shouldn't. Pick the smallest role that lets them do their job.</p>
+</div>

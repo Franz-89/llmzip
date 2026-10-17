@@ -1,0 +1,50 @@
+<p style="color: #5d6d7e; margin: 0 0 20px 0;">A short set of habits that keep the coin numbers accurate and the reports worth trusting. None of it is extra work &mdash; it's just doing the collection in the right order.</p>
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">Introduction</h2>
+<p>The coin reports are only as good as the collection discipline behind them. The system does the maths for you, but it relies on a few simple things being done consistently. This guide gathers them in one place.</p>
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">1. Confirm the counter at every collection</h2>
+<p>The single most important habit. When you empty a machine, <strong>read and confirm its counter</strong> &mdash; don't leave the collection pending.</p>
+<div style="border-left: 4px solid #2980b9; background: #eaf2f8; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0;"><strong style="color: #2980b9;">Why it matters:</strong> the moment a counter is confirmed is what the system uses to draw the line between "counted" and "still in the box". A collection that stays <strong>pending</strong> does not reconcile, and the machine's cash keeps showing as uncounted &mdash; so a collection you actually did looks like it never happened.</p>
+</div>
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">2. Configure a machine's coin values before it earns</h2>
+<p>When a machine goes live, make sure each acceptor pin has its <strong>money value</strong> set. Then every coin it logs carries its worth from the first drop.</p>
+<div style="border-left: 4px solid #e67e22; background: #fef5e7; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0;"><strong style="color: #b9770e;">Why it matters:</strong> a coin logged before its pin value is set has <strong>no known value</strong> &mdash; it counts as a coin but adds nothing to the money. Those "unpriced" coins can't be reconciled and don't count toward collection thresholds. Setting the values up front avoids a blind spot you'd otherwise have to explain later.</p>
+</div>
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">3. Collect the fullest boxes first</h2>
+<p>Use the <strong>Cash in Box</strong> report, sorted biggest-first, to plan a collection run. You'll always be emptying the machines that need it most, and no box quietly fills to the point of blocking.</p>
+<div style="border-left: 4px solid #27ae60; background: #eafaf1; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0;"><strong style="color: #1e8449;">Set a per-machine cap.</strong> Even if a shop as a whole is nowhere near its threshold, one popular game can fill up on its own. A per-machine cap makes sure that game is flagged for collection long before it blocks &mdash; independently of the shop total.</p>
+</div>
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">4. Tune thresholds with the report, don't guess</h2>
+<p>Set your collection thresholds, then watch the Cash in Box report for a week or two and adjust:</p>
+<ul>
+    <li>If <strong>nothing ever goes red</strong>, the threshold is too high &mdash; you're not being warned in time.</li>
+    <li>If <strong>everything is always red</strong>, it's too low &mdash; the alerts become noise and get ignored.</li>
+</ul>
+<p>Aim for a level where a red flag genuinely means "worth a trip". Start a little conservative and bring it down as you learn each shop's rhythm.</p>
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">5. Read a deviation in context</h2>
+<p>On the reconciliation report, a single collection that's a little off is almost always a <strong>miscount</strong> &mdash; not a problem. What deserves attention is a <strong>pattern</strong>.</p>
+<div style="border-left: 4px solid #2980b9; background: #eaf2f8; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0 0 6px 0;"><strong style="color: #2980b9;">Use the three figures to tell problems apart:</strong></p>
+    <ul style="margin: 0;">
+        <li>Cash <strong>below both</strong> the counter and the coin log, repeatedly &rarr; money going missing. Investigate.</li>
+        <li>Counter <strong>disagrees with the coin log</strong>, but cash matches the log &rarr; the counter or acceptor has drifted, not a cash problem.</li>
+        <li>A one-off gap that doesn't repeat &rarr; almost certainly a counting slip.</li>
+    </ul>
+</div>
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">6. Act on invalid-coin flags</h2>
+<p>If a machine is flagged for <strong>invalid</strong> coins &mdash; impossible bursts logged in a fraction of a second &mdash; treat it as a hardware signal, not a data quirk. It almost always means a <strong>bouncing pulse line or a failing acceptor</strong>.</p>
+<div style="border-left: 4px solid #c0392b; background: #fdecea; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0;"><strong style="color: #c0392b;">Fix the wiring, don't just ignore the number.</strong> The system already keeps these phantom coins out of your totals, so your money is correct either way &mdash; but the underlying fault means real coins may be miscounted or missed. A machine that keeps doing it is telling you it needs a technician.</p>
+</div>
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">7. Only reopen a confirmed collection when you truly need to</h2>
+<p>Reopening a confirmed collection moves the line the whole system uses to decide what's counted and what's still in the box. Do it for a real correction &mdash; not out of habit.</p>
+<div style="border-left: 4px solid #e67e22; background: #fef5e7; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0;"><strong style="color: #b9770e;">Why it matters:</strong> the most recent <strong>confirmed</strong> collection is what defines each machine's window. Reopen one and the window shifts &mdash; money can move between "counted" and "in the box" on the reports until it's confirmed again. That's correct behaviour, but it can look surprising if you didn't expect it, so reopen deliberately.</p>
+</div>
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">8. Let the alerts do the remembering</h2>
+<p>Once thresholds are set and the scheduled check is running, you don't need to keep opening the report "just in case". The system watches every shop and machine and notifies the right people when something needs collecting.</p>
+<div style="border-left: 4px solid #27ae60; background: #eafaf1; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0;"><strong style="color: #1e8449;">The goal:</strong> collections happen because a box is genuinely getting full &mdash; not because someone remembered to check, and not because a game already blocked. Get these habits in place and the reports stop being something you inspect and become something you trust.</p>
+</div>

@@ -1,0 +1,40 @@
+<p style="color: #5d6d7e; margin: 0 0 20px 0;">How the money a coin acceptor takes in travels from the machine to your accounts &mdash; and which report answers which question.</p>
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">Introduction</h2>
+<p>Every time a coin goes into an acceptor, the machine reports it electronically. That electronic record is the backbone of the coin reports. This guide explains the <strong>lifecycle</strong> of that money &mdash; from the moment a coin is logged to the moment it is counted at collection &mdash; so that the numbers on the different reports make sense and never surprise you.</p>
+<div style="border-left: 4px solid #2980b9; background: #eaf2f8; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0;"><strong style="color: #2980b9;">The one idea to take away:</strong> a coin passes through three stages &mdash; <strong>logged</strong>, then <strong>in the box</strong>, then <strong>counted</strong>. Each report looks at a different stage. Once you know which stage a report is about, the numbers always add up.</p>
+</div>
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">Base concepts</h2>
+<p><strong>Coin-in (the log)</strong> &mdash; The electronic record of coins the acceptor reported. Each coin carries the value configured for its pin (its <strong>money value</strong>), stamped at the moment it went in. This is the raw truth of what the machine received.</p>
+<p><strong>Collection</strong> &mdash; When a person physically empties a machine, reads its counter, and counts the cash. A collection is <strong>confirmed</strong> the moment its counter reading is approved &mdash; that instant is what ties the electronic log to the physical count.</p>
+<p><strong>Counted vs uncounted</strong> &mdash; Coins logged <strong>before</strong> the last confirmed collection have already been counted. Coins logged <strong>after</strong> it are still <strong>in the box</strong>, waiting to be collected.</p>
+<div style="border-left: 4px solid #e67e22; background: #fef5e7; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0 0 6px 0;"><strong style="color: #b9770e;">Unpriced coins.</strong> Coins logged <strong>before</strong> a machine's pin values were configured have no stamped value. They are still counted as coins, but their money reads as <strong>0</strong> because we genuinely don't know what they were worth. Every report shows these separately as "unpriced" so a &euro;0 is never mistaken for an empty box or a shortfall. This only affects the historical tail &mdash; every new coin carries its value.</p>
+</div>
+<div style="border-left: 4px solid #c0392b; background: #fdecea; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0;"><strong style="color: #c0392b;">Invalid coins.</strong> A faulty pulse line can log dozens of "coins" in under a second &mdash; physically impossible. A background check flags those as <strong>invalid</strong> and removes them from every total, so a wiring fault never inflates your figures. A machine that does this repeatedly is surfaced as a likely wiring problem.</p>
+</div>
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">The three stages, and the number each report shows</h2>
+<p>Take one machine over a period. Its coin-in splits cleanly:</p>
+<div style="border-left: 4px solid #2980b9; background: #eaf2f8; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0 0 6px 0;"><strong style="color: #2980b9;">Total logged = already counted + still in the box</strong></p>
+    <p style="margin: 0;">For example, a machine that logged &euro;44 in the period, whose last collection was confirmed part-way through, might be &euro;17.50 already counted and &euro;26.50 still in the box. The two always add back up to the total.</p>
+</div>
+<p><strong>Coin-in report</strong> &mdash; the <strong>total logged</strong> over a date range. Everything the acceptors reported, by denomination, by game, by location, plus when the coins came in (a day-by-hour heatmap and a daily trend). This is your analysis view: which games and times pull the most cash.</p>
+<p><strong>Cash in Box report</strong> &mdash; the <strong>still-in-the-box</strong> amount, right now, per machine. Not a date range &mdash; a live snapshot of money waiting to be collected. This is the operational view: where to send someone to collect.</p>
+<p><strong>Coin Reconciliation report</strong> &mdash; the <strong>counted</strong> slice, checked three ways. For each confirmed collection it lines up the counter meter's expected cash, the cash actually counted, and the coin-in log for that exact collection window. Gaps between them are the signal &mdash; money missing between the box and the count.</p>
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">Why the same machine can show different numbers</h2>
+<p>This is the question that trips people up, and the answer is always the same: <strong>the reports are looking at different stages.</strong></p>
+<ul>
+    <li>The <strong>Coin-in report</strong> shows the whole period's total &mdash; counted <strong>and</strong> uncounted together.</li>
+    <li>The <strong>Cash in Box report</strong> shows only what is still in the box (logged since the last collection).</li>
+    <li>The <strong>Reconciliation report</strong> shows only what a confirmed collection has already captured.</li>
+</ul>
+<div style="border-left: 4px solid #27ae60; background: #eafaf1; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0;"><strong style="color: #1e8449;">A number that seems "missing" is usually just in a different stage.</strong> When you confirm a new collection, the money that was "in the box" moves into "counted" &mdash; it disappears from Cash in Box and appears in Reconciliation. Nothing is lost; it simply crossed a stage.</p>
+</div>
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">Collection thresholds</h2>
+<p>Because Cash in Box knows exactly how much is waiting in every machine, it can warn you <strong>before</strong> a box fills up or a game gets blocked. You set a threshold per shop and an optional cap per machine; when a shop or machine goes over, the people responsible are notified so they can collect in time. Setting this up is covered in its own guide.</p>
+<div style="border-left: 4px solid #2980b9; background: #eaf2f8; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0;"><strong style="color: #2980b9;">In short:</strong> the Coin-in report is for <strong>analysis</strong>, Cash in Box is for <strong>knowing what to collect now</strong>, and Reconciliation is for <strong>checking the count is honest</strong>. Same money, three questions.</p>
+</div>

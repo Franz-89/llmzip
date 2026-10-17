@@ -1,0 +1,638 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>SapiensCore — Make it real.</title>
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..700&family=Inter:wght@300;400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet"/>
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+
+:root{
+  --pw:210mm; --ph:148mm;          /* A5 landscape */
+  --m:13mm;                         /* page safe margin */
+  --ink:#1b2536; --ink2:#33425a; --muted:#64748b;
+  --paper:#faf8f3; --card:#ffffff; --line:#e4ddd0;
+  --accent:#2563eb; --accent-d:#1d4ed8; --accent-soft:#eef3fe;
+  --good:#15803d; --good-soft:#eafaf0;
+  --serif:'Fraunces',Georgia,serif;
+  --sans:'Inter',system-ui,sans-serif;
+  --mono:'DM Mono',ui-monospace,monospace;
+}
+
+html,body{background:#262b35}
+body{font-family:var(--sans);color:var(--ink);-webkit-font-smoothing:antialiased;padding:64px 0 80px}
+
+/* ── viewer chrome ── */
+.bar{position:fixed;top:0;left:0;right:0;height:44px;z-index:50;display:flex;align-items:center;gap:14px;
+  padding:0 18px;background:#11151d;color:#cbd5e1;font:500 12px/1 var(--sans);border-bottom:1px solid #2a323f}
+.bar .grow{flex:1}
+.bar .tag{font-family:var(--mono);color:#8aa0c0;letter-spacing:.5px}
+.bar button{background:#1e2734;color:#cbd5e1;border:1px solid #313c4d;border-radius:6px;
+  padding:6px 10px;font:500 12px var(--sans);cursor:pointer}
+.bar button.on{background:var(--accent);border-color:var(--accent);color:#fff}
+
+.book{display:flex;flex-direction:column;align-items:center;gap:10mm}
+
+/* ── page ── */
+.page{width:var(--pw);height:var(--ph);background:var(--paper);color:var(--ink);
+  position:relative;overflow:hidden;box-shadow:0 6mm 16mm rgba(0,0,0,.45);counter-increment:pg}
+.pad{position:absolute;inset:0;padding:var(--m);display:flex;flex-direction:column}
+.pad.center{justify-content:center}
+.pad.bottom{justify-content:flex-end}
+
+/* folio + running head on light text pages */
+.page.text .folio{position:absolute;left:var(--m);bottom:7mm;font:600 8pt var(--mono);color:#b3a892;letter-spacing:1px}
+.page.text .runhead{position:absolute;right:var(--m);bottom:7mm;font:500 7.5pt var(--mono);
+  color:#c2b9a6;letter-spacing:1.5px;text-transform:uppercase}
+.page.text .folio::after{content:counter(pg)}
+
+/* ── typography (light pages) ── */
+.eyebrow{font:500 8.5pt var(--mono);letter-spacing:3px;text-transform:uppercase;color:var(--accent);margin-bottom:7mm}
+h2.title{font:600 25pt/1.08 var(--serif);letter-spacing:-.3px;color:var(--ink);margin-bottom:5mm;max-width:88%}
+h3{font:600 13.5pt/1.2 var(--serif);color:var(--ink);margin:6mm 0 2.5mm}
+h3:first-of-type{margin-top:0}
+.lead{font:400 12pt/1.5 var(--serif);color:var(--ink2);margin-bottom:4mm}
+p{font:400 10pt/1.55 var(--sans);color:var(--ink2);margin-bottom:2.6mm}
+p:last-child{margin-bottom:0}
+strong{color:var(--ink);font-weight:600}
+em{font-style:italic}
+.small{font-size:9pt}
+
+ul.dash{list-style:none;margin:2mm 0}
+ul.dash li{position:relative;padding-left:6mm;margin-bottom:2.4mm;font:400 9.7pt/1.5 var(--sans);color:var(--ink2)}
+ul.dash li::before{content:"";position:absolute;left:0;top:3.1mm;width:3mm;height:1.4px;background:var(--accent)}
+ul.dash li strong{color:var(--ink)}
+
+.callout{border-left:2.5px solid var(--accent);background:var(--accent-soft);
+  padding:3.5mm 5mm;border-radius:0 3px 3px 0;margin:3mm 0}
+.callout p{font-size:9.7pt;color:var(--ink2);margin:0}
+.callout.good{border-color:var(--good);background:var(--good-soft)}
+
+/* ── FAQ ── */
+.grouphead{font:500 8.5pt var(--mono);letter-spacing:2.5px;text-transform:uppercase;color:var(--accent);
+  padding-top:3mm;margin:5mm 0 3mm;border-top:1px solid var(--line)}
+.grouphead:first-of-type{margin-top:0;padding-top:0;border-top:none}
+.qa{margin-bottom:3.6mm}
+.qa .q{font:600 11pt/1.25 var(--serif);color:var(--ink);margin-bottom:1.4mm}
+.qa .a{font:400 9.6pt/1.5 var(--sans);color:var(--ink2)}
+.qa .a strong{color:var(--ink)}
+
+/* ── proof ── */
+.prooflist{list-style:none;margin-top:3mm}
+.prooflist li{position:relative;padding:3mm 0 3mm 9mm;border-top:1px solid var(--line);
+  font:400 10pt/1.45 var(--sans);color:var(--ink2)}
+.prooflist li:first-child{border-top:none}
+.prooflist li strong{color:var(--ink);font-weight:600}
+.prooflist li::before{content:"";position:absolute;left:0;top:4mm;width:4mm;height:4mm;border-radius:50%;
+  background:var(--accent)}
+
+/* ── pricing ── */
+.prow{display:flex;gap:6mm;margin:3mm 0}
+.pcard{flex:1;background:var(--card);border:1px solid var(--line);border-radius:7px;padding:4mm 5mm}
+.pcard.hl{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent) inset}
+.pcard .plabel{font:500 7.5pt var(--mono);letter-spacing:1.5px;text-transform:uppercase;color:var(--accent);margin-bottom:1.5mm}
+.pcard .pval{font:700 22pt/1 var(--sans);color:var(--ink)}
+.pcard .punit{font:400 8.5pt var(--sans);color:var(--muted);margin-top:1mm}
+.pcard.hl .plabel{color:var(--good)}
+.priceline{display:flex;justify-content:space-between;align-items:baseline;border-top:1px solid var(--line);
+  padding:2.4mm 0;font:400 9.7pt var(--sans);color:var(--ink2)}
+.priceline:first-of-type{border-top:none}
+.priceline .pn{font-weight:600;color:var(--ink);font-variant-numeric:tabular-nums}
+.priceline .pk{flex:1;padding-right:4mm}
+
+/* ── dark / feature pages ── */
+.page.dark{color:#eef2f8;background:linear-gradient(150deg,#223049 0%,#141d2c 70%)}
+.page.dark .bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;opacity:.4}
+.page.dark .scrim{position:absolute;inset:0;background:linear-gradient(120deg,rgba(13,19,30,.82),rgba(13,19,30,.55))}
+.page.dark .pad{z-index:2}
+.page.dark p{color:#c4cfdf}
+.page.dark strong{color:#fff}
+.page.dark .eyebrow{color:#7aa2f7}
+
+.brand{font:600 11pt var(--sans);letter-spacing:3px;text-transform:uppercase;color:#9db4dc}
+.logo{align-self:flex-start;flex:0 0 auto;width:48mm;height:auto;display:block;filter:drop-shadow(0 1px 3px rgba(0,0,0,.45))}
+.cover-title{font:600 58pt/.92 var(--serif);letter-spacing:-2px;color:#fff;margin:4mm 0}
+.cover-sub{font:400 13pt/1.4 var(--serif);font-style:italic;color:#aebfd8;max-width:70%}
+.cover-foot{position:absolute;left:var(--m);bottom:var(--m);font:500 8.5pt var(--mono);letter-spacing:1px;color:#8aa0c0}
+.cover-foot span{display:block;color:#647693;margin-top:1.5mm;text-transform:uppercase;letter-spacing:2px;font-size:7.5pt}
+
+.sec-num{font:300 110pt/0.85 var(--serif);color:rgba(122,162,247,.55);letter-spacing:-4px}
+.sec-title{font:500 15pt var(--mono);letter-spacing:6px;text-transform:uppercase;color:#fff;margin:4mm 0 6mm}
+.sec-sub{font:400 11.5pt/1.55 var(--serif);font-style:italic;color:rgba(255,255,255,.6);max-width:62%}
+
+.opener-title{font:600 30pt/1.08 var(--serif);color:#fff;letter-spacing:-.4px;max-width:80%;margin-bottom:4mm}
+.opener-lead{font:400 11.5pt/1.55 var(--sans);color:#c4cfdf;max-width:74%}
+
+.closing-title{font:600 44pt/.95 var(--serif);letter-spacing:-1px;color:#fff;margin-bottom:5mm}
+.closing-contact{margin-top:7mm;padding-top:4mm;border-top:1px solid rgba(122,162,247,.3);
+  font:500 10pt var(--mono);letter-spacing:.5px;color:#9db4dc}
+
+/* scene cards on the "day" pages */
+.scene{border-left:2px solid var(--accent);background:#fff;border:1px solid var(--line);
+  border-left:2.5px solid var(--accent);border-radius:0 4px 4px 0;padding:2.8mm 4mm;margin-bottom:2.6mm}
+.scene .when{font:500 7.5pt var(--mono);letter-spacing:1.5px;text-transform:uppercase;color:var(--accent);margin-bottom:1mm}
+.scene p{font-size:9.4pt;line-height:1.45;margin:0}
+
+@media print{
+  @page{size:210mm 148mm;margin:0}
+  html,body{background:#fff;padding:0}
+  .bar{display:none}
+  .book{gap:0}
+  .page{box-shadow:none;break-after:page;page-break-after:always}
+}
+</style>
+</head>
+<body>
+
+<div class="bar">
+  <span class="tag">SapiensCore · A5 booklet</span>
+  <span class="tag">100% = actual print size</span>
+  <div class="grow"></div>
+  <button data-z="0.5">50%</button>
+  <button data-z="0.75">75%</button>
+  <button data-z="1" class="on">100%</button>
+  <span class="tag" id="cnt"></span>
+</div>
+
+<div class="book" id="book">
+
+  <!-- 1 · COVER -->
+  <section class="page dark">
+    <img class="bg" src="images/cover-front.png" alt=""/>
+    <div class="scrim"></div>
+    <div class="pad">
+      <img class="logo" src="images/Core full logo.png" alt="SapiensCore"/>
+      <div style="flex:1"></div>
+      <div class="cover-title">Make it<br/>real.</div>
+      <div class="cover-sub">The operating system for your venue — built around the loyalty card.</div>
+      <div class="cover-foot">Product &amp; Platform Guide · 2026 Edition<span>Confidential — for authorized recipients only</span></div>
+    </div>
+  </section>
+
+  <!-- 2 · BEFORE WE BEGIN -->
+  <section class="page text">
+    <div class="pad">
+      <div class="eyebrow">Before we begin</div>
+      <h2 class="title">This won't read like the others</h2>
+      <p>You've sat through enough demos that go quiet after you sign, and flipped through enough catalogues that say everything and mean nothing. So: no buzzwords, no feature matrix with green ticks, no "AI-powered" on every page. Pricing is at the back, in full — no contact form, no "let's schedule a call."</p>
+      <p>And it's written for <strong>you</strong> — the person who runs the place. The calls come to you when something breaks; the numbers land on your desk when they don't add up. Most software in this industry talks past you, to your customers or your accountant or your IT person. We're going to talk to you.</p>
+      <p>One more thing about how we work: every customer runs the same code and gets the same updates — what we improve tomorrow reaches all of you the same week. No favourites, no per-customer builds, no version only the biggest account gets. It costs us more to work this way. It's worth it.</p>
+      <div class="folio"></div><div class="runhead">Before we begin</div>
+    </div>
+  </section>
+
+  <!-- 3 · WHAT IT IS -->
+  <section class="page text">
+    <div class="pad">
+      <div class="eyebrow">What it is</div>
+      <h2 class="title">What SapiensCore actually is</h2>
+      <p>SapiensCore is the operating system for an entertainment venue, built around one thing: <strong>the loyalty card.</strong></p>
+      <p>The card is the spine. Through it, one system runs your <strong>POS</strong> (counter, tables, open tabs), your <strong>cashless payments</strong> — loyalty and bank cards on the same reader, at the counter and on every game — your <strong>bookings</strong>, your <strong>device monitoring</strong>, your <strong>day-to-day operations</strong> (cash collection flow, maintenance, staff accountability — every job tracked as a Trace), and your <strong>accounting</strong>. It runs on hardware we install in your venue, so it keeps working when the internet doesn't.</p>
+      <div class="callout"><p><strong>The loyalty card is the centre of gravity</strong> — it's what ties the customer to balance, history, tier, and VAT, and the platform is built for <strong>networks</strong>: multi-site operators running one system across every venue. You're never forced to buy the plastic from us — source the physical cards anywhere you like, or bring the ones you already use; the system that runs them is the part that's ours. If you don't run a cashless loyalty program at all, it still works — but you'd see loyalty woven through screens you'll never use, so honestly, it's not the best fit for you.</p></div>
+      <div class="folio"></div><div class="runhead">What it is</div>
+    </div>
+  </section>
+
+  <!-- 3 · THE DEAL -->
+  <section class="page text">
+    <div class="pad">
+      <div class="eyebrow">The deal</div>
+      <h2 class="title">A menu — in an all-you-can-eat</h2>
+      <p>Everything on top of the card is included, and already paid for. You pay one entrance — a flat monthly fee per location — and every feature in this book is on the table. Use one, use all of them, use more next year at no extra cost. <strong>No tiers, no premium version, no per-feature unlock, no surprise on the invoice.</strong></p>
+      <p>Keep your website, keep your accounting, bring the cards you already have — or fill your plate with everything we make. The card program is the one thing you must take. After that, the only question is how much you want to use.</p>
+      <h3>And one difference you'll feel on every page</h3>
+      <p>Most vendors sell you <strong>tools</strong> — a loyalty module, a monitoring dashboard, a ticketing app — that don't talk to each other. We sell you one nervous system where everything is connected, so there are no gaps where money, time, and trust quietly leak out. And when you already have a tool that works — your website, your accounting, your kiosks — we plug it into that same nervous system instead of forcing you to rip it out. Connected, either way. That's the harder thing to build, and the only thing worth building.</p>
+      <div class="folio"></div><div class="runhead">What it is</div>
+    </div>
+  </section>
+
+  <!-- 4 · A DAY (1) -->
+  <section class="page text">
+    <div class="pad">
+      <div class="eyebrow">Where we start</div>
+      <h2 class="title">A day in your operation</h2>
+      <p class="small">A few things that are true in most venues right now — possibly yours. None is extreme. That's the point.</p>
+      <div class="scene"><div class="when">10:47 · Tuesday</div><p>Game 23 jams. The manager tapes a "out of service" sign on it and gets back to the queue. Does your technical team know? Maybe today. Maybe never. Meanwhile it earns nothing, and the only record is in someone's head.</p></div>
+      <div class="scene"><div class="when">1:15 · Collection day</div><p>Your collector empties the coin boxes from the arcade games and counts the takings. The cash he hands you is less than the machines' counters say. Skimming? Or did card plays spin the same mechanical counter the coins do? You can't tell. You sign anyway.</p></div>
+      <div class="scene"><div class="when">8:12 · Saturday</div><p>An employee taps "top up €100," charges the terminal €10, and pockets the difference — or marks it "paid by card" and never charges anything. The report says card payment. Nobody reconciles the two. You never see it.</p></div>
+      <div class="folio"></div><div class="runhead">A day in your operation</div>
+    </div>
+  </section>
+
+  <!-- 5 · A DAY (2) -->
+  <section class="page text">
+    <div class="pad">
+      <div class="scene"><div class="when">Monday · 7:30</div><p>The server died; the last backup ran the night before. A full day of top-ups and redemptions, gone. You spend the week reconstructing balances from receipts — and the month wondering which "reconstructed" top-ups were ever real.</p></div>
+      <div class="scene"><div class="when">End of month</div><p>Four systems disagree. Bowling says one number, the cash count another, the processor a third, Nayax a fourth. You close the books and accept the gap. Again.</p></div>
+      <p>You know exactly what that list was. It isn't a horror story — it's a Tuesday, and a Saturday, and the end of every month. Most of it isn't separate problems. It's one problem wearing different clothes: <strong>you can't see your operation in real time, and you can't prove what happened when it's questioned.</strong></p>
+      <p>Solve that properly and most of those moments stop being normal. The fastest way to see whether we do is to find your own question.</p>
+      <div class="folio"></div><div class="runhead">A day in your operation</div>
+    </div>
+  </section>
+
+  <!-- 6 · FAQ Switching (1) -->
+  <section class="page text">
+    <div class="pad">
+      <div class="eyebrow">Start here</div>
+      <h2 class="title">The questions you're actually asking</h2>
+      <p class="small">No feature matrix. The things operators ask us, answered straight — including where the answer is "no" or "yes, but."</p>
+      <div class="grouphead">Switching from what you run today</div>
+      <div class="qa"><div class="q">Can I migrate my existing loyalty cards, with their balances?</div><div class="a">Yes — and not in theory. We migrated <strong>40 venues off a competitor</strong> with every customer's credit intact, and switched on <strong>cross-country credit</strong> they'd never had: one card, spendable across borders. Migration is the thing operators fear most. We've done it at scale.</div></div>
+      <div class="qa"><div class="q">Do I have to rip everything out at once?</div><div class="a">No. The card is the spine; everything on top is modular. Keep your website, your accounting, your existing cards — replace only what's actually weak. We've never asked a venue to go dark for a weekend to switch.</div></div>
+      <div class="folio"></div><div class="runhead">The questions you're asking</div>
+    </div>
+  </section>
+
+  <!-- 7 · FAQ Switching (2) + Runs (1) -->
+  <section class="page text">
+    <div class="pad">
+      <div class="qa"><div class="q">I run Nayax / other readers. Replace them, or work with them?</div><div class="a">Both, your choice. You can run a SapiensCore card on a Nayax terminal — we built that integration. But on an arcade game, our reader wins on its own terms: <strong>one device reads loyalty and bank cards</strong>, it keeps working <strong>offline</strong> (Nayax goes dark when its cloud or 4G drops), and it doubles as a self-service top-up point. You don't have to take all of us to beat what's on your floor today.</div></div>
+      <div class="qa"><div class="q">Can I run all my venues from one place?</div><div class="a">Yes — multi-location, multi-company, multi-merchant from a single platform. Cards can work across every site or be scoped to one; reporting and legal compliance stay correctly separate per company. Location managers see their location, regional managers their region, you see everything — same screen, scoped automatically.</div></div>
+      <div class="grouphead">What the system actually runs</div>
+      <div class="qa"><div class="q">Is this just loyalty, or a full operations platform?</div><div class="a">Both, and more. It's a real POS — counter sales, <strong>tables, open tabs, pause-a-sale</strong> to serve the next customer and resume. But the POS is one part: the same system runs your <strong>cash-collection flow</strong> (evidence at every step), <strong>maintenance and cost tracking</strong> (every repair a Trace, rolled into per-game P&amp;L), <strong>real-time monitoring</strong> of every device, anti-fraud, and <strong>advanced reporting</strong> across all of it. Loyalty is the entry point; the system is your whole back office.</div></div>
+      <div class="folio"></div><div class="runhead">The questions you're asking</div>
+    </div>
+  </section>
+
+  <!-- 8 · FAQ Runs (2) -->
+  <section class="page text">
+    <div class="pad">
+      <div class="qa"><div class="q">One reader for loyalty, Visa, Mastercard, and Apple Pay at the games?</div><div class="a">Yes — one device, one reader, one tap; the system detects the card type. Online and offline. The one honest exception: EMV bank cards need internet to authorise — that's the card networks, not us. Loyalty keeps working regardless.</div></div>
+      <div class="qa"><div class="q">Dynamic pricing on the games?</div><div class="a">Yes — both deterministic (season, day, location, tier) and behavioural, with reporting on what each rule earned. And changes apply in <strong>real time</strong>: push a new price — or a new screen design — and it appears on every terminal in seconds. No reboot, no sync, no "wait until Monday."</div></div>
+      <div class="qa"><div class="q">Bookings and activities?</div><div class="a">Yes — birthdays, bowling lanes, trampolines. One engine across online, counter, and phone; different rules per channel where it matters; offline-capable. Customers check in with a short code, no app.</div></div>
+      <div class="qa"><div class="q">Can a customer pay by phone on a game with no reader?</div><div class="a">Yes — on <strong>any game</strong>, with no terminal at all. A QR/NFC sticker turns it into a phone-payment point: tap or scan, a page opens instantly (no app, no signup), pay with Apple/Google Pay, the game starts. <strong>No reader, no app, and no monthly per-device fee</strong> — it's built in, not sold as a separate product.</div></div>
+      <div class="folio"></div><div class="runhead">The questions you're asking</div>
+    </div>
+  </section>
+
+  <!-- 9 · FAQ Runs (3) + Money (1) -->
+  <section class="page text">
+    <div class="pad">
+      <div class="qa"><div class="q">Our website and accounting — included or extra?</div><div class="a">Included if you want them: a template website in your brand (bookings, top-ups, balances, one customer account), and a self-hosted Odoo ERP we run for you. Both optional. Already have a website you love? Keep it.</div></div>
+      <div class="grouphead">The money you're already losing</div>
+      <div class="qa"><div class="q">Am I paying VAT on credit nobody has spent?</div><div class="a">Almost certainly. Total the unused credit on cards, apply your VAT rate — that's money you've handed the tax authority on services you haven't delivered. <strong>Credit-VAT</strong> postpones VAT until the credit is actually spent. Honest limit: it can't recover what you've already paid; it stops the bleeding from now on. We've run it in production for years.</div></div>
+      <div class="qa"><div class="q">Can I recover the top-ups I lose at the queue?</div><div class="a">Yes. Every game terminal is also a self-service top-up point — short balance, tap to top up, play, all in under thirty seconds. The €20 that used to walk out when the line was too long stays in.</div></div>
+      <div class="folio"></div><div class="runhead">The questions you're asking</div>
+    </div>
+  </section>
+
+  <!-- 10 · FAQ Money (2) + Trust (1) -->
+  <section class="page text">
+    <div class="pad">
+      <div class="qa"><div class="q">Do I actually know what each game earns versus costs?</div><div class="a">Yes — on one screen. Revenue from the transactions, repair cost from the Trace attached to that game, net per game on demand. The Saturday-with-Excel ritual disappears.</div></div>
+      <div class="grouphead">Trust, fraud, and when things break</div>
+      <div class="qa"><div class="q">Can I trust my cash counts?</div><div class="a">Yes, and it's solved in hardware, not hope. The PulseBox isolates the mechanical coin counter so card plays never spin it. The counter reads X, the cash should equal X, and any gap is a real one worth investigating — no reconciliation formulas.</div></div>
+      <div class="qa"><div class="q">Can staff fake a card top-up?</div><div class="a">No. The amount is pushed to the terminal automatically; the employee can't type it, override it, or mark "paid by card" without a real terminal confirmation. That whole fraud surface collapses to zero by design.</div></div>
+      <div class="folio"></div><div class="runhead">The questions you're asking</div>
+    </div>
+  </section>
+
+  <!-- 11 · FAQ Trust (2) -->
+  <section class="page text">
+    <div class="pad">
+      <div class="qa"><div class="q">What happens when the internet goes down?</div><div class="a">Loyalty, game starts, POS, cash, prize redemptions, in-store bookings all keep running — the local NUC holds the state and syncs when the connection returns. EMV bank cards are the only thing that pauses (the bank has to authorise). Most customers never notice.</div></div>
+      <div class="qa"><div class="q">What if the server dies, or gets stolen?</div><div class="a">A spare NUC ships with every venue — plug it in, it rebuilds from the continuous cloud copy to the last transaction, no data loss. A stolen NUC is an encrypted brick that won't boot anywhere but its own venue. We proved the resilience for real in the 2025 Spain-wide blackout: zero data loss, zero phone calls.</div></div>
+      <div class="callout good"><p>Everything above is running today — across dozens of venues and <strong>3,500+ devices</strong>. It isn't a roadmap.</p></div>
+      <div class="folio"></div><div class="runhead">The questions you're asking</div>
+    </div>
+  </section>
+
+  <!-- 12 · FAQ Price & commitment -->
+  <section class="page text">
+    <div class="pad">
+      <div class="grouphead">Price and commitment</div>
+      <div class="qa"><div class="q">What does it cost?</div><div class="a">Full numbers are at the back of this book — no contact form, no "let's schedule a call." Early-adopter rates for anyone who starts before April 2027, locked for years.</div></div>
+      <div class="qa"><div class="q">Am I locked in?</div><div class="a">No. Your Odoo instance, your cards, your data are yours and stay yours. Card payments go <strong>direct to Planet</strong>, our processor partner — not through us — so we're never sitting between you and your money.</div></div>
+      <div class="qa"><div class="q">Is this real, or a roadmap?</div><div class="a">Real. Running today across dozens of venues in Spain and Portugal, on <strong>3,500+ devices</strong> and expanding fast. The one thing still in active build is our Trace system — and we'll tell you plainly what's shipped versus coming when you ask.</div></div>
+      <div class="folio"></div><div class="runhead">The questions you're asking</div>
+    </div>
+  </section>
+
+  <!-- 13 · PROOF -->
+  <section class="page text">
+    <div class="pad center">
+      <div class="eyebrow">Proof</div>
+      <h2 class="title">Already running, at scale</h2>
+      <ul class="prooflist">
+        <li><strong>40 venues migrated off a competitor</strong> — every customer's balance preserved, cross-country credit enabled.</li>
+        <li><strong>3,500+ devices live</strong> — a mix of our terminals and our readers — expanding quickly.</li>
+        <li><strong>Dozens of locations across Spain and Portugal — and expanding fast</strong>, processing thousands of transactions a day.</li>
+        <li><strong>A nationwide blackout survived</strong> with zero data loss and zero corrupted state — April 2025, every venue recovered itself.</li>
+      </ul>
+      <p style="margin-top:4mm">This isn't a prototype looking for its first believer. It's an operation looking for its next one. When you want it, we'll show you the real thing against your own numbers — not a demo dataset.</p>
+      <div class="folio"></div><div class="runhead">Proof</div>
+    </div>
+  </section>
+
+  <!-- 14 · DIVIDER · go deeper -->
+  <section class="page dark">
+    <img class="bg" src="images/ch02-opener-control-room.png" alt=""/>
+    <div class="scrim"></div>
+    <div class="pad bottom">
+      <div class="sec-num">01</div>
+      <div class="sec-title">We go deeper</div>
+      <div class="sec-sub">Anyone can ship a loyalty module and a monitoring dashboard. The difference is whether the system <em>knows your operation</em> — or just stores rows about it.</div>
+    </div>
+  </section>
+
+  <!-- 15 · see and act -->
+  <section class="page text">
+    <div class="pad">
+      <div class="eyebrow">We go deeper</div>
+      <h2 class="title">You see, and you act</h2>
+      <p>Most monitoring tells you one thing: is the device on or off. Nowhere near enough — arcade hardware is decades old and rarely raises its hand to say it's broken; you learn by what stops happening. The PulseBox on every game sees every coin, payment, game start, and ticket, so a machine that normally starts twenty games an hour and suddenly starts zero shows up <strong>immediately</strong> — not when a customer complains.</p>
+      <p>It's a nervous system, not a Monday dashboard. When a game loses its PulseBox at 3pm, the system blocks its card reader within sixty seconds, alerts the cashier, and escalates to your tech team and you if no one acknowledges. Two minutes later it's back; the reader re-enables itself and the alert closes. <strong>Alerts that open and close themselves</strong> — signal, not twenty acknowledgements a day you stop reading.</p>
+      <p>And you don't just watch — you act, from the same screen or your phone: reboot a stuck device, start a game (a service test, or a free play for a customer whose last one didn't fire), block a terminal, push a price to every terminal in seconds, run pin-level diagnostics, even flash firmware remotely. Every command is logged: who, when, which device, from where.</p>
+      <div class="folio"></div><div class="runhead">We go deeper</div>
+    </div>
+  </section>
+
+  <!-- 16 · verify -->
+  <section class="page text">
+    <div class="pad">
+      <div class="eyebrow">We go deeper</div>
+      <h2 class="title">You verify, you don't hope</h2>
+      <p>Most operators run on trust — the collector, the cashier, the prize counter. Trust is fine until something goes wrong; then it gives you nothing. SapiensCore is built so <strong>everything important produces its own evidence, automatically.</strong></p>
+      <ul class="dash">
+        <li><strong>Cash that reconciles clean</strong> — the coin counter is isolated, so the gap between counter and cash is always a real signal, never physics.</li>
+        <li><strong>Counter photographed, OCR-verified</strong> — on collection; a typed number that disagrees alerts before the cash leaves the machine. Reading the counter and counting the cash are split across people, on purpose.</li>
+        <li><strong>Cash tracked to the bank</strong> — collection → safe → transport → bank, each handoff logged; an alarm if it doesn't arrive in the window.</li>
+        <li><strong>Patterns, not just records</strong> — 120 recovery codes redeemed onto one card isn't a customer, it's a staff-and-friend. Flagged the moment volume exceeds plausibility.</li>
+        <li><strong>Join-chain analysis</strong> — balances funneled card-to-card-to-card, followed the whole way, no depth limit, in seconds.</li>
+      </ul>
+      <p>None of this is about catching people. It clears your honest staff by default. Honour is wonderful — it just isn't a control system.</p>
+      <div class="folio"></div><div class="runhead">We go deeper</div>
+    </div>
+  </section>
+
+  <!-- 17 · credit-vat -->
+  <section class="page text">
+    <div class="pad">
+      <div class="eyebrow">We go deeper · the chapter your accountant should read</div>
+      <h2 class="title">Credit-VAT</h2>
+      <p>A top-up isn't a sale. It's a deposit — the customer prepaying for a service they haven't received. Yet almost every system declares VAT the moment the card is loaded, so you pay tax on credit your customers may never spend.</p>
+      <p>With Credit-VAT, SapiensCore separates the top-up from the taxation. €20 loads €20 of credit; no VAT yet. VAT is calculated the moment that credit is <strong>consumed</strong> — on the exact amount, at the right rate for the right service (game play one rate, food another, a party room another). Bonus and courtesy balances are consumed first (the customer's paid credit lasts longer), regular credit next, Credit-VAT last (your liability stays at the legal minimum). Staff decide nothing; the customer sees one number; your books are simply correct.</p>
+      <p>Why does almost nobody do this? You have to understand the business from the inside, the implementation is genuinely hard, and it splits your reports in two — operational revenue today versus taxable revenue today. Most systems can barely produce one report correctly. We produce both from the same events.</p>
+      <div class="folio"></div><div class="runhead">We go deeper</div>
+    </div>
+  </section>
+
+  <!-- 18 · resilience -->
+  <section class="page text">
+    <div class="pad">
+      <div class="eyebrow">We go deeper</div>
+      <h2 class="title">What never breaks your day</h2>
+      <p>We refused the two easy paths. Cloud-only is easy to build — until a venue's internet drops and games stop. Offline-only is easy too — but you lose the real-time visibility that makes everything else work. We built both at once: online when it can be, offline when it must be.</p>
+      <ul class="dash">
+        <li><strong>Real-time replication, not nightly backup</strong> — every transaction exists in two places within seconds. "We back up every night" means "lose everything since midnight when the server dies at 4pm." Not here.</li>
+        <li><strong>The spare NUC</strong> — disaster recovery in minutes, rebuilt to the last transaction.</li>
+        <li><strong>UPS, battery-aware shutdown, voltage monitoring</strong> — we watch actual voltage, not just on/off. The machine that "keeps breaking for no reason" is sometimes the wall, not the game.</li>
+        <li><strong>Stolen-device protection</strong> — full-disk encryption, USB logging, remote wipe, location-aware lockdown. Walk out with a NUC, walk out with a brick.</li>
+        <li><strong>Zero-trust by architecture</strong> — nobody at SapiensCore has direct access to your venue's data. Not by policy. By design.</li>
+      </ul>
+      <div class="folio"></div><div class="runhead">We go deeper</div>
+    </div>
+  </section>
+
+  <!-- 19 · trace (1) -->
+  <section class="page text">
+    <div class="pad">
+      <div class="eyebrow">We go deeper</div>
+      <h2 class="title">Open a Trace, not a ticket</h2>
+      <p>This is what "we go deeper" means, made concrete. A ticket in Trello or Jira is a blank card — someone types the reservation number, the game model, the location, and hopes. It doesn't <em>know</em> your operation. A <strong>Trace</strong> does.</p>
+      <p>When you open a Trace, you don't describe what it's about — you <strong>select</strong> it. Pick the reservation, and the customer, payment, package, activity, location, staff on duty, and related Traces from the last 30 days are already attached. Pick the game (or scan it with the PDA) and its repair history comes with it.</p>
+      <p>Two consequences from that one choice: the data is always accurate, and everything is linked — the Trace shows up on the reservation, the game's record, and the customer's profile at once.</p>
+      <div class="folio"></div><div class="runhead">We go deeper</div>
+    </div>
+  </section>
+
+  <!-- 20 · trace (2) -->
+  <section class="page text">
+    <div class="pad">
+      <p>That linkage is why the per-game P&amp;L isn't magic, it's arithmetic: revenue from transactions, cost from Traces, net on demand. It's why the same fault across three venues gets connected instead of fixed three times. SapiensCore even opens Traces itself — a game that should have started and didn't, a NUC on battery, a payment that won't reconcile.</p>
+      <h3>And your feedback to us? Also a Trace.</h3>
+      <p>No separate support inbox that doesn't know your operation. You see what we're doing about it, in the same system, with the same accountability. That's the whole philosophy in one feature: everything connected, no gaps where things go to die.</p>
+      <p>Trace is the part we're investing in most right now — what's shipped already changes how operators work; more lands every release. As always, included.</p>
+      <div class="folio"></div><div class="runhead">We go deeper</div>
+    </div>
+  </section>
+
+  <!-- 21 · DIVIDER · full menu -->
+  <section class="page dark">
+    <img class="bg" src="images/ch03-opener-venue-full.png" alt=""/>
+    <div class="scrim"></div>
+    <div class="pad bottom">
+      <div class="sec-num">02</div>
+      <div class="sec-title">Everything on the table</div>
+      <div class="sec-sub">You pay one entrance; this is the buffet. None of it is an add-on or a premium tier — it's all in the flat monthly fee.</div>
+    </div>
+  </section>
+
+  <!-- 22 · iM25 (1) -->
+  <section class="page text">
+    <div class="pad">
+      <div class="eyebrow">Everything on the table · the games</div>
+      <h2 class="title">The iM25 — one device on every game</h2>
+      <p>Readers come in three flavours and none does the whole job: loyalty-only readers, EMV-only retail terminals, and Nayax — which does both but goes dark when its cloud or 4G drops. So we picked hardware we liked (PAX iM25, with the iM30 as the larger sibling), wrote our own app from scratch, designed a custom case, and certified the whole thing. One device now does the entire job, in <strong>four modes from one app</strong>, switched remotely, not reflashed:</p>
+      <ul class="dash">
+        <li><strong>Arcade</strong> — single game, fixed price, tap and play. Short balance? It offers a top-up on the spot.</li>
+        <li><strong>Selector</strong> — one terminal across 2–8 games; pick from a visual grid, see the price, pay.</li>
+        <li><strong>Attended</strong> — staff-operated rides; multi-price grid, adjustable quantity, tap-to-block with a service card, and a "Call Assistance" button so no staff sits at an empty attraction.</li>
+        <li><strong>Kiosk</strong> — companion to an external kiosk, or full standalone on the iM30's bigger screen.</li>
+      </ul>
+      <div class="folio"></div><div class="runhead">Everything on the table</div>
+    </div>
+  </section>
+
+  <!-- 23 · iM25 (2) + A920 -->
+  <section class="page text">
+    <div class="pad">
+      <p>The details you only miss when they're gone: dual card detection at hardware level, automatic PIN handling, any orientation, self-healing with remote reboot, a rolling multilingual idle screen, offline loyalty, and <strong>screensaver campaigns</strong> — every idle terminal is also a scheduled advertising surface you manage from one place, or sell to sponsors. One rule we don't bend: <strong>every venue runs the same APK.</strong> When something improves, it improves for everyone the same week.</p>
+      <h3>The A920 Pro — the counter terminal that walks</h3>
+      <p>Same architecture, the counter role. When staff ring a sale, the amount is pushed to the A920 Pro over WiFi — the employee can't decouple the top-up from the payment. When the queue builds, grab it and walk the line: read a card, <strong>sell and activate a new card on the spot</strong>, take the EMV payment — the customer never reaches the counter. Receipts live in the system, so you can reprint even if that device is off or dead.</p>
+      <div class="folio"></div><div class="runhead">Everything on the table</div>
+    </div>
+  </section>
+
+  <!-- 24 · PDA -->
+  <section class="page text">
+    <div class="pad">
+      <div class="eyebrow">Everything on the table · the floor</div>
+      <h2 class="title">The PDA — your staff's portable everything</h2>
+      <p>The floor was the gap: every system covered the back office and the counter, but the person walking the floor had paper and memory. The PDA replaces both.</p>
+      <ul class="dash">
+        <li><strong>Cash collection that produces evidence</strong> — scan the cabinet QR to find the game, photograph the counter (OCR verifies; a mismatch alerts before the cash moves), count on the device, chain of custody logged to the bank.</li>
+        <li><strong>Act from where you're standing</strong> — scan a game or a customer card to see live state, enable a game for a demo or recovery play, and open a Trace with a priority that lands in the right queue with the staffer's name on it.</li>
+        <li><strong>The emergency bridge</strong> — a dead PulseBox plus one USB-C cable turns the PDA into a remote bridge: live logs, pin diagnostics, even a firmware flash from anywhere while someone on-site just holds the cable. Half-day callouts become five-minute sessions.</li>
+      </ul>
+      <div class="folio"></div><div class="runhead">Everything on the table</div>
+    </div>
+  </section>
+
+  <!-- 25 · DW200 + Mobile -->
+  <section class="page text">
+    <div class="pad">
+      <div class="eyebrow">Everything on the table</div>
+      <h2 class="title">The DW200 &amp; mobile payments</h2>
+      <h3>The DW200 — your ticket station, made smart</h3>
+      <p>Keep the ticket eater you already have; we add a small device on top — a card reader, a screen, and the connection to SapiensCore. Customers convert paper to virtual tickets straight onto a card (no counter walk), check any balance, and switch language on any screen. The same hardware doubles as a lobby balance station or a <strong>gate/access reader</strong> (bowling area, trampolines, VIP zone, party room) — buy it for one role, expand it as you grow.</p>
+      <h3>Mobile payments — no app, no per-game fee</h3>
+      <p>A sticker with a QR and NFC tag on the game. Tap a phone, a page opens instantly (no app, no signup), pay with Apple/Google Pay, the game starts. The flow is bulletproof: it <strong>pre-authorises</strong> (holds, not charges), fires the relay, and only captures on success — releasing on failure, so the customer is never charged for a game that didn't run.</p>
+      <div class="folio"></div><div class="runhead">Everything on the table</div>
+    </div>
+  </section>
+
+  <!-- 26 · Loyalty depth -->
+  <section class="page text">
+    <div class="pad">
+      <div class="eyebrow">Everything on the table · the spine</div>
+      <h2 class="title">Loyalty cards with depth</h2>
+      <ul class="dash">
+        <li><strong>One transaction, many cards</strong> — the 3pm family (two new cards, two top-ups of different amounts, drinks, a toy) is one payment, one receipt, one audit trail; a discount lands on the right card, not smeared across the basket.</li>
+        <li><strong>Six balance types</strong> — credit, credit-VAT, bonus, courtesy, time, tickets — each consumed in a fixed order that's fair to the customer (bonus first) and correct for your books (Credit-VAT last).</li>
+        <li><strong>Tiers, automatically</strong> — promotion by cumulative spend, tier discounts applied at the moment of play, configurable per organisation.</li>
+        <li><strong>Relevant History</strong> — the journey belongs to the customer, not the plastic. When cards are joined, returned, resold, or transferred, each chain stays reconstructable — settle a dispute or run an investigation from the same data.</li>
+        <li><strong>Card supply, your call</strong> — €0.10/card from us (fully custom, per-tier designs), bring your existing cards, or buy anywhere. No markup on plastic.</li>
+      </ul>
+      <div class="folio"></div><div class="runhead">Everything on the table</div>
+    </div>
+  </section>
+
+  <!-- 27 · Reservations + Website -->
+  <section class="page text">
+    <div class="pad">
+      <div class="eyebrow">Everything on the table</div>
+      <h2 class="title">Reservations, website &amp; kiosks</h2>
+      <h3>Reservations and activities</h3>
+      <p>The whole lifecycle, across <strong>three channels on one engine</strong> (online, counter, phone) sharing availability and pricing, with stricter rules online and a manager's overbook-by-one in store. Availability is intelligent: capacity at 30-minute granularity, per-lane, per-room, opening hours, holidays, cleanup time. Holds expire automatically; deposits include an <strong>adaptive</strong> mode that tunes to your real no-show patterns. Offline-capable; every booking gets a short code.</p>
+      <h3>Your website, your kiosks</h3>
+      <p>We see <strong>a customer, not a card</strong>: one account, one login, holding multiple linked cards. The included brand website (bookings, top-ups, balances, multi-language, SSL/CDN/DDoS-protected) is optional — keep yours if you love it. And the <strong>kiosks sell and activate new cards on the spot</strong>, so a walk-in is playing before they ever reach your counter.</p>
+      <div class="folio"></div><div class="runhead">Everything on the table</div>
+    </div>
+  </section>
+
+  <!-- 28 · Platform -->
+  <section class="page text">
+    <div class="pad">
+      <div class="eyebrow">Everything on the table · the platform</div>
+      <h2 class="title">The platform around it</h2>
+      <ul class="dash">
+        <li><strong>Accounting — full Odoo ERP, included, no lock-in.</strong> We self-host and customise your instance, connected bidirectionally: numbered compliant receipts, grouped invoices, automatic journal entries, VAT (incl. Credit-VAT). Leave us and the Odoo instance stays yours.</li>
+        <li><strong>Remote desktop — no AnyDesk, no TeamViewer.</strong> Included, web-based, 20 workstations per location (then €1/mo each). Self-hosted, no per-device licensing.</li>
+        <li><strong>Multi-location, multi-company, multi-merchant</strong> — one platform; cards global or scoped; reporting and compliance correctly separate; the right processor account chosen automatically by where the transaction happens.</li>
+        <li><strong>Periods</strong> — seasonal price changes that adjust automatically, the same season running different dates per location; also used to schedule maintenance outside your hours.</li>
+        <li><strong>Marketing powered by your data</strong> — "email everyone who bought two cokes and a pizza, offer a free pizza if they top up €50." 40,000 emails/mo per location; ad spend and venue revenue in one view; WhatsApp, Telegram, push.</li>
+      </ul>
+      <div class="folio"></div><div class="runhead">Everything on the table</div>
+    </div>
+  </section>
+
+  <!-- 29 · DIVIDER · pricing -->
+  <section class="page dark">
+    <img class="bg" src="images/bg-pricing-brass-scale.png" alt=""/>
+    <div class="scrim"></div>
+    <div class="pad bottom">
+      <div class="sec-num">03</div>
+      <div class="sec-title">Pricing</div>
+      <div class="sec-sub">Transparent, as promised. What everything costs, why, and what you don't pay.</div>
+    </div>
+  </section>
+
+  <!-- 30 · pricing model -->
+  <section class="page text">
+    <div class="pad">
+      <div class="eyebrow">Pricing</div>
+      <h2 class="title">A word on the model first</h2>
+      <p>Pricing says a lot about a vendor's intentions. Some companies charge an entry fee, give you the software "free," and sell you cards at 5–10× market value — then never update the software, because you didn't pay for it. Others sit in between, with tiers, per-game fees, per-user fees, and a wall of conditions you meet after signing.</p>
+      <p>That's not us. We charge for what we actually do: <strong>build, update, and improve the system every day</strong>, and help you find money in your own data. Not plastic.</p>
+      <div class="callout"><p>That's why loyalty cards are <strong>€0.10/card</strong> from us — or buy them anywhere. Selling expensive plastic is not how we add value.</p></div>
+      <div class="folio"></div><div class="runhead">Pricing</div>
+    </div>
+  </section>
+
+  <!-- 31 · setup + monthly -->
+  <section class="page text">
+    <div class="pad">
+      <div class="eyebrow">Pricing · per location</div>
+      <h2 class="title">Setup &amp; monthly</h2>
+      <h3>Location setup — one-time</h3>
+      <div class="prow">
+        <div class="pcard hl"><div class="plabel">Early adopter · IAAPA London 2026</div><div class="pval">€5,000</div><div class="punit">one-time · –33% guaranteed on every location you ever open, if you start before April 2027</div></div>
+        <div class="pcard"><div class="plabel">Standard</div><div class="pval">€7,500</div><div class="punit">one-time · signing after March 2027</div></div>
+      </div>
+      <p class="small">Both include: 2 NUCs (primary + spare), 1 UPS with data + voltage monitoring, 1 military-grade USB recovery key, and remote support for the full install.</p>
+      <h3>Monthly</h3>
+      <div class="prow">
+        <div class="pcard hl"><div class="plabel">Early adopter</div><div class="pval">€800<span style="font-size:11pt">/mo</span></div><div class="punit">locked 3 years, then inflation only · every additional location gets the same rate</div></div>
+        <div class="pcard"><div class="plabel">Standard</div><div class="pval">€1,500<span style="font-size:11pt">/mo</span></div><div class="punit">per location · includes everything in this book</div></div>
+      </div>
+      <div class="folio"></div><div class="runhead">Pricing</div>
+    </div>
+  </section>
+
+  <!-- 32 · hardware -->
+  <section class="page text">
+    <div class="pad">
+      <div class="eyebrow">Pricing · hardware</div>
+      <h2 class="title">Pay upfront, or over 3 years</h2>
+      <div class="priceline"><span class="pk">iM25 base</span><span class="pn">€490</span></div>
+      <div class="priceline"><span class="pk">+ PulseBox (game control, coin-counter isolation, mobile QR)</span><span class="pn">+€40</span></div>
+      <div class="priceline"><span class="pk">+ Case with LED (at-a-glance status)</span><span class="pn">+€30</span></div>
+      <div class="priceline"><span class="pk">Full setup — iM25 + PulseBox + Case with LED</span><span class="pn">€560</span></div>
+      <div class="priceline"><span class="pk">PulseBox alone (mobile QR/NFC on a game, no terminal)</span><span class="pn">€90</span></div>
+      <div class="priceline"><span class="pk">Case with LED standalone (for existing iM25s)</span><span class="pn">€79</span></div>
+      <div class="priceline"><span class="pk">Maintenance — iM25/iM30 only · early adopter / standard</span><span class="pn">€2.50 / €5 mo</span></div>
+      <p class="small" style="margin-top:3mm">PulseBox has no maintenance fee. Others in this space typically charge €9–10/device. All hardware is available on a 3-year payment plan — the device starts paying for itself from day one.</p>
+      <div class="folio"></div><div class="runhead">Pricing</div>
+    </div>
+  </section>
+
+  <!-- 33 · don't charge + Planet -->
+  <section class="page text">
+    <div class="pad">
+      <div class="eyebrow">Pricing</div>
+      <h2 class="title">Things others charge for — we don't</h2>
+      <ul class="dash">
+        <li><strong>Loyalty cards</strong> — €0.10/card from us, or anywhere. No margin on plastic.</li>
+        <li><strong>QR / mobile / online payments</strong> — built in, no per-game or per-transaction fee from us.</li>
+        <li><strong>NFC SUN anti-clone tags</strong> — under €0.60 each, or source your own.</li>
+        <li><strong>Remote desktop &amp; VPN</strong> — included; no AnyDesk, TeamViewer, or third-party VPN subscriptions.</li>
+      </ul>
+      <h3>The one thing we insist on providing — and the one we don't</h3>
+      <p>The <strong>NUC</strong> is certified at the highest security level; the encryption and firmware depend on specific hardware, so it has to come from us. Everything else, source yourself. And <strong>card payments go straight to Planet</strong>, our processor partner — escrow-backed payouts, a direct relationship — because we don't want to sit between you and your money. The rate depends on your volume and mix; we'll help you negotiate it directly.</p>
+      <div class="folio"></div><div class="runhead">Pricing</div>
+    </div>
+  </section>
+
+  <!-- 34 · CLOSE -->
+  <section class="page dark">
+    <img class="bg" src="images/cover-back.png" alt=""/>
+    <div class="scrim"></div>
+    <div class="pad">
+      <img class="logo" src="images/Core full logo.png" alt="SapiensCore"/>
+      <div style="flex:1"></div>
+      <div class="closing-title">Make it real.</div>
+      <p style="max-width:78%">Everything in this book is included — not options, not add-ons, not future upgrades. One system, available from day one, running today across dozens of venues and 3,500+ devices.</p>
+      <p style="max-width:78%">You don't have to use all of it — but it's all on the table for the one entrance fee. The loyalty card is the spine; the rest is yours to use as much or as little as you like. The next step isn't a sales call — it's us showing you the real thing, against your own numbers, whenever you're ready.</p>
+      <div class="closing-contact">info@sapienscore.com · sapienscore.com</div>
+    </div>
+  </section>
+
+</div>
+
+<script>
+  const book = document.getElementById('book');
+  document.querySelectorAll('.bar button').forEach(b=>{
+    b.addEventListener('click',()=>{
+      document.querySelectorAll('.bar button').forEach(x=>x.classList.remove('on'));
+      b.classList.add('on');
+      book.style.zoom = b.dataset.z;
+    });
+  });
+  document.getElementById('cnt').textContent = document.querySelectorAll('.page').length + ' pages';
+</script>
+</body>
+</html>

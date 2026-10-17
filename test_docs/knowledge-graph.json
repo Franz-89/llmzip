@@ -1,0 +1,1043 @@
+{
+  "schema": "okf-light-knowledge-graph-v1",
+  "generated_at": "2026-10-16T13:58:29.049424+00:00",
+  "docs_dir": "/Users/francesco/WebDev/sapienscore/docs",
+  "node_count": 62,
+  "edge_count": 23,
+  "unresolved_link_count": 0,
+  "nodes": [
+    {
+      "id": "API_PUBLIC",
+      "path": "API_PUBLIC.md",
+      "title": "Public API — v1 contract (NUC plane)",
+      "type": null,
+      "description": null,
+      "tags": [],
+      "status": null,
+      "source_kind": null,
+      "timestamp": null,
+      "reserved": false
+    },
+    {
+      "id": "CLUSTERS",
+      "path": "CLUSTERS.md",
+      "title": "Clusters — location grouping (source of truth)",
+      "type": null,
+      "description": null,
+      "tags": [],
+      "status": null,
+      "source_kind": null,
+      "timestamp": null,
+      "reserved": false
+    },
+    {
+      "id": "CODING_STANDARDS",
+      "path": "CODING_STANDARDS.md",
+      "title": "SapiensCore Coding Standards",
+      "type": null,
+      "description": null,
+      "tags": [],
+      "status": null,
+      "source_kind": null,
+      "timestamp": null,
+      "reserved": false
+    },
+    {
+      "id": "CURRENCY",
+      "path": "CURRENCY.md",
+      "title": "Currency handling — rules and cleanup spec",
+      "type": null,
+      "description": null,
+      "tags": [],
+      "status": null,
+      "source_kind": null,
+      "timestamp": null,
+      "reserved": false
+    },
+    {
+      "id": "DB_POOLING",
+      "path": "DB_POOLING.md",
+      "title": "DB connection pooling & stability (plan)",
+      "type": null,
+      "description": null,
+      "tags": [],
+      "status": null,
+      "source_kind": null,
+      "timestamp": null,
+      "reserved": false
+    },
+    {
+      "id": "DYNAMIC_PRICING",
+      "path": "DYNAMIC_PRICING.md",
+      "title": "Dynamic Pricing — Design (for sign-off)",
+      "type": null,
+      "description": null,
+      "tags": [],
+      "status": null,
+      "source_kind": null,
+      "timestamp": null,
+      "reserved": false
+    },
+    {
+      "id": "DYNAMIC_PRICING_BEHAVIOURAL",
+      "path": "DYNAMIC_PRICING_BEHAVIOURAL.md",
+      "title": "Behavioural (signal-driven) pricing — parked design notes",
+      "type": null,
+      "description": null,
+      "tags": [],
+      "status": null,
+      "source_kind": null,
+      "timestamp": null,
+      "reserved": false
+    },
+    {
+      "id": "DYNAMIC_PRICING_PLAN",
+      "path": "DYNAMIC_PRICING_PLAN.md",
+      "title": "Dynamic Pricing — Phased Implementation Plan",
+      "type": null,
+      "description": null,
+      "tags": [],
+      "status": null,
+      "source_kind": null,
+      "timestamp": null,
+      "reserved": false
+    },
+    {
+      "id": "EVENTS",
+      "path": "EVENTS.md",
+      "title": "Event system",
+      "type": null,
+      "description": null,
+      "tags": [],
+      "status": null,
+      "source_kind": null,
+      "timestamp": null,
+      "reserved": false
+    },
+    {
+      "id": "FISCAL_EXPORT",
+      "path": "FISCAL_EXPORT.md",
+      "title": "Fiscal data & export study — mall information request (Guimarães, June 2026)",
+      "type": null,
+      "description": null,
+      "tags": [],
+      "status": null,
+      "source_kind": null,
+      "timestamp": null,
+      "reserved": false
+    },
+    {
+      "id": "FLOOR",
+      "path": "FLOOR.md",
+      "title": "Floor — 2D-first floor editor + live viewer (with generated 3D view)",
+      "type": null,
+      "description": null,
+      "tags": [],
+      "status": null,
+      "source_kind": null,
+      "timestamp": null,
+      "reserved": false
+    },
+    {
+      "id": "MAINTENANCE",
+      "path": "MAINTENANCE.md",
+      "title": "Maintenance & tech-work model",
+      "type": null,
+      "description": null,
+      "tags": [],
+      "status": null,
+      "source_kind": null,
+      "timestamp": null,
+      "reserved": false
+    },
+    {
+      "id": "MEDIA",
+      "path": "MEDIA.md",
+      "title": "Media storage & serving (source of truth)",
+      "type": null,
+      "description": null,
+      "tags": [],
+      "status": null,
+      "source_kind": null,
+      "timestamp": null,
+      "reserved": false
+    },
+    {
+      "id": "MEMBERSHIP",
+      "path": "MEMBERSHIP.md",
+      "title": "Membership — early notes (separate workstream)",
+      "type": null,
+      "description": null,
+      "tags": [],
+      "status": null,
+      "source_kind": null,
+      "timestamp": null,
+      "reserved": false
+    },
+    {
+      "id": "MEMBERSHIPS",
+      "path": "MEMBERSHIPS.md",
+      "title": "Memberships — assignment (source of truth)",
+      "type": null,
+      "description": null,
+      "tags": [],
+      "status": null,
+      "source_kind": null,
+      "timestamp": null,
+      "reserved": false
+    },
+    {
+      "id": "MIGRATION",
+      "path": "MIGRATION.md",
+      "title": "Migration plan — AdminLTE → Tabler / Alpine / HTMX (+ Vue for Trace)",
+      "type": null,
+      "description": null,
+      "tags": [],
+      "status": null,
+      "source_kind": null,
+      "timestamp": null,
+      "reserved": false
+    },
+    {
+      "id": "MIGRATION_PLAYBOOK",
+      "path": "MIGRATION_PLAYBOOK.md",
+      "title": "v2 Migration Playbook — hands-on recipe for one page",
+      "type": null,
+      "description": null,
+      "tags": [],
+      "status": null,
+      "source_kind": null,
+      "timestamp": null,
+      "reserved": false
+    },
+    {
+      "id": "MIGRATION_V1_INVENTORY",
+      "path": "MIGRATION_V1_INVENTORY.md",
+      "title": "v1 → v2 Migration Inventory (verified 2026-07-05)",
+      "type": null,
+      "description": null,
+      "tags": [],
+      "status": null,
+      "source_kind": null,
+      "timestamp": null,
+      "reserved": false
+    },
+    {
+      "id": "OKF-STANDARD",
+      "path": "OKF-STANDARD.md",
+      "title": "OKF-Light Documentation Standard",
+      "type": "Reference",
+      "description": "Defines metadata, classification, navigation, history, and validation rules for the project knowledge bundle.",
+      "tags": [
+        "documentation",
+        "okf",
+        "knowledge-base"
+      ],
+      "status": "active",
+      "source_kind": "hand-written",
+      "timestamp": "2026-06-30T07:02:53Z",
+      "reserved": false
+    },
+    {
+      "id": "PERMISSIONS",
+      "path": "PERMISSIONS.md",
+      "title": "Permissions — v2 redesign (study doc)",
+      "type": null,
+      "description": null,
+      "tags": [],
+      "status": null,
+      "source_kind": null,
+      "timestamp": null,
+      "reserved": false
+    },
+    {
+      "id": "README",
+      "path": "README.md",
+      "title": "SapiensCore LLM Wiki",
+      "type": "Project Overview",
+      "description": "Legacy overview and page map for documentation generated from repository evidence.",
+      "tags": [
+        "project",
+        "documentation",
+        "navigation"
+      ],
+      "status": "active",
+      "source_kind": "generated",
+      "timestamp": "2026-06-30T06:51:14Z",
+      "reserved": false
+    },
+    {
+      "id": "RELEASE_NOTES",
+      "path": "RELEASE_NOTES.md",
+      "title": "Release notes",
+      "type": null,
+      "description": null,
+      "tags": [],
+      "status": null,
+      "source_kind": null,
+      "timestamp": null,
+      "reserved": false
+    },
+    {
+      "id": "TASK_product_import_permission",
+      "path": "TASK_product_import_permission.md",
+      "title": "Task: gate Product Import behind a real permission (replace `canAdminH()`)",
+      "type": null,
+      "description": null,
+      "tags": [],
+      "status": null,
+      "source_kind": null,
+      "timestamp": null,
+      "reserved": false
+    },
+    {
+      "id": "admin-cash-collection-photo-handoff",
+      "path": "admin-cash-collection-photo-handoff.md",
+      "title": "Handoff — Cash collection admin: surface the PDA counter photo",
+      "type": null,
+      "description": null,
+      "tags": [],
+      "status": null,
+      "source_kind": null,
+      "timestamp": null,
+      "reserved": false
+    },
+    {
+      "id": "apis",
+      "path": "apis.md",
+      "title": "APIs",
+      "type": "API Reference",
+      "description": "Reference to public, administrative, authentication, device, and integration APIs defined by the application.",
+      "tags": [
+        "api",
+        "routes",
+        "integrations"
+      ],
+      "status": "active",
+      "source_kind": "hand-written",
+      "timestamp": "2026-07-01T01:00:00Z",
+      "reserved": false
+    },
+    {
+      "id": "architecture",
+      "path": "architecture.md",
+      "title": "Architecture",
+      "type": "Architecture Note",
+      "description": "Overview of application startup, domain-selected routing, services, templates, and runtime architecture.",
+      "tags": [
+        "architecture",
+        "slim",
+        "routing"
+      ],
+      "status": "active",
+      "source_kind": "hand-written",
+      "timestamp": "2026-06-30T06:51:14Z",
+      "reserved": false
+    },
+    {
+      "id": "database",
+      "path": "database.md",
+      "title": "Database",
+      "type": "Data Model",
+      "description": "Reference to database engines, access patterns, migrations, and major schema areas.",
+      "tags": [
+        "database",
+        "postgresql",
+        "migrations"
+      ],
+      "status": "active",
+      "source_kind": "hand-written",
+      "timestamp": "2026-06-30T06:51:14Z",
+      "reserved": false
+    },
+    {
+      "id": "decisions/0001-use-slim-php-framework",
+      "path": "decisions/0001-use-slim-php-framework.md",
+      "title": "ADR 0001: Use Slim as the PHP HTTP Framework",
+      "type": "ADR",
+      "description": "Decision to use Slim and Slim PHP View as the application's HTTP and template framework.",
+      "tags": [
+        "adr",
+        "slim",
+        "php"
+      ],
+      "status": "active",
+      "source_kind": "generated",
+      "timestamp": "2026-06-30T06:51:14Z",
+      "reserved": false
+    },
+    {
+      "id": "decisions/0002-domain-selected-route-sets",
+      "path": "decisions/0002-domain-selected-route-sets.md",
+      "title": "ADR 0002: Select Route Sets by Domain Records",
+      "type": "ADR",
+      "description": "Decision to select route sets and theme behavior from the active domain record.",
+      "tags": [
+        "adr",
+        "routing",
+        "domain"
+      ],
+      "status": "active",
+      "source_kind": "generated",
+      "timestamp": "2026-06-30T06:51:14Z",
+      "reserved": false
+    },
+    {
+      "id": "decisions/0003-autodb-postgresql-instance-collector",
+      "path": "decisions/0003-autodb-postgresql-instance-collector.md",
+      "title": "ADR 0003: Use AutoDb with PostgreSQL Through a Shared Instance Collector",
+      "type": "ADR",
+      "description": "Decision to access PostgreSQL primarily through AutoDb instances managed by the shared instance collector.",
+      "tags": [
+        "adr",
+        "postgresql",
+        "autodb"
+      ],
+      "status": "active",
+      "source_kind": "generated",
+      "timestamp": "2026-06-30T06:51:14Z",
+      "reserved": false
+    },
+    {
+      "id": "decisions/0004-ordered-sql-migrations",
+      "path": "decisions/0004-ordered-sql-migrations.md",
+      "title": "ADR 0004: Manage Schema With Ordered SQL Install Files",
+      "type": "ADR",
+      "description": "Decision to manage schema changes with ordered SQL files and custom PHP migration utilities.",
+      "tags": [
+        "adr",
+        "database",
+        "migrations"
+      ],
+      "status": "active",
+      "source_kind": "generated",
+      "timestamp": "2026-06-30T06:51:14Z",
+      "reserved": false
+    },
+    {
+      "id": "decisions/0005-docker-compose-runtime",
+      "path": "decisions/0005-docker-compose-runtime.md",
+      "title": "ADR 0005: Run the Application With Docker Compose Services",
+      "type": "ADR",
+      "description": "Decision to run application infrastructure through Docker Compose service names and configuration.",
+      "tags": [
+        "adr",
+        "docker",
+        "runtime"
+      ],
+      "status": "active",
+      "source_kind": "generated",
+      "timestamp": "2026-06-30T06:51:14Z",
+      "reserved": false
+    },
+    {
+      "id": "decisions/0006-react-reporting-dashboard-bundle",
+      "path": "decisions/0006-react-reporting-dashboard-bundle.md",
+      "title": "ADR 0006: Embed a React Reporting Dashboard Into Admin Public Assets",
+      "type": "ADR",
+      "description": "Decision to build the React reporting dashboard into the PHP application's administrative public assets.",
+      "tags": [
+        "adr",
+        "react",
+        "reporting"
+      ],
+      "status": "active",
+      "source_kind": "generated",
+      "timestamp": "2026-06-30T06:51:14Z",
+      "reserved": false
+    },
+    {
+      "id": "decisions/0007-redis-cache-service",
+      "path": "decisions/0007-redis-cache-service.md",
+      "title": "ADR 0007: Use Redis as Shared Cache/Runtime Store",
+      "type": "ADR",
+      "description": "Decision to use Redis as the shared application cache and runtime store.",
+      "tags": [
+        "adr",
+        "redis",
+        "cache"
+      ],
+      "status": "active",
+      "source_kind": "generated",
+      "timestamp": "2026-06-30T06:51:14Z",
+      "reserved": false
+    },
+    {
+      "id": "decisions/0008-command-registry-in-settings",
+      "path": "decisions/0008-command-registry-in-settings.md",
+      "title": "ADR 0008: Register CLI Commands in Application Settings",
+      "type": "ADR",
+      "description": "Decision to centralize CLI command registration in Slim application settings.",
+      "tags": [
+        "adr",
+        "cli",
+        "configuration"
+      ],
+      "status": "active",
+      "source_kind": "generated",
+      "timestamp": "2026-06-30T06:51:14Z",
+      "reserved": false
+    },
+    {
+      "id": "decisions/0009-materialized-views-timescale-retention",
+      "path": "decisions/0009-materialized-views-timescale-retention.md",
+      "title": "ADR 0009: Use Materialized Views and Timescale Retention for Reporting/Logs",
+      "type": "ADR",
+      "description": "Decision to use materialized views for reporting and Timescale retention policies for selected logs.",
+      "tags": [
+        "adr",
+        "reporting",
+        "timescaledb"
+      ],
+      "status": "active",
+      "source_kind": "generated",
+      "timestamp": "2026-06-30T06:51:14Z",
+      "reserved": false
+    },
+    {
+      "id": "decisions/0010-use-readonly-admin-permission-levels",
+      "path": "decisions/0010-use-readonly-admin-permission-levels.md",
+      "title": "ADR 0010: Use Readonly/Admin Permission Levels",
+      "type": "ADR",
+      "description": "Decision to separate viewing and mutation capabilities into readonly and administrative permission levels.",
+      "tags": [
+        "adr",
+        "permissions",
+        "authorization"
+      ],
+      "status": "active",
+      "source_kind": "generated",
+      "timestamp": "2026-06-30T06:51:14Z",
+      "reserved": false
+    },
+    {
+      "id": "decisions/README",
+      "path": "decisions/README.md",
+      "title": "Architecture Decision Records",
+      "type": "Reference",
+      "description": "Catalog of architectural decisions derived from repository code and configuration.",
+      "tags": [
+        "architecture",
+        "adr",
+        "decisions"
+      ],
+      "status": "active",
+      "source_kind": "generated",
+      "timestamp": "2026-06-30T06:51:14Z",
+      "reserved": false
+    },
+    {
+      "id": "deployment",
+      "path": "deployment.md",
+      "title": "Deployment",
+      "type": "Runbook",
+      "description": "Operational guidance for Docker Compose services, environment configuration, assets, and database setup.",
+      "tags": [
+        "deployment",
+        "docker",
+        "configuration"
+      ],
+      "status": "active",
+      "source_kind": "hand-written",
+      "timestamp": "2026-06-30T06:51:14Z",
+      "reserved": false
+    },
+    {
+      "id": "design_handoff_orbit_homepage/README",
+      "path": "design_handoff_orbit_homepage/README.md",
+      "title": "Handoff: SapiensCore — ORBIT Public Website (Homepage)",
+      "type": null,
+      "description": null,
+      "tags": [],
+      "status": null,
+      "source_kind": null,
+      "timestamp": null,
+      "reserved": false
+    },
+    {
+      "id": "fraud-report-616952",
+      "path": "fraud-report-616952.md",
+      "title": "Fraud Investigation Report — Loyalty Card #616952",
+      "type": null,
+      "description": null,
+      "tags": [],
+      "status": null,
+      "source_kind": null,
+      "timestamp": null,
+      "reserved": false
+    },
+    {
+      "id": "iaapa/README",
+      "path": "iaapa/README.md",
+      "title": "SapiensCore — Booklet v2 (preview)",
+      "type": null,
+      "description": null,
+      "tags": [],
+      "status": null,
+      "source_kind": null,
+      "timestamp": null,
+      "reserved": false
+    },
+    {
+      "id": "iaapa/book_v3_reshape",
+      "path": "iaapa/book_v3_reshape.md",
+      "title": "SapiensCore — Make it real. (v3 reshape)",
+      "type": null,
+      "description": null,
+      "tags": [],
+      "status": null,
+      "source_kind": null,
+      "timestamp": null,
+      "reserved": false
+    },
+    {
+      "id": "lco-revert-and-idempotency",
+      "path": "lco-revert-and-idempotency.md",
+      "title": "Guide — `loyalty_card_operation` sync: universal idempotency + REVERT delta re-application",
+      "type": null,
+      "description": null,
+      "tags": [],
+      "status": null,
+      "source_kind": null,
+      "timestamp": null,
+      "reserved": false
+    },
+    {
+      "id": "modules",
+      "path": "modules.md",
+      "title": "Modules",
+      "type": "Architecture Note",
+      "description": "Map of application modules, route surfaces, integrations, and the React reporting dashboard.",
+      "tags": [
+        "modules",
+        "architecture",
+        "routing"
+      ],
+      "status": "active",
+      "source_kind": "hand-written",
+      "timestamp": "2026-07-01T01:00:00Z",
+      "reserved": false
+    },
+    {
+      "id": "new/cluster/_automation/README",
+      "path": "new/cluster/_automation/README.md",
+      "title": "Cluster guide — screenshot automation",
+      "type": null,
+      "description": null,
+      "tags": [],
+      "status": null,
+      "source_kind": null,
+      "timestamp": null,
+      "reserved": false
+    },
+    {
+      "id": "new/trace/_automation/README",
+      "path": "new/trace/_automation/README.md",
+      "title": "Trace guide — screenshot automation",
+      "type": null,
+      "description": null,
+      "tags": [],
+      "status": null,
+      "source_kind": null,
+      "timestamp": null,
+      "reserved": false
+    },
+    {
+      "id": "outbound-sync-queue-plan",
+      "path": "outbound-sync-queue-plan.md",
+      "title": "Outbound sync queue — unified core→NUC push queue (design proposal)",
+      "type": null,
+      "description": null,
+      "tags": [],
+      "status": null,
+      "source_kind": null,
+      "timestamp": null,
+      "reserved": false
+    },
+    {
+      "id": "pda-game-location-operation",
+      "path": "pda-game-location-operation.md",
+      "title": "Guide — `game_location_operation` cloud receiver + Trace orchestration",
+      "type": null,
+      "description": null,
+      "tags": [],
+      "status": null,
+      "source_kind": null,
+      "timestamp": null,
+      "reserved": false
+    },
+    {
+      "id": "pda-tech-panel-plan",
+      "path": "pda-tech-panel-plan.md",
+      "title": "Plan (deferred) — PDA tech panel: device commands + real-time feed",
+      "type": null,
+      "description": null,
+      "tags": [],
+      "status": null,
+      "source_kind": null,
+      "timestamp": null,
+      "reserved": false
+    },
+    {
+      "id": "permissions-readonly-admin",
+      "path": "permissions-readonly-admin.md",
+      "title": "Readonly/Admin Permission Refactor",
+      "type": "Domain Concept",
+      "description": "Defines the readonly and administrative permission model and tracks category migration status.",
+      "tags": [
+        "permissions",
+        "authorization",
+        "migration"
+      ],
+      "status": "active",
+      "source_kind": "hand-written",
+      "timestamp": "2026-06-30T06:51:14Z",
+      "reserved": false
+    },
+    {
+      "id": "product-import-matching",
+      "path": "product-import-matching.md",
+      "title": "Product import — product matching and conflict resolution",
+      "type": "Development Guide",
+      "description": "How an imported row is bound to an existing product, which situations are reported as resolvable conflicts in the preview, and how the choice is validated on processing.",
+      "tags": [
+        "product",
+        "import",
+        "validation",
+        "preview",
+        "conflict"
+      ],
+      "status": "active",
+      "source_kind": "hand-written",
+      "timestamp": "2026-07-30T00:00:00Z",
+      "reserved": false
+    },
+    {
+      "id": "project-overview",
+      "path": "project-overview.md",
+      "title": "Project Overview",
+      "type": "Project Overview",
+      "description": "Overview of SapiensCore capabilities, technology stack, entry points, and package structure.",
+      "tags": [
+        "project",
+        "architecture",
+        "technology"
+      ],
+      "status": "active",
+      "source_kind": "hand-written",
+      "timestamp": "2026-06-30T06:51:14Z",
+      "reserved": false
+    },
+    {
+      "id": "release-notes-april-2026",
+      "path": "release-notes-april-2026.md",
+      "title": "Sapiens Platform — What's New (April 2026)",
+      "type": null,
+      "description": null,
+      "tags": [],
+      "status": null,
+      "source_kind": null,
+      "timestamp": null,
+      "reserved": false
+    },
+    {
+      "id": "release-notes-march-2026",
+      "path": "release-notes-march-2026.md",
+      "title": "Sapiens Platform — What's New (March 2026)",
+      "type": null,
+      "description": null,
+      "tags": [],
+      "status": null,
+      "source_kind": null,
+      "timestamp": null,
+      "reserved": false
+    },
+    {
+      "id": "release-notes-spring-2026",
+      "path": "release-notes-spring-2026.md",
+      "title": "Sapiens Platform — What's New (Spring 2026)",
+      "type": null,
+      "description": null,
+      "tags": [],
+      "status": null,
+      "source_kind": null,
+      "timestamp": null,
+      "reserved": false
+    },
+    {
+      "id": "skills/README",
+      "path": "skills/README.md",
+      "title": "Repository Skills",
+      "type": "Reference",
+      "description": "Catalog of repository-local and configured skills with their purposes and activation criteria.",
+      "tags": [
+        "skills",
+        "agents",
+        "workflows"
+      ],
+      "status": "active",
+      "source_kind": "hand-written",
+      "timestamp": "2026-06-30T06:51:14Z",
+      "reserved": false
+    },
+    {
+      "id": "tabler-htmx-alpine-migration",
+      "path": "tabler-htmx-alpine-migration.md",
+      "title": "Tabler, HTMX, and Alpine Migration",
+      "type": "Development Guide",
+      "description": "Tracks templates migrated to the Tabler, HTMX, and Alpine interface architecture.",
+      "tags": [
+        "tabler",
+        "htmx",
+        "alpine"
+      ],
+      "status": "active",
+      "source_kind": "hand-written",
+      "timestamp": "2026-06-30T06:51:14Z",
+      "reserved": false
+    },
+    {
+      "id": "tasks/RECEIPT_STORAGE",
+      "path": "tasks/RECEIPT_STORAGE.md",
+      "title": "Task: Vendus receipt file storage — stop the unbounded local sediment",
+      "type": null,
+      "description": null,
+      "tags": [],
+      "status": null,
+      "source_kind": null,
+      "timestamp": null,
+      "reserved": false
+    },
+    {
+      "id": "testing",
+      "path": "testing.md",
+      "title": "Testing",
+      "type": "Development Guide",
+      "description": "Reference to available PHP, React, and manual verification mechanisms.",
+      "tags": [
+        "testing",
+        "verification",
+        "development"
+      ],
+      "status": "active",
+      "source_kind": "hand-written",
+      "timestamp": "2026-06-30T06:51:14Z",
+      "reserved": false
+    },
+    {
+      "id": "trace-orchestration-handoff",
+      "path": "trace-orchestration-handoff.md",
+      "title": "Handoff — Cloud Trace orchestration for `game_location_operation` (revised)",
+      "type": null,
+      "description": null,
+      "tags": [],
+      "status": null,
+      "source_kind": null,
+      "timestamp": null,
+      "reserved": false
+    },
+    {
+      "id": "ui/template-map",
+      "path": "ui/template-map.md",
+      "title": "AdminLTE UI Relationship Map",
+      "type": "Reference",
+      "description": "Maps AdminLTE routes, controllers, managers, renderers, templates, and client-side interactions.",
+      "tags": [
+        "adminlte",
+        "templates",
+        "routes"
+      ],
+      "status": "active",
+      "source_kind": "hand-written",
+      "timestamp": "2026-06-30T06:51:14Z",
+      "reserved": false
+    }
+  ],
+  "edges": [
+    {
+      "source": "README",
+      "target": "project-overview",
+      "label": "links_to",
+      "link_text": "Project overview",
+      "source_path": "README.md",
+      "target_path": "project-overview.md"
+    },
+    {
+      "source": "README",
+      "target": "architecture",
+      "label": "links_to",
+      "link_text": "Architecture",
+      "source_path": "README.md",
+      "target_path": "architecture.md"
+    },
+    {
+      "source": "README",
+      "target": "modules",
+      "label": "links_to",
+      "link_text": "Modules",
+      "source_path": "README.md",
+      "target_path": "modules.md"
+    },
+    {
+      "source": "README",
+      "target": "database",
+      "label": "links_to",
+      "link_text": "Database",
+      "source_path": "README.md",
+      "target_path": "database.md"
+    },
+    {
+      "source": "README",
+      "target": "apis",
+      "label": "links_to",
+      "link_text": "APIs",
+      "source_path": "README.md",
+      "target_path": "apis.md"
+    },
+    {
+      "source": "README",
+      "target": "deployment",
+      "label": "links_to",
+      "link_text": "Deployment",
+      "source_path": "README.md",
+      "target_path": "deployment.md"
+    },
+    {
+      "source": "README",
+      "target": "testing",
+      "label": "links_to",
+      "link_text": "Testing",
+      "source_path": "README.md",
+      "target_path": "testing.md"
+    },
+    {
+      "source": "README",
+      "target": "permissions-readonly-admin",
+      "label": "links_to",
+      "link_text": "Readonly/Admin permission refactor",
+      "source_path": "README.md",
+      "target_path": "permissions-readonly-admin.md"
+    },
+    {
+      "source": "README",
+      "target": "ui/template-map",
+      "label": "links_to",
+      "link_text": "AdminLTE UI template map",
+      "source_path": "README.md",
+      "target_path": "ui/template-map.md"
+    },
+    {
+      "source": "README",
+      "target": "tabler-htmx-alpine-migration",
+      "label": "links_to",
+      "link_text": "Tabler, HTMX, and Alpine migration",
+      "source_path": "README.md",
+      "target_path": "tabler-htmx-alpine-migration.md"
+    },
+    {
+      "source": "README",
+      "target": "skills/README",
+      "label": "links_to",
+      "link_text": "Skills",
+      "source_path": "README.md",
+      "target_path": "skills/README.md"
+    },
+    {
+      "source": "README",
+      "target": "decisions/README",
+      "label": "links_to",
+      "link_text": "Architecture decisions",
+      "source_path": "README.md",
+      "target_path": "decisions/README.md"
+    },
+    {
+      "source": "decisions/README",
+      "target": "decisions/0001-use-slim-php-framework",
+      "label": "links_to",
+      "link_text": "ADR 0001: Use Slim as the PHP HTTP Framework",
+      "source_path": "decisions/README.md",
+      "target_path": "decisions/0001-use-slim-php-framework.md"
+    },
+    {
+      "source": "decisions/README",
+      "target": "decisions/0002-domain-selected-route-sets",
+      "label": "links_to",
+      "link_text": "ADR 0002: Select Route Sets by Domain Records",
+      "source_path": "decisions/README.md",
+      "target_path": "decisions/0002-domain-selected-route-sets.md"
+    },
+    {
+      "source": "decisions/README",
+      "target": "decisions/0003-autodb-postgresql-instance-collector",
+      "label": "links_to",
+      "link_text": "ADR 0003: Use AutoDb with PostgreSQL Through a Shared Instance Collector",
+      "source_path": "decisions/README.md",
+      "target_path": "decisions/0003-autodb-postgresql-instance-collector.md"
+    },
+    {
+      "source": "decisions/README",
+      "target": "decisions/0004-ordered-sql-migrations",
+      "label": "links_to",
+      "link_text": "ADR 0004: Manage Schema With Ordered SQL Install Files",
+      "source_path": "decisions/README.md",
+      "target_path": "decisions/0004-ordered-sql-migrations.md"
+    },
+    {
+      "source": "decisions/README",
+      "target": "decisions/0005-docker-compose-runtime",
+      "label": "links_to",
+      "link_text": "ADR 0005: Run the Application With Docker Compose Services",
+      "source_path": "decisions/README.md",
+      "target_path": "decisions/0005-docker-compose-runtime.md"
+    },
+    {
+      "source": "decisions/README",
+      "target": "decisions/0006-react-reporting-dashboard-bundle",
+      "label": "links_to",
+      "link_text": "ADR 0006: Embed a React Reporting Dashboard Into Admin Public Assets",
+      "source_path": "decisions/README.md",
+      "target_path": "decisions/0006-react-reporting-dashboard-bundle.md"
+    },
+    {
+      "source": "decisions/README",
+      "target": "decisions/0007-redis-cache-service",
+      "label": "links_to",
+      "link_text": "ADR 0007: Use Redis as Shared Cache/Runtime Store",
+      "source_path": "decisions/README.md",
+      "target_path": "decisions/0007-redis-cache-service.md"
+    },
+    {
+      "source": "decisions/README",
+      "target": "decisions/0008-command-registry-in-settings",
+      "label": "links_to",
+      "link_text": "ADR 0008: Register CLI Commands in Application Settings",
+      "source_path": "decisions/README.md",
+      "target_path": "decisions/0008-command-registry-in-settings.md"
+    },
+    {
+      "source": "decisions/README",
+      "target": "decisions/0009-materialized-views-timescale-retention",
+      "label": "links_to",
+      "link_text": "ADR 0009: Use Materialized Views and Timescale Retention for Reporting/Logs",
+      "source_path": "decisions/README.md",
+      "target_path": "decisions/0009-materialized-views-timescale-retention.md"
+    },
+    {
+      "source": "decisions/README",
+      "target": "decisions/0010-use-readonly-admin-permission-levels",
+      "label": "links_to",
+      "link_text": "ADR 0010: Use Readonly/Admin Permission Levels",
+      "source_path": "decisions/README.md",
+      "target_path": "decisions/0010-use-readonly-admin-permission-levels.md"
+    },
+    {
+      "source": "testing",
+      "target": "product-import-matching",
+      "label": "links_to",
+      "link_text": "product import matching",
+      "source_path": "testing.md",
+      "target_path": "product-import-matching.md"
+    }
+  ],
+  "unresolved_links": []
+}

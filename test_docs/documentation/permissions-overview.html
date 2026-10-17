@@ -1,0 +1,38 @@
+<p style="color: #5d6d7e; margin: 0 0 20px 0;">What a permission actually is, why we describe access as an <strong>area</strong> plus a <strong>level</strong>, and how to think about "what can this person do?" without getting lost in technical names.</p>
+
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">The idea in one sentence</h2>
+<p>A permission answers a single question: <strong>&ldquo;is this person allowed to do this here?&rdquo;</strong> Everything below is just a tidy way of asking that question consistently across the whole application.</p>
+
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">Area &times; Level</h2>
+<p>Access is described by two things together:</p>
+<ul>
+    <li><strong>The area</strong> &mdash; a part of the application. <em>Locations, Cash, Warehouse, Reporting, Users, Organizations, Customers, Trace, Marketing, Pricing, Devices</em>, and so on. Each screen belongs to exactly one area.</li>
+    <li><strong>The level</strong> &mdash; how much you can do in that area. There are two: <strong>View</strong> (look, but don't change) and <strong>Manage</strong> (create, edit, delete).</li>
+</ul>
+<p>So a permission is always a pair &mdash; <strong>&ldquo;Cash &middot; View&rdquo;</strong>, <strong>&ldquo;Warehouse &middot; Manage&rdquo;</strong>, <strong>&ldquo;Users &middot; Manage&rdquo;</strong>. That pairing is the whole model. Once you see access this way, every screen in the app has an obvious answer to &ldquo;who gets in, and can they change anything?&rdquo;</p>
+
+<div style="border-left: 4px solid #2980b9; background: #eaf2f8; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0;"><strong style="color: #2980b9;">Manage always includes View.</strong> If someone can <em>Manage</em> an area, they can obviously <em>see</em> it too &mdash; you never grant both by hand. Grant Manage and View comes with it.</p>
+</div>
+
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">Why two levels and not just &ldquo;on/off&rdquo;</h2>
+<p>Most real roles need to <em>see</em> far more than they should <em>change</em>. An accountant needs to read every cash session and invoice but must never edit one. A shop manager runs their own location but only looks at the company-wide numbers. Splitting each area into <strong>View</strong> and <strong>Manage</strong> lets you hand out exactly that: read-only where it's information, full control where it's their job.</p>
+
+<div style="border-left: 4px solid #2980b9; background: #eaf2f8; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0;"><strong style="color: #2980b9;">A few areas are single-level.</strong> Some things don't split into view/manage &mdash; either you do them or you don't (for example, escalating a Trace, or a technician's NFC tag assignment). For those, having the permission at all <em>is</em> the access.</p>
+</div>
+
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">Big areas contain smaller ones</h2>
+<p>Some areas are broad and made of parts. <strong>Locations</strong> is the clearest example: it's really a stack of tabs &mdash; Info, Opening hours, Games, Products, Floor, Stock, and more &mdash; each of which can be handed out on its own. Granting the whole <strong>Location</strong> area is a shortcut that hands out every tab at once; granting a single tab is how you give someone a narrow slice.</p>
+<p>The same idea covers <strong>Reporting</strong>: there's an &ldquo;all standard reports&rdquo; permission, and there's one permission per individual report. Give the parent for everything, or a single report for someone who should only ever see that one.</p>
+
+<div style="border-left: 4px solid #27ae60; background: #eafaf1; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0;"><strong style="color: #1e8449;">You almost never build access from scratch.</strong> Every role starts from a sensible default bundle (see <a class="doc-link" data-doc-id="">Permissions &mdash; The default starting point</a>). Areas and levels are what you reach for when you want to <em>adjust</em> one person &mdash; add a report here, take away an area there.</p>
+</div>
+
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">What this replaces</h2>
+<p>The application used to lean on a blunt idea of &ldquo;is this an admin?&rdquo; &mdash; one big label that either opened a door or didn't. That made it impossible to say &ldquo;this person handles reservations and customer look-ups, nothing else.&rdquo; Area&nbsp;&times;&nbsp;Level fixes that: access is now made of small, named, combinable pieces, so a role can be exactly as wide or as narrow as the job really is.</p>
+
+<div style="border-left: 4px solid #2980b9; background: #eaf2f8; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0;"><strong style="color: #2980b9;">Next:</strong> how these pieces are actually decided for a given person &mdash; role defaults, company overrides, and per-person adjustments &mdash; in <a class="doc-link" data-doc-id="">Permissions &mdash; How it works</a>.</p>
+</div>

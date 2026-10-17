@@ -1,0 +1,46 @@
+<p style="color: #5d6d7e; margin: 0 0 20px 0;">How a trace flows from the moment it's opened to the moment it's archived &mdash; and why most of that happens on its own, so the board stays clean without anyone tidying it.</p>
+<div style="border-left: 4px solid #2980b9; background: #eaf2f8; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0;"><strong style="color: #2980b9;">New to Trace?</strong> See <a class="doc-link" data-doc-id="">Trace &mdash; Overview &amp; how to use it</a> for the basics first.</p>
+</div>
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">The five statuses</h2>
+<p>Every trace is in exactly one status. The first four are the columns on the board; the fifth is the archive.</p>
+<ul>
+    <li><strong>Open</strong> &mdash; logged, not yet started.</li>
+    <li><strong>In&nbsp;Progress</strong> &mdash; someone is working it.</li>
+    <li><strong>Waiting</strong> &mdash; paused, waiting on something outside (a part, a reply).</li>
+    <li><strong>Resolved</strong> &mdash; the work is done, but it's still on the board for a short while.</li>
+    <li><strong>Closed</strong> &mdash; archived. Off the board, but always findable.</li>
+</ul>
+<p>You move a trace along either by <strong>dragging</strong> it between columns or by changing the status in its detail view.</p>
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">Reaching "Resolved"</h2>
+<p>There are two ways a trace becomes Resolved:</p>
+<ul>
+    <li><strong>Mark the solution.</strong> In the Timeline, mark the message that explains the fix as the <strong>solution</strong> &mdash; the trace moves to Resolved automatically. This is the recommended way: it resolves <em>and</em> records how you fixed it.</li>
+    <li><strong>Move it yourself</strong> &mdash; drag it to Resolved, or set the status directly.</li>
+</ul>
+<div style="border-left: 4px solid #e67e22; background: #fef5e7; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0;"><strong style="color: #b9770e;">It won't resolve while something is open.</strong> If the trace still has open <strong>sub-tasks</strong> or <strong>blockers</strong>, it can't be resolved yet. Marking the solution still records it &mdash; the trace resolves on its own once those are done. (See <a class="doc-link" data-doc-id="">Trace &mdash; Sub-tasks &amp; dependencies</a>.)</p>
+</div>
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">The grace period, and automatic closing</h2>
+<p>A resolved trace does <strong>not</strong> disappear straight away. It stays in the <strong>Resolved</strong> column for a <strong>grace period</strong>, so it can be checked, and so it's easy to reopen if the fix doesn't hold. After that period, the system <strong>closes it automatically</strong> &mdash; it leaves the board and becomes archived.</p>
+<div style="border-left: 4px solid #2980b9; background: #eaf2f8; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0;"><strong style="color: #2980b9;">Why a grace period?</strong> A machine that's "fixed" but breaks again two days later was never really fixed. Keeping resolved traces visible for a while &mdash; then archiving them on their own &mdash; means the board stays tidy without anyone doing housekeeping, and genuine fixes get a chance to prove themselves before they vanish.</p>
+</div>
+<div style="border-left: 4px solid #27ae60; background: #eafaf1; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0;"><strong style="color: #1e8449;">Nothing is ever lost.</strong> Closed traces leave the board but stay fully searchable in the <strong>List / Archive</strong> view &mdash; see <a class="doc-link" data-doc-id="">Trace &mdash; Finding traces</a>. You almost never need to close a trace by hand; the system does it for you.</p>
+</div>
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">Reopening &mdash; when it comes back</h2>
+<p>If a problem returns, don't open a brand-new trace for it &mdash; find the resolved or closed one and use <strong>Reopen</strong>. It goes back to <strong>Open</strong>, ready to be worked again, with all its previous history intact.</p>
+<div style="border-left: 4px solid #2980b9; background: #eaf2f8; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0;"><strong style="color: #2980b9;">Reopens are counted &mdash; on purpose.</strong> A trace that's been reopened shows a <strong>↻ &times;n</strong> marker. A high count is a useful warning sign: a recurring, never-quite-fixed problem &mdash; exactly the kind of thing worth a closer look, or a bigger decision about the machine.</p>
+</div>
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">The "Waiting" detour</h2>
+<p>At any point before it's done, a trace can sit in <strong>Waiting</strong> &mdash; paused on the outside world. Record what you're <strong>waiting for</strong>; when it arrives, mark it arrived and the trace moves back into progress. Waiting keeps a stalled trace honest: it's clearly "blocked on something", not forgotten.</p>
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">The whole cycle at a glance</h2>
+<ol>
+    <li><strong>Open</strong> &rarr; <strong>In&nbsp;Progress</strong> &mdash; pick it up and work it.</li>
+    <li><strong>Waiting</strong> &mdash; if you're stuck waiting on something (optional detour).</li>
+    <li><strong>Resolved</strong> &mdash; mark the solution; it stays on the board through the grace period.</li>
+    <li><strong>Closed</strong> &mdash; archived automatically after the grace period; still findable.</li>
+    <li><strong>Reopen</strong> &mdash; any time it comes back; the count goes up.</li>
+</ol>

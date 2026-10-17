@@ -1,0 +1,159 @@
+<p style="color: #5d6d7e; margin: 0 0 20px 0;">Trace is your shared, internal workspace for anything that needs attention or action &mdash; a fault, a complaint, a task, an investigation &mdash; attached to the exact thing it is about, and driven all the way to "done".</p>
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">What Trace is for</h2>
+<p>Every day, things come up that someone needs to follow through: a bill acceptor jams, a customer disputes a charge, a kiosk needs a part, a payment terminal goes offline, a cash count doesn't add up. <strong>Trace</strong> is where all of that lives &mdash; one shared board the whole team can see, instead of messages scattered across chats, notes and memory.</p>
+<p>Two ideas make Trace different from a plain to-do list:</p>
+<ul>
+    <li><strong>Context.</strong> A trace is never floating &mdash; it is <strong>attached to the thing it is about</strong> (a specific game, NUC, kiosk, terminal, reservation, customer, location&hellip;). Anyone opening it immediately knows <em>what</em> and <em>where</em>, with no extra explaining.</li>
+    <li><strong>It is a complete record.</strong> Everything that happens &mdash; comments, status changes, costs, who was involved, the solution &mdash; is captured in one place, in order. When you look back in six months, the whole story is there.</li>
+</ul>
+<div style="border-left: 4px solid #2980b9; background: #eaf2f8; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0;"><strong style="color: #2980b9;">Trace is internal.</strong> It is a tool for <strong>your team</strong> &mdash; customers never see it. It is the place where work is organised, tracked, and, when you get stuck, <strong>escalated to SmartMonkey</strong> for help (more on that at the end).</p>
+</div>
+<div style="border-left: 4px solid #2980b9; background: #eaf2f8; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0 0 6px 0;"><strong style="color: #2980b9;">If you've used Trello or Jira, this will feel familiar.</strong></p>
+    <p style="margin: 0;">A board, cards, statuses, comments &mdash; the shape is the same, and that's deliberate. But Trace is <strong>not meant to replace them</strong>. Although it is capable across a wide range of work, it is built for one specific job: to <strong>close the gap between the shops and the support team</strong>. That's why every trace carries the real <strong>context</strong> of which machine, terminal or location it's about, and can be <strong>escalated straight to SmartMonkey</strong> when needed. You're welcome to use it more broadly for everyday work &mdash; just know that the shop&ndash;to&ndash;support flow is what it's designed around.</p>
+</div>
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">One system, every user</h2>
+<p>Trace is <strong>fully integrated into both SapiensCore and SapiensClient</strong>. It is not a separate app you have to remember to open &mdash; it is part of the platform your team already uses, in the place where they already work.</p>
+<p>Because of that, it natively supports <strong>everyone</strong>:</p>
+<ul>
+    <li><strong>Managers</strong> who work from the cloud &mdash; in <strong>SapiensCore</strong>;</li>
+    <li><strong>Employees</strong> who work in the shop &mdash; in <strong>SapiensClient</strong>, on the <strong>SapiensWorkstation</strong>.</li>
+</ul>
+<p>As a consequence, Trace is <strong>user-based by nature</strong>: every trace, comment and change is tied to the real person who did it, wherever they did it.</p>
+<div style="border-left: 4px solid #27ae60; background: #eafaf1; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0;"><strong style="color: #1e8449;">On the shop floor.</strong> An employee working at location&nbsp;A can open Trace right on the <strong>SapiensWorkstation</strong> &mdash; see the board, receive updates, and create traces &mdash; with no special login. Because they are <strong>physically in the shop</strong>, everything they do is automatically marked as coming from <strong>that shop</strong> and <strong>that user</strong>. The context is filled in for them.</p>
+</div>
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">Base concepts</h2>
+<p>A few terms come up constantly. Make sure they are clear before you start.</p>
+<p><strong>Trace</strong> &mdash; A single thing to follow through. It has a title, a description, a status, and a unique number (for example <strong>#312</strong>) you can use to refer to it.</p>
+<p><strong>Scope &amp; entity (the context)</strong> &mdash; The <strong>scope</strong> is the <em>kind</em> of thing the trace is about (Game, NUC, Kiosk, POS Terminal, Reservation, Customer, Location, Cash&hellip;); the <strong>entity</strong> is the <em>specific</em> one (this game, this terminal). Together they are the trace's context.</p>
+<p><strong>Status</strong> &mdash; Where the trace is in its life: <strong>Open</strong>, <strong>In&nbsp;Progress</strong>, <strong>Waiting</strong>, <strong>Resolved</strong>, <strong>Closed</strong>. These are the columns on the board.</p>
+<p><strong>Priority</strong> &mdash; How urgent: <strong>Low</strong>, <strong>Normal</strong>, <strong>High</strong>, <strong>Critical</strong>. It is a visual cue, shown as a coloured badge and a coloured strip on the card.</p>
+<p><strong>Effort</strong> &mdash; A rough estimate of how much <em>work</em> the trace is (separate from how urgent it is). Picked from a fixed scale &mdash; see <strong>Estimating effort</strong> below.</p>
+<p><strong>Assignee &amp; Members</strong> &mdash; The <strong>assignee</strong> is the one person responsible. <strong>Members</strong> are everyone else involved (for collaboration and notifications).</p>
+<div style="border-left: 4px solid #2980b9; background: #eaf2f8; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0;"><strong style="color: #2980b9;">"Resolved" and "Closed" are not the same thing.</strong> <strong>Resolved</strong> means the work is done but the trace stays on the board for a while, so it can be checked and easily reopened if the problem comes back. <strong>Closed</strong> means archived &mdash; off the board, but always findable. You rarely close a trace by hand; the system does it for you. This is explained fully in <strong>The lifecycle</strong>.</p>
+</div>
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">The board</h2>
+<p>The board is the main screen: four columns &mdash; <strong>Open</strong>, <strong>In&nbsp;Progress</strong>, <strong>Waiting</strong>, <strong>Resolved</strong> &mdash; each holding cards. Each card is one trace.</p>
+<h3>Reading a card at a glance</h3>
+<p>A card is designed so you can understand a trace without opening it. On it you will find:</p>
+<ul>
+    <li>the <strong>scope</strong> (e.g. 🎮 Game, 🖥️ Kiosk) and the <strong>entity / location</strong> it concerns;</li>
+    <li>the <strong>title</strong> and the trace <strong>#number</strong>;</li>
+    <li>the <strong>priority</strong> badge and a matching coloured strip down the left edge;</li>
+    <li>the <strong>effort</strong> estimate and the <strong>due date</strong>, if set;</li>
+    <li>small markers for activity: 💬 comments, 📎 attachments, a cost total, ☑ checklist progress;</li>
+    <li>relationship signals: 🔒 <strong>Blocked</strong> (it is waiting on something else), 🌿 <strong>sub-tasks</strong> (1/3 done), 🔗 <strong>links</strong>, and ↻ if it has been <strong>reopened</strong> before.</li>
+</ul>
+<h3>Moving and ordering cards</h3>
+<p><strong>Change status:</strong> drag a card from one column to another &mdash; e.g. from <strong>Open</strong> to <strong>In&nbsp;Progress</strong> when you start working it.</p>
+<p><strong>Set the order within a column:</strong> drag a card up or down inside its column to arrange it. The order is <strong>shared</strong> &mdash; everyone sees the same board &mdash; so the simple rule is: <strong>the top card is the next one to do</strong>.</p>
+<div style="border-left: 4px solid #2980b9; background: #eaf2f8; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0;"><strong style="color: #2980b9;">Priority is a label, not the order.</strong> You decide the order by dragging. If a column gets messy, the small <strong>"sort by priority"</strong> button in the column header re-orders it from most to least urgent in one click.</p>
+</div>
+<h3>Finding things</h3>
+<p>The toolbar above the board lets you <strong>filter</strong> by location, assignee, priority, type, overdue, and search by text. To jump straight to a specific trace, type its number into <strong>"Go to&nbsp;#"</strong> and press Enter.</p>
+<p>You can also switch between the <strong>Board</strong> (cards) and the <strong>List</strong> (a dense table) using the toggle in the toolbar. The List view is also where you browse <strong>resolved and closed</strong> traces &mdash; see <strong>Looking back</strong>.</p>
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">Creating a trace</h2>
+<p>Use <strong>New</strong> to open the create form. It walks you through a few short steps:</p>
+<ol>
+    <li><strong>What is it about?</strong> &mdash; Pick the <strong>scope</strong> (Game, Kiosk, Terminal, Reservation, Customer, Cash, Other&hellip;).</li>
+    <li><strong>Which one?</strong> &mdash; Pick the specific <strong>entity</strong>. For things tied to a location (a game, a NUC, a kiosk) choose the location first to narrow the list; for others (a customer, a payment) just start typing to search. Some scopes (Cash, Other, Location) need no entity.</li>
+    <li><strong>Describe it</strong> &mdash; A short, clear <strong>title</strong> and, if useful, a longer <strong>description</strong>.</li>
+    <li><strong>Classify</strong> &mdash; The <strong>type</strong> (Maintenance, Incident, Complaint, Request, Fraud, Other), the <strong>priority</strong>, and &mdash; for hardware &mdash; an <strong>operational status</strong> (Operational / Degraded / Offline).</li>
+    <li><strong>Who &amp; when</strong> &mdash; Optionally an <strong>assignee</strong>, a <strong>due date</strong>, and an <strong>effort</strong> estimate.</li>
+    <li><strong>Optional</strong> &mdash; A starting <strong>checklist</strong> and any <strong>files</strong> (photos of the fault, documents&hellip;).</li>
+</ol>
+<div style="border-left: 4px solid #27ae60; background: #eafaf1; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0;"><strong style="color: #1e8449;">A good title saves everyone time.</strong> "Bill acceptor jams on coin 2" is far more useful at a glance than "machine broken". The context (which game, which shop) is already attached, so the title can focus on the <em>problem</em>.</p>
+</div>
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">Working a trace &mdash; the detail view</h2>
+<p>Click a card to open it. The top of the detail view shows the <strong>#number</strong>, the title, and a row of controls to set <strong>status</strong>, <strong>priority</strong>, <strong>assignee</strong>, <strong>due date</strong> and <strong>effort</strong> &mdash; change any of them right there.</p>
+<p>Just under that, a <strong>relationship bar</strong> appears when the trace is connected to others: its parent (<strong>Part of #n</strong>), what is <strong>blocking</strong> it, what it <strong>blocks</strong>, and its <strong>sub-tasks</strong>. Each number is clickable, so you can hop between connected traces.</p>
+<p>Below, the work itself is organised into tabs.</p>
+<h3>Timeline (comments &amp; activity)</h3>
+<p>The Timeline is the conversation and the history together &mdash; comments you write, plus automatic entries for things like status changes. The newest entry is at the top.</p>
+<ul>
+    <li><strong>Write a message</strong> to record progress, ask a question, or note what you found.</li>
+    <li><strong>Mention a colleague</strong> with <strong>@name</strong> to notify them. Use <strong>@name!</strong> (with an exclamation mark) for a <strong>help request</strong> &mdash; a stronger, higher-priority ping.</li>
+    <li><strong>Attach files</strong> &mdash; photos and documents &mdash; to any message.</li>
+    <li><strong>"Waiting for"</strong> &mdash; when a trace is paused waiting on something (a part, a reply), record what you're waiting on; the trace moves to the <strong>Waiting</strong> column.</li>
+</ul>
+<div style="border-left: 4px solid #27ae60; background: #eafaf1; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0;"><strong style="color: #1e8449;">Marking the solution.</strong> When a message explains how the problem was fixed, mark it as the <strong>solution</strong>. This does two things: it flags the answer for next time, and it automatically moves the trace to <strong>Resolved</strong>. (If the trace still has open sub-tasks or blockers, the solution is recorded and it resolves once those are done.)</p>
+</div>
+<h3>Checklist</h3>
+<p>A simple list of steps to work through &mdash; tick them off as you go. The card shows the progress (e.g. <strong>☑ 2/4</strong>).</p>
+<div style="border-left: 4px solid #2980b9; background: #eaf2f8; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0;"><strong style="color: #2980b9;">Promote a step into its own trace.</strong> Sometimes a checklist step turns out to be real work of its own (e.g. "order a new lens"). Use <strong>promote</strong> on that item and it becomes a <strong>sub-task</strong> &mdash; its own trace, with its own assignee, effort and timeline &mdash; linked back to this one. The step now shows as <strong>"&rarr; #n"</strong>, and the parent <strong>cannot be closed until the sub-task is done</strong>.</p>
+</div>
+<h3>Cost</h3>
+<p>Record the cost of fixing the trace &mdash; parts, consumables, labour, external service. The total appears on the card. Over time this is what tells you which machines are quietly costing you the most.</p>
+<h3>Members</h3>
+<p>Add the people involved. Members are kept in the loop and make it clear, later, who worked on what.</p>
+<h3>Related</h3>
+<p>The full picture of how this trace connects to others. The goal is bigger than tidy links: connecting traces turns a pile of tickets into the <strong>memory</strong> of your operation &mdash; cause and effect, duplicates caught, and recurring problems on the same machine made obvious.</p>
+<ul>
+    <li><strong>Sub-tasks</strong> &mdash; children promoted from the checklist, with their progress.</li>
+    <li><strong>Part of</strong> &mdash; the parent, if this trace is itself a sub-task.</li>
+    <li><strong>Blocked by / Blocks</strong> &mdash; dependencies on other traces.</li>
+    <li><strong>Linked traces</strong> &mdash; meaningful connections you add by hand: <strong>Caused by</strong>, <strong>Duplicate</strong>, <strong>Blocks</strong>.</li>
+    <li><strong>Other traces on this entity</strong> &mdash; everything else recorded against the same game/terminal/customer, so recurring problems stand out.</li>
+</ul>
+<p style="margin: 8px 0 0 0;">Full detail in <a class="doc-link" data-doc-id="">Trace &mdash; Related traces, sub-tasks &amp; dependencies</a>.</p>
+<div style="border-left: 4px solid #2980b9; background: #eaf2f8; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0;"><strong style="color: #2980b9;">Blocking and the close-gate.</strong> If trace A is blocked by trace B, A cannot be moved to Resolved/Closed until B is done. The board shows a 🔒 <strong>Blocked</strong> chip on any trace that is currently waiting on an open dependency, so you can see at a glance what is stuck.</p>
+</div>
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">Estimating effort</h2>
+<p>Effort answers "roughly how much work is this?" &mdash; which is different from how urgent it is. It is chosen from a <strong>fixed scale</strong>, not typed in freely:</p>
+<p style="margin: 4px 0;"><strong>30&nbsp;min &middot; 1h &middot; 2h &middot; Half&nbsp;day &middot; 1&nbsp;day &middot; 2&ndash;3&nbsp;days &middot; 1&nbsp;week &middot; 2&nbsp;weeks &middot; 1&nbsp;month</strong></p>
+<p>The scale is deliberately coarse at the top: nobody can tell a 31-hour job from a 34-hour job, so beyond a point you simply round to the next honest bucket. Pick the closest one and move on &mdash; the value is in the rough comparison across traces, not in false precision.</p>
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">The lifecycle &mdash; from open to archived</h2>
+<p>A trace flows through a natural cycle. Most of it happens on its own; you mostly just do the work.</p>
+<ol>
+    <li><strong>Open</strong> &rarr; <strong>In&nbsp;Progress</strong> &mdash; you pick it up and work it (drag it across, or change the status).</li>
+    <li><strong>Waiting</strong> &mdash; if you get stuck waiting on something, park it here with a "waiting for" note.</li>
+    <li><strong>Resolved</strong> &mdash; mark the solution (or move it yourself). The trace stays on the board for a <strong>grace period</strong> so it can be checked or reopened if the fix doesn't hold.</li>
+    <li><strong>Closed (archived)</strong> &mdash; after the grace period, the system <strong>closes it automatically</strong>. It leaves the board but is never lost &mdash; you can always find it in the List view.</li>
+</ol>
+<div style="border-left: 4px solid #2980b9; background: #eaf2f8; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0;"><strong style="color: #2980b9;">Why the grace period?</strong> A "fixed" machine that breaks again two days later isn't really fixed. Keeping resolved traces on the board for a while &mdash; then archiving them automatically &mdash; means the board stays clean without anyone having to tidy it, and genuine fixes get a chance to prove themselves first.</p>
+</div>
+<h3>Reopening</h3>
+<p>If a problem comes back, open the resolved/closed trace and use <strong>Reopen</strong>. It goes back to Open, and the system keeps count: a trace that has been reopened shows a <strong>↻ &times;n</strong> marker. A high reopen count is a useful warning sign &mdash; a recurring, never-quite-fixed problem.</p>
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">Looking back &mdash; the List &amp; Archive</h2>
+<p>Switch to the <strong>List</strong> view (the toggle in the toolbar) for a dense, sortable table of traces. At the top you choose what to show:</p>
+<ul>
+    <li><strong>Active</strong> &mdash; the same set as the board.</li>
+    <li><strong>Resolved</strong> / <strong>Closed</strong> / <strong>All</strong> &mdash; the archive. Add a <strong>date range</strong> to answer questions like "what did we resolve at this shop last month?"</li>
+</ul>
+<p>The same filters as the board (location, assignee, priority, type) apply here too. This is how you find a closed trace again &mdash; or just say to a colleague, "look at Trace 312", and they type <strong>312</strong> into <strong>Go to&nbsp;#</strong>.</p>
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">Escalating to SmartMonkey</h2>
+<p>When something is beyond what the team can resolve on its own &mdash; you need a configuration changed, an authorisation, a deeper investigation &mdash; you can <strong>escalate the trace to SmartMonkey</strong>. This pushes the trace, with its full context and history, to the SmartMonkey support team, who can then work on it directly.</p>
+<p>You'll find <strong>Escalate to SmartMonkey</strong> in the trace's escalation strip. Add a short note describing exactly what you need, and send. After that, the trace shows the SmartMonkey state at a glance:</p>
+<ul>
+    <li><strong>Escalated</strong> &mdash; sent, waiting for SmartMonkey to pick it up.</li>
+    <li><strong>Reviewing</strong> &mdash; someone at SmartMonkey has taken it.</li>
+    <li><strong>SM done</strong> &mdash; their part is finished (your trace can then carry on or be closed).</li>
+</ul>
+<div style="border-left: 4px solid #2980b9; background: #eaf2f8; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0;"><strong style="color: #2980b9;">Who can escalate.</strong> Escalation is controlled by a <strong>permission</strong>. SmartMonkey staff have it by default; for your own team it is granted per user, so you decide who is allowed to escalate. If you don't see the option, you don't currently have the permission &mdash; ask your manager.</p>
+</div>
+<div style="border-left: 4px solid #e67e22; background: #fef5e7; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0;"><strong style="color: #b9770e;">Before you escalate, make the trace tell the story.</strong> The strength of an escalation is the context that travels with it &mdash; the entity it's attached to, what you've already tried (in the timeline), photos, the exact thing you need. A well-filled trace gets a fast, accurate answer; a one-line trace gets questions back.</p>
+</div>
+<div style="border-left: 4px solid #2980b9; background: #eaf2f8; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0;"><strong style="color: #2980b9;">Full guide:</strong> for exactly how escalation works, who is allowed to do it, and the status flow end to end, see <a class="doc-link" data-doc-id="">Trace &mdash; Escalating to SmartMonkey</a>.</p>
+</div>
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">Notifications</h2>
+<p>Trace keeps people informed without anyone having to chase. You receive a notification (in the browser, and on Telegram if linked) when you are <strong>mentioned</strong>, <strong>assigned</strong> a trace, or sent a <strong>help request</strong> (<strong>@name!</strong>), among others. This is why mentioning the right person, rather than just writing into the void, matters.</p>
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">Good habits</h2>
+<ul>
+    <li><strong>One trace, one problem.</strong> If a step grows into separate work, promote it to a sub-task rather than overloading the original.</li>
+    <li><strong>Keep the timeline honest.</strong> Note what you tried, even when it didn't work &mdash; it saves the next person from repeating it, and makes any escalation far stronger.</li>
+    <li><strong>Mark the solution.</strong> It's one click, it resolves the trace, and it builds a memory of "how we fixed this last time".</li>
+    <li><strong>Order is a promise.</strong> The top card is the next job &mdash; keep your columns ordered so the board means something.</li>
+    <li><strong>Attach the context.</strong> Always pick the right scope and entity. A trace without context is just a sticky note.</li>
+</ul>

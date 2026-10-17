@@ -1,0 +1,64 @@
+<p style="color: #5d6d7e; margin: 0 0 20px 0;">Real work is rarely one isolated job. This guide covers how traces connect &mdash; breaking a big job into sub-tasks, and handling traces that block one another.</p>
+<div style="border-left: 4px solid #2980b9; background: #eaf2f8; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0;"><strong style="color: #2980b9;">New to Trace?</strong> See <a class="doc-link" data-doc-id="">Trace &mdash; Overview &amp; how to use it</a> and <a class="doc-link" data-doc-id="">Trace &mdash; Creating &amp; working a trace</a> first.</p>
+</div>
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">Why connect traces &mdash; the goal</h2>
+<p>On their own, traces are a to-do list. <strong>Connected</strong>, they become a picture of how your operation actually behaves. That's the whole point of relating traces, and it does three things for you:</p>
+<ul>
+    <li><strong>It shows cause and effect.</strong> "This outage was <em>caused by</em> that change." Linking the two means the next person sees the chain &mdash; not two unrelated tickets they have to piece together.</li>
+    <li><strong>It avoids duplicated effort.</strong> Marking a trace as a <em>duplicate</em> of another keeps the work, and the conversation, in one place &mdash; instead of two people fixing the same thing twice.</li>
+    <li><strong>It reveals patterns.</strong> Because every trace stays attached to its entity, the same machine's whole history sits together. A game with eight traces this year isn't eight isolated faults &mdash; it's a machine telling you something.</li>
+</ul>
+<p>And breaking a big job into <strong>sub-tasks</strong> keeps each piece honest: nothing gets marked "done" while a real part of it is still open.</p>
+<div style="border-left: 4px solid #27ae60; background: #eafaf1; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0;"><strong style="color: #1e8449;">In one line:</strong> relating traces turns a pile of tickets into the <strong>memory</strong> of your operation &mdash; what broke, what caused it, what fixed it, and what keeps coming back.</p>
+</div>
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">The relationship bar</h2>
+<p>When a trace is connected to others, a <strong>relationship bar</strong> appears at the top of its detail view &mdash; the quick map of how it fits in:</p>
+<ul>
+    <li><strong>Part of #n</strong> &mdash; this trace is a sub-task of another.</li>
+    <li><strong>Blocked by</strong> &mdash; traces that must be done before this one can close (with a dot showing if each is still open or done).</li>
+    <li><strong>Blocks</strong> &mdash; traces this one is holding up.</li>
+    <li><strong>Sub-tasks</strong> &mdash; the children of this trace, and their progress.</li>
+</ul>
+<p>Every number in the bar is clickable, so you can hop straight between connected traces.</p>
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">Sub-tasks &mdash; splitting a job</h2>
+<p>Sometimes what looked like a single step turns into real work of its own. Instead of overloading the original trace, you <strong>promote</strong> that step into a <strong>sub-task</strong>: its own trace, with its own assignee, effort, timeline and history &mdash; linked back to the parent.</p>
+<h3>How to promote a step</h3>
+<ol>
+    <li>Open the trace and go to the <strong>Checklist</strong> tab.</li>
+    <li>On the step you want to split out, use <strong>promote</strong>.</li>
+    <li>A new trace is created from that step &mdash; it inherits the parent's context (the same entity, location and priority), so you don't re-enter it &mdash; and it's linked to the parent.</li>
+</ol>
+<p>The checklist step now shows as <strong>"&rarr; #n"</strong> &mdash; handed off &mdash; and the new sub-task appears under <strong>Sub-tasks</strong> on the parent. You then give the sub-task its own assignee and effort and work it like any trace.</p>
+<div style="border-left: 4px solid #2980b9; background: #eaf2f8; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0;"><strong style="color: #2980b9;">The parent waits for its children.</strong> A parent trace <strong>cannot be resolved or closed while it still has an open sub-task</strong>. This is deliberate: it stops a job being marked "done" while a real piece of it is still outstanding.</p>
+</div>
+<div style="border-left: 4px solid #27ae60; background: #eafaf1; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0;"><strong style="color: #1e8449;">When to promote vs keep one trace.</strong> Keep it as a checklist step if it's a quick action in the same flow. Promote it to a sub-task when it has its <strong>own</strong> life &mdash; a different owner, a different timeline, something you'll track separately (ordering a part, waiting on an external service). One trace, one problem.</p>
+</div>
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">Blocking &mdash; "this can't be done until that is"</h2>
+<p>Traces can depend on each other. If trace A is <strong>blocked by</strong> trace B, then A is genuinely stuck until B is finished &mdash; and Trace enforces that.</p>
+<ul>
+    <li>The <strong>relationship bar</strong> and the <strong>Related</strong> tab show <strong>Blocked by</strong> and <strong>Blocks</strong>, each with a status dot.</li>
+    <li>On the board, any trace currently waiting on an open dependency carries a 🔒 <strong>Blocked</strong> chip &mdash; so you can see at a glance what is stuck and why.</li>
+</ul>
+<div style="border-left: 4px solid #e67e22; background: #fef5e7; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0;"><strong style="color: #b9770e;">The close-gate.</strong> A blocked trace <strong>cannot be moved to Resolved or Closed</strong> while any of its blockers (or open sub-tasks) are still open. If you try, it won't let you. This keeps the board honest &mdash; nothing is marked done while something it depends on is still hanging.</p>
+</div>
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">Links &mdash; connecting related traces</h2>
+<p>Beyond parent/child and blocking, you can connect traces that are simply <strong>related</strong>, from the <strong>Related</strong> tab:</p>
+<ul>
+    <li><strong>Caused by</strong> &mdash; this problem was caused by another trace.</li>
+    <li><strong>Duplicate</strong> &mdash; this is the same issue as another trace.</li>
+    <li><strong>Blocks</strong> &mdash; mark a blocking dependency by hand.</li>
+</ul>
+<p>To add one, open <strong>Add link</strong>, choose the type, and find the other trace by its <strong>#number</strong> or title.</p>
+<h3>Other traces on this entity (automatic)</h3>
+<p>You don't have to link these by hand. The Related tab shows, automatically, <strong>every other trace recorded against the same entity</strong> &mdash; the same game, terminal or customer. This is the system relating traces <em>for</em> you, and it's where recurring problems reveal themselves: if a machine has five traces this year you'll see them all in one place &mdash; the difference between "another fault" and "<em>this machine again</em>".</p>
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">In short</h2>
+<ul>
+    <li><strong>Promote</strong> a checklist step into a <strong>sub-task</strong> when it deserves its own trace &mdash; the parent then waits for it.</li>
+    <li><strong>Blocked-by</strong> means it can't close until the blocker is done; the board flags it with 🔒.</li>
+    <li>Use <strong>links</strong> (caused-by / duplicate) to connect related traces, and check <strong>other traces on this entity</strong> to spot patterns.</li>
+</ul>

@@ -1,0 +1,16 @@
+#!/bin/bash
+set -e
+CONTAINER=souldpark-sapienscore-1
+WORKDIR=/var/www/html/sapienscore/command/v2
+for org in 1; do
+  for cmd in SiiProcessNayaxTransactionByOrganization SiiProcessEmvTransactionByOrganization SiiProcessOnlinePaymentByOrganization SiiProcessRefundByOrganization SiiProcessCashCollectionByOrganization; do
+    echo "=== $(date -Iseconds) $cmd $org ==="
+    docker exec -w $WORKDIR $CONTAINER php -d memory_limit=512M index.php $cmd $org
+  done
+  echo "=== $(date -Iseconds) SiiProcessPaymentByOrganization $org loyalty ==="
+  docker exec -w $WORKDIR $CONTAINER php -d memory_limit=512M index.php SiiProcessPaymentByOrganization $org 1
+  echo "=== $(date -Iseconds) SiiProcessPaymentByOrganization $org regular ==="
+  docker exec -w $WORKDIR $CONTAINER php -d memory_limit=512M index.php SiiProcessPaymentByOrganization $org 0
+done
+echo "=== $(date -Iseconds) SiiProcessSchedule ==="
+docker exec -w $WORKDIR $CONTAINER php -d memory_limit=512M index.php SiiProcessSchedule

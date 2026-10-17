@@ -1,0 +1,36 @@
+<p style="color: #5d6d7e; margin: 0 0 20px 0;">Check that the cash counted at collection matches what the machine actually took in &mdash; three independent figures, side by side, per collection.</p>
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">Introduction</h2>
+<p>The <strong>Coin Reconciliation</strong> report answers the question every operator eventually asks: <strong>did the cash we counted match what the machine says it received?</strong> For each confirmed collection it puts three numbers next to each other so a discrepancy has nowhere to hide.</p>
+<div style="border-left: 4px solid #2980b9; background: #eaf2f8; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0 0 6px 0;"><strong style="color: #2980b9;">The three figures:</strong></p>
+    <ul style="margin: 0;">
+        <li><strong>Expected</strong> &mdash; what the machine's mechanical counter says should be there (the counter reading, converted to cash).</li>
+        <li><strong>Cash</strong> &mdash; what was physically counted at collection.</li>
+        <li><strong>Coin-in</strong> &mdash; what the electronic coin log recorded, for that exact collection.</li>
+    </ul>
+</div>
+<p>Three independent sources for the same money. When they agree, the collection is clean. When they don't, the gaps tell you what kind of problem you have.</p>
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">The collection window &mdash; why the timing is exact</h2>
+<p>The clever part is <strong>which</strong> coins belong to a collection. A collection's counter is confirmed at a precise moment. The coins that belong to it are the ones logged <strong>between the previous collection's confirmation and this one's</strong> &mdash; nothing before, nothing after.</p>
+<div style="border-left: 4px solid #2980b9; background: #eaf2f8; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0;"><strong style="color: #2980b9;">It follows the counter, not the cash count.</strong> Even if the cash is counted days later, the coins that belong to a collection are the ones that were in the box when the counter was read. This makes the match exact, with no guesswork about which day a coin "counts" for.</p>
+</div>
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">Reading the deltas</h2>
+<p>The report colours the differences so problems stand out. The one to watch is <strong>Cash vs Log</strong>:</p>
+<ul>
+    <li><strong>Cash below the log</strong> (red) &mdash; less cash was counted than the machine says it received. This is the money-missing signal &mdash; the sharpest one on the report.</li>
+    <li><strong>Cash above the log</strong> (green) &mdash; more cash than logged, usually harmless (for example, coins whose value wasn't yet configured).</li>
+</ul>
+<p>A second delta, <strong>Log vs Counter</strong>, compares the electronic log against the mechanical meter &mdash; useful for spotting a counter or acceptor that has drifted.</p>
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">Biggest shortfalls</h2>
+<p>Machines are ranked by how far their counted cash falls below their log, so a persistent problem rises to the top. A single bad collection can be a miscount; the same machine appearing again and again is worth investigating.</p>
+<div style="border-left: 4px solid #e67e22; background: #fef5e7; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0;"><strong style="color: #b9770e;">Unpriced coins are excluded from the ranking.</strong> A collection whose coins were all logged before the machine's values were configured shows a &euro;0 log &mdash; not because cash is missing, but because those coins have no known value. The report marks these and keeps them out of the shortfall ranking, so a data gap never masquerades as theft.</p>
+</div>
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">Only confirmed collections</h2>
+<div style="border-left: 4px solid #2980b9; background: #eaf2f8; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0;"><strong style="color: #2980b9;">A collection has to be confirmed to be reconciled.</strong> The confirmation instant is what defines the collection window, so pending collections don't appear here. If a collection you expect is missing, check that its counter has been confirmed.</p>
+</div>
+<div style="border-left: 4px solid #27ae60; background: #eafaf1; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0;"><strong style="color: #1e8449;">Use it after every collection cycle.</strong> Run the report over the period you just collected, scan the Cash-vs-Log column for red, and you have an honest, three-way check on the count &mdash; without opening a single collection by hand.</p>
+</div>

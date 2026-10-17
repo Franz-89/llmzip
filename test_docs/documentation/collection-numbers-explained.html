@@ -1,0 +1,60 @@
+<p style="color: #5d6d7e; margin: 0 0 20px 0;">Exactly how the Expected cash, the deviation, and the coin-in figure on a collection are worked out &mdash; and why there are three different numbers in the first place.</p>
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">Introduction</h2>
+<p>A collection carries three figures for the same money: <strong>Expected</strong>, <strong>Cash</strong>, and <strong>Coin-in</strong>. They come from three completely independent places, which is the whole point &mdash; if they agree, the collection is honest; if they don't, the gap tells you where to look. This guide explains where each number comes from, with the actual arithmetic.</p>
+<div style="border-left: 4px solid #2980b9; background: #eaf2f8; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0 0 6px 0;"><strong style="color: #2980b9;">The three sources:</strong></p>
+    <ul style="margin: 0;">
+        <li><strong>Expected</strong> comes from the machine's <strong>mechanical counter</strong> (a meter of plays).</li>
+        <li><strong>Cash</strong> comes from a <strong>person counting the money</strong>.</li>
+        <li><strong>Coin-in</strong> comes from the <strong>electronic coin log</strong> (each coin reported over the wire).</li>
+    </ul>
+</div>
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">The counter, and the coefficient</h2>
+<p><strong>Counter</strong> &mdash; every machine has a meter that only ever goes up. It counts <strong>plays</strong> (or pulses) for the machine's whole life. A single reading on its own means nothing; what matters is <strong>how much it moved</strong> since the last collection.</p>
+<p><strong>Counter coefficient</strong> &mdash; the value of one play. It converts a number of plays into money. If a play costs 0.50, the coefficient is 0.50.</p>
+<div style="border-left: 4px solid #2980b9; background: #eaf2f8; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0;"><strong style="color: #2980b9;">Why the difference, not the reading:</strong> a machine's counter might read 480,000. That number is meaningless by itself. Subtract the previous collection's reading and you get the plays <strong>since you last emptied it</strong> &mdash; which is exactly the period the Expected cash should cover.</p>
+</div>
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">The Expected cash formula</h2>
+<p>Putting it together, this is precisely how Expected cash is computed:</p>
+<div style="border: 1px solid #34495e; background: #2c3e50; color: #ecf0f1; padding: 14px 16px; margin: 14px 0; border-radius: 6px; font-family: monospace;">
+counter&nbsp;plays&nbsp;&nbsp;&nbsp;= counter&nbsp;now &minus; counter&nbsp;at&nbsp;last&nbsp;collection<br><br>
+<strong>Expected&nbsp;cash = counter&nbsp;plays &times; counter&nbsp;coefficient</strong>
+</div>
+<p>In words: <strong>the cash plays since the last collection, multiplied by the value of a play.</strong></p>
+<div style="border-left: 4px solid #2980b9; background: #eaf2f8; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0;"><strong style="color: #2980b9;">Cashless (Nayax) plays don't need removing.</strong> The counter only advances on <strong>cash</strong> plays &mdash; a cashless play through a Nayax reader does not spin it. So the plays it counts are already cash-only, and nothing has to be subtracted. (Older machines whose counter also advanced on cashless plays needed that correction; current pulseboxes don't, so it no longer applies.)</p>
+</div>
+<div style="border-left: 4px solid #e67e22; background: #fef5e7; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0;"><strong style="color: #b9770e;">Never negative.</strong> If the readings would produce a negative result (a counter that appears to have gone backwards, a reset, or a mis-typed reading), Expected is clamped to <strong>0</strong> rather than shown as a negative number. A machine showing 0 expected when you know it earned is a sign the counter readings need checking.</p>
+</div>
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">A worked example</h2>
+<div style="border-left: 4px solid #2980b9; background: #eaf2f8; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0 0 6px 0;"><strong style="color: #2980b9;">Say a machine at 0.50 per play:</strong></p>
+    <ul style="margin: 0;">
+        <li>Counter now <strong>10,500</strong>, last collection <strong>10,000</strong> &rarr; <strong>500</strong> cash plays.</li>
+        <li>Expected cash = 500 &times; 0.50 = <strong>250</strong>.</li>
+    </ul>
+</div>
+<p>If the person then counts <strong>245</strong> in the box, the collection is <strong>5 short</strong> of expected &mdash; about 2%. Small and probably fine. A gap of 50 on the same collection would be worth a closer look.</p>
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">Cash, and the deviation</h2>
+<p><strong>Cash</strong> is the simplest of the three &mdash; it's the amount a person physically counted and entered. No calculation.</p>
+<p>The <strong>deviation</strong> is just the difference between what was counted and what the counter expected:</p>
+<div style="border: 1px solid #34495e; background: #2c3e50; color: #ecf0f1; padding: 14px 16px; margin: 14px 0; border-radius: 6px; font-family: monospace;">
+deviation&nbsp;&nbsp;&nbsp;= cash&nbsp;counted &minus; expected&nbsp;cash<br>
+deviation&nbsp;% = deviation &divide; expected&nbsp;cash &times; 100
+</div>
+<p>A <strong>negative</strong> deviation means less cash than the counter expected &mdash; the direction that matters. A small percentage is normal; a large or repeating one is the signal.</p>
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">Coin-in &mdash; the third, independent figure</h2>
+<p>Everything above comes from the <strong>mechanical counter</strong>. <strong>Coin-in</strong> comes from somewhere else entirely: the <strong>electronic log</strong> the acceptor produces every time a coin drops, each coin already carrying its configured value.</p>
+<div style="border-left: 4px solid #2980b9; background: #eaf2f8; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0;"><strong style="color: #2980b9;">Which coins belong to the collection:</strong> the coins logged between the <strong>previous collection's confirmation and this one's</strong>. Because those confirmation moments are exact timestamps, the coin-in figure lines up with the counter's window precisely &mdash; no guessing which day a coin counts for.</p>
+</div>
+<p>So a collection is checked three ways from three independent origins: the <strong>meter</strong> says Expected, the <strong>person</strong> says Cash, the <strong>coin log</strong> says Coin-in. A counter that has drifted shows up as Expected disagreeing with Coin-in; money going missing shows up as Cash below both.</p>
+<div style="border-left: 4px solid #e67e22; background: #fef5e7; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0;"><strong style="color: #b9770e;">When Coin-in reads 0 but the machine clearly earned:</strong> its coins were logged before that machine's coin values were configured, so they have no known value. Those coins are counted but worth an unknown amount &mdash; a data gap, not a shortfall. It only affects the older, pre-configuration coins.</p>
+</div>
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">In summary</h2>
+<div style="border-left: 4px solid #27ae60; background: #eafaf1; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0;"><strong style="color: #1e8449;">Expected</strong> = counter plays &times; value per play. <strong>Cash</strong> = what was counted. <strong>Coin-in</strong> = the electronic coin log over the same window. Three origins, one truth &mdash; and the gaps between them are where the answers live.</p>
+</div>

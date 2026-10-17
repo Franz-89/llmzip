@@ -1,0 +1,42 @@
+<p style="color: #5d6d7e; margin: 0 0 20px 0;">Get notified before a shop's cash builds up too much or a game gets blocked, by setting the amount at which a collection should be triggered.</p>
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">Introduction</h2>
+<p>Collection thresholds turn the <strong>Cash in Box</strong> snapshot into an early warning. You decide how much uncounted cash is "too much" &mdash; for a whole shop, and optionally for any single machine &mdash; and the system notifies the shop's users when that amount is reached, so they can collect in time.</p>
+<div style="border-left: 4px solid #2980b9; background: #eaf2f8; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0 0 6px 0;"><strong style="color: #2980b9;">Two independent triggers:</strong></p>
+    <ul style="margin: 0;">
+        <li><strong>Location threshold</strong> &mdash; alert when the <strong>total</strong> cash across all a shop's machines reaches this amount.</li>
+        <li><strong>Per-machine cap</strong> &mdash; alert when <strong>any single machine</strong> reaches this amount, so a busy game never fills up and blocks, even if the shop as a whole is nowhere near its threshold.</li>
+    </ul>
+</div>
+<p>A good example: a shop's location threshold might be a large round number, while the per-machine cap is much smaller &mdash; so a single popular game that fills quickly gets collected on its own, long before the shop total would ever trigger.</p>
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">Base concepts</h2>
+<p><strong>Owner default</strong> &mdash; The thresholds that apply to <strong>all</strong> of an owner's shops unless a shop says otherwise. This is where you set the general policy.</p>
+<p><strong>Location override</strong> &mdash; A specific shop can override any of the values &mdash; enable/disable, its own location threshold, its own per-machine cap. Anything a shop doesn't override falls back to the owner default.</p>
+<div style="border-left: 4px solid #2980b9; background: #eaf2f8; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0;"><strong style="color: #2980b9;">How a value is chosen:</strong> the system starts from the owner default and then applies any location override on top, field by field. So you set the policy once for the owner, and only touch individual shops that need to differ.</p>
+</div>
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">Setting the owner default</h2>
+<p>Open <strong>Location &rarr; Collection Thresholds</strong>. Choose the <strong>owner</strong>, then set:</p>
+<ul>
+    <li><strong>Enable collection alerts</strong> &mdash; the master switch. If this is off, nothing is checked and no one is notified.</li>
+    <li><strong>Location threshold</strong> &mdash; the shop-total amount. Leave it at 0 to switch off the shop-level trigger.</li>
+    <li><strong>Per-machine cap</strong> &mdash; the single-machine amount. Leave it at 0 to switch off the per-machine trigger.</li>
+</ul>
+<p>Save, and the default is in force for every shop under that owner.</p>
+<div style="border-left: 4px solid #e67e22; background: #fef5e7; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0;"><strong style="color: #b9770e;">A threshold of 0 means "off" for that level.</strong> You can run only the shop-total trigger, only the per-machine cap, or both. Turning the master switch off disables everything at once without losing your numbers.</p>
+</div>
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">Seeing it on the report</h2>
+<p>Everything you configure is reflected live on the <strong>Cash in Box</strong> report: the location threshold appears next to each shop, a shop that has reached it turns red with a <strong>Collect</strong> tag, and any machine over its cap is flagged <strong>over cap</strong>. This is the quickest way to check your thresholds are set sensibly &mdash; if nothing ever goes red, they may be too high; if everything is red, too low.</p>
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">How the alerts are sent</h2>
+<p>A scheduled check runs on its own in the background. Each time it runs it looks at the current Cash in Box state and, for every shop that is over its location threshold <strong>or</strong> has machines over the cap, it notifies that shop's users. The notification links straight to the Cash in Box report so they can see exactly what to collect.</p>
+<div style="border-left: 4px solid #2980b9; background: #eaf2f8; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0;"><strong style="color: #2980b9;">You won't be spammed.</strong> A shop that has just been alerted is not alerted again for a while, even if the check runs frequently. It waits out a quiet window before it can notify the same shop again &mdash; so a shop that stays over threshold produces one alert, not one every run.</p>
+</div>
+<div style="border-left: 4px solid #27ae60; background: #eafaf1; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0;"><strong style="color: #1e8449;">Once it's set up, it looks after itself.</strong> Configure the thresholds, and from then on the right people get a nudge whenever a shop or a machine needs collecting &mdash; no one has to remember to check.</p>
+</div>
+<h2 style="border-bottom: 2px solid #e5e8eb; padding-bottom: 6px;">Unpriced coins and thresholds</h2>
+<div style="border-left: 4px solid #e67e22; background: #fef5e7; padding: 12px 16px; margin: 16px 0; border-radius: 4px;">
+    <p style="margin: 0;"><strong style="color: #b9770e;">Thresholds work on known money.</strong> Coins logged before a machine's values were configured count as coins but not as money, so they don't push a shop over its threshold. Once a machine's pins are configured, every new coin carries its value and counts normally. If a shop seems oddly low against its threshold, check whether it still has old unpriced coins on the Cash in Box report.</p>
+</div>

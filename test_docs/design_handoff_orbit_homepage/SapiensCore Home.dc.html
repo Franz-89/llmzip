@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet data-dc-atomics>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Hanken+Grotesk:wght@400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+<style>
+*{box-sizing:border-box}
+html,body{margin:0}
+body{background:#f7f1e7;overflow-x:hidden}
+::selection{background:var(--c1,#ff7a59);color:#fff}
+@keyframes floatA{0%,100%{transform:translateY(0) rotate(-5deg)}50%{transform:translateY(-12px) rotate(-5deg)}}
+@keyframes floatB{0%,100%{transform:translateY(0) rotate(6deg)}50%{transform:translateY(-14px) rotate(6deg)}}
+@keyframes blobDrift{0%,100%{transform:translate(0,0) scale(1)}50%{transform:translate(20px,-24px) scale(1.06)}}
+@keyframes dockIn{from{transform:translate(-50%,120%)}to{transform:translate(-50%,0)}}
+</style>
+</helmet>
+<div style="{{ rootVars }}; font-family:'Hanken Grotesk',system-ui,sans-serif; color:#2c2733; background:#f7f1e7; min-height:100vh; position:relative; overflow:hidden;">
+
+  <div style="position:absolute; top:-160px; right:-120px; width:520px; height:520px; border-radius:50%; background:var(--c2,#ffc247); opacity:.20; filter:blur(10px); animation:blobDrift 20s ease-in-out infinite; animation-play-state:var(--play,running); z-index:0;"></div>
+  <div style="position:absolute; top:520px; left:-140px; width:420px; height:420px; border-radius:50%; background:var(--c3,#3fb984); opacity:.16; filter:blur(10px); animation:blobDrift 26s ease-in-out infinite reverse; animation-play-state:var(--play,running); z-index:0;"></div>
+
+  <div style="position:relative; z-index:1;">
+
+  <!-- NAV -->
+  <nav data-screen-label="Home / Nav" style="position:sticky; top:0; z-index:40; display:flex; align-items:center; justify-content:space-between; padding:16px 40px; background:rgba(247,241,231,.85); backdrop-filter:blur(14px); border-bottom:1px solid rgba(44,39,51,.07);">
+    <div style="display:flex; align-items:center; gap:11px;">
+      <div style="width:40px; height:40px; border-radius:14px; background:var(--c1,#ff7a59); display:flex; align-items:center; justify-content:center; box-shadow:0 6px 16px rgba(255,122,89,.4);">
+        <div style="width:15px; height:15px; border-radius:50%; border:3.5px solid #fff;"></div>
+      </div>
+      <span style="font:600 24px 'Fredoka',sans-serif; letter-spacing:-.01em;">ORBIT</span>
+    </div>
+    <div style="display:flex; align-items:center; gap:32px;">
+      <a href="#activities" style="font:500 16px 'Hanken Grotesk',sans-serif; color:#2c2733; text-decoration:none;">Activities</a>
+      <a href="#locations" style="font:500 16px 'Hanken Grotesk',sans-serif; color:#2c2733; text-decoration:none;">Locations</a>
+      <a href="#reserve" style="font:500 16px 'Hanken Grotesk',sans-serif; color:#2c2733; text-decoration:none;">Plan a visit</a>
+      <a href="#rewards" style="font:500 16px 'Hanken Grotesk',sans-serif; color:#2c2733; text-decoration:none;">Rewards</a>
+    </div>
+    <div style="display:flex; align-items:center; gap:10px;">
+      <button style="font:500 15px 'Hanken Grotesk',sans-serif; padding:10px 16px; border-radius:999px; border:none; background:transparent; color:#2c2733; cursor:pointer;">Log in</button>
+      <button style="display:inline-flex; align-items:center; gap:7px; font:600 15px 'Hanken Grotesk',sans-serif; padding:11px 18px; border-radius:999px; border:1.5px solid rgba(44,39,51,.16); background:#fffdf8; color:#2c2733; cursor:pointer;" style-hover="border-color:var(--c1,#ff7a59); color:var(--c1,#ff7a59);"><span style="font-size:16px;">＋</span> Top up</button>
+      <button style="font:600 15px 'Hanken Grotesk',sans-serif; padding:12px 22px; border-radius:999px; border:none; background:var(--c1,#ff7a59); color:#fff; cursor:pointer; box-shadow:0 8px 20px rgba(255,122,89,.38);" style-hover="transform:translateY(-1px); box-shadow:0 12px 26px rgba(255,122,89,.46);">Book a visit</button>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section data-screen-label="Home / Hero" ref="{{ heroRef }}" style="position:relative; display:grid; grid-template-columns:1.02fr .98fr; gap:52px; align-items:center; padding:60px 40px 76px; max-width:1240px; margin:0 auto;">
+    <div>
+      <div style="display:inline-flex; align-items:center; gap:8px; padding:7px 15px; border-radius:999px; background:#fffdf8; border:1.5px solid rgba(44,39,51,.10); color:#6a6072; font:700 11px 'Space Mono',monospace; letter-spacing:.1em; margin-bottom:24px; box-shadow:0 4px 14px rgba(44,39,51,.06);">
+        <span style="width:8px; height:8px; border-radius:50%; background:var(--c3,#3fb984);"></span>
+        FAMILY FUN · POWERED BY SAPIENSCORE
+      </div>
+      <h1 style="font:600 clamp(46px,6.2vw,80px)/1.02 'Fredoka',sans-serif; letter-spacing:-.02em; margin:0 0 22px; color:#2c2733;">
+        More smiles<br>per visit.
+      </h1>
+      <p style="font:400 20px/1.6 'Hanken Grotesk',sans-serif; color:#5a5265; max-width:470px; margin:0 0 32px;">
+        A warm welcome for the whole family — bowling, bouncing, climbing and more. One ORBIT card remembers your points, your top-ups and your favourite park.
+      </p>
+      <div style="display:flex; gap:14px; flex-wrap:wrap;">
+        <button style="font:600 17px 'Hanken Grotesk',sans-serif; padding:16px 30px; border-radius:999px; border:none; background:var(--c1,#ff7a59); color:#fff; cursor:pointer; box-shadow:0 12px 28px rgba(255,122,89,.42);" style-hover="transform:translateY(-2px); box-shadow:0 16px 34px rgba(255,122,89,.5);">Book a visit</button>
+        <button style="font:600 17px 'Hanken Grotesk',sans-serif; padding:16px 30px; border-radius:999px; border:1.5px solid rgba(44,39,51,.16); background:#fffdf8; color:#2c2733; cursor:pointer;" style-hover="border-color:#2c2733;">Get your free card</button>
+      </div>
+      <div style="display:flex; gap:28px; margin-top:36px; flex-wrap:wrap; align-items:center;">
+        <div style="display:flex; align-items:center;">
+          <div style="width:34px; height:34px; border-radius:50%; background:var(--c2,#ffc247); border:2.5px solid #f7f1e7;"></div>
+          <div style="width:34px; height:34px; border-radius:50%; background:var(--c3,#3fb984); border:2.5px solid #f7f1e7; margin-left:-12px;"></div>
+          <div style="width:34px; height:34px; border-radius:50%; background:var(--c4,#4aa8e0); border:2.5px solid #f7f1e7; margin-left:-12px;"></div>
+          <div style="width:34px; height:34px; border-radius:50%; background:var(--c1,#ff7a59); border:2.5px solid #f7f1e7; margin-left:-12px; display:flex; align-items:center; justify-content:center; color:#fff; font:700 11px 'Space Mono',monospace;">+50k</div>
+        </div>
+        <div style="font:500 15px/1.4 'Hanken Grotesk',sans-serif; color:#5a5265;"><strong style="color:#2c2733;">4.9★</strong> from 50,000+<br>happy families</div>
+      </div>
+    </div>
+
+    <!-- HERO RIGHT: photo + loyalty card -->
+    <div style="position:relative; display:flex; align-items:center; justify-content:center; perspective:1500px; min-height:420px;">
+      <!-- family photo placeholder -->
+      <div style="position:absolute; top:0; left:0; width:66%; height:74%; border-radius:28px; overflow:hidden; box-shadow:0 24px 50px rgba(44,39,51,.18); background:repeating-linear-gradient(45deg,#ece0cd,#ece0cd 11px,#e3d5be 11px,#e3d5be 22px); display:flex; align-items:center; justify-content:center;">
+        <span style="font:600 11px 'Space Mono',monospace; color:#8a7d68; background:#f7f1e7; padding:6px 11px; border-radius:8px;">family photo · bowling</span>
+      </div>
+      <!-- floating small chip -->
+      <div style="position:absolute; top:8px; right:14%; z-index:4; background:#fffdf8; border-radius:16px; padding:11px 15px; box-shadow:0 12px 26px rgba(44,39,51,.16); animation:floatA 5.5s ease-in-out infinite; animation-play-state:var(--play,running); display:flex; align-items:center; gap:9px;">
+        <div style="width:30px; height:30px; border-radius:9px; background:var(--c3,#3fb984); display:flex; align-items:center; justify-content:center; font-size:15px;">🎳</div>
+        <div><div style="font:700 13px 'Fredoka',sans-serif; line-height:1;">+50 points</div><div style="font:500 11px 'Hanken Grotesk',sans-serif; color:#8a8194;">this game</div></div>
+      </div>
+
+      <!-- loyalty card -->
+      <div ref="{{ cardRef }}" style="position:absolute; bottom:2px; right:0; z-index:5; transition:transform .2s ease-out; transform:rotateY(-10deg) rotateX(7deg); transform-style:preserve-3d; cursor:pointer;">
+        <div ref="{{ flipRef }}" onClick="{{ flip }}" style="position:relative; width:330px; height:206px; transform-style:preserve-3d; transition:transform .7s cubic-bezier(.4,.2,.2,1); transform:rotateY(0deg);">
+          <!-- FRONT -->
+          <div style="position:absolute; inset:0; backface-visibility:hidden; -webkit-backface-visibility:hidden; border-radius:22px; background:linear-gradient(135deg,var(--c1,#ff7a59),var(--c4,#4aa8e0)); box-shadow:0 22px 44px rgba(44,39,51,.28); padding:22px; color:#fff; overflow:hidden;">
+            <div style="position:absolute; top:-46px; right:-30px; width:150px; height:150px; border-radius:50%; background:rgba(255,255,255,.16);"></div>
+            <div style="display:flex; justify-content:space-between; align-items:flex-start;">
+              <div>
+                <div style="font:700 10px 'Space Mono',monospace; letter-spacing:.16em; opacity:.9;">ORBIT REWARDS</div>
+                <div style="font:600 20px 'Fredoka',sans-serif; margin-top:3px;">Gold family</div>
+              </div>
+              <div style="width:38px; height:29px; border-radius:7px; background:var(--c2,#ffc247);"></div>
+            </div>
+            <div style="margin-top:24px;">
+              <div style="font:600 11px 'Hanken Grotesk',sans-serif; opacity:.9;">Points balance</div>
+              <div style="font:700 38px/1 'Space Mono',monospace; margin-top:3px;">2,480</div>
+            </div>
+            <div style="position:absolute; left:22px; bottom:18px; right:22px; display:flex; justify-content:space-between; align-items:flex-end;">
+              <div>
+                <div style="font:400 11px 'Space Mono',monospace; letter-spacing:.16em; opacity:.85;">•••• 7204</div>
+                <div style="font:600 14px 'Hanken Grotesk',sans-serif; margin-top:3px;">The Rivera Family</div>
+              </div>
+              <div style="font:700 9px 'Space Mono',monospace; opacity:.8; text-align:right;">TAP TO<br>FLIP ↻</div>
+            </div>
+          </div>
+          <!-- BACK -->
+          <div style="position:absolute; inset:0; backface-visibility:hidden; -webkit-backface-visibility:hidden; transform:rotateY(180deg); border-radius:22px; background:#2c2733; box-shadow:0 22px 44px rgba(44,39,51,.28); padding:22px; color:#f7f1e7; overflow:hidden;">
+            <div style="height:34px; background:#211d29; margin:-22px -22px 16px; border-bottom:2px solid var(--c2,#ffc247);"></div>
+            <div style="display:flex; gap:15px; align-items:center;">
+              <div style="width:70px; height:70px; border-radius:12px; background:#f7f1e7; display:grid; grid-template-columns:repeat(5,1fr); grid-template-rows:repeat(5,1fr); padding:6px; gap:2px;">
+                <div style="background:#2c2733"></div><div></div><div style="background:#2c2733"></div><div style="background:#2c2733"></div><div style="background:#2c2733"></div><div></div><div style="background:#2c2733"></div><div></div><div></div><div style="background:#2c2733"></div><div style="background:#2c2733"></div><div></div><div style="background:#2c2733"></div><div style="background:#2c2733"></div><div></div><div style="background:#2c2733"></div><div></div><div style="background:#2c2733"></div><div></div><div style="background:#2c2733"></div><div style="background:#2c2733"></div><div style="background:#2c2733"></div><div></div><div style="background:#2c2733"></div><div style="background:#2c2733"></div>
+              </div>
+              <div>
+                <div style="font:700 10px 'Space Mono',monospace; letter-spacing:.12em; color:var(--c3,#3fb984);">MEMBER ID</div>
+                <div style="font:700 16px 'Space Mono',monospace; margin:2px 0 10px;">ORB-7204-AX</div>
+                <div style="font:700 10px 'Space Mono',monospace; letter-spacing:.12em; color:var(--c2,#ffc247);">NEXT REWARD</div>
+                <div style="font:600 14px 'Hanken Grotesk',sans-serif;">520 pts → Free hour</div>
+              </div>
+            </div>
+            <div style="position:absolute; left:22px; right:22px; bottom:14px; font:400 10px 'Space Mono',monospace; opacity:.55; text-align:center;">Synced by SapiensCore · valid at all 12 parks</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WELCOME / TRUST BAND (static) -->
+  <div style="border-top:1px solid rgba(44,39,51,.08); border-bottom:1px solid rgba(44,39,51,.08); background:#fffdf8;">
+    <div style="max-width:1240px; margin:0 auto; padding:22px 40px; display:flex; align-items:center; justify-content:center; gap:44px; flex-wrap:wrap; font:500 15px 'Hanken Grotesk',sans-serif; color:#5a5265;">
+      <span style="display:inline-flex; align-items:center; gap:9px;"><span style="width:26px; height:26px; border-radius:8px; background:var(--c2,#ffc247); display:flex; align-items:center; justify-content:center; font-size:13px;">🎂</span> Birthday parties</span>
+      <span style="display:inline-flex; align-items:center; gap:9px;"><span style="width:26px; height:26px; border-radius:8px; background:var(--c3,#3fb984); display:flex; align-items:center; justify-content:center; font-size:13px;">🧒</span> All ages welcome</span>
+      <span style="display:inline-flex; align-items:center; gap:9px;"><span style="width:26px; height:26px; border-radius:8px; background:var(--c4,#4aa8e0); display:flex; align-items:center; justify-content:center; font-size:13px;">☕</span> Family café on-site</span>
+      <span style="display:inline-flex; align-items:center; gap:9px;"><span style="width:26px; height:26px; border-radius:8px; background:var(--c1,#ff7a59); display:flex; align-items:center; justify-content:center; font-size:13px;">🅿️</span> Free parking</span>
+    </div>
+  </div>
+
+  <!-- RESERVATION HIGHLIGHT -->
+  <section data-screen-label="Home / Reserve" id="reserve" style="max-width:1240px; margin:0 auto; padding:76px 40px 44px;">
+    <div style="background:linear-gradient(135deg,#fffdf8,#fbf4e8); border:1px solid rgba(44,39,51,.08); border-radius:32px; box-shadow:0 24px 54px rgba(44,39,51,.10); padding:44px; display:grid; grid-template-columns:1fr 1.1fr; gap:44px; align-items:center;">
+      <div>
+        <div style="font:700 12px 'Space Mono',monospace; letter-spacing:.14em; color:var(--c1,#ff7a59);">// PLAN AHEAD</div>
+        <h2 style="font:600 clamp(32px,3.8vw,46px)/1.05 'Fredoka',sans-serif; margin:12px 0 14px; color:#2c2733;">Reserve your spot in seconds</h2>
+        <p style="font:400 17px/1.55 'Hanken Grotesk',sans-serif; color:#5a5265; margin:0;">Skip the queue. Pick a day, tell us how many are coming, and we'll have everything ready — points added automatically when you arrive.</p>
+      </div>
+      <div style="background:#fffdf8; border:1px solid rgba(44,39,51,.10); border-radius:22px; padding:26px; box-shadow:0 10px 26px rgba(44,39,51,.07);">
+        <div style="font:600 13px 'Hanken Grotesk',sans-serif; color:#8a8194; margin-bottom:10px;">When are you visiting?</div>
+        <div ref="{{ dateRef }}" style="display:flex; gap:9px; margin-bottom:22px; flex-wrap:wrap;">
+          <button data-d="Today" onClick="{{ selectDate }}" style="font:600 14px 'Hanken Grotesk',sans-serif; padding:11px 18px; border-radius:12px; border:1.5px solid rgba(44,39,51,.14); background:#fff; color:#2c2733; cursor:pointer;">Today</button>
+          <button data-d="Tomorrow" onClick="{{ selectDate }}" style="font:600 14px 'Hanken Grotesk',sans-serif; padding:11px 18px; border-radius:12px; border:1.5px solid rgba(44,39,51,.14); background:#fff; color:#2c2733; cursor:pointer;">Tomorrow</button>
+          <button data-d="Saturday" onClick="{{ selectDate }}" style="font:600 14px 'Hanken Grotesk',sans-serif; padding:11px 18px; border-radius:12px; border:1.5px solid var(--c1,#ff7a59); background:var(--c1,#ff7a59); color:#fff; cursor:pointer;">Saturday</button>
+          <button data-d="Sunday" onClick="{{ selectDate }}" style="font:600 14px 'Hanken Grotesk',sans-serif; padding:11px 18px; border-radius:12px; border:1.5px solid rgba(44,39,51,.14); background:#fff; color:#2c2733; cursor:pointer;">Sunday</button>
+        </div>
+        <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:22px;">
+          <div style="font:600 13px 'Hanken Grotesk',sans-serif; color:#8a8194;">How many?</div>
+          <div style="display:flex; align-items:center; gap:16px;">
+            <button onClick="{{ dec }}" style="width:38px; height:38px; border-radius:11px; border:1.5px solid rgba(44,39,51,.14); background:#fff; font:600 20px 'Fredoka',sans-serif; color:#2c2733; cursor:pointer;">−</button>
+            <span ref="{{ partyRef }}" style="font:700 22px 'Space Mono',monospace; min-width:24px; text-align:center;">4</span>
+            <button onClick="{{ inc }}" style="width:38px; height:38px; border-radius:11px; border:1.5px solid rgba(44,39,51,.14); background:#fff; font:600 20px 'Fredoka',sans-serif; color:#2c2733; cursor:pointer;">＋</button>
+          </div>
+        </div>
+        <button style="width:100%; font:600 16px 'Hanken Grotesk',sans-serif; padding:15px; border-radius:14px; border:none; background:var(--c1,#ff7a59); color:#fff; cursor:pointer; box-shadow:0 10px 24px rgba(255,122,89,.36);" style-hover="transform:translateY(-1px);">Check availability →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACTIVITIES GRID -->
+  <section data-screen-label="Home / Activities" id="activities" style="max-width:1240px; margin:0 auto; padding:56px 40px 76px;">
+    <div style="text-align:center; margin-bottom:44px;">
+      <div style="font:700 12px 'Space Mono',monospace; letter-spacing:.14em; color:var(--c4,#4aa8e0);">// WHAT'S INSIDE</div>
+      <h2 style="font:600 clamp(34px,4.2vw,52px)/1.02 'Fredoka',sans-serif; margin:12px 0 10px; color:#2c2733;">Something for everyone</h2>
+      <p style="font:400 17px/1.5 'Hanken Grotesk',sans-serif; color:#5a5265; max-width:460px; margin:0 auto;">Every activity earns points at the same rate — mix, match and cash in together.</p>
+    </div>
+    <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:22px;">
+      <div style="border-radius:26px; padding:26px; background:#fffdf8; border:1px solid rgba(44,39,51,.08); box-shadow:0 12px 30px rgba(44,39,51,.07); transition:transform .18s ease, box-shadow .18s ease; min-height:210px; display:flex; flex-direction:column; justify-content:space-between;" style-hover="transform:translateY(-5px); box-shadow:0 20px 40px rgba(44,39,51,.12);">
+        <div style="width:56px; height:56px; border-radius:16px; background:var(--c1,#ff7a59); display:flex; align-items:center; justify-content:center; font-size:27px;">🤸</div>
+        <div><h3 style="font:600 23px 'Fredoka',sans-serif; margin:0 0 6px; color:#2c2733;">Trampolines</h3><p style="font:400 15px/1.45 'Hanken Grotesk',sans-serif; margin:0 0 10px; color:#5a5265;">Open jump, dodgeball &amp; foam pits.</p><span style="font:600 12px 'Space Mono',monospace; color:#8a8194;">AGES 3+</span></div>
+      </div>
+      <div style="border-radius:26px; padding:26px; background:#fffdf8; border:1px solid rgba(44,39,51,.08); box-shadow:0 12px 30px rgba(44,39,51,.07); transition:transform .18s ease, box-shadow .18s ease; min-height:210px; display:flex; flex-direction:column; justify-content:space-between;" style-hover="transform:translateY(-5px); box-shadow:0 20px 40px rgba(44,39,51,.12);">
+        <div style="width:56px; height:56px; border-radius:16px; background:var(--c3,#3fb984); display:flex; align-items:center; justify-content:center; font-size:27px;">🎳</div>
+        <div><h3 style="font:600 23px 'Fredoka',sans-serif; margin:0 0 6px; color:#2c2733;">Bowling</h3><p style="font:400 15px/1.45 'Hanken Grotesk',sans-serif; margin:0 0 10px; color:#5a5265;">Bumpers &amp; ramps for the little ones.</p><span style="font:600 12px 'Space Mono',monospace; color:#8a8194;">ALL AGES</span></div>
+      </div>
+      <div style="border-radius:26px; padding:26px; background:#fffdf8; border:1px solid rgba(44,39,51,.08); box-shadow:0 12px 30px rgba(44,39,51,.07); transition:transform .18s ease, box-shadow .18s ease; min-height:210px; display:flex; flex-direction:column; justify-content:space-between;" style-hover="transform:translateY(-5px); box-shadow:0 20px 40px rgba(44,39,51,.12);">
+        <div style="width:56px; height:56px; border-radius:16px; background:var(--c2,#ffc247); display:flex; align-items:center; justify-content:center; font-size:27px;">🕹️</div>
+        <div><h3 style="font:600 23px 'Fredoka',sans-serif; margin:0 0 6px; color:#2c2733;">Arcade</h3><p style="font:400 15px/1.45 'Hanken Grotesk',sans-serif; margin:0 0 10px; color:#5a5265;">120+ games, win tickets for prizes.</p><span style="font:600 12px 'Space Mono',monospace; color:#8a8194;">ALL AGES</span></div>
+      </div>
+      <div style="border-radius:26px; padding:26px; background:#fffdf8; border:1px solid rgba(44,39,51,.08); box-shadow:0 12px 30px rgba(44,39,51,.07); transition:transform .18s ease, box-shadow .18s ease; min-height:210px; display:flex; flex-direction:column; justify-content:space-between;" style-hover="transform:translateY(-5px); box-shadow:0 20px 40px rgba(44,39,51,.12);">
+        <div style="width:56px; height:56px; border-radius:16px; background:var(--c4,#4aa8e0); display:flex; align-items:center; justify-content:center; font-size:27px;">🏎️</div>
+        <div><h3 style="font:600 23px 'Fredoka',sans-serif; margin:0 0 6px; color:#2c2733;">Go-Karts</h3><p style="font:400 15px/1.45 'Hanken Grotesk',sans-serif; margin:0 0 10px; color:#5a5265;">Gentle electric karts, timed races.</p><span style="font:600 12px 'Space Mono',monospace; color:#8a8194;">AGES 8+</span></div>
+      </div>
+      <div style="border-radius:26px; padding:26px; background:#fffdf8; border:1px solid rgba(44,39,51,.08); box-shadow:0 12px 30px rgba(44,39,51,.07); transition:transform .18s ease, box-shadow .18s ease; min-height:210px; display:flex; flex-direction:column; justify-content:space-between;" style-hover="transform:translateY(-5px); box-shadow:0 20px 40px rgba(44,39,51,.12);">
+        <div style="width:56px; height:56px; border-radius:16px; background:var(--c3,#3fb984); display:flex; align-items:center; justify-content:center; font-size:27px;">🧗</div>
+        <div><h3 style="font:600 23px 'Fredoka',sans-serif; margin:0 0 6px; color:#2c2733;">Climbing</h3><p style="font:400 15px/1.45 'Hanken Grotesk',sans-serif; margin:0 0 10px; color:#5a5265;">Auto-belay walls, fully supervised.</p><span style="font:600 12px 'Space Mono',monospace; color:#8a8194;">AGES 5+</span></div>
+      </div>
+      <div style="border-radius:26px; padding:26px; background:#fffdf8; border:1px solid rgba(44,39,51,.08); box-shadow:0 12px 30px rgba(44,39,51,.07); transition:transform .18s ease, box-shadow .18s ease; min-height:210px; display:flex; flex-direction:column; justify-content:space-between;" style-hover="transform:translateY(-5px); box-shadow:0 20px 40px rgba(44,39,51,.12);">
+        <div style="width:56px; height:56px; border-radius:16px; background:var(--c1,#ff7a59); display:flex; align-items:center; justify-content:center; font-size:27px;">🔫</div>
+        <div><h3 style="font:600 23px 'Fredoka',sans-serif; margin:0 0 6px; color:#2c2733;">Laser Tag</h3><p style="font:400 15px/1.45 'Hanken Grotesk',sans-serif; margin:0 0 10px; color:#5a5265;">Team mode in a multi-level arena.</p><span style="font:600 12px 'Space Mono',monospace; color:#8a8194;">AGES 6+</span></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW REWARDS WORK + TOPUP -->
+  <section data-screen-label="Home / Rewards" id="rewards" style="background:#2c2733; color:#f7f1e7; padding:80px 40px;">
+    <div style="max-width:1240px; margin:0 auto;">
+      <div style="text-align:center; margin-bottom:50px;">
+        <div style="font:700 12px 'Space Mono',monospace; letter-spacing:.14em; color:var(--c3,#3fb984);">// HOW IT WORKS</div>
+        <h2 style="font:600 clamp(34px,4.4vw,54px)/1.02 'Fredoka',sans-serif; margin:12px 0 0;">Your card does the work</h2>
+      </div>
+      <div style="display:grid; grid-template-columns:repeat(3,1fr); gap:22px;">
+        <div style="background:rgba(247,241,231,.05); border:1px solid rgba(247,241,231,.12); border-radius:24px; padding:30px;">
+          <div style="width:52px; height:52px; border-radius:15px; background:var(--c1,#ff7a59); display:flex; align-items:center; justify-content:center; font:700 20px 'Space Mono',monospace; color:#fff;">1</div>
+          <h3 style="font:600 22px 'Fredoka',sans-serif; margin:18px 0 8px;">Tap in</h3>
+          <p style="font:400 15px/1.55 'Hanken Grotesk',sans-serif; color:#b8b1c0; margin:0;">Scan your card at any activity. Points land instantly — no receipts to keep.</p>
+        </div>
+        <div style="background:rgba(247,241,231,.05); border:1px solid rgba(247,241,231,.12); border-radius:24px; padding:30px;">
+          <div style="width:52px; height:52px; border-radius:15px; background:var(--c2,#ffc247); display:flex; align-items:center; justify-content:center; font:700 20px 'Space Mono',monospace; color:#2c2733;">2</div>
+          <h3 style="font:600 22px 'Fredoka',sans-serif; margin:18px 0 8px;">Top up &amp; play</h3>
+          <p style="font:400 15px/1.55 'Hanken Grotesk',sans-serif; color:#b8b1c0; margin:0;">Load credit from your phone in seconds. Weekends earn double, automatically.</p>
+        </div>
+        <div style="background:rgba(247,241,231,.05); border:1px solid rgba(247,241,231,.12); border-radius:24px; padding:30px;">
+          <div style="width:52px; height:52px; border-radius:15px; background:var(--c3,#3fb984); display:flex; align-items:center; justify-content:center; font:700 20px 'Space Mono',monospace; color:#fff;">3</div>
+          <h3 style="font:600 22px 'Fredoka',sans-serif; margin:18px 0 8px;">Cash in rewards</h3>
+          <p style="font:400 15px/1.55 'Hanken Grotesk',sans-serif; color:#b8b1c0; margin:0;">Swap points for free hours, party upgrades and prizes across all parks.</p>
+        </div>
+      </div>
+      <!-- TOPUP WIDGET -->
+      <div style="margin-top:26px; background:linear-gradient(100deg,rgba(255,122,89,.16),rgba(74,168,224,.12)); border:1px solid rgba(247,241,231,.14); border-radius:24px; padding:28px 32px; display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:22px;">
+        <div>
+          <div style="font:700 11px 'Space Mono',monospace; letter-spacing:.12em; color:var(--c2,#ffc247);">QUICK TOP-UP</div>
+          <div style="font:600 26px 'Fredoka',sans-serif; margin-top:5px;">Add credit, keep the fun going</div>
+        </div>
+        <div style="display:flex; gap:12px; flex-wrap:wrap;">
+          <div style="border:1.5px solid rgba(247,241,231,.35); border-radius:16px; padding:14px 22px; text-align:center; cursor:pointer;" style-hover="background:var(--c2,#ffc247); color:#2c2733; border-color:var(--c2,#ffc247);"><div style="font:700 22px 'Space Mono',monospace;">€10</div><div style="font:500 11px 'Hanken Grotesk',sans-serif; opacity:.75;">+100 pts</div></div>
+          <div style="border:1.5px solid var(--c2,#ffc247); background:var(--c2,#ffc247); color:#2c2733; border-radius:16px; padding:14px 22px; text-align:center; cursor:pointer; position:relative;"><div style="position:absolute; top:-9px; right:-8px; background:var(--c1,#ff7a59); color:#fff; font:700 9px 'Space Mono',monospace; padding:3px 7px; border-radius:7px;">BEST</div><div style="font:700 22px 'Space Mono',monospace;">€25</div><div style="font:500 11px 'Hanken Grotesk',sans-serif;">+300 pts</div></div>
+          <div style="border:1.5px solid rgba(247,241,231,.35); border-radius:16px; padding:14px 22px; text-align:center; cursor:pointer;" style-hover="background:var(--c2,#ffc247); color:#2c2733; border-color:var(--c2,#ffc247);"><div style="font:700 22px 'Space Mono',monospace;">€50</div><div style="font:500 11px 'Hanken Grotesk',sans-serif; opacity:.75;">+700 pts</div></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- LOCATIONS EXPLORER -->
+  <section data-screen-label="Home / Locations" id="locations" style="max-width:1240px; margin:0 auto; padding:80px 40px;">
+    <div style="display:flex; align-items:flex-end; justify-content:space-between; flex-wrap:wrap; gap:16px; margin-bottom:34px;">
+      <div>
+        <div style="font:700 12px 'Space Mono',monospace; letter-spacing:.14em; color:var(--c1,#ff7a59);">// FIND YOUR PARK</div>
+        <h2 style="font:600 clamp(34px,4vw,52px)/1.02 'Fredoka',sans-serif; margin:10px 0 0; color:#2c2733;">12 parks, one card</h2>
+      </div>
+      <a href="#locations" style="font:600 15px 'Hanken Grotesk',sans-serif; padding:13px 22px; border-radius:999px; border:1.5px solid rgba(44,39,51,.16); background:#fffdf8; color:#2c2733; text-decoration:none;" style-hover="border-color:#2c2733;">See all locations →</a>
+    </div>
+    <div ref="{{ mapRef }}" style="display:grid; grid-template-columns:1fr 1.15fr; gap:22px; align-items:stretch;">
+      <div style="position:relative; border-radius:26px; background:#eee4d3; overflow:hidden; min-height:380px; box-shadow:0 14px 34px rgba(44,39,51,.10);">
+        <div style="position:absolute; inset:0; background-image:linear-gradient(rgba(44,39,51,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(44,39,51,.05) 1px,transparent 1px); background-size:36px 36px;"></div>
+        <div style="position:absolute; top:22%; left:-10%; width:60%; height:24px; background:var(--c3,#3fb984); opacity:.35; transform:rotate(-16deg); border-radius:999px;"></div>
+        <div style="position:absolute; top:62%; left:22%; width:70%; height:20px; background:var(--c4,#4aa8e0); opacity:.35; transform:rotate(10deg); border-radius:999px;"></div>
+        <button data-i="0" onClick="{{ selectLoc }}" style="position:absolute; top:24%; left:26%; width:30px; height:30px; border-radius:50% 50% 50% 0; transform:rotate(-45deg); background:var(--c1,#ff7a59); border:3px solid #fffdf8; cursor:pointer; box-shadow:0 5px 12px rgba(44,39,51,.25); z-index:5;"></button>
+        <button data-i="1" onClick="{{ selectLoc }}" style="position:absolute; top:44%; left:58%; width:26px; height:26px; border-radius:50% 50% 50% 0; transform:rotate(-45deg); background:#fffdf8; border:3px solid #fffdf8; box-shadow:0 5px 12px rgba(44,39,51,.2); cursor:pointer;"></button>
+        <button data-i="2" onClick="{{ selectLoc }}" style="position:absolute; top:66%; left:34%; width:26px; height:26px; border-radius:50% 50% 50% 0; transform:rotate(-45deg); background:#fffdf8; border:3px solid #fffdf8; box-shadow:0 5px 12px rgba(44,39,51,.2); cursor:pointer;"></button>
+        <button data-i="3" onClick="{{ selectLoc }}" style="position:absolute; top:32%; left:74%; width:26px; height:26px; border-radius:50% 50% 50% 0; transform:rotate(-45deg); background:#fffdf8; border:3px solid #fffdf8; box-shadow:0 5px 12px rgba(44,39,51,.2); cursor:pointer;"></button>
+        <div style="position:absolute; left:16px; bottom:14px; font:600 11px 'Space Mono',monospace; color:#8a7d68; letter-spacing:.06em;">▲ TAP A PIN TO EXPLORE</div>
+      </div>
+      <div style="border-radius:26px; overflow:hidden; box-shadow:0 14px 34px rgba(44,39,51,.10); display:flex; flex-direction:column; background:#fffdf8;">
+        <div ref="{{ locImg }}" style="height:150px; background:linear-gradient(135deg,var(--c1,#ff7a59),var(--c4,#4aa8e0)); position:relative; display:flex; align-items:flex-end; padding:16px;">
+          <span ref="{{ locBadge }}" style="font:700 11px 'Space Mono',monospace; background:#2c2733; color:#f7f1e7; padding:5px 11px; border-radius:8px; letter-spacing:.06em;">OPEN NOW · 10:00–22:00</span>
+        </div>
+        <div style="padding:26px; flex:1;">
+          <div style="display:flex; justify-content:space-between; align-items:flex-start;">
+            <div>
+              <h3 ref="{{ locName }}" style="font:600 26px 'Fredoka',sans-serif; margin:0; color:#2c2733;">ORBIT Riverside</h3>
+              <div ref="{{ locArea }}" style="font:400 15px 'Hanken Grotesk',sans-serif; color:#8a8194; margin-top:2px;">Riverside Plaza · 2.4 km away</div>
+            </div>
+            <div ref="{{ locScore }}" style="font:700 16px 'Space Mono',monospace; background:var(--c2,#ffc247); color:#2c2733; padding:6px 11px; border-radius:11px;">4.9★</div>
+          </div>
+          <div ref="{{ locTags }}" style="display:flex; flex-wrap:wrap; gap:8px; margin:20px 0 24px;">
+            <span style="font:600 12px 'Hanken Grotesk',sans-serif; padding:6px 13px; border-radius:999px; background:#f2e9da; color:#5a5265;">Trampolines</span>
+            <span style="font:600 12px 'Hanken Grotesk',sans-serif; padding:6px 13px; border-radius:999px; background:#f2e9da; color:#5a5265;">Arcade</span>
+            <span style="font:600 12px 'Hanken Grotesk',sans-serif; padding:6px 13px; border-radius:999px; background:#f2e9da; color:#5a5265;">Laser Tag</span>
+            <span style="font:600 12px 'Hanken Grotesk',sans-serif; padding:6px 13px; border-radius:999px; background:#f2e9da; color:#5a5265;">Café</span>
+          </div>
+          <div style="display:flex; gap:12px;">
+            <button style="flex:1; font:600 15px 'Hanken Grotesk',sans-serif; padding:14px; border-radius:14px; border:none; background:var(--c1,#ff7a59); color:#fff; cursor:pointer; box-shadow:0 8px 20px rgba(255,122,89,.34);">Book this park</button>
+            <button style="font:600 15px 'Hanken Grotesk',sans-serif; padding:14px 18px; border-radius:14px; border:1.5px solid rgba(44,39,51,.16); background:#fff; color:#2c2733; cursor:pointer;">Details</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS BAND -->
+  <section data-screen-label="Home / Stats" style="background:var(--c2,#ffc247);">
+    <div style="max-width:1240px; margin:0 auto; padding:52px 40px; display:grid; grid-template-columns:repeat(4,1fr); gap:24px; text-align:center; color:#2c2733;">
+      <div><div style="font:700 clamp(38px,5vw,60px)/1 'Space Mono',monospace;"><span ref="{{ count0 }}">0</span>k+</div><div style="font:600 14px 'Hanken Grotesk',sans-serif; margin-top:6px;">happy families</div></div>
+      <div><div style="font:700 clamp(38px,5vw,60px)/1 'Space Mono',monospace;"><span ref="{{ count1 }}">0</span></div><div style="font:600 14px 'Hanken Grotesk',sans-serif; margin-top:6px;">parks near you</div></div>
+      <div><div style="font:700 clamp(38px,5vw,60px)/1 'Space Mono',monospace;"><span ref="{{ count2 }}">0</span>M</div><div style="font:600 14px 'Hanken Grotesk',sans-serif; margin-top:6px;">points earned</div></div>
+      <div><div style="font:700 clamp(38px,5vw,60px)/1 'Space Mono',monospace;"><span ref="{{ count3 }}">0</span>s</div><div style="font:600 14px 'Hanken Grotesk',sans-serif; margin-top:6px;">to check in</div></div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section data-screen-label="Home / Join" style="max-width:1240px; margin:0 auto; padding:88px 40px 120px; text-align:center;">
+    <div style="font:700 12px 'Space Mono',monospace; letter-spacing:.14em; color:var(--c4,#4aa8e0);">// COME PLAY</div>
+    <h2 style="font:600 clamp(38px,5.6vw,72px)/1.02 'Fredoka',sans-serif; margin:16px auto 20px; max-width:760px; color:#2c2733;">Your first 500 points are on us.</h2>
+    <p style="font:400 18px/1.5 'Hanken Grotesk',sans-serif; color:#5a5265; max-width:460px; margin:0 auto 32px;">Join free in 30 seconds — no card in your wallet, just more play.</p>
+    <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap;">
+      <button style="font:600 17px 'Hanken Grotesk',sans-serif; padding:17px 36px; border-radius:999px; border:none; background:var(--c1,#ff7a59); color:#fff; cursor:pointer; box-shadow:0 14px 30px rgba(255,122,89,.42);" style-hover="transform:translateY(-2px);">Create free account</button>
+      <button style="font:600 17px 'Hanken Grotesk',sans-serif; padding:17px 36px; border-radius:999px; border:1.5px solid rgba(44,39,51,.16); background:#fffdf8; color:#2c2733; cursor:pointer;" style-hover="border-color:#2c2733;">Book a visit</button>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer style="background:#2c2733; color:#f7f1e7; padding:54px 40px 34px;">
+    <div style="max-width:1240px; margin:0 auto; display:grid; grid-template-columns:1.4fr 1fr 1fr 1fr; gap:32px; padding-bottom:38px; border-bottom:1px solid rgba(247,241,231,.12);">
+      <div>
+        <div style="display:flex; align-items:center; gap:10px;">
+          <div style="width:36px; height:36px; border-radius:12px; background:var(--c1,#ff7a59); display:flex; align-items:center; justify-content:center;"><div style="width:13px; height:13px; border-radius:50%; border:3.5px solid #fff;"></div></div>
+          <span style="font:600 21px 'Fredoka',sans-serif;">ORBIT</span>
+        </div>
+        <p style="font:400 14px/1.55 'Hanken Grotesk',sans-serif; color:#b8b1c0; max-width:260px; margin:16px 0 0;">Family entertainment parks where every visit pays you back.</p>
+      </div>
+      <div><div style="font:700 12px 'Space Mono',monospace; letter-spacing:.08em; color:var(--c2,#ffc247); margin-bottom:14px;">PLAY</div><div style="display:flex; flex-direction:column; gap:10px; font:400 14px 'Hanken Grotesk',sans-serif;"><a href="#activities" style="color:#b8b1c0; text-decoration:none;">Activities</a><a href="#locations" style="color:#b8b1c0; text-decoration:none;">Locations</a><a href="#reserve" style="color:#b8b1c0; text-decoration:none;">Book a visit</a></div></div>
+      <div><div style="font:700 12px 'Space Mono',monospace; letter-spacing:.08em; color:var(--c3,#3fb984); margin-bottom:14px;">MEMBERS</div><div style="display:flex; flex-direction:column; gap:10px; font:400 14px 'Hanken Grotesk',sans-serif;"><a href="#rewards" style="color:#b8b1c0; text-decoration:none;">Rewards</a><a href="#" style="color:#b8b1c0; text-decoration:none;">Top up</a><a href="#" style="color:#b8b1c0; text-decoration:none;">My card</a></div></div>
+      <div><div style="font:700 12px 'Space Mono',monospace; letter-spacing:.08em; color:var(--c4,#4aa8e0); margin-bottom:14px;">COMPANY</div><div style="display:flex; flex-direction:column; gap:10px; font:400 14px 'Hanken Grotesk',sans-serif;"><a href="#" style="color:#b8b1c0; text-decoration:none;">About</a><a href="#" style="color:#b8b1c0; text-decoration:none;">Careers</a><a href="#" style="color:#b8b1c0; text-decoration:none;">Contact</a></div></div>
+    </div>
+    <div style="max-width:1240px; margin:20px auto 0; display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; font:400 12px 'Space Mono',monospace; color:#8a8194;">
+      <span>© 2026 ORBIT Parks</span>
+      <span style="display:inline-flex; align-items:center; gap:8px;">POWERED BY <span style="color:#f7f1e7; font-weight:700;">SAPIENSCORE</span></span>
+    </div>
+  </footer>
+
+  </div>
+
+  <!-- PERSISTENT ACTION DOCK -->
+  <div style="position:fixed; left:50%; bottom:22px; transform:translateX(-50%); z-index:60; display:flex; align-items:center; gap:14px; background:#fffdf8; border:1px solid rgba(44,39,51,.10); border-radius:999px; padding:10px 12px 10px 20px; box-shadow:0 16px 40px rgba(44,39,51,.20); animation:dockIn .5s cubic-bezier(.2,.8,.2,1) both;">
+    <div style="display:flex; align-items:center; gap:9px; padding-right:14px; border-right:1px solid rgba(44,39,51,.10);">
+      <div style="width:30px; height:30px; border-radius:9px; background:linear-gradient(135deg,var(--c1,#ff7a59),var(--c4,#4aa8e0));"></div>
+      <div><div style="font:700 11px/1 'Space Mono',monospace; color:#2c2733;">2,480 pts</div><div style="font:500 11px/1.2 'Hanken Grotesk',sans-serif; color:#8a8194;">Gold family</div></div>
+    </div>
+    <button style="display:inline-flex; align-items:center; gap:7px; font:600 14px 'Hanken Grotesk',sans-serif; padding:11px 18px; border-radius:999px; border:1.5px solid rgba(44,39,51,.16); background:#fff; color:#2c2733; cursor:pointer;" style-hover="border-color:var(--c1,#ff7a59); color:var(--c1,#ff7a59);"><span style="font-size:15px;">＋</span> Top up</button>
+    <button style="font:600 14px 'Hanken Grotesk',sans-serif; padding:12px 22px; border-radius:999px; border:none; background:var(--c1,#ff7a59); color:#fff; cursor:pointer; box-shadow:0 8px 20px rgba(255,122,89,.4);" style-hover="transform:translateY(-1px);">Book a visit</button>
+  </div>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;accent&quot;:{&quot;editor&quot;:&quot;enum&quot;,&quot;options&quot;:[&quot;Warm welcome&quot;,&quot;Sunset&quot;,&quot;Meadow&quot;],&quot;default&quot;:&quot;Warm welcome&quot;,&quot;tsType&quot;:&quot;string&quot;,&quot;section&quot;:&quot;Theme&quot;},&quot;motion&quot;:{&quot;editor&quot;:&quot;boolean&quot;,&quot;default&quot;:true,&quot;tsType&quot;:&quot;boolean&quot;,&quot;section&quot;:&quot;Theme&quot;}}">
+class Component extends DCLogic {
+  constructor(props){
+    super(props);
+    this._flipped = false;
+    this._party = 4;
+    this.cardRef = React.createRef();
+    this.flipRef = React.createRef();
+    this.heroRef = React.createRef();
+    this.mapRef = React.createRef();
+    this.dateRef = React.createRef();
+    this.partyRef = React.createRef();
+    this.c0 = React.createRef();
+    this.c1 = React.createRef();
+    this.c2 = React.createRef();
+    this.c3 = React.createRef();
+    this.locImg = React.createRef();
+    this.locBadge = React.createRef();
+    this.locName = React.createRef();
+    this.locArea = React.createRef();
+    this.locScore = React.createRef();
+    this.locTags = React.createRef();
+    this.locs = [
+      { name:"ORBIT Riverside", area:"Riverside Plaza · 2.4 km away", hours:"OPEN NOW · 10:00–22:00", score:"4.9★", grad:"linear-gradient(135deg,#ff7a59,#4aa8e0)", tags:["Trampolines","Arcade","Laser Tag","Café"] },
+      { name:"ORBIT Northgate", area:"Northgate Mall · 5.1 km away", hours:"OPEN NOW · 09:00–23:00", score:"4.8★", grad:"linear-gradient(135deg,#3fb984,#4aa8e0)", tags:["Bowling","Go-Karts","Arcade","Café"] },
+      { name:"ORBIT Southside", area:"Harbour District · 7.8 km away", hours:"OPEN NOW · 10:00–22:00", score:"4.7★", grad:"linear-gradient(135deg,#ffc247,#ff7a59)", tags:["Climbing","Trampolines","Café","Parties"] },
+      { name:"ORBIT Skyline", area:"City Center · 9.2 km away", hours:"OPENS 11:00", score:"5.0★", grad:"linear-gradient(135deg,#4aa8e0,#3fb984)", tags:["Go-Karts","Laser Tag","Arcade","VIP"] }
+    ];
+  }
+
+  componentDidMount(){
+    const hero = this.heroRef.current, card = this.cardRef.current;
+    if(hero && card){
+      this._mm = (e)=>{
+        if(this.props.motion === false) return;
+        const r = hero.getBoundingClientRect();
+        const px = (e.clientX - r.left)/r.width - 0.5;
+        const py = (e.clientY - r.top)/r.height - 0.5;
+        card.style.transform = "rotateY("+(px*18 - 10)+"deg) rotateX("+(-py*18 + 7)+"deg)";
+      };
+      this._ml = ()=>{ card.style.transform = "rotateY(-10deg) rotateX(7deg)"; };
+      hero.addEventListener("mousemove", this._mm);
+      hero.addEventListener("mouseleave", this._ml);
+    }
+    this._count(this.c0, 50);
+    this._count(this.c1, 12);
+    this._count(this.c2, 8);
+    this._count(this.c3, 3);
+  }
+
+  componentWillUnmount(){
+    const hero = this.heroRef.current;
+    if(hero){ hero.removeEventListener("mousemove", this._mm); hero.removeEventListener("mouseleave", this._ml); }
+  }
+
+  _count(ref, target){
+    let cur = 0;
+    const step = Math.max(1, Math.ceil(target/38));
+    const id = setInterval(()=>{
+      cur += step;
+      if(cur >= target){ cur = target; clearInterval(id); }
+      if(ref.current) ref.current.textContent = cur;
+    }, 28);
+  }
+
+  flip(){
+    this._flipped = !this._flipped;
+    if(this.flipRef.current) this.flipRef.current.style.transform = this._flipped ? "rotateY(180deg)" : "rotateY(0deg)";
+  }
+
+  inc(){ this._party++; if(this.partyRef.current) this.partyRef.current.textContent = this._party; }
+  dec(){ if(this._party>1){ this._party--; if(this.partyRef.current) this.partyRef.current.textContent = this._party; } }
+
+  selectDate(e){
+    if(!this.dateRef.current) return;
+    const c1 = getComputedStyle(document.documentElement).getPropertyValue('--c1') || '#ff7a59';
+    this.dateRef.current.querySelectorAll('button').forEach(b=>{
+      b.style.background = "#fff"; b.style.color = "#2c2733"; b.style.borderColor = "rgba(44,39,51,.14)";
+    });
+    e.currentTarget.style.background = "var(--c1,#ff7a59)";
+    e.currentTarget.style.color = "#fff";
+    e.currentTarget.style.borderColor = "var(--c1,#ff7a59)";
+  }
+
+  selectLoc(e){
+    const i = +e.currentTarget.dataset.i;
+    const L = this.locs[i]; if(!L) return;
+    if(this.locName.current) this.locName.current.textContent = L.name;
+    if(this.locArea.current) this.locArea.current.textContent = L.area;
+    if(this.locScore.current) this.locScore.current.textContent = L.score;
+    if(this.locBadge.current) this.locBadge.current.textContent = L.hours;
+    if(this.locImg.current) this.locImg.current.style.background = L.grad;
+    if(this.locTags.current){
+      this.locTags.current.innerHTML = L.tags.map(t=>'<span style="font:600 12px \'Hanken Grotesk\',sans-serif;padding:6px 13px;border-radius:999px;background:#f2e9da;color:#5a5265;">'+t+'</span>').join('');
+    }
+    if(this.mapRef.current){
+      this.mapRef.current.querySelectorAll("[data-i]").forEach(b=>{ b.style.background = "#fffdf8"; b.style.zIndex = "1"; b.style.width="26px"; b.style.height="26px"; });
+      e.currentTarget.style.background = "var(--c1,#ff7a59)";
+      e.currentTarget.style.zIndex = "5";
+      e.currentTarget.style.width = "30px";
+      e.currentTarget.style.height = "30px";
+    }
+  }
+
+  renderVals(){
+    const palettes = {
+      "Warm welcome": { c1:"#ff7a59", c2:"#ffc247", c3:"#3fb984", c4:"#4aa8e0" },
+      "Sunset":       { c1:"#ff6f61", c2:"#ffab5e", c3:"#f2849e", c4:"#c66fb0" },
+      "Meadow":       { c1:"#4fb98a", c2:"#ffcf5c", c3:"#57bcd9", c4:"#f0876d" }
+    };
+    const p = palettes[this.props.accent] || palettes["Warm welcome"];
+    const play = (this.props.motion === false) ? "paused" : "running";
+    const rootVars = "--c1:"+p.c1+";--c2:"+p.c2+";--c3:"+p.c3+";--c4:"+p.c4+";--play:"+play;
+    return {
+      rootVars,
+      cardRef: this.cardRef, flipRef: this.flipRef, heroRef: this.heroRef, mapRef: this.mapRef,
+      dateRef: this.dateRef, partyRef: this.partyRef,
+      count0: this.c0, count1: this.c1, count2: this.c2, count3: this.c3,
+      locImg: this.locImg, locBadge: this.locBadge, locName: this.locName,
+      locArea: this.locArea, locScore: this.locScore, locTags: this.locTags,
+      flip: ()=>this.flip(),
+      inc: ()=>this.inc(), dec: ()=>this.dec(),
+      selectDate: (e)=>this.selectDate(e),
+      selectLoc: (e)=>this.selectLoc(e)
+    };
+  }
+}
+</script>
+</body>
+</html>

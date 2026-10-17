@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Investigation Report — Card #1674522</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #333; background: #f5f5f5; }
+        .page { max-width: 820px; margin: 0 auto; background: #fff; padding: 50px 60px; margin-bottom: 30px; box-shadow: 0 1px 4px rgba(0,0,0,0.1); }
+        .page-break { page-break-after: always; }
+        h1 { font-size: 22px; color: #c0392b; margin-bottom: 5px; }
+        h2 { font-size: 17px; color: #2c3e50; margin: 30px 0 15px 0; border-bottom: 2px solid #e74c3c; padding-bottom: 5px; }
+        h3 { font-size: 14px; color: #555; margin: 20px 0 10px 0; }
+        p { font-size: 13px; line-height: 1.7; margin-bottom: 10px; }
+        .subtitle { font-size: 13px; color: #777; margin-bottom: 25px; }
+        .highlight { background: #fdf2f2; border-left: 3px solid #e74c3c; padding: 12px 15px; margin: 15px 0; font-size: 13px; }
+        .highlight-blue { background: #f0f7ff; border-left: 3px solid #3498db; padding: 12px 15px; margin: 15px 0; font-size: 13px; }
+        .highlight-green { background: #f0faf0; border-left: 3px solid #27ae60; padding: 12px 15px; margin: 15px 0; font-size: 13px; }
+        .highlight-orange { background: #fef9f0; border-left: 3px solid #e67e22; padding: 12px 15px; margin: 15px 0; font-size: 13px; }
+        table { width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 12px; }
+        th { background: #f8f8f8; text-align: left; padding: 8px 10px; border: 1px solid #ddd; font-weight: 600; color: #555; }
+        td { padding: 7px 10px; border: 1px solid #eee; vertical-align: top; }
+        tr:nth-child(even) { background: #fafafa; }
+        .amount { text-align: right; font-family: 'Courier New', monospace; }
+        .red { color: #c0392b; font-weight: 600; }
+        .green { color: #27ae60; }
+        .orange { color: #e67e22; font-weight: 600; }
+        .badge { display: inline-block; padding: 2px 8px; border-radius: 3px; font-size: 11px; font-weight: 600; }
+        .badge-red { background: #fde8e8; color: #c0392b; }
+        .badge-green { background: #e8fde8; color: #27ae60; }
+        .badge-orange { background: #fef3e0; color: #e67e22; }
+        .badge-blue { background: #e8f0fd; color: #2980b9; }
+        .badge-grey { background: #eee; color: #666; }
+        ul { font-size: 13px; line-height: 2; padding-left: 20px; margin-bottom: 15px; }
+        .chain-arrow { text-align: center; font-size: 20px; color: #e74c3c; padding: 5px 0; }
+        .chain-box { border: 2px solid #ddd; border-radius: 8px; padding: 12px 15px; margin: 8px 0; font-size: 12px; }
+        .chain-box.red { border-color: #e74c3c; background: #fef8f8; }
+        .chain-box.orange { border-color: #e67e22; background: #fef9f0; }
+        .chain-box.blue { border-color: #3498db; background: #f0f7ff; }
+        .staff-name { font-weight: 700; color: #c0392b; }
+        .footer { text-align: center; font-size: 11px; color: #aaa; margin-top: 30px; padding-top: 15px; border-top: 1px solid #eee; }
+        strong { color: #2c3e50; }
+        @media print {
+            body { background: #fff; }
+            .page { box-shadow: none; margin: 0; padding: 40px 50px; }
+            .page-break { page-break-after: always; }
+        }
+    </style>
+</head>
+<body>
+
+<!-- PAGE 1: Summary -->
+<div class="page page-break">
+    <h1>Investigation Report</h1>
+    <p class="subtitle">Loyalty Card #1674522 &bull; Card Number: 1807913 &bull; Investigation Date: 09/04/2026</p>
+
+    <table>
+        <tr><td style="width:200px"><strong>Card Status</strong></td><td>Active. Current balance: 0 credit, 0 bonus, <strong>14,992 tickets</strong></td></tr>
+        <tr><td><strong>Card Origin</strong></td><td>Created 23/06/2025. Replaced card 1665181, inheriting 0.6 credit + 3,744 tickets</td></tr>
+        <tr><td><strong>Real Money Paid</strong></td><td>90 EUR across 7 top-up purchases (Jul 2025 &ndash; Apr 2026)</td></tr>
+        <tr><td><strong>Suspected Staff</strong></td><td><strong>Kevin</strong> (user 2785) &mdash; primary suspect, responsible for ticket inflation</td></tr>
+    </table>
+
+    <h2>What Happened</h2>
+
+    <p>Card #1674522 has accumulated <strong>14,992 tickets</strong> and already redeemed <strong>9,650 tickets</strong> worth of physical prizes &mdash; including a <strong>Game Projector 4K (7,300 tickets)</strong>. Only 90 EUR of real money was ever loaded. The ticket balance was inflated through three mechanisms: <strong>harvesting Ticket Station recovery codes</strong>, <strong>ticket consolidation via card joins</strong>, and <strong>free ticket loads with bogus justifications</strong>.</p>
+
+    <div class="highlight">
+        <strong>This is ticket fraud, not balance fraud.</strong> Unlike card #616952 (bonus consolidation), this card's scheme works by collecting unclaimed Ticket Station recovery barcodes &mdash; codes generated when customers insert paper tickets but don't tap a card within 90 seconds &mdash; and scanning them onto Kevin's card. <strong>~120 individual recovery codes</strong> were loaded onto this single card, which is impossible for a legitimate customer (a customer only needs one recovery code, the first time, before they buy a card). The card currently holds nearly 15,000 tickets.
+    </div>
+
+    <h2>Financial Summary</h2>
+
+    <table>
+        <tr><th style="width:450px">Metric</th><th class="amount">Amount</th></tr>
+        <tr><td>Real money loaded (7 purchases)</td><td class="amount">90 EUR</td></tr>
+        <tr><td>Credit loaded from purchases</td><td class="amount">90 EUR</td></tr>
+        <tr><td>Bonus loaded from purchases</td><td class="amount">26 EUR</td></tr>
+        <tr><td>Credit used playing games</td><td class="amount">88.14 EUR</td></tr>
+        <tr><td>Bonus used playing games</td><td class="amount">26.00 EUR</td></tr>
+        <tr><td colspan="2" style="background:#f8f8f8; font-weight:600; text-align:center">Ticket Economy</td></tr>
+        <tr><td>Tickets inherited from replaced card (1665181)</td><td class="amount">3,744</td></tr>
+        <tr><td>Tickets won from machines (type 7)</td><td class="amount">~3,965</td></tr>
+        <tr><td>Tickets from Ticket Station recovery codes &mdash; <span class="red">~120 codes in 43 operations</span></td><td class="amount red">~8,155</td></tr>
+        <tr><td>Tickets from card joins (15 joins, 11 source cards)</td><td class="amount red">7,765</td></tr>
+        <tr><td>Free ticket loads (0 EUR purchases with excuses)</td><td class="amount red">495</td></tr>
+        <tr><td>Tickets redeemed for prizes</td><td class="amount">-9,650</td></tr>
+        <tr style="font-weight:600; background:#f8f8f8;">
+            <td>Current ticket balance</td><td class="amount red">14,992</td>
+        </tr>
+    </table>
+
+    <div class="highlight-orange">
+        <strong>~16,415 tickets (~67%) came from non-game sources</strong> (barcode scanning + joins + free loads). Only ~3,965 tickets (~16%) were legitimately won from machines. The remaining 3,744 came from the replaced card (origin unclear).
+    </div>
+
+    <div class="footer">Sapiens Core &bull; Confidential &bull; Page 1</div>
+</div>
+
+<!-- PAGE 2: The Three Fraud Vectors -->
+<div class="page page-break">
+    <h1>Fraud Vector #1 &mdash; Ticket Station Recovery Code Abuse</h1>
+    <p class="subtitle">43 scan operations &bull; ~120 individual recovery barcodes &bull; ~8,155 tickets loaded</p>
+
+    <div class="highlight-blue">
+        <strong>How Ticket Station recovery codes work:</strong> When a customer inserts paper tickets into a Ticket Station, the machine counts them and asks the customer to tap their card within 90 seconds. If no card is tapped, the machine prints a <strong>recovery barcode</strong>. This barcode can later be redeemed at the cashier onto any card.<br><br>
+        <strong>Normal scenario:</strong> A customer without a card plays games, wins paper tickets, inserts them into the Ticket Station, but has no card to tap. They go to the cashier, buy a card, and the staff scans the recovery barcode onto the new card. <strong>This should happen at most once per customer</strong> &mdash; because from that point on, the customer has a card and can tap it directly at the Ticket Station.
+    </div>
+
+    <h2>Why ~120 Recovery Barcodes on One Card Is Impossible</h2>
+
+    <p>Card #1674522 received <strong>~120 individual recovery barcodes</strong> across 43 scan operations over 33 days. This is not a legitimate customer scenario:</p>
+
+    <ul>
+        <li><strong>A customer only needs ONE recovery barcode</strong> &mdash; the first time, before they have a card. After buying a card, they tap it directly at the Ticket Station. There is no reason for the same card to keep receiving recovery barcodes.</li>
+        <li><strong>Multiple barcodes in a single operation</strong> &mdash; on 22/03, Kevin scanned 6 barcodes at once (13:28), then 4 more three minutes later (13:31), then 4 more that evening (19:18). This means someone had a <strong>collection of codes</strong> ready to scan.</li>
+        <li><strong>Barcodes accumulated over different days</strong> &mdash; these codes were scanned across 22 different days. A customer would not keep losing their card, getting recovery codes, and then remembering to bring all of them to the same cashier.</li>
+    </ul>
+
+    <div class="highlight">
+        <strong>The likely mechanism:</strong> When customers don't tap a card within 90 seconds, the Ticket Station prints a recovery barcode. These unclaimed barcodes are left behind or collected by staff. Kevin then scans these orphaned codes onto his own card at the cashier, accumulating tickets that belong to other customers (or to no one). Alternatively, staff may use the <strong>manual ticket add</strong> function at the cashier &mdash; which triggers the machine to produce a recovery code that Kevin then claims.
+    </div>
+
+    <h2>Barcode Scan Detail by Day</h2>
+
+    <table>
+        <tr><th>Date</th><th>User</th><th class="amount">Barcodes</th><th class="amount">Tickets</th><th>Pattern</th></tr>
+        <tr><td>05/03</td><td><span class="staff-name">Kevin</span></td><td class="amount">3</td><td class="amount">107</td><td></td></tr>
+        <tr><td>16/03</td><td><span class="staff-name">Kevin</span></td><td class="amount">1</td><td class="amount">123</td><td></td></tr>
+        <tr><td>17/03</td><td>Yasmany</td><td class="amount">2</td><td class="amount">91</td><td></td></tr>
+        <tr style="background:#fde8e8">
+            <td>22/03</td><td><span class="staff-name">Kevin</span></td><td class="amount red"><strong>17</strong></td><td class="amount red">920</td>
+            <td><span class="badge badge-red">5 operations in 1 day</span><br>6 codes at 13:28, 4 at 13:31, 4 at 19:18, 2 at 19:28</td>
+        </tr>
+        <tr><td>23/03</td><td><span class="staff-name">Kevin</span></td><td class="amount">5</td><td class="amount">183</td><td>2 operations</td></tr>
+        <tr><td>24/03</td><td><span class="staff-name">Kevin</span></td><td class="amount">3</td><td class="amount">173</td><td>2 operations</td></tr>
+        <tr><td>27/03</td><td><span class="staff-name">Kevin</span></td><td class="amount">7</td><td class="amount">43</td><td>7 tiny codes (1&ndash;11 tix each)</td></tr>
+        <tr><td>28/03</td><td><span class="staff-name">Kevin</span> + Yasmany + Ruben</td><td class="amount">10</td><td class="amount">282</td><td>3 users, 3 operations</td></tr>
+        <tr><td>29/03</td><td><span class="staff-name">Kevin</span> + Carlota</td><td class="amount">6</td><td class="amount">289</td><td></td></tr>
+        <tr style="background:#fde8e8">
+            <td>01/04</td><td><span class="staff-name">Kevin</span></td><td class="amount red"><strong>8</strong></td><td class="amount red">429</td>
+            <td><span class="badge badge-red">8 codes at once</span></td>
+        </tr>
+        <tr style="background:#fde8e8">
+            <td>02/04</td><td><span class="staff-name">Kevin</span> + Yasmany</td><td class="amount red"><strong>12</strong></td><td class="amount red">1,234</td>
+            <td><span class="badge badge-red">6 operations, 4 users</span></td>
+        </tr>
+        <tr><td>03/04</td><td><span class="staff-name">Kevin</span> + Carlota + Yasmany</td><td class="amount">12</td><td class="amount">829</td><td>4 operations</td></tr>
+        <tr style="background:#fde8e8">
+            <td>04/04</td><td><span class="staff-name">Kevin</span> + Yasmany</td><td class="amount red"><strong>12</strong></td><td class="amount red">1,275</td>
+            <td><span class="badge badge-red">4 operations</span> incl. 7 codes at 21:51</td>
+        </tr>
+        <tr><td>05/04</td><td><span class="staff-name">Kevin</span> + Ruben</td><td class="amount">14</td><td class="amount">1,051</td><td>3 operations</td></tr>
+        <tr><td>06/04</td><td><span class="staff-name">Kevin</span></td><td class="amount">2</td><td class="amount">512</td><td></td></tr>
+        <tr><td>07/04</td><td><span class="staff-name">Kevin</span></td><td class="amount">2</td><td class="amount">53</td><td>Same day as Game Projector 4K prize</td></tr>
+        <tr style="font-weight:600; background:#f8f8f8;">
+            <td colspan="2">Total</td><td class="amount red">~120</td><td class="amount red">~8,155</td><td></td>
+        </tr>
+    </table>
+
+    <div class="highlight-orange">
+        <strong>22/03/2026 is the smoking gun:</strong> Kevin scanned <strong>17 recovery barcodes</strong> onto this card in a single day, across 5 separate operations within 6 hours. No legitimate customer scenario produces 17 unclaimed Ticket Station codes that all end up on the same card on the same day. This is someone systematically harvesting recovery codes.
+    </div>
+
+    <div class="footer">Sapiens Core &bull; Confidential &bull; Page 2</div>
+</div>
+
+<!-- PAGE 3: Joins -->
+<div class="page page-break">
+    <h1>Fraud Vector #2 &mdash; Ticket Consolidation via Card Joins</h1>
+    <p class="subtitle">15 join operations &bull; 11 source cards &bull; 7,765 tickets transferred in</p>
+
+    <p>Staff members joined 11 different cards into card #1674522, transferring a total of 7,765 tickets. The joins have <strong>zero bonus and zero courtesy</strong> transferred &mdash; this is purely a ticket harvesting operation.</p>
+
+    <h2>Direct Joins into Card #1674522 (Level 1)</h2>
+
+    <table>
+        <tr><th>Date</th><th>Source Card</th><th class="amount">Tickets</th><th>Source Card Plays</th><th>User</th></tr>
+        <tr style="background:#fde8e8">
+            <td>01/03/2026</td><td>1870896</td><td class="amount red"><strong>6,281</strong></td>
+            <td>45 plays (+ 17.98 credit)</td><td><span class="staff-name">Teanny</span></td>
+        </tr>
+        <tr style="background:#fde8e8">
+            <td>05/04/2026</td><td>1885967</td><td class="amount red">913</td>
+            <td>49 plays</td><td>Ruben</td>
+        </tr>
+        <tr><td>02/04/2026</td><td>1862434</td><td class="amount">243</td><td><span class="red">0 plays</span></td><td>Yasmany</td></tr>
+        <tr><td>05/04/2026</td><td>1895883</td><td class="amount">104</td><td>17 plays</td><td>Ruben</td></tr>
+        <tr><td>27/03/2026</td><td>1862434</td><td class="amount">91</td><td><span class="red">0 plays</span></td><td><span class="staff-name">Kevin</span></td></tr>
+        <tr><td>20/03/2026</td><td>1649969</td><td class="amount">30</td><td><span class="red">0 plays</span></td><td><span class="staff-name">Kevin</span></td></tr>
+        <tr><td>21/03/2026</td><td>1875885</td><td class="amount">22</td><td>39 plays</td><td><span class="staff-name">Teanny</span></td></tr>
+        <tr><td>04/04/2026</td><td>1862434</td><td class="amount">19</td><td><span class="red">0 plays</span></td><td><span class="staff-name">Kevin</span></td></tr>
+        <tr><td>05/04/2026</td><td>1862434</td><td class="amount">18</td><td><span class="red">0 plays</span></td><td><span class="staff-name">Kevin</span></td></tr>
+        <tr><td>20/03/2026</td><td>1878478</td><td class="amount">16</td><td>5 plays</td><td><span class="staff-name">Kevin</span></td></tr>
+        <tr><td>04/04/2026</td><td>1894291</td><td class="amount">13</td><td>29 plays</td><td><span class="staff-name">Kevin</span></td></tr>
+        <tr><td>20/03/2026</td><td>1862434</td><td class="amount">8</td><td><span class="red">0 plays</span></td><td><span class="staff-name">Kevin</span></td></tr>
+        <tr><td>05/04/2026</td><td>1895682</td><td class="amount">5</td><td>29 plays</td><td>Ruben</td></tr>
+        <tr><td>21/03/2026</td><td>1880269</td><td class="amount">2</td><td>74 plays</td><td><span class="staff-name">Kevin</span></td></tr>
+        <tr><td>13/03/2026</td><td>1876222</td><td class="amount">0</td><td>17 plays</td><td>Carlota</td></tr>
+    </table>
+
+    <h2>Card 1862434 &mdash; The Ticket Aggregator</h2>
+
+    <div class="highlight">
+        <strong>Card 1862434 (card number 3053304) has zero game transactions</strong> but was joined into card #1674522 <strong>five separate times</strong> (8+91+243+19+18 = 379 tickets). This card was never used to play games &mdash; it exists solely as a ticket collection point.
+    </div>
+
+    <p>Card 1862434 itself received joins from 4 feeder cards, all by <span class="staff-name">Teanny (3128)</span> on 31/03/2026:</p>
+
+    <table>
+        <tr><th>Feeder Card</th><th class="amount">Tickets</th><th>Feeder Plays</th><th>User</th></tr>
+        <tr><td>1888961</td><td class="amount">455</td><td>37 plays</td><td><span class="staff-name">Teanny</span></td></tr>
+        <tr><td>1887737</td><td class="amount">175</td><td>99 plays</td><td><span class="staff-name">Teanny</span></td></tr>
+        <tr><td>1888198</td><td class="amount">33</td><td>17 plays</td><td><span class="staff-name">Teanny</span></td></tr>
+        <tr><td>1888612</td><td class="amount">7</td><td>50 plays</td><td><span class="staff-name">Teanny</span></td></tr>
+    </table>
+
+    <p>Card 1888612 had a <strong>3rd-level feeder</strong>: card 1649075 (309 tickets, joined by Yasmany (2768)).</p>
+
+    <div class="chain-box red">
+        <strong>The chain:</strong> Feeder cards (level 3) &rarr; Card 1888612 (level 2) &rarr; Card 1862434 (level 1, ticket aggregator) &rarr; Card 1674522 (target). All intermediate operations by <span class="staff-name">Teanny (3128)</span>.
+    </div>
+
+    <div class="footer">Sapiens Core &bull; Confidential &bull; Page 3</div>
+</div>
+
+<!-- PAGE 4: Free loads + Prizes -->
+<div class="page page-break">
+    <h1>Fraud Vector #3 &mdash; Free Ticket Loads</h1>
+    <p class="subtitle">Two suspicious 0 EUR payment_location entries</p>
+
+    <p>Two purchases with <strong>0 EUR amount</strong> loaded tickets for free, both by <span class="staff-name">User 2835 <!-- NAME UNKNOWN --></span> on 30/07/2025:</p>
+
+    <table>
+        <tr><th>Payment ID</th><th>Time</th><th class="amount">Tickets</th><th>Comment</th><th>Assessment</th></tr>
+        <tr>
+            <td>477394</td>
+            <td>30/07/2025 17:18</td>
+            <td class="amount">56</td>
+            <td><em>"rtsfgd"</em></td>
+            <td><span class="badge badge-red">Gibberish comment</span></td>
+        </tr>
+        <tr>
+            <td>478490</td>
+            <td>30/07/2025 18:47</td>
+            <td class="amount">439</td>
+            <td><em>"ERROR"</em></td>
+            <td><span class="badge badge-orange">Vague justification</span></td>
+        </tr>
+    </table>
+
+    <div class="highlight-orange">
+        <strong>495 free tickets</strong> loaded in a single day with no real justification. The comment "rtsfgd" is random keyboard input &mdash; no attempt to explain why tickets were given for free. The "ERROR" comment provides no detail about what error occurred.
+    </div>
+
+    <h2>Prize Redemptions</h2>
+
+    <p>Four prize redemptions have been made, totalling <strong>9,650 tickets</strong>:</p>
+
+    <table>
+        <tr><th>Date</th><th>Product</th><th class="amount">Tickets</th><th>User</th><th>Balance After</th></tr>
+        <tr>
+            <td>26/07/2025</td>
+            <td>100 TICKETS &times; 10</td>
+            <td class="amount">1,000</td>
+            <td><span class="staff-name">Kevin</span></td>
+            <td class="amount">3,086</td>
+        </tr>
+        <tr>
+            <td>06/08/2025</td>
+            <td>Altavoz BASS-02</td>
+            <td class="amount">1,200</td>
+            <td><span class="staff-name">Teanny</span></td>
+            <td class="amount">3,212</td>
+        </tr>
+        <tr>
+            <td>04/04/2026</td>
+            <td>Garra de dinosaurio el&aacute;stica/pegajosa</td>
+            <td class="amount">150</td>
+            <td><span class="staff-name">Kevin</span></td>
+            <td class="amount">17,317</td>
+        </tr>
+        <tr style="background:#fde8e8">
+            <td>07/04/2026</td>
+            <td><strong>Game Projector 4K con 2 mandos</strong></td>
+            <td class="amount red"><strong>7,300</strong></td>
+            <td><span class="staff-name">Teanny</span></td>
+            <td class="amount">14,357</td>
+        </tr>
+        <tr style="font-weight:600; background:#f8f8f8;">
+            <td colspan="2">Total prizes redeemed</td>
+            <td class="amount red">9,650</td>
+            <td colspan="2"></td>
+        </tr>
+    </table>
+
+    <div class="highlight">
+        <strong>The Game Projector 4K (7,300 tickets)</strong> was redeemed on 07/04/2026 &mdash; just 2 days after the last batch of card joins (05/04). The timing suggests the joins were performed specifically to accumulate enough tickets for this prize. Teanny processed the redemption at the counter, but the person who <strong>inflated the tickets</strong> to make this possible was <span class="staff-name">Kevin</span> (33 barcode scans + 8 joins in the preceding 5 weeks).
+    </div>
+    <div class="highlight-blue">
+        <strong>Note:</strong> Staff processing a prize redemption at the counter does not necessarily mean they are involved in the fraud. The customer presents the card, and whichever staff member is on duty processes the exchange. The fraud lies in <strong>how the tickets were added</strong>, not who hands over the prize.
+    </div>
+
+    <h3>First Redemption &mdash; Suspicious</h3>
+    <div class="highlight-orange">
+        <strong>26/07/2025:</strong> Kevin (2785) redeemed "100 TICKETS" &times; 10 (= 1,000 tickets). This product appears to be a <strong>ticket voucher</strong> &mdash; exchanging digital tickets for physical ticket vouchers. The card had 3,744 tickets from the replaced card plus ~342 earned that day. This happened on the card's first day of real use, before any meaningful game play. Where did those original 3,744 tickets on the replaced card come from?
+    </div>
+
+    <div class="footer">Sapiens Core &bull; Confidential &bull; Page 4</div>
+</div>
+
+<!-- PAGE 5: Usage Pattern -->
+<div class="page page-break">
+    <h1>Usage Pattern &mdash; Playing vs. Ticket Loading</h1>
+    <p class="subtitle">152 games played &bull; 90 EUR spent &bull; Jul 2025 &ndash; Apr 2026</p>
+
+    <h2>Daily Activity</h2>
+
+    <table>
+        <tr>
+            <th>Date</th>
+            <th class="amount">Games</th>
+            <th class="amount">Credit</th>
+            <th class="amount">Bonus</th>
+            <th>Notes</th>
+        </tr>
+        <tr>
+            <td>26/07/2025</td><td class="amount">23</td><td class="amount">21.80</td><td class="amount">0</td>
+            <td>First use. 20 EUR top-up. Prize: 100 TICKETS &times;10</td>
+        </tr>
+        <tr>
+            <td>30/07/2025</td><td class="amount">11</td><td class="amount">10.60</td><td class="amount">0</td>
+            <td>10 EUR top-up + 2 free ticket loads (495 tickets)</td>
+        </tr>
+        <tr>
+            <td>06/08/2025</td><td class="amount">11</td><td class="amount">10.60</td><td class="amount">0</td>
+            <td>10 EUR top-up. Prize: Altavoz BASS-02 (1,200 tix)</td>
+        </tr>
+        <tr>
+            <td>10/08/2025</td><td class="amount">10</td><td class="amount">10.00</td><td class="amount">0</td>
+            <td>10 EUR top-up</td>
+        </tr>
+        <tr style="background: #fff8e1;">
+            <td colspan="5" style="text-align:center; color:#888; font-style:italic;">&mdash; 2 month gap (Aug&ndash;Oct 2025) &mdash;</td>
+        </tr>
+        <tr>
+            <td>09/10/2025</td><td class="amount">6</td><td class="amount">0</td><td class="amount red">6.00</td>
+            <td><span class="badge badge-orange">100% bonus</span></td>
+        </tr>
+        <tr>
+            <td>17/10/2025</td><td class="amount">8</td><td class="amount">0</td><td class="amount red">8.00</td>
+            <td><span class="badge badge-orange">100% bonus</span></td>
+        </tr>
+        <tr>
+            <td>24/10/2025</td><td class="amount">13</td><td class="amount">10.60</td><td class="amount">2.00</td>
+            <td>10 EUR top-up</td>
+        </tr>
+        <tr>
+            <td>31/10/2025</td><td class="amount">1</td><td class="amount">0.60</td><td class="amount">0</td>
+            <td>Leftover credit</td>
+        </tr>
+        <tr style="background: #fff8e1;">
+            <td colspan="5" style="text-align:center; color:#888; font-style:italic;">&mdash; 2 month gap (Nov 2025&ndash;Jan 2026) &mdash;</td>
+        </tr>
+        <tr>
+            <td>03/01/2026</td><td class="amount">1</td><td class="amount">0.60</td><td class="amount">0</td>
+            <td>Single play, leftover credit</td>
+        </tr>
+        <tr style="background: #fde8e8;">
+            <td colspan="5" style="text-align:center; color:#c0392b; font-weight:600;">&mdash; 2 MONTH GAP (Jan&ndash;Feb 2026) &mdash;</td>
+        </tr>
+        <tr>
+            <td>01/03/2026</td><td class="amount">3</td><td class="amount">2.78</td><td class="amount">0</td>
+            <td><span class="badge badge-red">Big join</span> Card 1870896 joined: 6,281 tickets</td>
+        </tr>
+        <tr>
+            <td>11/03/2026</td><td class="amount">17</td><td class="amount">15.30</td><td class="amount">0</td>
+            <td>Active play session</td>
+        </tr>
+        <tr>
+            <td>27/03/2026</td><td class="amount">13</td><td class="amount">2.48</td><td class="amount">2.00</td>
+            <td>10 EUR top-up. Joins + barcode scans intensify</td>
+        </tr>
+        <tr style="background:#fde8e8">
+            <td>07/04/2026</td><td class="amount red"><strong>35</strong></td><td class="amount">2.78</td><td class="amount red">8.00</td>
+            <td><span class="badge badge-red">35 games, 20 EUR top-up</span> Prize: Game Projector 4K</td>
+        </tr>
+    </table>
+
+    <div class="highlight-blue">
+        <strong>The inflection point is March 2026.</strong> Between March 1 and April 7, the card received 14 of its 15 joins (7,765 tickets) and 43 barcode scans (~8,155 tickets). Before March, the card was used normally with real money top-ups. The ticket accumulation phase is compressed into ~5 weeks, suggesting a deliberate campaign.
+    </div>
+
+    <div class="footer">Sapiens Core &bull; Confidential &bull; Page 5</div>
+</div>
+
+<!-- PAGE 6: Staff -->
+<div class="page page-break">
+    <h1>Staff Members Involved</h1>
+    <p class="subtitle">All operators who performed operations on card #1674522 and its feeder network</p>
+
+    <table>
+        <tr><th>User ID</th><th>Operations on Card #1674522</th><th>Assessment</th></tr>
+        <tr>
+            <td><span class="staff-name">Kevin (2785)</span></td>
+            <td>
+                &bull; <strong>33 barcode scans</strong> (type 14) &mdash; ~5,500+ tickets added<br>
+                &bull; <strong>8 card joins</strong> &mdash; mostly small ticket amounts<br>
+                &bull; 2 prize redemptions (1,000 + 150 tickets)<br>
+                &bull; Replaced original card (created #1674522)<br>
+            </td>
+            <td>
+                <span class="badge badge-red">Primary suspect</span><br>
+                Most active operator on this card. 33 barcode scans onto a single card over 33 days is highly abnormal. Also the one who created the card and performs the majority of joins.
+            </td>
+        </tr>
+        <tr>
+            <td><span class="staff-name">Teanny (3128)</span></td>
+            <td>
+                &bull; <strong>2 card joins</strong> directly (incl. 6,281 ticket card)<br>
+                &bull; <strong>7 joins at intermediate level</strong> (built feeder network via card 1862434)<br>
+                &bull; 2 prize redemptions (<strong>1,200 + 7,300 tickets</strong>)<br>
+            </td>
+            <td>
+                <span class="badge badge-orange">Investigate further</span><br>
+                Joined the single largest ticket source (6,281 tix) and managed the 1862434 aggregator card. Prize redemptions at the counter may be routine duty (whoever is on shift processes the exchange). <strong>However, building the feeder card network requires intent</strong> &mdash; needs clarification on whether these joins were instructed or self-initiated.
+            </td>
+        </tr>
+        <tr>
+            <td><span class="staff-name">Yasmany (2768)</span></td>
+            <td>
+                &bull; 1 card join (243 tickets from 1862434)<br>
+                &bull; 6 barcode scans<br>
+                &bull; 1 join at level 3 (card 1649075 &rarr; 1888612)
+            </td>
+            <td>
+                <span class="badge badge-orange">Supporting role</span><br>
+                Involved in the feeder chain and barcode scanning. Also linked to other cards in the network.
+            </td>
+        </tr>
+        <tr>
+            <td>Ruben Flores (632)</td>
+            <td>
+                &bull; 3 card joins (1,022 tickets total)<br>
+                &bull; 2 barcode scans
+            </td>
+            <td><span class="badge badge-orange">Involved</span></td>
+        </tr>
+        <tr>
+            <td>Carlota (617)</td>
+            <td>
+                &bull; 1 card join (0 tickets)<br>
+                &bull; 3 barcode scans
+            </td>
+            <td><span class="badge badge-grey">Minor</span></td>
+        </tr>
+        <tr>
+            <td>User 2835 <!-- NAME UNKNOWN --></td>
+            <td>
+                &bull; 2 free ticket loads (56 + 439 = 495 tickets)<br>
+                &bull; Comments: "rtsfgd" and "ERROR"
+            </td>
+            <td><span class="badge badge-orange">Free ticket loads</span></td>
+        </tr>
+    </table>
+
+    <h2>Cross-Network Analysis (data-21)</h2>
+    <p>Looking at ALL cards in the join chain (not just #1674522):</p>
+
+    <table>
+        <tr><th>User ID</th><th>Total Operations</th><th>Distinct Cards Touched</th><th>Key Actions</th></tr>
+        <tr><td><span class="staff-name">Teanny</span></td><td class="amount">57</td><td class="amount">7+</td><td>26 REWARD (prize redemptions across 7 cards!), 24 barcode scans, 7 joins</td></tr>
+        <tr><td><span class="staff-name">Kevin</span></td><td class="amount">44</td><td class="amount">2+</td><td>33 barcode scans, 8 joins, 3 rewards</td></tr>
+        <tr><td>Yasmany</td><td class="amount">28</td><td class="amount">5+</td><td>16 barcode scans, 10 rewards across 4 cards, 2 joins</td></tr>
+        <tr><td>7529</td><td class="amount">17</td><td class="amount">2</td><td>9 rewards, 8 barcode scans (only in feeder cards)</td></tr>
+    </table>
+
+    <div class="highlight">
+        <strong>Kevin (2785) is the most active ticket inflator:</strong> 33 barcode scans and 8 joins on card #1674522 alone. No other staff member comes close to this level of ticket-adding activity on a single card. The barcode scanning is the primary fraud mechanism &mdash; it requires physical access to ticket receipts and deliberate choice to scan them onto this specific card rather than the customer's own card.
+    </div>
+
+    <div class="highlight-orange">
+        <strong>Teanny (3128) processed 26 prize redemptions across 7 cards in the network.</strong> This could indicate involvement, or it could mean Teanny is frequently on counter duty when prizes are redeemed. The key question is whether Teanny's card joins (building the 1862434 aggregator) were self-initiated or done at Kevin's request. If Kevin asks Teanny to "clean up" leftover cards by joining them, Teanny may not realize the tickets are being funnelled to a specific card.
+    </div>
+
+    <div class="footer">Sapiens Core &bull; Confidential &bull; Page 6</div>
+</div>
+
+<!-- PAGE 7: Conclusion -->
+<div class="page">
+    <h1>Conclusion &amp; Recommendations</h1>
+    <p class="subtitle">Card #1674522 &bull; 09/04/2026</p>
+
+    <h2>Verdict: <span class="red">CONFIRMED FRAUD</span></h2>
+
+    <div class="highlight" style="border-left-color: #c0392b; border-left-width: 5px;">
+        <strong style="font-size: 14px;">This is fraud. The evidence is conclusive and does not admit an innocent explanation.</strong><br><br>
+        <span class="staff-name">Kevin (user 2785)</span> systematically inflated the ticket balance on card #1674522 by harvesting <strong>~120 Ticket Station recovery barcodes</strong> and scanning them onto his card across 43 operations over 33 days. A recovery barcode is a one-time fallback for a customer who inserts paper tickets into a Ticket Station but has no card to tap. <strong>A legitimate customer would need at most one recovery barcode</strong> &mdash; after that, they have a card and tap it directly. There is no scenario in which 120 recovery codes legitimately end up on the same card.<br><br>
+        In addition to the barcode abuse, 15 card joins transferred 7,765 tickets from 11 source cards &mdash; including a card with zero game history (pure ticket aggregator) and a 3-level feeder chain. The scheme accelerated dramatically in March&ndash;April 2026, culminating in a <strong>Game Projector 4K (7,300 tickets)</strong> prize redemption on 07/04/2026.<br><br>
+        <strong>The card still holds 14,992 tickets.</strong>
+    </div>
+
+    <h2>Why There Is No Innocent Explanation</h2>
+
+    <ul>
+        <li><strong>~120 recovery barcodes on one card is impossible for a customer.</strong> Recovery codes are generated when someone inserts paper tickets but doesn't tap a card within 90 seconds. Once a customer has a card, they tap it directly. Kevin's card already existed when all 120 codes were scanned onto it.</li>
+        <li><strong>Multiple codes scanned at once proves collection.</strong> On 22/03/2026, Kevin scanned 17 barcodes in 5 operations within 6 hours. On 01/04, 8 barcodes at once. This is someone with a stash of codes, not a customer who forgot to tap.</li>
+        <li><strong>Codes scanned across 22 different days over 33 days.</strong> No customer accumulates recovery codes day after day while already having a card.</li>
+        <li><strong>Only 90 EUR of real money</strong> was ever loaded, yet the card has processed ~24,000+ tickets &mdash; ~67% from non-game sources.</li>
+        <li><strong>A zero-play aggregator card (1862434)</strong> was used to funnel tickets from other cards through joins. This card never played a single game &mdash; it existed solely as a ticket collection point.</li>
+    </ul>
+
+    <h2>Key Findings</h2>
+
+    <ul>
+        <li><strong>Primary fraud mechanism:</strong> Kevin scanned ~120 Ticket Station recovery barcodes onto card #1674522 in 43 operations (33 by Kevin himself). These are orphaned codes from customers who didn't tap, or codes generated via manual ticket adds at the cashier.</li>
+        <li><strong>Secondary mechanism:</strong> 15 card joins from 11 source cards transferred 7,765 tickets. Kevin performed 8 of these joins directly.</li>
+        <li><strong>Feeder card network:</strong> Card 1862434 (zero game history) served as a ticket aggregator with a 3-level chain. Teanny built the intermediate level; the extent of her awareness is unclear.</li>
+        <li><strong>Prize extraction:</strong> 9,650 tickets already redeemed for physical prizes, including the Game Projector 4K (7,300 tickets) on 07/04/2026 &mdash; 2 days after the last card joins.</li>
+        <li><strong>14,992 tickets remain</strong> on the card, at risk of further prize redemption.</li>
+    </ul>
+
+    <h2>Recommended Actions</h2>
+
+    <div class="highlight-blue">
+        <ol style="font-size: 13px; line-height: 2; padding-left: 20px;">
+            <li><strong>Freeze card #1674522 immediately</strong> &mdash; 14,992 tickets at risk of being redeemed</li>
+            <li><strong>Confront Kevin (2785)</strong> &mdash; ask him to explain where ~120 recovery barcodes came from and why they were all scanned onto his card. There is no legitimate answer.</li>
+            <li><strong>Audit Kevin's activity across ALL cards</strong> &mdash; if he does this on card #1674522, he likely does it on others. Check all type 14 operations by user 2785 system-wide</li>
+            <li><strong>Clarify Teanny's (3128) role</strong> &mdash; she built the feeder card network (1862434 aggregator). Determine if the joins were self-initiated or done at Kevin's request</li>
+            <li><strong>Implement barcode scan alerts</strong> &mdash; any card receiving more than 2&ndash;3 recovery barcodes should trigger an automatic flag. No legitimate customer needs more than one.</li>
+            <li><strong>Investigate card 1862434 (card number 3053304)</strong> &mdash; zero-play aggregator card; determine who requested its creation and why</li>
+        </ol>
+    </div>
+
+    <div class="footer">Sapiens Core &bull; Confidential &bull; Page 7</div>
+</div>
+
+</body>
+</html>
