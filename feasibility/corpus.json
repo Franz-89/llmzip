@@ -1,0 +1,41 @@
+{
+  "_comment": "Phase 0 pilot corpus. Eligibility criteria and selection were fixed before any measurement was run.",
+  "criteria": [
+    "Valid UTF-8 Markdown written by people as technical documentation (no generated dumps, logs, SQL, CSV or HTML)",
+    "Size between 1.5 KB and 60 KB",
+    "No near-duplicates of another selected document",
+    "At least three document types represented"
+  ],
+  "excluded_examples": {
+    "test_docs/ui/template-map.md": "generated relationship dump, 170 KB",
+    "test_docs/log.md": "changelog-style log, not reference documentation",
+    "test_docs/outbound-sync-queue-plan.md": "over 60 KB",
+    "test_docs/decisions/*.md": "under 1.5 KB each; measured only as a multi-document bundle"
+  },
+  "documents": [
+    {"path": "test_docs/API_PUBLIC.md", "type": "api_reference"},
+    {"path": "test_docs/apis.md", "type": "api_reference"},
+    {"path": "test_docs/README.md", "type": "readme"},
+    {"path": "test_docs/project-overview.md", "type": "readme"},
+    {"path": "test_docs/iaapa/README.md", "type": "readme"},
+    {"path": "test_docs/design_handoff_orbit_homepage/README.md", "type": "readme"},
+    {"path": "test_docs/skills/README.md", "type": "readme"},
+    {"path": "test_docs/deployment.md", "type": "guide"},
+    {"path": "test_docs/DB_POOLING.md", "type": "guide"},
+    {"path": "test_docs/testing.md", "type": "guide"},
+    {"path": "test_docs/database.md", "type": "guide"},
+    {"path": "test_docs/MIGRATION_PLAYBOOK.md", "type": "guide"},
+    {"path": "test_docs/CODING_STANDARDS.md", "type": "guide"},
+    {"path": "test_docs/product-import-matching.md", "type": "guide"},
+    {"path": "test_docs/lco-revert-and-idempotency.md", "type": "guide"},
+    {"path": "test_docs/PERMISSIONS.md", "type": "design"},
+    {"path": "test_docs/EVENTS.md", "type": "design"},
+    {"path": "test_docs/DYNAMIC_PRICING.md", "type": "design"},
+    {"path": "test_docs/MAINTENANCE.md", "type": "design"},
+    {"path": "test_docs/architecture.md", "type": "design"}
+  ],
+  "bundles": [
+    {"name": "adr-bundle", "glob": "test_docs/decisions/0*.md"},
+    {"name": "pilot-bundle", "from_documents": true}
+  ]
+}

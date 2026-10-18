@@ -1,0 +1,7759 @@
+[
+ {
+  "doc": "test_docs/API_PUBLIC.md",
+  "type": "api_reference",
+  "profile": "o200k",
+  "notation": "opaque",
+  "original_tokens": 6752,
+  "envelope_tokens": 6819,
+  "payload_tokens": 6673,
+  "legend_tokens": 90,
+  "instruction_tokens": 55,
+  "savings": -0.0099,
+  "effective_savings": 0.0,
+  "entries": 12,
+  "protected_share": 0.3633,
+  "seconds": 0.04,
+  "top_entries": [
+   [
+    "0",
+    "the NUC",
+    8
+   ],
+   [
+    "1",
+    "in v1",
+    7
+   ],
+   [
+    "2",
+    "## 3",
+    6
+   ],
+   [
+    "3",
+    "**Response 200",
+    5
+   ],
+   [
+    "4",
+    "1.",
+    5
+   ],
+   [
+    "5",
+    "2.",
+    5
+   ],
+   [
+    "6",
+    "|---|---|",
+    5
+   ],
+   [
+    "7",
+    "**Implementation notes**",
+    4
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/apis.md",
+  "type": "api_reference",
+  "profile": "o200k",
+  "notation": "opaque",
+  "original_tokens": 3985,
+  "envelope_tokens": 4045,
+  "payload_tokens": 3982,
+  "legend_tokens": 7,
+  "instruction_tokens": 55,
+  "savings": -0.0151,
+  "effective_savings": 0.0,
+  "entries": 1,
+  "protected_share": 0.3235,
+  "seconds": 0.02,
+  "top_entries": [
+   [
+    "0",
+    ", so the",
+    5
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/README.md",
+  "type": "readme",
+  "profile": "o200k",
+  "notation": "opaque",
+  "original_tokens": 376,
+  "envelope_tokens": 449,
+  "payload_tokens": 378,
+  "legend_tokens": 15,
+  "instruction_tokens": 55,
+  "savings": -0.1941,
+  "effective_savings": 0.0,
+  "entries": 2,
+  "protected_share": 0.2344,
+  "seconds": 0.0,
+  "top_entries": [
+   [
+    "0",
+    ".md)",
+    12
+   ],
+   [
+    "1",
+    "SapiensCore LLM Wiki",
+    2
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/project-overview.md",
+  "type": "readme",
+  "profile": "o200k",
+  "notation": "opaque",
+  "original_tokens": 613,
+  "envelope_tokens": 669,
+  "payload_tokens": 613,
+  "legend_tokens": 0,
+  "instruction_tokens": 55,
+  "savings": -0.0914,
+  "effective_savings": 0.0,
+  "entries": 0,
+  "protected_share": 0.1648,
+  "seconds": 0.0,
+  "top_entries": []
+ },
+ {
+  "doc": "test_docs/iaapa/README.md",
+  "type": "readme",
+  "profile": "o200k",
+  "notation": "opaque",
+  "original_tokens": 504,
+  "envelope_tokens": 559,
+  "payload_tokens": 492,
+  "legend_tokens": 11,
+  "instruction_tokens": 55,
+  "savings": -0.1091,
+  "effective_savings": 0.0,
+  "entries": 1,
+  "protected_share": 0.0884,
+  "seconds": 0.0,
+  "top_entries": [
+   [
+    "0",
+    "- **http://localhost:8765",
+    2
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/design_handoff_orbit_homepage/README.md",
+  "type": "readme",
+  "profile": "o200k",
+  "notation": "opaque",
+  "original_tokens": 3593,
+  "envelope_tokens": 3635,
+  "payload_tokens": 3479,
+  "legend_tokens": 100,
+  "instruction_tokens": 55,
+  "savings": -0.0117,
+  "effective_savings": 0.0,
+  "entries": 12,
+  "protected_share": 0.1077,
+  "seconds": 0.04,
+  "top_entries": [
+   [
+    "0",
+    "-col grid",
+    7
+   ],
+   [
+    "1",
+    "\"Book a visit\"",
+    4
+   ],
+   [
+    "2",
+    "Hanken Grotesk",
+    4
+   ],
+   [
+    "3",
+    "(coral)",
+    3
+   ],
+   [
+    "4",
+    "(e.g.",
+    3
+   ],
+   [
+    "5",
+    ") | Fredoka | 600 |",
+    3
+   ],
+   [
+    "6",
+    "- **Left**:",
+    3
+   ],
+   [
+    "7",
+    "- **Loyalty card",
+    3
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/skills/README.md",
+  "type": "readme",
+  "profile": "o200k",
+  "notation": "opaque",
+  "original_tokens": 1859,
+  "envelope_tokens": 1843,
+  "payload_tokens": 1723,
+  "legend_tokens": 64,
+  "instruction_tokens": 55,
+  "savings": 0.0086,
+  "effective_savings": 0.0,
+  "entries": 9,
+  "protected_share": 0.1895,
+  "seconds": 0.02,
+  "top_entries": [
+   [
+    "0",
+    "- Current location:",
+    11
+   ],
+   [
+    "1",
+    "- Purpose:",
+    11
+   ],
+   [
+    "2",
+    "- Summary:",
+    11
+   ],
+   [
+    "3",
+    "- Use when: A user",
+    11
+   ],
+   [
+    "4",
+    "### caveman",
+    6
+   ],
+   [
+    "5",
+    "- Related file:",
+    6
+   ],
+   [
+    "6",
+    ", HTMX, and Alpine",
+    3
+   ],
+   [
+    "7",
+    "- Related workflow/config file:",
+    3
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/deployment.md",
+  "type": "guide",
+  "profile": "o200k",
+  "notation": "opaque",
+  "original_tokens": 692,
+  "envelope_tokens": 748,
+  "payload_tokens": 692,
+  "legend_tokens": 0,
+  "instruction_tokens": 55,
+  "savings": -0.0809,
+  "effective_savings": 0.0,
+  "entries": 0,
+  "protected_share": 0.3045,
+  "seconds": 0.0,
+  "top_entries": []
+ },
+ {
+  "doc": "test_docs/DB_POOLING.md",
+  "type": "guide",
+  "profile": "o200k",
+  "notation": "opaque",
+  "original_tokens": 3684,
+  "envelope_tokens": 3753,
+  "payload_tokens": 3660,
+  "legend_tokens": 37,
+  "instruction_tokens": 55,
+  "savings": -0.0187,
+  "effective_savings": 0.0,
+  "entries": 5,
+  "protected_share": 0.2926,
+  "seconds": 0.02,
+  "top_entries": [
+   [
+    "0",
+    "— PgBouncer",
+    4
+   ],
+   [
+    "1",
+    "---|---|",
+    3
+   ],
+   [
+    "2",
+    "1. *",
+    3
+   ],
+   [
+    "3",
+    "2. *",
+    3
+   ],
+   [
+    "4",
+    "2026-07-22.",
+    2
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/testing.md",
+  "type": "guide",
+  "profile": "o200k",
+  "notation": "opaque",
+  "original_tokens": 428,
+  "envelope_tokens": 484,
+  "payload_tokens": 428,
+  "legend_tokens": 0,
+  "instruction_tokens": 55,
+  "savings": -0.1308,
+  "effective_savings": 0.0,
+  "entries": 0,
+  "protected_share": 0.2677,
+  "seconds": 0.0,
+  "top_entries": []
+ },
+ {
+  "doc": "test_docs/database.md",
+  "type": "guide",
+  "profile": "o200k",
+  "notation": "opaque",
+  "original_tokens": 635,
+  "envelope_tokens": 691,
+  "payload_tokens": 635,
+  "legend_tokens": 0,
+  "instruction_tokens": 55,
+  "savings": -0.0882,
+  "effective_savings": 0.0,
+  "entries": 0,
+  "protected_share": 0.2479,
+  "seconds": 0.0,
+  "top_entries": []
+ },
+ {
+  "doc": "test_docs/MIGRATION_PLAYBOOK.md",
+  "type": "guide",
+  "profile": "o200k",
+  "notation": "opaque",
+  "original_tokens": 7001,
+  "envelope_tokens": 7058,
+  "payload_tokens": 6917,
+  "legend_tokens": 85,
+  "instruction_tokens": 55,
+  "savings": -0.0081,
+  "effective_savings": 0.0,
+  "entries": 10,
+  "protected_share": 0.4588,
+  "seconds": 0.05,
+  "top_entries": [
+   [
+    "0",
+    "- [ ]",
+    12
+   ],
+   [
+    "1",
+    "** — the",
+    5
+   ],
+   [
+    "2",
+    "-loyalty\"",
+    3
+   ],
+   [
+    "3",
+    "2. *",
+    3
+   ],
+   [
+    "4",
+    "<div class=\"tab",
+    3
+   ],
+   [
+    "5",
+    "|---|---|---|",
+    3
+   ],
+   [
+    "6",
+    "\" data-bs-toggle=\"tab\" href=\"#tab",
+    2
+   ],
+   [
+    "7",
+    "<a class=\"nav-link",
+    2
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/CODING_STANDARDS.md",
+  "type": "guide",
+  "profile": "o200k",
+  "notation": "opaque",
+  "original_tokens": 2736,
+  "envelope_tokens": 2794,
+  "payload_tokens": 2730,
+  "legend_tokens": 8,
+  "instruction_tokens": 55,
+  "savings": -0.0212,
+  "effective_savings": 0.0,
+  "entries": 1,
+  "protected_share": 0.6513,
+  "seconds": 0.01,
+  "top_entries": [
+   [
+    "0",
+    "to the NUC",
+    3
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/product-import-matching.md",
+  "type": "guide",
+  "profile": "o200k",
+  "notation": "opaque",
+  "original_tokens": 1647,
+  "envelope_tokens": 1703,
+  "payload_tokens": 1635,
+  "legend_tokens": 12,
+  "instruction_tokens": 55,
+  "savings": -0.034,
+  "effective_savings": 0.0,
+  "entries": 1,
+  "protected_share": 0.1696,
+  "seconds": 0.01,
+  "top_entries": [
+   [
+    "0",
+    "Product import — product matching and conflict resolution",
+    2
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/lco-revert-and-idempotency.md",
+  "type": "guide",
+  "profile": "o200k",
+  "notation": "opaque",
+  "original_tokens": 3085,
+  "envelope_tokens": 3165,
+  "payload_tokens": 3023,
+  "legend_tokens": 86,
+  "instruction_tokens": 55,
+  "savings": -0.0259,
+  "effective_savings": 0.0,
+  "entries": 12,
+  "protected_share": 0.2942,
+  "seconds": 0.02,
+  "top_entries": [
+   [
+    "0",
+    "- [ ]",
+    13
+   ],
+   [
+    "1",
+    "$card-",
+    9
+   ],
+   [
+    "2",
+    "## 3",
+    6
+   ],
+   [
+    "3",
+    "## 2",
+    5
+   ],
+   [
+    "4",
+    "on the cloud",
+    5
+   ],
+   [
+    "5",
+    "the cloud's",
+    5
+   ],
+   [
+    "6",
+    "$cloudOriginalTx-",
+    4
+   ],
+   [
+    "7",
+    ". Sapiensclient",
+    4
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/PERMISSIONS.md",
+  "type": "design",
+  "profile": "o200k",
+  "notation": "opaque",
+  "original_tokens": 6182,
+  "envelope_tokens": 6182,
+  "payload_tokens": 5887,
+  "legend_tokens": 239,
+  "instruction_tokens": 55,
+  "savings": 0.0,
+  "effective_savings": 0.0,
+  "entries": 27,
+  "protected_share": 0.1743,
+  "seconds": 0.1,
+  "top_entries": [
+   [
+    "0",
+    "| – | – | – |",
+    17
+   ],
+   [
+    "1",
+    "A | – |",
+    8
+   ],
+   [
+    "2",
+    "- ✅ *",
+    6
+   ],
+   [
+    "3",
+    "A | A |",
+    6
+   ],
+   [
+    "4",
+    "| area × level",
+    6
+   ],
+   [
+    "5",
+    ". This is the",
+    4
+   ],
+   [
+    "6",
+    "**elevated",
+    3
+   ],
+   [
+    "7",
+    "--:|:--:|:",
+    3
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/EVENTS.md",
+  "type": "design",
+  "profile": "o200k",
+  "notation": "opaque",
+  "original_tokens": 8755,
+  "envelope_tokens": 8822,
+  "payload_tokens": 8630,
+  "legend_tokens": 136,
+  "instruction_tokens": 55,
+  "savings": -0.0077,
+  "effective_savings": 0.0,
+  "entries": 17,
+  "protected_share": 0.2335,
+  "seconds": 0.08,
+  "top_entries": [
+   [
+    "0",
+    "the NUC",
+    12
+   ],
+   [
+    "1",
+    "## 3",
+    8
+   ],
+   [
+    "2",
+    ". ✅ done —",
+    8
+   ],
+   [
+    "3",
+    "- **No",
+    6
+   ],
+   [
+    "4",
+    "both repos)",
+    6
+   ],
+   [
+    "5",
+    "2026-07-20",
+    5
+   ],
+   [
+    "6",
+    "on both repos",
+    5
+   ],
+   [
+    "7",
+    "1. *",
+    4
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/DYNAMIC_PRICING.md",
+  "type": "design",
+  "profile": "o200k",
+  "notation": "opaque",
+  "original_tokens": 6828,
+  "envelope_tokens": 6910,
+  "payload_tokens": 6706,
+  "legend_tokens": 148,
+  "instruction_tokens": 55,
+  "savings": -0.012,
+  "effective_savings": 0.0,
+  "entries": 17,
+  "protected_share": 0.1595,
+  "seconds": 0.05,
+  "top_entries": [
+   [
+    "0",
+    "## 5",
+    10
+   ],
+   [
+    "1",
+    "## 12",
+    8
+   ],
+   [
+    "2",
+    ", not a",
+    6
+   ],
+   [
+    "3",
+    "Phase 2",
+    5
+   ],
+   [
+    "4",
+    "holiday/holiday-eve",
+    4
+   ],
+   [
+    "5",
+    "§5.3",
+    4
+   ],
+   [
+    "6",
+    "( id_rule,",
+    3
+   ],
+   [
+    "7",
+    ", status ) — the",
+    3
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/MAINTENANCE.md",
+  "type": "design",
+  "profile": "o200k",
+  "notation": "opaque",
+  "original_tokens": 3737,
+  "envelope_tokens": 3801,
+  "payload_tokens": 3688,
+  "legend_tokens": 57,
+  "instruction_tokens": 55,
+  "savings": -0.0171,
+  "effective_savings": 0.0,
+  "entries": 7,
+  "protected_share": 0.1792,
+  "seconds": 0.04,
+  "top_entries": [
+   [
+    "0",
+    ". ✅ done",
+    6
+   ],
+   [
+    "1",
+    ", and the",
+    5
+   ],
+   [
+    "2",
+    "(en/es/pt",
+    4
+   ],
+   [
+    "3",
+    "| GLO (",
+    4
+   ],
+   [
+    "4",
+    ") | routine, no cost |",
+    3
+   ],
+   [
+    "5",
+    "- **Tech time** —",
+    2
+   ],
+   [
+    "6",
+    "1:1 with a game location",
+    2
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/architecture.md",
+  "type": "design",
+  "profile": "o200k",
+  "notation": "opaque",
+  "original_tokens": 1059,
+  "envelope_tokens": 1107,
+  "payload_tokens": 1039,
+  "legend_tokens": 12,
+  "instruction_tokens": 55,
+  "savings": -0.0453,
+  "effective_savings": 0.0,
+  "entries": 1,
+  "protected_share": 0.2826,
+  "seconds": 0.0,
+  "top_entries": [
+   [
+    "0",
+    "denies access unless the current domain is",
+    4
+   ]
+  ]
+ },
+ {
+  "doc": "adr-bundle",
+  "type": "bundle",
+  "profile": "o200k",
+  "notation": "opaque",
+  "original_tokens": 2423,
+  "envelope_tokens": 2261,
+  "payload_tokens": 1973,
+  "legend_tokens": 232,
+  "instruction_tokens": 55,
+  "savings": 0.0669,
+  "effective_savings": 0.0669,
+  "entries": 22,
+  "protected_share": 0.1228,
+  "seconds": 0.02,
+  "top_entries": [
+   [
+    "0",
+    "## Consequences",
+    10
+   ],
+   [
+    "1",
+    "description: \"Decision to",
+    10
+   ],
+   [
+    "2",
+    "source_kind: generated",
+    10
+   ],
+   [
+    "3",
+    "status: active",
+    10
+   ],
+   [
+    "4",
+    "tags: [adr,",
+    10
+   ],
+   [
+    "5",
+    "timestamp: \"2026-06-30T06:51:14Z\"",
+    10
+   ],
+   [
+    "6",
+    "title: \"ADR",
+    10
+   ],
+   [
+    "7",
+    "type: ADR",
+    10
+   ]
+  ]
+ },
+ {
+  "doc": "pilot-bundle",
+  "type": "bundle",
+  "profile": "o200k",
+  "notation": "opaque",
+  "original_tokens": 64154,
+  "envelope_tokens": 63959,
+  "payload_tokens": 62481,
+  "legend_tokens": 1422,
+  "instruction_tokens": 55,
+  "savings": 0.003,
+  "effective_savings": 0.0,
+  "entries": 180,
+  "protected_share": 0.2729,
+  "seconds": 1.31,
+  "top_entries": [
+   [
+    "0",
+    "1.",
+    40
+   ],
+   [
+    "1",
+    "## 3",
+    29
+   ],
+   [
+    "2",
+    "the NUC",
+    29
+   ],
+   [
+    "3",
+    "4.",
+    26
+   ],
+   [
+    "4",
+    "- [ ]",
+    25
+   ],
+   [
+    "5",
+    "2. *",
+    21
+   ],
+   [
+    "6",
+    "*not*",
+    19
+   ],
+   [
+    "7",
+    "## 5",
+    18
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/API_PUBLIC.md",
+  "type": "api_reference",
+  "profile": "o200k",
+  "notation": "mnemonic",
+  "original_tokens": 6752,
+  "envelope_tokens": 6810,
+  "payload_tokens": 6739,
+  "legend_tokens": 15,
+  "instruction_tokens": 55,
+  "savings": -0.0086,
+  "effective_savings": 0.0,
+  "entries": 2,
+  "protected_share": 0.3633,
+  "seconds": 0.03,
+  "top_entries": [
+   [
+    "3",
+    "## 3",
+    6
+   ],
+   [
+    "X",
+    "|---|---|",
+    5
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/apis.md",
+  "type": "api_reference",
+  "profile": "o200k",
+  "notation": "mnemonic",
+  "original_tokens": 3985,
+  "envelope_tokens": 4041,
+  "payload_tokens": 3985,
+  "legend_tokens": 0,
+  "instruction_tokens": 55,
+  "savings": -0.0141,
+  "effective_savings": 0.0,
+  "entries": 0,
+  "protected_share": 0.3235,
+  "seconds": 0.01,
+  "top_entries": []
+ },
+ {
+  "doc": "test_docs/README.md",
+  "type": "readme",
+  "profile": "o200k",
+  "notation": "mnemonic",
+  "original_tokens": 376,
+  "envelope_tokens": 449,
+  "payload_tokens": 388,
+  "legend_tokens": 5,
+  "instruction_tokens": 55,
+  "savings": -0.1941,
+  "effective_savings": 0.0,
+  "entries": 1,
+  "protected_share": 0.2344,
+  "seconds": 0.0,
+  "top_entries": [
+   [
+    "Md",
+    ".md)",
+    12
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/project-overview.md",
+  "type": "readme",
+  "profile": "o200k",
+  "notation": "mnemonic",
+  "original_tokens": 613,
+  "envelope_tokens": 669,
+  "payload_tokens": 613,
+  "legend_tokens": 0,
+  "instruction_tokens": 55,
+  "savings": -0.0914,
+  "effective_savings": 0.0,
+  "entries": 0,
+  "protected_share": 0.1648,
+  "seconds": 0.0,
+  "top_entries": []
+ },
+ {
+  "doc": "test_docs/iaapa/README.md",
+  "type": "readme",
+  "profile": "o200k",
+  "notation": "mnemonic",
+  "original_tokens": 504,
+  "envelope_tokens": 560,
+  "payload_tokens": 504,
+  "legend_tokens": 0,
+  "instruction_tokens": 55,
+  "savings": -0.1111,
+  "effective_savings": 0.0,
+  "entries": 0,
+  "protected_share": 0.0884,
+  "seconds": 0.0,
+  "top_entries": []
+ },
+ {
+  "doc": "test_docs/design_handoff_orbit_homepage/README.md",
+  "type": "readme",
+  "profile": "o200k",
+  "notation": "mnemonic",
+  "original_tokens": 3593,
+  "envelope_tokens": 3641,
+  "payload_tokens": 3556,
+  "legend_tokens": 29,
+  "instruction_tokens": 55,
+  "savings": -0.0134,
+  "effective_savings": 0.0,
+  "entries": 3,
+  "protected_share": 0.1077,
+  "seconds": 0.03,
+  "top_entries": [
+   [
+    "Fred600",
+    ") | Fredoka | 600 |",
+    3
+   ],
+   [
+    "Left",
+    "- **Left**:",
+    3
+   ],
+   [
+    "X",
+    "|---|---|---|",
+    3
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/skills/README.md",
+  "type": "readme",
+  "profile": "o200k",
+  "notation": "mnemonic",
+  "original_tokens": 1859,
+  "envelope_tokens": 1898,
+  "payload_tokens": 1826,
+  "legend_tokens": 16,
+  "instruction_tokens": 55,
+  "savings": -0.021,
+  "effective_savings": 0.0,
+  "entries": 2,
+  "protected_share": 0.1895,
+  "seconds": 0.01,
+  "top_entries": [
+   [
+    "Summ",
+    "- Summary:",
+    11
+   ],
+   [
+    "UseWhenA",
+    "- Use when: A user",
+    11
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/deployment.md",
+  "type": "guide",
+  "profile": "o200k",
+  "notation": "mnemonic",
+  "original_tokens": 692,
+  "envelope_tokens": 748,
+  "payload_tokens": 692,
+  "legend_tokens": 0,
+  "instruction_tokens": 55,
+  "savings": -0.0809,
+  "effective_savings": 0.0,
+  "entries": 0,
+  "protected_share": 0.3045,
+  "seconds": 0.0,
+  "top_entries": []
+ },
+ {
+  "doc": "test_docs/DB_POOLING.md",
+  "type": "guide",
+  "profile": "o200k",
+  "notation": "mnemonic",
+  "original_tokens": 3684,
+  "envelope_tokens": 3740,
+  "payload_tokens": 3684,
+  "legend_tokens": 0,
+  "instruction_tokens": 55,
+  "savings": -0.0152,
+  "effective_savings": 0.0,
+  "entries": 0,
+  "protected_share": 0.2926,
+  "seconds": 0.01,
+  "top_entries": []
+ },
+ {
+  "doc": "test_docs/testing.md",
+  "type": "guide",
+  "profile": "o200k",
+  "notation": "mnemonic",
+  "original_tokens": 428,
+  "envelope_tokens": 484,
+  "payload_tokens": 428,
+  "legend_tokens": 0,
+  "instruction_tokens": 55,
+  "savings": -0.1308,
+  "effective_savings": 0.0,
+  "entries": 0,
+  "protected_share": 0.2677,
+  "seconds": 0.0,
+  "top_entries": []
+ },
+ {
+  "doc": "test_docs/database.md",
+  "type": "guide",
+  "profile": "o200k",
+  "notation": "mnemonic",
+  "original_tokens": 635,
+  "envelope_tokens": 691,
+  "payload_tokens": 635,
+  "legend_tokens": 0,
+  "instruction_tokens": 55,
+  "savings": -0.0882,
+  "effective_savings": 0.0,
+  "entries": 0,
+  "protected_share": 0.2479,
+  "seconds": 0.0,
+  "top_entries": []
+ },
+ {
+  "doc": "test_docs/MIGRATION_PLAYBOOK.md",
+  "type": "guide",
+  "profile": "o200k",
+  "notation": "mnemonic",
+  "original_tokens": 7001,
+  "envelope_tokens": 7052,
+  "payload_tokens": 6980,
+  "legend_tokens": 16,
+  "instruction_tokens": 55,
+  "savings": -0.0073,
+  "effective_savings": 0.0,
+  "entries": 2,
+  "protected_share": 0.4588,
+  "seconds": 0.03,
+  "top_entries": [
+   [
+    "X",
+    "- [ ]",
+    12
+   ],
+   [
+    "X2",
+    "|---|---|---|",
+    3
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/CODING_STANDARDS.md",
+  "type": "guide",
+  "profile": "o200k",
+  "notation": "mnemonic",
+  "original_tokens": 2736,
+  "envelope_tokens": 2792,
+  "payload_tokens": 2736,
+  "legend_tokens": 0,
+  "instruction_tokens": 55,
+  "savings": -0.0205,
+  "effective_savings": 0.0,
+  "entries": 0,
+  "protected_share": 0.6513,
+  "seconds": 0.0,
+  "top_entries": []
+ },
+ {
+  "doc": "test_docs/product-import-matching.md",
+  "type": "guide",
+  "profile": "o200k",
+  "notation": "mnemonic",
+  "original_tokens": 1647,
+  "envelope_tokens": 1703,
+  "payload_tokens": 1647,
+  "legend_tokens": 0,
+  "instruction_tokens": 55,
+  "savings": -0.034,
+  "effective_savings": 0.0,
+  "entries": 0,
+  "protected_share": 0.1696,
+  "seconds": 0.0,
+  "top_entries": []
+ },
+ {
+  "doc": "test_docs/lco-revert-and-idempotency.md",
+  "type": "guide",
+  "profile": "o200k",
+  "notation": "mnemonic",
+  "original_tokens": 3085,
+  "envelope_tokens": 3148,
+  "payload_tokens": 3075,
+  "legend_tokens": 17,
+  "instruction_tokens": 55,
+  "savings": -0.0204,
+  "effective_savings": 0.0,
+  "entries": 3,
+  "protected_share": 0.2942,
+  "seconds": 0.01,
+  "top_entries": [
+   [
+    "X",
+    "- [ ]",
+    13
+   ],
+   [
+    "Card",
+    "$card-",
+    9
+   ],
+   [
+    "3",
+    "## 3",
+    6
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/PERMISSIONS.md",
+  "type": "design",
+  "profile": "o200k",
+  "notation": "mnemonic",
+  "original_tokens": 6182,
+  "envelope_tokens": 6171,
+  "payload_tokens": 6035,
+  "legend_tokens": 80,
+  "instruction_tokens": 55,
+  "savings": 0.0018,
+  "effective_savings": 0.0,
+  "entries": 9,
+  "protected_share": 0.1743,
+  "seconds": 0.09,
+  "top_entries": [
+   [
+    "X",
+    "| – | – | – |",
+    17
+   ],
+   [
+    "A",
+    "A | – |",
+    8
+   ],
+   [
+    "X4",
+    "- ✅ *",
+    6
+   ],
+   [
+    "AA",
+    "A | A |",
+    6
+   ],
+   [
+    "Area",
+    "| area ×",
+    6
+   ],
+   [
+    "X2",
+    "--:|:--:|:",
+    3
+   ],
+   [
+    "AAA",
+    "| A | A | A | A |",
+    2
+   ],
+   [
+    "R",
+    "| – | – | R |",
+    2
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/EVENTS.md",
+  "type": "design",
+  "profile": "o200k",
+  "notation": "mnemonic",
+  "original_tokens": 8755,
+  "envelope_tokens": 8827,
+  "payload_tokens": 8725,
+  "legend_tokens": 46,
+  "instruction_tokens": 55,
+  "savings": -0.0082,
+  "effective_savings": 0.0,
+  "entries": 7,
+  "protected_share": 0.2335,
+  "seconds": 0.05,
+  "top_entries": [
+   [
+    "3",
+    "## 3",
+    8
+   ],
+   [
+    "Done",
+    ". ✅ done —",
+    8
+   ],
+   [
+    "202607",
+    "2026-07",
+    7
+   ],
+   [
+    "No",
+    "- **No",
+    6
+   ],
+   [
+    "1",
+    "1. *",
+    4
+   ],
+   [
+    "2",
+    "2. *",
+    4
+   ],
+   [
+    "32",
+    "3. *",
+    4
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/DYNAMIC_PRICING.md",
+  "type": "design",
+  "profile": "o200k",
+  "notation": "mnemonic",
+  "original_tokens": 6828,
+  "envelope_tokens": 6898,
+  "payload_tokens": 6812,
+  "legend_tokens": 30,
+  "instruction_tokens": 55,
+  "savings": -0.0103,
+  "effective_savings": 0.0,
+  "entries": 4,
+  "protected_share": 0.1595,
+  "seconds": 0.04,
+  "top_entries": [
+   [
+    "5",
+    "## 5",
+    10
+   ],
+   [
+    "12",
+    "## 12",
+    8
+   ],
+   [
+    "53",
+    "§5.3",
+    4
+   ],
+   [
+    "X",
+    "|---|---|",
+    3
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/MAINTENANCE.md",
+  "type": "design",
+  "profile": "o200k",
+  "notation": "mnemonic",
+  "original_tokens": 3737,
+  "envelope_tokens": 3798,
+  "payload_tokens": 3736,
+  "legend_tokens": 6,
+  "instruction_tokens": 55,
+  "savings": -0.0163,
+  "effective_savings": 0.0,
+  "entries": 1,
+  "protected_share": 0.1792,
+  "seconds": 0.03,
+  "top_entries": [
+   [
+    "Done",
+    ". ✅ done",
+    6
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/architecture.md",
+  "type": "design",
+  "profile": "o200k",
+  "notation": "mnemonic",
+  "original_tokens": 1059,
+  "envelope_tokens": 1115,
+  "payload_tokens": 1059,
+  "legend_tokens": 0,
+  "instruction_tokens": 55,
+  "savings": -0.0529,
+  "effective_savings": 0.0,
+  "entries": 0,
+  "protected_share": 0.2826,
+  "seconds": 0.0,
+  "top_entries": []
+ },
+ {
+  "doc": "adr-bundle",
+  "type": "bundle",
+  "profile": "o200k",
+  "notation": "mnemonic",
+  "original_tokens": 2423,
+  "envelope_tokens": 2370,
+  "payload_tokens": 2253,
+  "legend_tokens": 61,
+  "instruction_tokens": 55,
+  "savings": 0.0219,
+  "effective_savings": 0.0,
+  "entries": 5,
+  "protected_share": 0.1228,
+  "seconds": 0.02,
+  "top_entries": [
+   [
+    "Cons",
+    "## Consequences",
+    10
+   ],
+   [
+    "Adr2",
+    ": \"ADR",
+    10
+   ],
+   [
+    "Adr",
+    ": [adr,",
+    10
+   ],
+   [
+    "Time202606",
+    "timestamp: \"2026-06-30T06:51:14Z\"",
+    10
+   ],
+   [
+    "UseMateView",
+    ": Use Materialized Views and Timescale Retention for Reporting/Logs",
+    2
+   ]
+  ]
+ },
+ {
+  "doc": "pilot-bundle",
+  "type": "bundle",
+  "profile": "o200k",
+  "notation": "mnemonic",
+  "original_tokens": 64154,
+  "envelope_tokens": 64074,
+  "payload_tokens": 63632,
+  "legend_tokens": 386,
+  "instruction_tokens": 55,
+  "savings": 0.0012,
+  "effective_savings": 0.0,
+  "entries": 53,
+  "protected_share": 0.2729,
+  "seconds": 0.72,
+  "top_entries": [
+   [
+    "1",
+    "1.",
+    40
+   ],
+   [
+    "3",
+    "## 3",
+    29
+   ],
+   [
+    "4",
+    "4.",
+    26
+   ],
+   [
+    "X3",
+    "- [ ]",
+    25
+   ],
+   [
+    "2",
+    "2. *",
+    21
+   ],
+   [
+    "Not",
+    "*not*",
+    19
+   ],
+   [
+    "5",
+    "## 5",
+    18
+   ],
+   [
+    "No",
+    "- **No",
+    17
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/API_PUBLIC.md",
+  "type": "api_reference",
+  "profile": "o200k",
+  "notation": "opaque-unprotected",
+  "original_tokens": 6752,
+  "envelope_tokens": 6512,
+  "payload_tokens": 5882,
+  "legend_tokens": 574,
+  "instruction_tokens": 55,
+  "savings": 0.0355,
+  "effective_savings": 0.0,
+  "entries": 64,
+  "protected_share": 0.0,
+  "seconds": 0.13,
+  "top_entries": [
+   [
+    "0",
+    "\", \"currency\": \"EUR\" }",
+    18
+   ],
+   [
+    "1",
+    ".php`",
+    18
+   ],
+   [
+    "2",
+    "\": { \"amount\":",
+    17
+   ],
+   [
+    "3",
+    "`sapiensclient/App",
+    16
+   ],
+   [
+    "4",
+    "the NUC",
+    8
+   ],
+   [
+    "5",
+    ".read`",
+    7
+   ],
+   [
+    "6",
+    "`errors: {",
+    7
+   ],
+   [
+    "7",
+    "in v1",
+    7
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/apis.md",
+  "type": "api_reference",
+  "profile": "o200k",
+  "notation": "opaque-unprotected",
+  "original_tokens": 3985,
+  "envelope_tokens": 4005,
+  "payload_tokens": 3683,
+  "legend_tokens": 266,
+  "instruction_tokens": 55,
+  "savings": -0.005,
+  "effective_savings": 0.0,
+  "entries": 31,
+  "protected_share": 0.0,
+  "seconds": 0.05,
+  "top_entries": [
+   [
+    "0",
+    ".php`",
+    15
+   ],
+   [
+    "1",
+    "/v1/technologies",
+    11
+   ],
+   [
+    "2",
+    "/api/v1",
+    10
+   ],
+   [
+    "3",
+    "- `POST",
+    6
+   ],
+   [
+    "4",
+    "/list`",
+    6
+   ],
+   [
+    "5",
+    "`list`",
+    6
+   ],
+   [
+    "6",
+    ", so the",
+    5
+   ],
+   [
+    "7",
+    "- `src",
+    5
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/README.md",
+  "type": "readme",
+  "profile": "o200k",
+  "notation": "opaque-unprotected",
+  "original_tokens": 376,
+  "envelope_tokens": 463,
+  "payload_tokens": 387,
+  "legend_tokens": 20,
+  "instruction_tokens": 55,
+  "savings": -0.2314,
+  "effective_savings": 0.0,
+  "entries": 3,
+  "protected_share": 0.0,
+  "seconds": 0.0,
+  "top_entries": [
+   [
+    "0",
+    ".md)",
+    12
+   ],
+   [
+    "1",
+    ".php`",
+    9
+   ],
+   [
+    "2",
+    "SapiensCore LLM Wiki",
+    2
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/project-overview.md",
+  "type": "readme",
+  "profile": "o200k",
+  "notation": "opaque-unprotected",
+  "original_tokens": 613,
+  "envelope_tokens": 683,
+  "payload_tokens": 615,
+  "legend_tokens": 12,
+  "instruction_tokens": 55,
+  "savings": -0.1142,
+  "effective_savings": 0.0,
+  "entries": 2,
+  "protected_share": 0.0,
+  "seconds": 0.01,
+  "top_entries": [
+   [
+    "0",
+    ".php`",
+    14
+   ],
+   [
+    "1",
+    ", `public",
+    7
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/iaapa/README.md",
+  "type": "readme",
+  "profile": "o200k",
+  "notation": "opaque-unprotected",
+  "original_tokens": 504,
+  "envelope_tokens": 561,
+  "payload_tokens": 483,
+  "legend_tokens": 22,
+  "instruction_tokens": 55,
+  "savings": -0.1131,
+  "effective_savings": 0.0,
+  "entries": 2,
+  "protected_share": 0.0,
+  "seconds": 0.0,
+  "top_entries": [
+   [
+    "0",
+    "- **http://localhost:8765",
+    2
+   ],
+   [
+    "1",
+    "book_en_v2_skinned.html",
+    2
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/design_handoff_orbit_homepage/README.md",
+  "type": "readme",
+  "profile": "o200k",
+  "notation": "opaque-unprotected",
+  "original_tokens": 3593,
+  "envelope_tokens": 3617,
+  "payload_tokens": 3388,
+  "legend_tokens": 173,
+  "instruction_tokens": 55,
+  "savings": -0.0067,
+  "effective_savings": 0.0,
+  "entries": 21,
+  "protected_share": 0.0,
+  "seconds": 0.05,
+  "top_entries": [
+   [
+    "0",
+    "` | `",
+    12
+   ],
+   [
+    "1",
+    "| `-",
+    12
+   ],
+   [
+    "2",
+    "(coral",
+    7
+   ],
+   [
+    "3",
+    "-col grid",
+    7
+   ],
+   [
+    "4",
+    "`, `-",
+    6
+   ],
+   [
+    "5",
+    "\"Book a visit\"",
+    4
+   ],
+   [
+    "6",
+    "Hanken Grotesk",
+    4
+   ],
+   [
+    "7",
+    "rgba(44,39,51,",
+    4
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/skills/README.md",
+  "type": "readme",
+  "profile": "o200k",
+  "notation": "opaque-unprotected",
+  "original_tokens": 1859,
+  "envelope_tokens": 1798,
+  "payload_tokens": 1553,
+  "legend_tokens": 189,
+  "instruction_tokens": 55,
+  "savings": 0.0328,
+  "effective_savings": 0.0,
+  "entries": 22,
+  "protected_share": 0.0,
+  "seconds": 0.03,
+  "top_entries": [
+   [
+    "0",
+    ".md`",
+    23
+   ],
+   [
+    "1",
+    ": `.agents/skills/caveman",
+    12
+   ],
+   [
+    "2",
+    "- Purpose:",
+    11
+   ],
+   [
+    "3",
+    "- Summary:",
+    11
+   ],
+   [
+    "4",
+    "- Use when: A user",
+    11
+   ],
+   [
+    "5",
+    "/SKILL",
+    11
+   ],
+   [
+    "6",
+    "- Current location",
+    8
+   ],
+   [
+    "7",
+    "`/caveman",
+    7
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/deployment.md",
+  "type": "guide",
+  "profile": "o200k",
+  "notation": "opaque-unprotected",
+  "original_tokens": 692,
+  "envelope_tokens": 749,
+  "payload_tokens": 651,
+  "legend_tokens": 42,
+  "instruction_tokens": 55,
+  "savings": -0.0824,
+  "effective_savings": 0.0,
+  "entries": 5,
+  "protected_share": 0.0,
+  "seconds": 0.01,
+  "top_entries": [
+   [
+    "0",
+    "- `npm run",
+    3
+   ],
+   [
+    "1",
+    "`sapienscore`",
+    3
+   ],
+   [
+    "2",
+    "`cd utility/ && php",
+    2
+   ],
+   [
+    "3",
+    "`docker-compose.example.yaml`",
+    2
+   ],
+   [
+    "4",
+    "`salvatorecampanella/core",
+    2
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/DB_POOLING.md",
+  "type": "guide",
+  "profile": "o200k",
+  "notation": "opaque-unprotected",
+  "original_tokens": 3684,
+  "envelope_tokens": 3755,
+  "payload_tokens": 3481,
+  "legend_tokens": 218,
+  "instruction_tokens": 55,
+  "savings": -0.0193,
+  "effective_savings": 0.0,
+  "entries": 27,
+  "protected_share": 0.0,
+  "seconds": 0.04,
+  "top_entries": [
+   [
+    "0",
+    ".php`",
+    12
+   ],
+   [
+    "1",
+    "/docker-compose.yaml",
+    5
+   ],
+   [
+    "2",
+    "DB `command:`",
+    5
+   ],
+   [
+    "3",
+    "`idle_in_transaction_session_timeout",
+    4
+   ],
+   [
+    "4",
+    "`statement_timeout`",
+    4
+   ],
+   [
+    "5",
+    "pgFirstConnect()",
+    4
+   ],
+   [
+    "6",
+    "scram-sha-256",
+    4
+   ],
+   [
+    "7",
+    "— PgBouncer",
+    4
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/testing.md",
+  "type": "guide",
+  "profile": "o200k",
+  "notation": "opaque-unprotected",
+  "original_tokens": 428,
+  "envelope_tokens": 493,
+  "payload_tokens": 423,
+  "legend_tokens": 14,
+  "instruction_tokens": 55,
+  "savings": -0.1519,
+  "effective_savings": 0.0,
+  "entries": 2,
+  "protected_share": 0.0,
+  "seconds": 0.0,
+  "top_entries": [
+   [
+    "0",
+    ".php`",
+    6
+   ],
+   [
+    "1",
+    "`react/package.json` declares",
+    2
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/database.md",
+  "type": "guide",
+  "profile": "o200k",
+  "notation": "opaque-unprotected",
+  "original_tokens": 635,
+  "envelope_tokens": 692,
+  "payload_tokens": 617,
+  "legend_tokens": 19,
+  "instruction_tokens": 55,
+  "savings": -0.0898,
+  "effective_savings": 0.0,
+  "entries": 2,
+  "protected_share": 0.0,
+  "seconds": 0.01,
+  "top_entries": [
+   [
+    "0",
+    "`App\\InstanceCollector\\IC",
+    2
+   ],
+   [
+    "1",
+    "`sqlinstall00312.sql`.",
+    2
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/MIGRATION_PLAYBOOK.md",
+  "type": "guide",
+  "profile": "o200k",
+  "notation": "opaque-unprotected",
+  "original_tokens": 7001,
+  "envelope_tokens": 6937,
+  "payload_tokens": 6235,
+  "legend_tokens": 646,
+  "instruction_tokens": 55,
+  "savings": 0.0091,
+  "effective_savings": 0.0,
+  "entries": 71,
+  "protected_share": 0.0,
+  "seconds": 0.16,
+  "top_entries": [
+   [
+    "0",
+    "</div>",
+    27
+   ],
+   [
+    "1",
+    "<div class=",
+    25
+   ],
+   [
+    "2",
+    ".phtml`",
+    17
+   ],
+   [
+    "3",
+    "'); ?",
+    13
+   ],
+   [
+    "4",
+    ".js`",
+    13
+   ],
+   [
+    "5",
+    "- [ ]",
+    12
+   ],
+   [
+    "6",
+    "><?php echo T::t('common.label",
+    11
+   ],
+   [
+    "7",
+    "/adminlte/v2",
+    10
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/CODING_STANDARDS.md",
+  "type": "guide",
+  "profile": "o200k",
+  "notation": "opaque-unprotected",
+  "original_tokens": 2736,
+  "envelope_tokens": 2771,
+  "payload_tokens": 2432,
+  "legend_tokens": 283,
+  "instruction_tokens": 55,
+  "savings": -0.0128,
+  "effective_savings": 0.0,
+  "entries": 33,
+  "protected_share": 0.0,
+  "seconds": 0.05,
+  "top_entries": [
+   [
+    "0",
+    "$obj-",
+    8
+   ],
+   [
+    "1",
+    "public static function",
+    8
+   ],
+   [
+    "2",
+    "$x-",
+    6
+   ],
+   [
+    "3",
+    "$autoDb",
+    5
+   ],
+   [
+    "4",
+    "$this->record",
+    5
+   ],
+   [
+    "5",
+    ">store()",
+    5
+   ],
+   [
+    "6",
+    "`sync = 1`",
+    5
+   ],
+   [
+    "7",
+    "getMoreWhere(",
+    5
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/product-import-matching.md",
+  "type": "guide",
+  "profile": "o200k",
+  "notation": "opaque-unprotected",
+  "original_tokens": 1647,
+  "envelope_tokens": 1700,
+  "payload_tokens": 1617,
+  "legend_tokens": 27,
+  "instruction_tokens": 55,
+  "savings": -0.0322,
+  "effective_savings": 0.0,
+  "entries": 3,
+  "protected_share": 0.0,
+  "seconds": 0.01,
+  "top_entries": [
+   [
+    "0",
+    "`ProductImportManager:",
+    4
+   ],
+   [
+    "1",
+    "Product import — product matching and conflict resolution",
+    2
+   ],
+   [
+    "2",
+    "`TYPE_CONFLICT_SELECTION`",
+    2
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/lco-revert-and-idempotency.md",
+  "type": "guide",
+  "profile": "o200k",
+  "notation": "opaque-unprotected",
+  "original_tokens": 3085,
+  "envelope_tokens": 3051,
+  "payload_tokens": 2693,
+  "legend_tokens": 302,
+  "instruction_tokens": 55,
+  "savings": 0.011,
+  "effective_savings": 0.0,
+  "entries": 35,
+  "protected_share": 0.0,
+  "seconds": 0.04,
+  "top_entries": [
+   [
+    "0",
+    "$card-",
+    9
+   ],
+   [
+    "1",
+    "- [ ]",
+    9
+   ],
+   [
+    "2",
+    "::getLocalSourceEquivalent",
+    7
+   ],
+   [
+    "3",
+    "## 3",
+    6
+   ],
+   [
+    "4",
+    "`LoyaltyCardSync`",
+    6
+   ],
+   [
+    "5",
+    "`id_source`",
+    6
+   ],
+   [
+    "6",
+    "## 2",
+    5
+   ],
+   [
+    "7",
+    "$operationData[",
+    5
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/PERMISSIONS.md",
+  "type": "design",
+  "profile": "o200k",
+  "notation": "opaque-unprotected",
+  "original_tokens": 6182,
+  "envelope_tokens": 6161,
+  "payload_tokens": 5688,
+  "legend_tokens": 417,
+  "instruction_tokens": 55,
+  "savings": 0.0034,
+  "effective_savings": 0.0,
+  "entries": 50,
+  "protected_share": 0.0,
+  "seconds": 0.13,
+  "top_entries": [
+   [
+    "0",
+    "| – | – | – |",
+    17
+   ],
+   [
+    "1",
+    "A | – |",
+    8
+   ],
+   [
+    "2",
+    "`, `",
+    7
+   ],
+   [
+    "3",
+    "`LocationUser`",
+    7
+   ],
+   [
+    "4",
+    "`canAdminH",
+    7
+   ],
+   [
+    "5",
+    "- ✅ *",
+    6
+   ],
+   [
+    "6",
+    "A | A |",
+    6
+   ],
+   [
+    "7",
+    "` | area × level",
+    6
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/EVENTS.md",
+  "type": "design",
+  "profile": "o200k",
+  "notation": "opaque-unprotected",
+  "original_tokens": 8755,
+  "envelope_tokens": 8751,
+  "payload_tokens": 8176,
+  "legend_tokens": 519,
+  "instruction_tokens": 55,
+  "savings": 0.0005,
+  "effective_savings": 0.0,
+  "entries": 61,
+  "protected_share": 0.0,
+  "seconds": 0.15,
+  "top_entries": [
+   [
+    "0",
+    "the NUC",
+    12
+   ],
+   [
+    "1",
+    "`eventSetting",
+    11
+   ],
+   [
+    "2",
+    "## 3",
+    8
+   ],
+   [
+    "3",
+    "'none'`",
+    8
+   ],
+   [
+    "4",
+    ". ✅ done —",
+    8
+   ],
+   [
+    "5",
+    "- **No",
+    6
+   ],
+   [
+    "6",
+    "`bookingCode`",
+    6
+   ],
+   [
+    "7",
+    "both repos)",
+    6
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/DYNAMIC_PRICING.md",
+  "type": "design",
+  "profile": "o200k",
+  "notation": "opaque-unprotected",
+  "original_tokens": 6828,
+  "envelope_tokens": 6883,
+  "payload_tokens": 6443,
+  "legend_tokens": 384,
+  "instruction_tokens": 55,
+  "savings": -0.0081,
+  "effective_savings": 0.0,
+  "entries": 45,
+  "protected_share": 0.0,
+  "seconds": 0.09,
+  "top_entries": [
+   [
+    "0",
+    "## 5",
+    10
+   ],
+   [
+    "1",
+    "`GamePrice`",
+    10
+   ],
+   [
+    "2",
+    "## 12",
+    8
+   ],
+   [
+    "3",
+    ", not a",
+    6
+   ],
+   [
+    "4",
+    "Phase 2",
+    5
+   ],
+   [
+    "5",
+    "`DATE_RANGE`",
+    5
+   ],
+   [
+    "6",
+    "`id_period`",
+    5
+   ],
+   [
+    "7",
+    "`pricing_change_event`",
+    5
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/MAINTENANCE.md",
+  "type": "design",
+  "profile": "o200k",
+  "notation": "opaque-unprotected",
+  "original_tokens": 3737,
+  "envelope_tokens": 3760,
+  "payload_tokens": 3466,
+  "legend_tokens": 238,
+  "instruction_tokens": 55,
+  "savings": -0.0062,
+  "effective_savings": 0.0,
+  "entries": 25,
+  "protected_share": 0.0,
+  "seconds": 0.06,
+  "top_entries": [
+   [
+    "0",
+    "`trace_cost`",
+    6
+   ],
+   [
+    "1",
+    "`worked_on`",
+    6
+   ],
+   [
+    "2",
+    ", and the",
+    5
+   ],
+   [
+    "3",
+    ". ✅ done",
+    5
+   ],
+   [
+    "4",
+    ".js`",
+    5
+   ],
+   [
+    "5",
+    "`game_location_operation",
+    4
+   ],
+   [
+    "6",
+    "`getList()`",
+    4
+   ],
+   [
+    "7",
+    "`trace_target`",
+    4
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/architecture.md",
+  "type": "design",
+  "profile": "o200k",
+  "notation": "opaque-unprotected",
+  "original_tokens": 1059,
+  "envelope_tokens": 1120,
+  "payload_tokens": 1005,
+  "legend_tokens": 59,
+  "instruction_tokens": 55,
+  "savings": -0.0576,
+  "effective_savings": 0.0,
+  "entries": 8,
+  "protected_share": 0.0,
+  "seconds": 0.01,
+  "top_entries": [
+   [
+    "0",
+    "`, routes",
+    7
+   ],
+   [
+    "1",
+    "- `App",
+    6
+   ],
+   [
+    "2",
+    ".php`",
+    6
+   ],
+   [
+    "3",
+    "- `public",
+    5
+   ],
+   [
+    "4",
+    ".php` denies access unless the current domain is",
+    4
+   ],
+   [
+    "5",
+    "/index.php`",
+    3
+   ],
+   [
+    "6",
+    "`src/settings.php`",
+    3
+   ],
+   [
+    "7",
+    "`App\\InstanceCollector\\IC",
+    2
+   ]
+  ]
+ },
+ {
+  "doc": "adr-bundle",
+  "type": "bundle",
+  "profile": "o200k",
+  "notation": "opaque-unprotected",
+  "original_tokens": 2423,
+  "envelope_tokens": 2267,
+  "payload_tokens": 1917,
+  "legend_tokens": 294,
+  "instruction_tokens": 55,
+  "savings": 0.0644,
+  "effective_savings": 0.0644,
+  "entries": 29,
+  "protected_share": 0.0,
+  "seconds": 0.02,
+  "top_entries": [
+   [
+    "0",
+    "## Consequences",
+    10
+   ],
+   [
+    "1",
+    "description: \"Decision to",
+    10
+   ],
+   [
+    "2",
+    "source_kind: generated",
+    10
+   ],
+   [
+    "3",
+    "status: active",
+    10
+   ],
+   [
+    "4",
+    "tags: [adr,",
+    10
+   ],
+   [
+    "5",
+    "timestamp: \"2026-06-30T06:51:14Z\"",
+    10
+   ],
+   [
+    "6",
+    "title: \"ADR",
+    10
+   ],
+   [
+    "7",
+    "type: ADR",
+    10
+   ]
+  ]
+ },
+ {
+  "doc": "pilot-bundle",
+  "type": "bundle",
+  "profile": "o200k",
+  "notation": "opaque-unprotected",
+  "original_tokens": 64154,
+  "envelope_tokens": 63152,
+  "payload_tokens": 58183,
+  "legend_tokens": 4913,
+  "instruction_tokens": 55,
+  "savings": 0.0156,
+  "effective_savings": 0.0,
+  "entries": 593,
+  "protected_share": 0.0,
+  "seconds": 6.2,
+  "top_entries": [
+   [
+    "0",
+    ".php`",
+    124
+   ],
+   [
+    "1",
+    ".md`",
+    42
+   ],
+   [
+    "2",
+    "1.",
+    40
+   ],
+   [
+    "3",
+    "## 3",
+    29
+   ],
+   [
+    "4",
+    "the NUC",
+    29
+   ],
+   [
+    "5",
+    "</div>",
+    27
+   ],
+   [
+    "6",
+    ".js`",
+    26
+   ],
+   [
+    "7",
+    ".phtml`",
+    26
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/API_PUBLIC.md",
+  "type": "api_reference",
+  "profile": "cl100k",
+  "notation": "opaque",
+  "original_tokens": 6752,
+  "envelope_tokens": 6818,
+  "payload_tokens": 6671,
+  "legend_tokens": 91,
+  "instruction_tokens": 55,
+  "savings": -0.0098,
+  "effective_savings": 0.0,
+  "entries": 12,
+  "protected_share": 0.3633,
+  "seconds": 0.05,
+  "top_entries": [
+   [
+    "0",
+    "the NUC",
+    8
+   ],
+   [
+    "1",
+    "in v1",
+    7
+   ],
+   [
+    "2",
+    "## 3",
+    6
+   ],
+   [
+    "3",
+    "**Response 200",
+    5
+   ],
+   [
+    "4",
+    "1.",
+    5
+   ],
+   [
+    "5",
+    "2.",
+    5
+   ],
+   [
+    "6",
+    "|---|---|",
+    5
+   ],
+   [
+    "7",
+    "**Implementation notes**",
+    4
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/apis.md",
+  "type": "api_reference",
+  "profile": "cl100k",
+  "notation": "opaque",
+  "original_tokens": 4005,
+  "envelope_tokens": 4065,
+  "payload_tokens": 4002,
+  "legend_tokens": 7,
+  "instruction_tokens": 55,
+  "savings": -0.015,
+  "effective_savings": 0.0,
+  "entries": 1,
+  "protected_share": 0.3235,
+  "seconds": 0.02,
+  "top_entries": [
+   [
+    "0",
+    ", so the",
+    5
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/README.md",
+  "type": "readme",
+  "profile": "cl100k",
+  "notation": "opaque",
+  "original_tokens": 375,
+  "envelope_tokens": 448,
+  "payload_tokens": 377,
+  "legend_tokens": 15,
+  "instruction_tokens": 55,
+  "savings": -0.1947,
+  "effective_savings": 0.0,
+  "entries": 2,
+  "protected_share": 0.2344,
+  "seconds": 0.0,
+  "top_entries": [
+   [
+    "0",
+    ".md)",
+    12
+   ],
+   [
+    "1",
+    "SapiensCore LLM Wiki",
+    2
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/project-overview.md",
+  "type": "readme",
+  "profile": "cl100k",
+  "notation": "opaque",
+  "original_tokens": 613,
+  "envelope_tokens": 669,
+  "payload_tokens": 613,
+  "legend_tokens": 0,
+  "instruction_tokens": 55,
+  "savings": -0.0914,
+  "effective_savings": 0.0,
+  "entries": 0,
+  "protected_share": 0.1648,
+  "seconds": 0.0,
+  "top_entries": []
+ },
+ {
+  "doc": "test_docs/iaapa/README.md",
+  "type": "readme",
+  "profile": "cl100k",
+  "notation": "opaque",
+  "original_tokens": 504,
+  "envelope_tokens": 559,
+  "payload_tokens": 492,
+  "legend_tokens": 11,
+  "instruction_tokens": 55,
+  "savings": -0.1091,
+  "effective_savings": 0.0,
+  "entries": 1,
+  "protected_share": 0.0884,
+  "seconds": 0.0,
+  "top_entries": [
+   [
+    "0",
+    "- **http://localhost:8765",
+    2
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/design_handoff_orbit_homepage/README.md",
+  "type": "readme",
+  "profile": "cl100k",
+  "notation": "opaque",
+  "original_tokens": 3584,
+  "envelope_tokens": 3630,
+  "payload_tokens": 3466,
+  "legend_tokens": 108,
+  "instruction_tokens": 55,
+  "savings": -0.0128,
+  "effective_savings": 0.0,
+  "entries": 13,
+  "protected_share": 0.1077,
+  "seconds": 0.04,
+  "top_entries": [
+   [
+    "0",
+    "-col grid",
+    7
+   ],
+   [
+    "1",
+    "\"Book a visit\"",
+    4
+   ],
+   [
+    "2",
+    "Hanken Grotesk",
+    4
+   ],
+   [
+    "3",
+    "(coral)",
+    3
+   ],
+   [
+    "4",
+    "(e.g.",
+    3
+   ],
+   [
+    "5",
+    ") | Fredoka | 600 |",
+    3
+   ],
+   [
+    "6",
+    "- **Left**:",
+    3
+   ],
+   [
+    "7",
+    "- **Loyalty card",
+    3
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/skills/README.md",
+  "type": "readme",
+  "profile": "cl100k",
+  "notation": "opaque",
+  "original_tokens": 1851,
+  "envelope_tokens": 1835,
+  "payload_tokens": 1715,
+  "legend_tokens": 64,
+  "instruction_tokens": 55,
+  "savings": 0.0086,
+  "effective_savings": 0.0,
+  "entries": 9,
+  "protected_share": 0.1895,
+  "seconds": 0.01,
+  "top_entries": [
+   [
+    "0",
+    "- Current location:",
+    11
+   ],
+   [
+    "1",
+    "- Purpose:",
+    11
+   ],
+   [
+    "2",
+    "- Summary:",
+    11
+   ],
+   [
+    "3",
+    "- Use when: A user",
+    11
+   ],
+   [
+    "4",
+    "### caveman",
+    6
+   ],
+   [
+    "5",
+    "- Related file:",
+    6
+   ],
+   [
+    "6",
+    ", HTMX, and Alpine",
+    3
+   ],
+   [
+    "7",
+    "- Related workflow/config file:",
+    3
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/deployment.md",
+  "type": "guide",
+  "profile": "cl100k",
+  "notation": "opaque",
+  "original_tokens": 695,
+  "envelope_tokens": 751,
+  "payload_tokens": 695,
+  "legend_tokens": 0,
+  "instruction_tokens": 55,
+  "savings": -0.0806,
+  "effective_savings": 0.0,
+  "entries": 0,
+  "protected_share": 0.3045,
+  "seconds": 0.0,
+  "top_entries": []
+ },
+ {
+  "doc": "test_docs/DB_POOLING.md",
+  "type": "guide",
+  "profile": "cl100k",
+  "notation": "opaque",
+  "original_tokens": 3686,
+  "envelope_tokens": 3755,
+  "payload_tokens": 3662,
+  "legend_tokens": 37,
+  "instruction_tokens": 55,
+  "savings": -0.0187,
+  "effective_savings": 0.0,
+  "entries": 5,
+  "protected_share": 0.2926,
+  "seconds": 0.02,
+  "top_entries": [
+   [
+    "0",
+    "— PgBouncer",
+    4
+   ],
+   [
+    "1",
+    "---|---|",
+    3
+   ],
+   [
+    "2",
+    "1. *",
+    3
+   ],
+   [
+    "3",
+    "2. *",
+    3
+   ],
+   [
+    "4",
+    "2026-07-22.",
+    2
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/testing.md",
+  "type": "guide",
+  "profile": "cl100k",
+  "notation": "opaque",
+  "original_tokens": 428,
+  "envelope_tokens": 484,
+  "payload_tokens": 428,
+  "legend_tokens": 0,
+  "instruction_tokens": 55,
+  "savings": -0.1308,
+  "effective_savings": 0.0,
+  "entries": 0,
+  "protected_share": 0.2677,
+  "seconds": 0.0,
+  "top_entries": []
+ },
+ {
+  "doc": "test_docs/database.md",
+  "type": "guide",
+  "profile": "cl100k",
+  "notation": "opaque",
+  "original_tokens": 639,
+  "envelope_tokens": 695,
+  "payload_tokens": 639,
+  "legend_tokens": 0,
+  "instruction_tokens": 55,
+  "savings": -0.0876,
+  "effective_savings": 0.0,
+  "entries": 0,
+  "protected_share": 0.2479,
+  "seconds": 0.0,
+  "top_entries": []
+ },
+ {
+  "doc": "test_docs/MIGRATION_PLAYBOOK.md",
+  "type": "guide",
+  "profile": "cl100k",
+  "notation": "opaque",
+  "original_tokens": 6972,
+  "envelope_tokens": 7028,
+  "payload_tokens": 6888,
+  "legend_tokens": 84,
+  "instruction_tokens": 55,
+  "savings": -0.008,
+  "effective_savings": 0.0,
+  "entries": 10,
+  "protected_share": 0.4588,
+  "seconds": 0.05,
+  "top_entries": [
+   [
+    "0",
+    "- [ ]",
+    12
+   ],
+   [
+    "1",
+    "** — the",
+    5
+   ],
+   [
+    "2",
+    "-loyalty\"",
+    3
+   ],
+   [
+    "3",
+    "2. *",
+    3
+   ],
+   [
+    "4",
+    "<div class=\"tab",
+    3
+   ],
+   [
+    "5",
+    "|---|---|---|",
+    3
+   ],
+   [
+    "6",
+    "\" data-bs-toggle=\"tab\" href=\"#tab",
+    2
+   ],
+   [
+    "7",
+    "<a class=\"nav-link",
+    2
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/CODING_STANDARDS.md",
+  "type": "guide",
+  "profile": "cl100k",
+  "notation": "opaque",
+  "original_tokens": 2694,
+  "envelope_tokens": 2752,
+  "payload_tokens": 2688,
+  "legend_tokens": 8,
+  "instruction_tokens": 55,
+  "savings": -0.0215,
+  "effective_savings": 0.0,
+  "entries": 1,
+  "protected_share": 0.6513,
+  "seconds": 0.01,
+  "top_entries": [
+   [
+    "0",
+    "to the NUC",
+    3
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/product-import-matching.md",
+  "type": "guide",
+  "profile": "cl100k",
+  "notation": "opaque",
+  "original_tokens": 1638,
+  "envelope_tokens": 1694,
+  "payload_tokens": 1626,
+  "legend_tokens": 12,
+  "instruction_tokens": 55,
+  "savings": -0.0342,
+  "effective_savings": 0.0,
+  "entries": 1,
+  "protected_share": 0.1696,
+  "seconds": 0.01,
+  "top_entries": [
+   [
+    "0",
+    "Product import — product matching and conflict resolution",
+    2
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/lco-revert-and-idempotency.md",
+  "type": "guide",
+  "profile": "cl100k",
+  "notation": "opaque",
+  "original_tokens": 3080,
+  "envelope_tokens": 3155,
+  "payload_tokens": 3021,
+  "legend_tokens": 78,
+  "instruction_tokens": 55,
+  "savings": -0.0244,
+  "effective_savings": 0.0,
+  "entries": 11,
+  "protected_share": 0.2942,
+  "seconds": 0.02,
+  "top_entries": [
+   [
+    "0",
+    "- [ ]",
+    13
+   ],
+   [
+    "1",
+    "$card-",
+    9
+   ],
+   [
+    "2",
+    "## 3",
+    6
+   ],
+   [
+    "3",
+    "## 2",
+    5
+   ],
+   [
+    "4",
+    "on the cloud",
+    5
+   ],
+   [
+    "5",
+    "the cloud's",
+    5
+   ],
+   [
+    "6",
+    "$cloudOriginalTx-",
+    4
+   ],
+   [
+    "7",
+    ". Sapiensclient",
+    4
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/PERMISSIONS.md",
+  "type": "design",
+  "profile": "cl100k",
+  "notation": "opaque",
+  "original_tokens": 6203,
+  "envelope_tokens": 6197,
+  "payload_tokens": 5893,
+  "legend_tokens": 248,
+  "instruction_tokens": 55,
+  "savings": 0.001,
+  "effective_savings": 0.0,
+  "entries": 28,
+  "protected_share": 0.1743,
+  "seconds": 0.09,
+  "top_entries": [
+   [
+    "0",
+    "| – | – | – |",
+    17
+   ],
+   [
+    "1",
+    "A | – |",
+    8
+   ],
+   [
+    "2",
+    "- ✅ *",
+    6
+   ],
+   [
+    "3",
+    "A | A |",
+    6
+   ],
+   [
+    "4",
+    "| area × level",
+    6
+   ],
+   [
+    "5",
+    ". This is the",
+    4
+   ],
+   [
+    "6",
+    "**elevated",
+    3
+   ],
+   [
+    "7",
+    "--:|:--:|:",
+    3
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/EVENTS.md",
+  "type": "design",
+  "profile": "cl100k",
+  "notation": "opaque",
+  "original_tokens": 8807,
+  "envelope_tokens": 8872,
+  "payload_tokens": 8654,
+  "legend_tokens": 162,
+  "instruction_tokens": 55,
+  "savings": -0.0074,
+  "effective_savings": 0.0,
+  "entries": 20,
+  "protected_share": 0.2335,
+  "seconds": 0.08,
+  "top_entries": [
+   [
+    "0",
+    "the NUC",
+    12
+   ],
+   [
+    "1",
+    "## 3",
+    8
+   ],
+   [
+    "2",
+    ". ✅ done —",
+    8
+   ],
+   [
+    "3",
+    "- **No",
+    6
+   ],
+   [
+    "4",
+    "both repos)",
+    6
+   ],
+   [
+    "5",
+    "2026-07-20",
+    5
+   ],
+   [
+    "6",
+    "on both repos",
+    5
+   ],
+   [
+    "7",
+    "** (§3",
+    4
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/DYNAMIC_PRICING.md",
+  "type": "design",
+  "profile": "cl100k",
+  "notation": "opaque",
+  "original_tokens": 6842,
+  "envelope_tokens": 6920,
+  "payload_tokens": 6728,
+  "legend_tokens": 136,
+  "instruction_tokens": 55,
+  "savings": -0.0114,
+  "effective_savings": 0.0,
+  "entries": 16,
+  "protected_share": 0.1595,
+  "seconds": 0.05,
+  "top_entries": [
+   [
+    "0",
+    "## 5",
+    10
+   ],
+   [
+    "1",
+    "## 12",
+    8
+   ],
+   [
+    "2",
+    ", not a",
+    6
+   ],
+   [
+    "3",
+    "Phase 2",
+    5
+   ],
+   [
+    "4",
+    "holiday/holiday-eve",
+    4
+   ],
+   [
+    "5",
+    "§5.3",
+    4
+   ],
+   [
+    "6",
+    "( id_rule,",
+    3
+   ],
+   [
+    "7",
+    ", status ) — the",
+    3
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/MAINTENANCE.md",
+  "type": "design",
+  "profile": "cl100k",
+  "notation": "opaque",
+  "original_tokens": 3752,
+  "envelope_tokens": 3813,
+  "payload_tokens": 3691,
+  "legend_tokens": 66,
+  "instruction_tokens": 55,
+  "savings": -0.0163,
+  "effective_savings": 0.0,
+  "entries": 8,
+  "protected_share": 0.1792,
+  "seconds": 0.04,
+  "top_entries": [
+   [
+    "0",
+    ". ✅ done",
+    6
+   ],
+   [
+    "1",
+    ", and the",
+    5
+   ],
+   [
+    "2",
+    "(en/es/pt",
+    4
+   ],
+   [
+    "3",
+    "| GLO (",
+    4
+   ],
+   [
+    "4",
+    ") | routine, no cost |",
+    3
+   ],
+   [
+    "5",
+    "✅ done.",
+    3
+   ],
+   [
+    "6",
+    "- **Tech time** —",
+    2
+   ],
+   [
+    "7",
+    "1:1 with a game location",
+    2
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/architecture.md",
+  "type": "design",
+  "profile": "cl100k",
+  "notation": "opaque",
+  "original_tokens": 1054,
+  "envelope_tokens": 1102,
+  "payload_tokens": 1034,
+  "legend_tokens": 12,
+  "instruction_tokens": 55,
+  "savings": -0.0455,
+  "effective_savings": 0.0,
+  "entries": 1,
+  "protected_share": 0.2826,
+  "seconds": 0.0,
+  "top_entries": [
+   [
+    "0",
+    "denies access unless the current domain is",
+    4
+   ]
+  ]
+ },
+ {
+  "doc": "adr-bundle",
+  "type": "bundle",
+  "profile": "cl100k",
+  "notation": "opaque",
+  "original_tokens": 2432,
+  "envelope_tokens": 2260,
+  "payload_tokens": 1960,
+  "legend_tokens": 244,
+  "instruction_tokens": 55,
+  "savings": 0.0707,
+  "effective_savings": 0.0707,
+  "entries": 24,
+  "protected_share": 0.1228,
+  "seconds": 0.02,
+  "top_entries": [
+   [
+    "0",
+    "# ADR",
+    10
+   ],
+   [
+    "1",
+    "## Consequences",
+    10
+   ],
+   [
+    "2",
+    "description: \"Decision to",
+    10
+   ],
+   [
+    "3",
+    "source_kind: generated",
+    10
+   ],
+   [
+    "4",
+    "status: active",
+    10
+   ],
+   [
+    "5",
+    "tags: [adr,",
+    10
+   ],
+   [
+    "6",
+    "timestamp: \"2026-06-30T06:51:14Z\"",
+    10
+   ],
+   [
+    "7",
+    "title: \"ADR",
+    10
+   ]
+  ]
+ },
+ {
+  "doc": "pilot-bundle",
+  "type": "bundle",
+  "profile": "cl100k",
+  "notation": "opaque",
+  "original_tokens": 64177,
+  "envelope_tokens": 63920,
+  "payload_tokens": 62434,
+  "legend_tokens": 1430,
+  "instruction_tokens": 55,
+  "savings": 0.004,
+  "effective_savings": 0.0,
+  "entries": 180,
+  "protected_share": 0.2729,
+  "seconds": 1.21,
+  "top_entries": [
+   [
+    "0",
+    "1.",
+    40
+   ],
+   [
+    "1",
+    "## 3",
+    29
+   ],
+   [
+    "2",
+    "the NUC",
+    29
+   ],
+   [
+    "3",
+    "4.",
+    26
+   ],
+   [
+    "4",
+    "- [ ]",
+    25
+   ],
+   [
+    "5",
+    "2. *",
+    21
+   ],
+   [
+    "6",
+    "*not*",
+    19
+   ],
+   [
+    "7",
+    "## 5",
+    18
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/API_PUBLIC.md",
+  "type": "api_reference",
+  "profile": "cl100k",
+  "notation": "mnemonic",
+  "original_tokens": 6752,
+  "envelope_tokens": 6810,
+  "payload_tokens": 6739,
+  "legend_tokens": 15,
+  "instruction_tokens": 55,
+  "savings": -0.0086,
+  "effective_savings": 0.0,
+  "entries": 2,
+  "protected_share": 0.3633,
+  "seconds": 0.03,
+  "top_entries": [
+   [
+    "3",
+    "## 3",
+    6
+   ],
+   [
+    "X",
+    "|---|---|",
+    5
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/apis.md",
+  "type": "api_reference",
+  "profile": "cl100k",
+  "notation": "mnemonic",
+  "original_tokens": 4005,
+  "envelope_tokens": 4061,
+  "payload_tokens": 4005,
+  "legend_tokens": 0,
+  "instruction_tokens": 55,
+  "savings": -0.014,
+  "effective_savings": 0.0,
+  "entries": 0,
+  "protected_share": 0.3235,
+  "seconds": 0.01,
+  "top_entries": []
+ },
+ {
+  "doc": "test_docs/README.md",
+  "type": "readme",
+  "profile": "cl100k",
+  "notation": "mnemonic",
+  "original_tokens": 375,
+  "envelope_tokens": 448,
+  "payload_tokens": 387,
+  "legend_tokens": 5,
+  "instruction_tokens": 55,
+  "savings": -0.1947,
+  "effective_savings": 0.0,
+  "entries": 1,
+  "protected_share": 0.2344,
+  "seconds": 0.0,
+  "top_entries": [
+   [
+    "Md",
+    ".md)",
+    12
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/project-overview.md",
+  "type": "readme",
+  "profile": "cl100k",
+  "notation": "mnemonic",
+  "original_tokens": 613,
+  "envelope_tokens": 669,
+  "payload_tokens": 613,
+  "legend_tokens": 0,
+  "instruction_tokens": 55,
+  "savings": -0.0914,
+  "effective_savings": 0.0,
+  "entries": 0,
+  "protected_share": 0.1648,
+  "seconds": 0.0,
+  "top_entries": []
+ },
+ {
+  "doc": "test_docs/iaapa/README.md",
+  "type": "readme",
+  "profile": "cl100k",
+  "notation": "mnemonic",
+  "original_tokens": 504,
+  "envelope_tokens": 560,
+  "payload_tokens": 504,
+  "legend_tokens": 0,
+  "instruction_tokens": 55,
+  "savings": -0.1111,
+  "effective_savings": 0.0,
+  "entries": 0,
+  "protected_share": 0.0884,
+  "seconds": 0.0,
+  "top_entries": []
+ },
+ {
+  "doc": "test_docs/design_handoff_orbit_homepage/README.md",
+  "type": "readme",
+  "profile": "cl100k",
+  "notation": "mnemonic",
+  "original_tokens": 3584,
+  "envelope_tokens": 3634,
+  "payload_tokens": 3556,
+  "legend_tokens": 22,
+  "instruction_tokens": 55,
+  "savings": -0.014,
+  "effective_savings": 0.0,
+  "entries": 2,
+  "protected_share": 0.1077,
+  "seconds": 0.03,
+  "top_entries": [
+   [
+    "Fred600",
+    ") | Fredoka | 600 |",
+    3
+   ],
+   [
+    "X",
+    "|---|---|---|",
+    3
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/skills/README.md",
+  "type": "readme",
+  "profile": "cl100k",
+  "notation": "mnemonic",
+  "original_tokens": 1851,
+  "envelope_tokens": 1896,
+  "payload_tokens": 1829,
+  "legend_tokens": 11,
+  "instruction_tokens": 55,
+  "savings": -0.0243,
+  "effective_savings": 0.0,
+  "entries": 1,
+  "protected_share": 0.1895,
+  "seconds": 0.01,
+  "top_entries": [
+   [
+    "UseWhenA",
+    "- Use when: A user",
+    11
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/deployment.md",
+  "type": "guide",
+  "profile": "cl100k",
+  "notation": "mnemonic",
+  "original_tokens": 695,
+  "envelope_tokens": 751,
+  "payload_tokens": 695,
+  "legend_tokens": 0,
+  "instruction_tokens": 55,
+  "savings": -0.0806,
+  "effective_savings": 0.0,
+  "entries": 0,
+  "protected_share": 0.3045,
+  "seconds": 0.0,
+  "top_entries": []
+ },
+ {
+  "doc": "test_docs/DB_POOLING.md",
+  "type": "guide",
+  "profile": "cl100k",
+  "notation": "mnemonic",
+  "original_tokens": 3686,
+  "envelope_tokens": 3742,
+  "payload_tokens": 3686,
+  "legend_tokens": 0,
+  "instruction_tokens": 55,
+  "savings": -0.0152,
+  "effective_savings": 0.0,
+  "entries": 0,
+  "protected_share": 0.2926,
+  "seconds": 0.01,
+  "top_entries": []
+ },
+ {
+  "doc": "test_docs/testing.md",
+  "type": "guide",
+  "profile": "cl100k",
+  "notation": "mnemonic",
+  "original_tokens": 428,
+  "envelope_tokens": 484,
+  "payload_tokens": 428,
+  "legend_tokens": 0,
+  "instruction_tokens": 55,
+  "savings": -0.1308,
+  "effective_savings": 0.0,
+  "entries": 0,
+  "protected_share": 0.2677,
+  "seconds": 0.0,
+  "top_entries": []
+ },
+ {
+  "doc": "test_docs/database.md",
+  "type": "guide",
+  "profile": "cl100k",
+  "notation": "mnemonic",
+  "original_tokens": 639,
+  "envelope_tokens": 695,
+  "payload_tokens": 639,
+  "legend_tokens": 0,
+  "instruction_tokens": 55,
+  "savings": -0.0876,
+  "effective_savings": 0.0,
+  "entries": 0,
+  "protected_share": 0.2479,
+  "seconds": 0.0,
+  "top_entries": []
+ },
+ {
+  "doc": "test_docs/MIGRATION_PLAYBOOK.md",
+  "type": "guide",
+  "profile": "cl100k",
+  "notation": "mnemonic",
+  "original_tokens": 6972,
+  "envelope_tokens": 7023,
+  "payload_tokens": 6951,
+  "legend_tokens": 16,
+  "instruction_tokens": 55,
+  "savings": -0.0073,
+  "effective_savings": 0.0,
+  "entries": 2,
+  "protected_share": 0.4588,
+  "seconds": 0.03,
+  "top_entries": [
+   [
+    "X",
+    "- [ ]",
+    12
+   ],
+   [
+    "X2",
+    "|---|---|---|",
+    3
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/CODING_STANDARDS.md",
+  "type": "guide",
+  "profile": "cl100k",
+  "notation": "mnemonic",
+  "original_tokens": 2694,
+  "envelope_tokens": 2750,
+  "payload_tokens": 2694,
+  "legend_tokens": 0,
+  "instruction_tokens": 55,
+  "savings": -0.0208,
+  "effective_savings": 0.0,
+  "entries": 0,
+  "protected_share": 0.6513,
+  "seconds": 0.0,
+  "top_entries": []
+ },
+ {
+  "doc": "test_docs/product-import-matching.md",
+  "type": "guide",
+  "profile": "cl100k",
+  "notation": "mnemonic",
+  "original_tokens": 1638,
+  "envelope_tokens": 1694,
+  "payload_tokens": 1638,
+  "legend_tokens": 0,
+  "instruction_tokens": 55,
+  "savings": -0.0342,
+  "effective_savings": 0.0,
+  "entries": 0,
+  "protected_share": 0.1696,
+  "seconds": 0.0,
+  "top_entries": []
+ },
+ {
+  "doc": "test_docs/lco-revert-and-idempotency.md",
+  "type": "guide",
+  "profile": "cl100k",
+  "notation": "mnemonic",
+  "original_tokens": 3080,
+  "envelope_tokens": 3143,
+  "payload_tokens": 3070,
+  "legend_tokens": 17,
+  "instruction_tokens": 55,
+  "savings": -0.0205,
+  "effective_savings": 0.0,
+  "entries": 3,
+  "protected_share": 0.2942,
+  "seconds": 0.02,
+  "top_entries": [
+   [
+    "X",
+    "- [ ]",
+    13
+   ],
+   [
+    "Card",
+    "$card-",
+    9
+   ],
+   [
+    "3",
+    "## 3",
+    6
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/PERMISSIONS.md",
+  "type": "design",
+  "profile": "cl100k",
+  "notation": "mnemonic",
+  "original_tokens": 6203,
+  "envelope_tokens": 6187,
+  "payload_tokens": 6050,
+  "legend_tokens": 81,
+  "instruction_tokens": 55,
+  "savings": 0.0026,
+  "effective_savings": 0.0,
+  "entries": 9,
+  "protected_share": 0.1743,
+  "seconds": 0.09,
+  "top_entries": [
+   [
+    "X",
+    "| – | – | – |",
+    17
+   ],
+   [
+    "A",
+    "A | – |",
+    8
+   ],
+   [
+    "X3",
+    "- ✅ *",
+    6
+   ],
+   [
+    "AA",
+    "A | A |",
+    6
+   ],
+   [
+    "Area",
+    "| area ×",
+    6
+   ],
+   [
+    "X2",
+    "--:|:--:|:",
+    3
+   ],
+   [
+    "AAA",
+    "| A | A | A | A |",
+    2
+   ],
+   [
+    "R",
+    "| – | – | R |",
+    2
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/EVENTS.md",
+  "type": "design",
+  "profile": "cl100k",
+  "notation": "mnemonic",
+  "original_tokens": 8807,
+  "envelope_tokens": 8873,
+  "payload_tokens": 8761,
+  "legend_tokens": 56,
+  "instruction_tokens": 55,
+  "savings": -0.0075,
+  "effective_savings": 0.0,
+  "entries": 8,
+  "protected_share": 0.2335,
+  "seconds": 0.06,
+  "top_entries": [
+   [
+    "3",
+    "## 3",
+    8
+   ],
+   [
+    "Done",
+    ". ✅ done —",
+    8
+   ],
+   [
+    "202607",
+    "2026-07",
+    7
+   ],
+   [
+    "No",
+    "- **No",
+    6
+   ],
+   [
+    "32",
+    "** (§3",
+    4
+   ],
+   [
+    "1",
+    "1. *",
+    4
+   ],
+   [
+    "2",
+    "2. *",
+    4
+   ],
+   [
+    "33",
+    "3. *",
+    4
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/DYNAMIC_PRICING.md",
+  "type": "design",
+  "profile": "cl100k",
+  "notation": "mnemonic",
+  "original_tokens": 6842,
+  "envelope_tokens": 6911,
+  "payload_tokens": 6825,
+  "legend_tokens": 30,
+  "instruction_tokens": 55,
+  "savings": -0.0101,
+  "effective_savings": 0.0,
+  "entries": 4,
+  "protected_share": 0.1595,
+  "seconds": 0.04,
+  "top_entries": [
+   [
+    "5",
+    "## 5",
+    10
+   ],
+   [
+    "12",
+    "## 12",
+    8
+   ],
+   [
+    "53",
+    "§5.3",
+    4
+   ],
+   [
+    "X",
+    "|---|---|",
+    3
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/MAINTENANCE.md",
+  "type": "design",
+  "profile": "cl100k",
+  "notation": "mnemonic",
+  "original_tokens": 3752,
+  "envelope_tokens": 3808,
+  "payload_tokens": 3745,
+  "legend_tokens": 7,
+  "instruction_tokens": 55,
+  "savings": -0.0149,
+  "effective_savings": 0.0,
+  "entries": 1,
+  "protected_share": 0.1792,
+  "seconds": 0.03,
+  "top_entries": [
+   [
+    "Done",
+    ". ✅ done",
+    6
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/architecture.md",
+  "type": "design",
+  "profile": "cl100k",
+  "notation": "mnemonic",
+  "original_tokens": 1054,
+  "envelope_tokens": 1110,
+  "payload_tokens": 1054,
+  "legend_tokens": 0,
+  "instruction_tokens": 55,
+  "savings": -0.0531,
+  "effective_savings": 0.0,
+  "entries": 0,
+  "protected_share": 0.2826,
+  "seconds": 0.0,
+  "top_entries": []
+ },
+ {
+  "doc": "adr-bundle",
+  "type": "bundle",
+  "profile": "cl100k",
+  "notation": "mnemonic",
+  "original_tokens": 2432,
+  "envelope_tokens": 2383,
+  "payload_tokens": 2268,
+  "legend_tokens": 59,
+  "instruction_tokens": 55,
+  "savings": 0.0201,
+  "effective_savings": 0.0,
+  "entries": 4,
+  "protected_share": 0.1228,
+  "seconds": 0.02,
+  "top_entries": [
+   [
+    "Cons",
+    "## Consequences",
+    10
+   ],
+   [
+    "Adr",
+    ": [adr,",
+    10
+   ],
+   [
+    "Time202606",
+    "timestamp: \"2026-06-30T06:51:14Z\"",
+    10
+   ],
+   [
+    "0009UseMate",
+    "0009: Use Materialized Views and Timescale Retention for Reporting/Logs",
+    2
+   ]
+  ]
+ },
+ {
+  "doc": "pilot-bundle",
+  "type": "bundle",
+  "profile": "cl100k",
+  "notation": "mnemonic",
+  "original_tokens": 64177,
+  "envelope_tokens": 64089,
+  "payload_tokens": 63640,
+  "legend_tokens": 393,
+  "instruction_tokens": 55,
+  "savings": 0.0014,
+  "effective_savings": 0.0,
+  "entries": 53,
+  "protected_share": 0.2729,
+  "seconds": 0.78,
+  "top_entries": [
+   [
+    "1",
+    "1.",
+    40
+   ],
+   [
+    "3",
+    "## 3",
+    29
+   ],
+   [
+    "4",
+    "4.",
+    26
+   ],
+   [
+    "X3",
+    "- [ ]",
+    25
+   ],
+   [
+    "2",
+    "2. *",
+    21
+   ],
+   [
+    "Not",
+    "*not*",
+    19
+   ],
+   [
+    "5",
+    "## 5",
+    18
+   ],
+   [
+    "No",
+    "- **No",
+    17
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/API_PUBLIC.md",
+  "type": "api_reference",
+  "profile": "cl100k",
+  "notation": "opaque-unprotected",
+  "original_tokens": 6752,
+  "envelope_tokens": 6511,
+  "payload_tokens": 5906,
+  "legend_tokens": 549,
+  "instruction_tokens": 55,
+  "savings": 0.0357,
+  "effective_savings": 0.0,
+  "entries": 61,
+  "protected_share": 0.0,
+  "seconds": 0.19,
+  "top_entries": [
+   [
+    "0",
+    ".php`",
+    25
+   ],
+   [
+    "1",
+    "\", \"currency\": \"EUR\" }",
+    18
+   ],
+   [
+    "2",
+    "\": { \"amount\":",
+    17
+   ],
+   [
+    "3",
+    "`sapiensclient/App",
+    16
+   ],
+   [
+    "4",
+    "the NUC",
+    8
+   ],
+   [
+    "5",
+    ".read`",
+    7
+   ],
+   [
+    "6",
+    "`errors: {",
+    7
+   ],
+   [
+    "7",
+    "in v1",
+    7
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/apis.md",
+  "type": "api_reference",
+  "profile": "cl100k",
+  "notation": "opaque-unprotected",
+  "original_tokens": 4005,
+  "envelope_tokens": 4037,
+  "payload_tokens": 3696,
+  "legend_tokens": 285,
+  "instruction_tokens": 55,
+  "savings": -0.008,
+  "effective_savings": 0.0,
+  "entries": 33,
+  "protected_share": 0.0,
+  "seconds": 0.06,
+  "top_entries": [
+   [
+    "0",
+    ".php`",
+    15
+   ],
+   [
+    "1",
+    "/v1/technologies",
+    11
+   ],
+   [
+    "2",
+    "/api/v1",
+    10
+   ],
+   [
+    "3",
+    "- `POST",
+    6
+   ],
+   [
+    "4",
+    "/list`",
+    6
+   ],
+   [
+    "5",
+    "`list`",
+    6
+   ],
+   [
+    "6",
+    ", so the",
+    5
+   ],
+   [
+    "7",
+    "- `src",
+    5
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/README.md",
+  "type": "readme",
+  "profile": "cl100k",
+  "notation": "opaque-unprotected",
+  "original_tokens": 375,
+  "envelope_tokens": 462,
+  "payload_tokens": 386,
+  "legend_tokens": 20,
+  "instruction_tokens": 55,
+  "savings": -0.232,
+  "effective_savings": 0.0,
+  "entries": 3,
+  "protected_share": 0.0,
+  "seconds": 0.0,
+  "top_entries": [
+   [
+    "0",
+    ".md)",
+    12
+   ],
+   [
+    "1",
+    ".php`",
+    9
+   ],
+   [
+    "2",
+    "SapiensCore LLM Wiki",
+    2
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/project-overview.md",
+  "type": "readme",
+  "profile": "cl100k",
+  "notation": "opaque-unprotected",
+  "original_tokens": 613,
+  "envelope_tokens": 683,
+  "payload_tokens": 615,
+  "legend_tokens": 12,
+  "instruction_tokens": 55,
+  "savings": -0.1142,
+  "effective_savings": 0.0,
+  "entries": 2,
+  "protected_share": 0.0,
+  "seconds": 0.01,
+  "top_entries": [
+   [
+    "0",
+    ".php`",
+    14
+   ],
+   [
+    "1",
+    ", `public",
+    7
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/iaapa/README.md",
+  "type": "readme",
+  "profile": "cl100k",
+  "notation": "opaque-unprotected",
+  "original_tokens": 504,
+  "envelope_tokens": 561,
+  "payload_tokens": 483,
+  "legend_tokens": 22,
+  "instruction_tokens": 55,
+  "savings": -0.1131,
+  "effective_savings": 0.0,
+  "entries": 2,
+  "protected_share": 0.0,
+  "seconds": 0.01,
+  "top_entries": [
+   [
+    "0",
+    "- **http://localhost:8765",
+    2
+   ],
+   [
+    "1",
+    "book_en_v2_skinned.html",
+    2
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/design_handoff_orbit_homepage/README.md",
+  "type": "readme",
+  "profile": "cl100k",
+  "notation": "opaque-unprotected",
+  "original_tokens": 3584,
+  "envelope_tokens": 3621,
+  "payload_tokens": 3364,
+  "legend_tokens": 201,
+  "instruction_tokens": 55,
+  "savings": -0.0103,
+  "effective_savings": 0.0,
+  "entries": 24,
+  "protected_share": 0.0,
+  "seconds": 0.05,
+  "top_entries": [
+   [
+    "0",
+    "` | `",
+    12
+   ],
+   [
+    "1",
+    "(coral",
+    7
+   ],
+   [
+    "2",
+    "-col grid",
+    7
+   ],
+   [
+    "3",
+    "\"Book a visit\"",
+    4
+   ],
+   [
+    "4",
+    "Hanken Grotesk",
+    4
+   ],
+   [
+    "5",
+    "`--c2",
+    4
+   ],
+   [
+    "6",
+    "rgba(44,39,51,",
+    4
+   ],
+   [
+    "7",
+    "(e.g.",
+    3
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/skills/README.md",
+  "type": "readme",
+  "profile": "cl100k",
+  "notation": "opaque-unprotected",
+  "original_tokens": 1851,
+  "envelope_tokens": 1790,
+  "payload_tokens": 1545,
+  "legend_tokens": 189,
+  "instruction_tokens": 55,
+  "savings": 0.033,
+  "effective_savings": 0.0,
+  "entries": 22,
+  "protected_share": 0.0,
+  "seconds": 0.03,
+  "top_entries": [
+   [
+    "0",
+    ".md`",
+    23
+   ],
+   [
+    "1",
+    ": `.agents/skills/caveman",
+    12
+   ],
+   [
+    "2",
+    "- Purpose:",
+    11
+   ],
+   [
+    "3",
+    "- Summary:",
+    11
+   ],
+   [
+    "4",
+    "- Use when: A user",
+    11
+   ],
+   [
+    "5",
+    "/SKILL",
+    11
+   ],
+   [
+    "6",
+    "- Current location",
+    8
+   ],
+   [
+    "7",
+    "`/caveman",
+    7
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/deployment.md",
+  "type": "guide",
+  "profile": "cl100k",
+  "notation": "opaque-unprotected",
+  "original_tokens": 695,
+  "envelope_tokens": 752,
+  "payload_tokens": 651,
+  "legend_tokens": 45,
+  "instruction_tokens": 55,
+  "savings": -0.082,
+  "effective_savings": 0.0,
+  "entries": 5,
+  "protected_share": 0.0,
+  "seconds": 0.01,
+  "top_entries": [
+   [
+    "0",
+    "- `npm run",
+    3
+   ],
+   [
+    "1",
+    "`sapienscore",
+    3
+   ],
+   [
+    "2",
+    "`: `salvatorecampanella/core",
+    2
+   ],
+   [
+    "3",
+    "`cd utility/ && php",
+    2
+   ],
+   [
+    "4",
+    "`docker-compose.example.yaml`",
+    2
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/DB_POOLING.md",
+  "type": "guide",
+  "profile": "cl100k",
+  "notation": "opaque-unprotected",
+  "original_tokens": 3686,
+  "envelope_tokens": 3758,
+  "payload_tokens": 3477,
+  "legend_tokens": 225,
+  "instruction_tokens": 55,
+  "savings": -0.0195,
+  "effective_savings": 0.0,
+  "entries": 28,
+  "protected_share": 0.0,
+  "seconds": 0.04,
+  "top_entries": [
+   [
+    "0",
+    ".php`",
+    12
+   ],
+   [
+    "1",
+    "/docker-compose.yaml",
+    5
+   ],
+   [
+    "2",
+    "DB `command:`",
+    5
+   ],
+   [
+    "3",
+    "`idle_in_transaction_session_timeout",
+    4
+   ],
+   [
+    "4",
+    "`statement_timeout`",
+    4
+   ],
+   [
+    "5",
+    "pgFirstConnect()",
+    4
+   ],
+   [
+    "6",
+    "scram-sha-256",
+    4
+   ],
+   [
+    "7",
+    "— PgBouncer",
+    4
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/testing.md",
+  "type": "guide",
+  "profile": "cl100k",
+  "notation": "opaque-unprotected",
+  "original_tokens": 428,
+  "envelope_tokens": 493,
+  "payload_tokens": 423,
+  "legend_tokens": 14,
+  "instruction_tokens": 55,
+  "savings": -0.1519,
+  "effective_savings": 0.0,
+  "entries": 2,
+  "protected_share": 0.0,
+  "seconds": 0.0,
+  "top_entries": [
+   [
+    "0",
+    ".php`",
+    6
+   ],
+   [
+    "1",
+    "`react/package.json` declares",
+    2
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/database.md",
+  "type": "guide",
+  "profile": "cl100k",
+  "notation": "opaque-unprotected",
+  "original_tokens": 639,
+  "envelope_tokens": 696,
+  "payload_tokens": 621,
+  "legend_tokens": 19,
+  "instruction_tokens": 55,
+  "savings": -0.0892,
+  "effective_savings": 0.0,
+  "entries": 2,
+  "protected_share": 0.0,
+  "seconds": 0.01,
+  "top_entries": [
+   [
+    "0",
+    "`App\\InstanceCollector\\IC",
+    2
+   ],
+   [
+    "1",
+    "`sqlinstall00312.sql`.",
+    2
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/MIGRATION_PLAYBOOK.md",
+  "type": "guide",
+  "profile": "cl100k",
+  "notation": "opaque-unprotected",
+  "original_tokens": 6972,
+  "envelope_tokens": 6899,
+  "payload_tokens": 6206,
+  "legend_tokens": 637,
+  "instruction_tokens": 55,
+  "savings": 0.0105,
+  "effective_savings": 0.0,
+  "entries": 71,
+  "protected_share": 0.0,
+  "seconds": 0.17,
+  "top_entries": [
+   [
+    "0",
+    "</div>",
+    27
+   ],
+   [
+    "1",
+    "<div class=",
+    25
+   ],
+   [
+    "2",
+    ".phtml`",
+    17
+   ],
+   [
+    "3",
+    ".js`",
+    13
+   ],
+   [
+    "4",
+    "- [ ]",
+    12
+   ],
+   [
+    "5",
+    "<?php echo T::t('common.label",
+    12
+   ],
+   [
+    "6",
+    "/adminlte/v2",
+    10
+   ],
+   [
+    "7",
+    "`data-list",
+    10
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/CODING_STANDARDS.md",
+  "type": "guide",
+  "profile": "cl100k",
+  "notation": "opaque-unprotected",
+  "original_tokens": 2694,
+  "envelope_tokens": 2726,
+  "payload_tokens": 2413,
+  "legend_tokens": 257,
+  "instruction_tokens": 55,
+  "savings": -0.0119,
+  "effective_savings": 0.0,
+  "entries": 30,
+  "protected_share": 0.0,
+  "seconds": 0.05,
+  "top_entries": [
+   [
+    "0",
+    "$obj-",
+    8
+   ],
+   [
+    "1",
+    "public static function",
+    8
+   ],
+   [
+    "2",
+    "$x-",
+    6
+   ],
+   [
+    "3",
+    "$autoDb",
+    5
+   ],
+   [
+    "4",
+    "$this->record",
+    5
+   ],
+   [
+    "5",
+    ">store()",
+    5
+   ],
+   [
+    "6",
+    "`sync = 1`",
+    5
+   ],
+   [
+    "7",
+    "getMoreWhere(",
+    5
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/product-import-matching.md",
+  "type": "guide",
+  "profile": "cl100k",
+  "notation": "opaque-unprotected",
+  "original_tokens": 1638,
+  "envelope_tokens": 1691,
+  "payload_tokens": 1608,
+  "legend_tokens": 27,
+  "instruction_tokens": 55,
+  "savings": -0.0324,
+  "effective_savings": 0.0,
+  "entries": 3,
+  "protected_share": 0.0,
+  "seconds": 0.01,
+  "top_entries": [
+   [
+    "0",
+    "`ProductImportManager:",
+    4
+   ],
+   [
+    "1",
+    "Product import — product matching and conflict resolution",
+    2
+   ],
+   [
+    "2",
+    "`TYPE_CONFLICT_SELECTION`",
+    2
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/lco-revert-and-idempotency.md",
+  "type": "guide",
+  "profile": "cl100k",
+  "notation": "opaque-unprotected",
+  "original_tokens": 3080,
+  "envelope_tokens": 3044,
+  "payload_tokens": 2707,
+  "legend_tokens": 281,
+  "instruction_tokens": 55,
+  "savings": 0.0117,
+  "effective_savings": 0.0,
+  "entries": 33,
+  "protected_share": 0.0,
+  "seconds": 0.04,
+  "top_entries": [
+   [
+    "0",
+    "$card-",
+    9
+   ],
+   [
+    "1",
+    "- [ ]",
+    9
+   ],
+   [
+    "2",
+    "::getLocalSourceEquivalent",
+    7
+   ],
+   [
+    "3",
+    "## 3",
+    6
+   ],
+   [
+    "4",
+    "`LoyaltyCardSync`",
+    6
+   ],
+   [
+    "5",
+    "`id_source`",
+    6
+   ],
+   [
+    "6",
+    "## 2",
+    5
+   ],
+   [
+    "7",
+    "$operationData[",
+    5
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/PERMISSIONS.md",
+  "type": "design",
+  "profile": "cl100k",
+  "notation": "opaque-unprotected",
+  "original_tokens": 6203,
+  "envelope_tokens": 6175,
+  "payload_tokens": 5690,
+  "legend_tokens": 429,
+  "instruction_tokens": 55,
+  "savings": 0.0045,
+  "effective_savings": 0.0,
+  "entries": 51,
+  "protected_share": 0.0,
+  "seconds": 0.15,
+  "top_entries": [
+   [
+    "0",
+    "| – | – | – |",
+    17
+   ],
+   [
+    "1",
+    "A | – |",
+    8
+   ],
+   [
+    "2",
+    "`LocationUser`",
+    7
+   ],
+   [
+    "3",
+    "`canAdminH",
+    7
+   ],
+   [
+    "4",
+    "- ✅ *",
+    6
+   ],
+   [
+    "5",
+    "A | A |",
+    6
+   ],
+   [
+    "6",
+    "` | area × level",
+    6
+   ],
+   [
+    "7",
+    ".php`",
+    5
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/EVENTS.md",
+  "type": "design",
+  "profile": "cl100k",
+  "notation": "opaque-unprotected",
+  "original_tokens": 8807,
+  "envelope_tokens": 8798,
+  "payload_tokens": 8187,
+  "legend_tokens": 555,
+  "instruction_tokens": 55,
+  "savings": 0.001,
+  "effective_savings": 0.0,
+  "entries": 65,
+  "protected_share": 0.0,
+  "seconds": 0.17,
+  "top_entries": [
+   [
+    "0",
+    "the NUC",
+    12
+   ],
+   [
+    "1",
+    "`eventSetting",
+    11
+   ],
+   [
+    "2",
+    "## 3",
+    8
+   ],
+   [
+    "3",
+    "'none'`",
+    8
+   ],
+   [
+    "4",
+    ". ✅ done —",
+    8
+   ],
+   [
+    "5",
+    "- **No",
+    6
+   ],
+   [
+    "6",
+    "`bookingCode`",
+    6
+   ],
+   [
+    "7",
+    "both repos)",
+    6
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/DYNAMIC_PRICING.md",
+  "type": "design",
+  "profile": "cl100k",
+  "notation": "opaque-unprotected",
+  "original_tokens": 6842,
+  "envelope_tokens": 6903,
+  "payload_tokens": 6450,
+  "legend_tokens": 397,
+  "instruction_tokens": 55,
+  "savings": -0.0089,
+  "effective_savings": 0.0,
+  "entries": 47,
+  "protected_share": 0.0,
+  "seconds": 0.13,
+  "top_entries": [
+   [
+    "0",
+    "## 5",
+    10
+   ],
+   [
+    "1",
+    "`GamePrice`",
+    10
+   ],
+   [
+    "2",
+    "## 12",
+    8
+   ],
+   [
+    "3",
+    ", not a",
+    6
+   ],
+   [
+    "4",
+    "Phase 2",
+    5
+   ],
+   [
+    "5",
+    "`DATE_RANGE`",
+    5
+   ],
+   [
+    "6",
+    "`id_period`",
+    5
+   ],
+   [
+    "7",
+    "`pricing_change_event`",
+    5
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/MAINTENANCE.md",
+  "type": "design",
+  "profile": "cl100k",
+  "notation": "opaque-unprotected",
+  "original_tokens": 3752,
+  "envelope_tokens": 3776,
+  "payload_tokens": 3482,
+  "legend_tokens": 238,
+  "instruction_tokens": 55,
+  "savings": -0.0064,
+  "effective_savings": 0.0,
+  "entries": 25,
+  "protected_share": 0.0,
+  "seconds": 0.06,
+  "top_entries": [
+   [
+    "0",
+    ". ✅ done",
+    6
+   ],
+   [
+    "1",
+    "`trace_cost`",
+    6
+   ],
+   [
+    "2",
+    "`worked_on`",
+    6
+   ],
+   [
+    "3",
+    ", and the",
+    5
+   ],
+   [
+    "4",
+    ".js`",
+    5
+   ],
+   [
+    "5",
+    "`game_location_operation",
+    4
+   ],
+   [
+    "6",
+    "`trace_target`",
+    4
+   ],
+   [
+    "7",
+    "| GLO (",
+    4
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/architecture.md",
+  "type": "design",
+  "profile": "cl100k",
+  "notation": "opaque-unprotected",
+  "original_tokens": 1054,
+  "envelope_tokens": 1109,
+  "payload_tokens": 1000,
+  "legend_tokens": 53,
+  "instruction_tokens": 55,
+  "savings": -0.0522,
+  "effective_savings": 0.0,
+  "entries": 7,
+  "protected_share": 0.0,
+  "seconds": 0.01,
+  "top_entries": [
+   [
+    "0",
+    "- `App",
+    6
+   ],
+   [
+    "1",
+    ".php`",
+    6
+   ],
+   [
+    "2",
+    "- `public",
+    5
+   ],
+   [
+    "3",
+    ".php` denies access unless the current domain is",
+    4
+   ],
+   [
+    "4",
+    "/index.php`",
+    3
+   ],
+   [
+    "5",
+    "`src/settings.php`",
+    3
+   ],
+   [
+    "6",
+    "`App\\InstanceCollector\\IC",
+    2
+   ]
+  ]
+ },
+ {
+  "doc": "adr-bundle",
+  "type": "bundle",
+  "profile": "cl100k",
+  "notation": "opaque-unprotected",
+  "original_tokens": 2432,
+  "envelope_tokens": 2260,
+  "payload_tokens": 1904,
+  "legend_tokens": 300,
+  "instruction_tokens": 55,
+  "savings": 0.0707,
+  "effective_savings": 0.0707,
+  "entries": 30,
+  "protected_share": 0.0,
+  "seconds": 0.02,
+  "top_entries": [
+   [
+    "0",
+    "# ADR",
+    10
+   ],
+   [
+    "1",
+    "## Consequences",
+    10
+   ],
+   [
+    "2",
+    "description: \"Decision to",
+    10
+   ],
+   [
+    "3",
+    "source_kind: generated",
+    10
+   ],
+   [
+    "4",
+    "status: active",
+    10
+   ],
+   [
+    "5",
+    "tags: [adr,",
+    10
+   ],
+   [
+    "6",
+    "timestamp: \"2026-06-30T06:51:14Z\"",
+    10
+   ],
+   [
+    "7",
+    "title: \"ADR",
+    10
+   ]
+  ]
+ },
+ {
+  "doc": "pilot-bundle",
+  "type": "bundle",
+  "profile": "cl100k",
+  "notation": "opaque-unprotected",
+  "original_tokens": 64177,
+  "envelope_tokens": 63091,
+  "payload_tokens": 58171,
+  "legend_tokens": 4864,
+  "instruction_tokens": 55,
+  "savings": 0.0169,
+  "effective_savings": 0.0,
+  "entries": 585,
+  "protected_share": 0.0,
+  "seconds": 7.08,
+  "top_entries": [
+   [
+    "0",
+    ".php`",
+    124
+   ],
+   [
+    "1",
+    ".md`",
+    42
+   ],
+   [
+    "2",
+    "1.",
+    40
+   ],
+   [
+    "3",
+    "## 3",
+    29
+   ],
+   [
+    "4",
+    "the NUC",
+    29
+   ],
+   [
+    "5",
+    "</div>",
+    27
+   ],
+   [
+    "6",
+    ".js`",
+    26
+   ],
+   [
+    "7",
+    ".phtml`",
+    26
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/API_PUBLIC.md",
+  "type": "api_reference",
+  "profile": "Qwen/Qwen2.5-7B-Instruct",
+  "notation": "opaque",
+  "original_tokens": 6964,
+  "envelope_tokens": 7028,
+  "payload_tokens": 6865,
+  "legend_tokens": 107,
+  "instruction_tokens": 55,
+  "savings": -0.0092,
+  "effective_savings": 0.0,
+  "entries": 13,
+  "protected_share": 0.3633,
+  "seconds": 0.05,
+  "top_entries": [
+   [
+    "0",
+    "the NUC",
+    8
+   ],
+   [
+    "1",
+    "in v1",
+    7
+   ],
+   [
+    "2",
+    "## 3",
+    6
+   ],
+   [
+    "3",
+    "**Response 200",
+    5
+   ],
+   [
+    "4",
+    "1.",
+    5
+   ],
+   [
+    "5",
+    "2.",
+    5
+   ],
+   [
+    "6",
+    "|---|---|",
+    5
+   ],
+   [
+    "7",
+    "**Implementation notes**",
+    4
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/apis.md",
+  "type": "api_reference",
+  "profile": "Qwen/Qwen2.5-7B-Instruct",
+  "notation": "opaque",
+  "original_tokens": 4019,
+  "envelope_tokens": 4079,
+  "payload_tokens": 4016,
+  "legend_tokens": 7,
+  "instruction_tokens": 55,
+  "savings": -0.0149,
+  "effective_savings": 0.0,
+  "entries": 1,
+  "protected_share": 0.3235,
+  "seconds": 0.02,
+  "top_entries": [
+   [
+    "0",
+    ", so the",
+    5
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/README.md",
+  "type": "readme",
+  "profile": "Qwen/Qwen2.5-7B-Instruct",
+  "notation": "opaque",
+  "original_tokens": 382,
+  "envelope_tokens": 455,
+  "payload_tokens": 384,
+  "legend_tokens": 15,
+  "instruction_tokens": 55,
+  "savings": -0.1911,
+  "effective_savings": 0.0,
+  "entries": 2,
+  "protected_share": 0.2344,
+  "seconds": 0.0,
+  "top_entries": [
+   [
+    "0",
+    ".md)",
+    12
+   ],
+   [
+    "1",
+    "SapiensCore LLM Wiki",
+    2
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/project-overview.md",
+  "type": "readme",
+  "profile": "Qwen/Qwen2.5-7B-Instruct",
+  "notation": "opaque",
+  "original_tokens": 620,
+  "envelope_tokens": 676,
+  "payload_tokens": 620,
+  "legend_tokens": 0,
+  "instruction_tokens": 55,
+  "savings": -0.0903,
+  "effective_savings": 0.0,
+  "entries": 0,
+  "protected_share": 0.1648,
+  "seconds": 0.0,
+  "top_entries": []
+ },
+ {
+  "doc": "test_docs/iaapa/README.md",
+  "type": "readme",
+  "profile": "Qwen/Qwen2.5-7B-Instruct",
+  "notation": "opaque",
+  "original_tokens": 525,
+  "envelope_tokens": 578,
+  "payload_tokens": 509,
+  "legend_tokens": 13,
+  "instruction_tokens": 55,
+  "savings": -0.101,
+  "effective_savings": 0.0,
+  "entries": 1,
+  "protected_share": 0.0884,
+  "seconds": 0.0,
+  "top_entries": [
+   [
+    "0",
+    "- **http://localhost:8765",
+    2
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/design_handoff_orbit_homepage/README.md",
+  "type": "readme",
+  "profile": "Qwen/Qwen2.5-7B-Instruct",
+  "notation": "opaque",
+  "original_tokens": 3771,
+  "envelope_tokens": 3822,
+  "payload_tokens": 3646,
+  "legend_tokens": 120,
+  "instruction_tokens": 55,
+  "savings": -0.0135,
+  "effective_savings": 0.0,
+  "entries": 13,
+  "protected_share": 0.1077,
+  "seconds": 0.03,
+  "top_entries": [
+   [
+    "0",
+    "-col grid",
+    7
+   ],
+   [
+    "1",
+    "\"Book a visit\"",
+    4
+   ],
+   [
+    "2",
+    "Hanken Grotesk",
+    4
+   ],
+   [
+    "3",
+    "(coral)",
+    3
+   ],
+   [
+    "4",
+    ") | Fredoka | 600 |",
+    3
+   ],
+   [
+    "5",
+    "- **Left**:",
+    3
+   ],
+   [
+    "6",
+    "- **Loyalty card",
+    3
+   ],
+   [
+    "7",
+    "|---|---|---|",
+    3
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/skills/README.md",
+  "type": "readme",
+  "profile": "Qwen/Qwen2.5-7B-Instruct",
+  "notation": "opaque",
+  "original_tokens": 1858,
+  "envelope_tokens": 1842,
+  "payload_tokens": 1722,
+  "legend_tokens": 64,
+  "instruction_tokens": 55,
+  "savings": 0.0086,
+  "effective_savings": 0.0,
+  "entries": 9,
+  "protected_share": 0.1895,
+  "seconds": 0.01,
+  "top_entries": [
+   [
+    "0",
+    "- Current location:",
+    11
+   ],
+   [
+    "1",
+    "- Purpose:",
+    11
+   ],
+   [
+    "2",
+    "- Summary:",
+    11
+   ],
+   [
+    "3",
+    "- Use when: A user",
+    11
+   ],
+   [
+    "4",
+    "### caveman",
+    6
+   ],
+   [
+    "5",
+    "- Related file:",
+    6
+   ],
+   [
+    "6",
+    ", HTMX, and Alpine",
+    3
+   ],
+   [
+    "7",
+    "- Related workflow/config file:",
+    3
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/deployment.md",
+  "type": "guide",
+  "profile": "Qwen/Qwen2.5-7B-Instruct",
+  "notation": "opaque",
+  "original_tokens": 708,
+  "envelope_tokens": 764,
+  "payload_tokens": 708,
+  "legend_tokens": 0,
+  "instruction_tokens": 55,
+  "savings": -0.0791,
+  "effective_savings": 0.0,
+  "entries": 0,
+  "protected_share": 0.3045,
+  "seconds": 0.0,
+  "top_entries": []
+ },
+ {
+  "doc": "test_docs/DB_POOLING.md",
+  "type": "guide",
+  "profile": "Qwen/Qwen2.5-7B-Instruct",
+  "notation": "opaque",
+  "original_tokens": 3752,
+  "envelope_tokens": 3819,
+  "payload_tokens": 3714,
+  "legend_tokens": 49,
+  "instruction_tokens": 55,
+  "savings": -0.0179,
+  "effective_savings": 0.0,
+  "entries": 6,
+  "protected_share": 0.2926,
+  "seconds": 0.02,
+  "top_entries": [
+   [
+    "0",
+    "— PgBouncer",
+    4
+   ],
+   [
+    "1",
+    "---|---|",
+    3
+   ],
+   [
+    "2",
+    "1. *",
+    3
+   ],
+   [
+    "3",
+    "2. *",
+    3
+   ],
+   [
+    "4",
+    "2026-07-22.",
+    2
+   ],
+   [
+    "5",
+    "~60 call sites).",
+    2
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/testing.md",
+  "type": "guide",
+  "profile": "Qwen/Qwen2.5-7B-Instruct",
+  "notation": "opaque",
+  "original_tokens": 435,
+  "envelope_tokens": 491,
+  "payload_tokens": 435,
+  "legend_tokens": 0,
+  "instruction_tokens": 55,
+  "savings": -0.1287,
+  "effective_savings": 0.0,
+  "entries": 0,
+  "protected_share": 0.2677,
+  "seconds": 0.0,
+  "top_entries": []
+ },
+ {
+  "doc": "test_docs/database.md",
+  "type": "guide",
+  "profile": "Qwen/Qwen2.5-7B-Instruct",
+  "notation": "opaque",
+  "original_tokens": 662,
+  "envelope_tokens": 718,
+  "payload_tokens": 662,
+  "legend_tokens": 0,
+  "instruction_tokens": 55,
+  "savings": -0.0846,
+  "effective_savings": 0.0,
+  "entries": 0,
+  "protected_share": 0.2479,
+  "seconds": 0.0,
+  "top_entries": []
+ },
+ {
+  "doc": "test_docs/MIGRATION_PLAYBOOK.md",
+  "type": "guide",
+  "profile": "Qwen/Qwen2.5-7B-Instruct",
+  "notation": "opaque",
+  "original_tokens": 6980,
+  "envelope_tokens": 7036,
+  "payload_tokens": 6896,
+  "legend_tokens": 84,
+  "instruction_tokens": 55,
+  "savings": -0.008,
+  "effective_savings": 0.0,
+  "entries": 10,
+  "protected_share": 0.4588,
+  "seconds": 0.06,
+  "top_entries": [
+   [
+    "0",
+    "- [ ]",
+    12
+   ],
+   [
+    "1",
+    "** — the",
+    5
+   ],
+   [
+    "2",
+    "-loyalty\"",
+    3
+   ],
+   [
+    "3",
+    "2. *",
+    3
+   ],
+   [
+    "4",
+    "<div class=\"tab",
+    3
+   ],
+   [
+    "5",
+    "|---|---|---|",
+    3
+   ],
+   [
+    "6",
+    "\" data-bs-toggle=\"tab\" href=\"#tab",
+    2
+   ],
+   [
+    "7",
+    "<a class=\"nav-link",
+    2
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/CODING_STANDARDS.md",
+  "type": "guide",
+  "profile": "Qwen/Qwen2.5-7B-Instruct",
+  "notation": "opaque",
+  "original_tokens": 2694,
+  "envelope_tokens": 2752,
+  "payload_tokens": 2688,
+  "legend_tokens": 8,
+  "instruction_tokens": 55,
+  "savings": -0.0215,
+  "effective_savings": 0.0,
+  "entries": 1,
+  "protected_share": 0.6513,
+  "seconds": 0.01,
+  "top_entries": [
+   [
+    "0",
+    "to the NUC",
+    3
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/product-import-matching.md",
+  "type": "guide",
+  "profile": "Qwen/Qwen2.5-7B-Instruct",
+  "notation": "opaque",
+  "original_tokens": 1645,
+  "envelope_tokens": 1701,
+  "payload_tokens": 1633,
+  "legend_tokens": 12,
+  "instruction_tokens": 55,
+  "savings": -0.034,
+  "effective_savings": 0.0,
+  "entries": 1,
+  "protected_share": 0.1696,
+  "seconds": 0.01,
+  "top_entries": [
+   [
+    "0",
+    "Product import — product matching and conflict resolution",
+    2
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/lco-revert-and-idempotency.md",
+  "type": "guide",
+  "profile": "Qwen/Qwen2.5-7B-Instruct",
+  "notation": "opaque",
+  "original_tokens": 3087,
+  "envelope_tokens": 3166,
+  "payload_tokens": 3031,
+  "legend_tokens": 79,
+  "instruction_tokens": 55,
+  "savings": -0.0256,
+  "effective_savings": 0.0,
+  "entries": 11,
+  "protected_share": 0.2942,
+  "seconds": 0.02,
+  "top_entries": [
+   [
+    "0",
+    "- [ ]",
+    13
+   ],
+   [
+    "1",
+    "$card-",
+    9
+   ],
+   [
+    "2",
+    "## 3",
+    6
+   ],
+   [
+    "3",
+    "## 2",
+    5
+   ],
+   [
+    "4",
+    "on the cloud",
+    5
+   ],
+   [
+    "5",
+    "the cloud's",
+    5
+   ],
+   [
+    "6",
+    "$cloudOriginalTx-",
+    4
+   ],
+   [
+    "7",
+    ". Sapiensclient",
+    4
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/PERMISSIONS.md",
+  "type": "design",
+  "profile": "Qwen/Qwen2.5-7B-Instruct",
+  "notation": "opaque",
+  "original_tokens": 6217,
+  "envelope_tokens": 6254,
+  "payload_tokens": 5951,
+  "legend_tokens": 247,
+  "instruction_tokens": 55,
+  "savings": -0.006,
+  "effective_savings": 0.0,
+  "entries": 25,
+  "protected_share": 0.1743,
+  "seconds": 0.08,
+  "top_entries": [
+   [
+    "0",
+    "| – | – | – |",
+    17
+   ],
+   [
+    "1",
+    "- ✅ *",
+    6
+   ],
+   [
+    "2",
+    "| area × level",
+    6
+   ],
+   [
+    "3",
+    ". This is the",
+    4
+   ],
+   [
+    "4",
+    "A | – | A |",
+    4
+   ],
+   [
+    "5",
+    "**elevated",
+    3
+   ],
+   [
+    "6",
+    "--:|:--:|:",
+    3
+   ],
+   [
+    "7",
+    "1. *",
+    3
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/EVENTS.md",
+  "type": "design",
+  "profile": "Qwen/Qwen2.5-7B-Instruct",
+  "notation": "opaque",
+  "original_tokens": 8876,
+  "envelope_tokens": 8948,
+  "payload_tokens": 8707,
+  "legend_tokens": 185,
+  "instruction_tokens": 55,
+  "savings": -0.0081,
+  "effective_savings": 0.0,
+  "entries": 20,
+  "protected_share": 0.2335,
+  "seconds": 0.06,
+  "top_entries": [
+   [
+    "0",
+    "the NUC",
+    12
+   ],
+   [
+    "1",
+    "## 3",
+    8
+   ],
+   [
+    "2",
+    ". ✅ done —",
+    8
+   ],
+   [
+    "3",
+    "- **No",
+    6
+   ],
+   [
+    "4",
+    "2026-07-20",
+    5
+   ],
+   [
+    "5",
+    "** (§3",
+    4
+   ],
+   [
+    "6",
+    "1. *",
+    4
+   ],
+   [
+    "7",
+    "2. *",
+    4
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/DYNAMIC_PRICING.md",
+  "type": "design",
+  "profile": "Qwen/Qwen2.5-7B-Instruct",
+  "notation": "opaque",
+  "original_tokens": 6890,
+  "envelope_tokens": 7001,
+  "payload_tokens": 6766,
+  "legend_tokens": 179,
+  "instruction_tokens": 55,
+  "savings": -0.0161,
+  "effective_savings": 0.0,
+  "entries": 20,
+  "protected_share": 0.1595,
+  "seconds": 0.05,
+  "top_entries": [
+   [
+    "0",
+    "## 5",
+    10
+   ],
+   [
+    "1",
+    "## 12",
+    8
+   ],
+   [
+    "2",
+    ", not a",
+    6
+   ],
+   [
+    "3",
+    "Phase 2",
+    5
+   ],
+   [
+    "4",
+    "50%",
+    4
+   ],
+   [
+    "5",
+    "holiday/holiday-eve",
+    4
+   ],
+   [
+    "6",
+    "§5.3",
+    4
+   ],
+   [
+    "7",
+    "## 11",
+    3
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/MAINTENANCE.md",
+  "type": "design",
+  "profile": "Qwen/Qwen2.5-7B-Instruct",
+  "notation": "opaque",
+  "original_tokens": 3774,
+  "envelope_tokens": 3834,
+  "payload_tokens": 3713,
+  "legend_tokens": 65,
+  "instruction_tokens": 55,
+  "savings": -0.0159,
+  "effective_savings": 0.0,
+  "entries": 8,
+  "protected_share": 0.1792,
+  "seconds": 0.05,
+  "top_entries": [
+   [
+    "0",
+    ". ✅ done",
+    6
+   ],
+   [
+    "1",
+    ", and the",
+    5
+   ],
+   [
+    "2",
+    "(en/es/pt",
+    4
+   ],
+   [
+    "3",
+    "| GLO (",
+    4
+   ],
+   [
+    "4",
+    ") | routine, no cost |",
+    3
+   ],
+   [
+    "5",
+    "✅ done.",
+    3
+   ],
+   [
+    "6",
+    "- **Tech time** —",
+    2
+   ],
+   [
+    "7",
+    "1:1 with a game location",
+    2
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/architecture.md",
+  "type": "design",
+  "profile": "Qwen/Qwen2.5-7B-Instruct",
+  "notation": "opaque",
+  "original_tokens": 1076,
+  "envelope_tokens": 1124,
+  "payload_tokens": 1056,
+  "legend_tokens": 12,
+  "instruction_tokens": 55,
+  "savings": -0.0446,
+  "effective_savings": 0.0,
+  "entries": 1,
+  "protected_share": 0.2826,
+  "seconds": 0.0,
+  "top_entries": [
+   [
+    "0",
+    "denies access unless the current domain is",
+    4
+   ]
+  ]
+ },
+ {
+  "doc": "adr-bundle",
+  "type": "bundle",
+  "profile": "Qwen/Qwen2.5-7B-Instruct",
+  "notation": "opaque",
+  "original_tokens": 2549,
+  "envelope_tokens": 2307,
+  "payload_tokens": 1931,
+  "legend_tokens": 320,
+  "instruction_tokens": 55,
+  "savings": 0.0949,
+  "effective_savings": 0.0949,
+  "entries": 22,
+  "protected_share": 0.1228,
+  "seconds": 0.02,
+  "top_entries": [
+   [
+    "0",
+    "## Consequences",
+    10
+   ],
+   [
+    "1",
+    "description: \"Decision to",
+    10
+   ],
+   [
+    "2",
+    "source_kind: generated",
+    10
+   ],
+   [
+    "3",
+    "status: active",
+    10
+   ],
+   [
+    "4",
+    "tags: [adr,",
+    10
+   ],
+   [
+    "5",
+    "timestamp: \"2026-06-30T06:51:14Z\"",
+    10
+   ],
+   [
+    "6",
+    "type: ADR",
+    10
+   ],
+   [
+    "7",
+    "Accepted in code.",
+    9
+   ]
+  ]
+ },
+ {
+  "doc": "pilot-bundle",
+  "type": "bundle",
+  "profile": "Qwen/Qwen2.5-7B-Instruct",
+  "notation": "opaque",
+  "original_tokens": 64938,
+  "envelope_tokens": 64807,
+  "payload_tokens": 63994,
+  "legend_tokens": 757,
+  "instruction_tokens": 55,
+  "savings": 0.002,
+  "effective_savings": 0.0,
+  "entries": 75,
+  "protected_share": 0.2729,
+  "seconds": 0.88,
+  "top_entries": [
+   [
+    "0",
+    "1.",
+    40
+   ],
+   [
+    "1",
+    "## 3",
+    29
+   ],
+   [
+    "2",
+    "the NUC",
+    29
+   ],
+   [
+    "3",
+    "4.",
+    26
+   ],
+   [
+    "4",
+    "- [ ]",
+    25
+   ],
+   [
+    "5",
+    "2. *",
+    21
+   ],
+   [
+    "6",
+    "*not*",
+    19
+   ],
+   [
+    "7",
+    "## 5",
+    18
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/API_PUBLIC.md",
+  "type": "api_reference",
+  "profile": "Qwen/Qwen2.5-7B-Instruct",
+  "notation": "mnemonic",
+  "original_tokens": 6964,
+  "envelope_tokens": 7022,
+  "payload_tokens": 6951,
+  "legend_tokens": 15,
+  "instruction_tokens": 55,
+  "savings": -0.0083,
+  "effective_savings": 0.0,
+  "entries": 2,
+  "protected_share": 0.3633,
+  "seconds": 0.04,
+  "top_entries": [
+   [
+    "3",
+    "## 3",
+    6
+   ],
+   [
+    "X",
+    "|---|---|",
+    5
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/apis.md",
+  "type": "api_reference",
+  "profile": "Qwen/Qwen2.5-7B-Instruct",
+  "notation": "mnemonic",
+  "original_tokens": 4019,
+  "envelope_tokens": 4075,
+  "payload_tokens": 4019,
+  "legend_tokens": 0,
+  "instruction_tokens": 55,
+  "savings": -0.0139,
+  "effective_savings": 0.0,
+  "entries": 0,
+  "protected_share": 0.3235,
+  "seconds": 0.01,
+  "top_entries": []
+ },
+ {
+  "doc": "test_docs/README.md",
+  "type": "readme",
+  "profile": "Qwen/Qwen2.5-7B-Instruct",
+  "notation": "mnemonic",
+  "original_tokens": 382,
+  "envelope_tokens": 455,
+  "payload_tokens": 394,
+  "legend_tokens": 5,
+  "instruction_tokens": 55,
+  "savings": -0.1911,
+  "effective_savings": 0.0,
+  "entries": 1,
+  "protected_share": 0.2344,
+  "seconds": 0.0,
+  "top_entries": [
+   [
+    "Md",
+    ".md)",
+    12
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/project-overview.md",
+  "type": "readme",
+  "profile": "Qwen/Qwen2.5-7B-Instruct",
+  "notation": "mnemonic",
+  "original_tokens": 620,
+  "envelope_tokens": 676,
+  "payload_tokens": 620,
+  "legend_tokens": 0,
+  "instruction_tokens": 55,
+  "savings": -0.0903,
+  "effective_savings": 0.0,
+  "entries": 0,
+  "protected_share": 0.1648,
+  "seconds": 0.0,
+  "top_entries": []
+ },
+ {
+  "doc": "test_docs/iaapa/README.md",
+  "type": "readme",
+  "profile": "Qwen/Qwen2.5-7B-Instruct",
+  "notation": "mnemonic",
+  "original_tokens": 525,
+  "envelope_tokens": 581,
+  "payload_tokens": 525,
+  "legend_tokens": 0,
+  "instruction_tokens": 55,
+  "savings": -0.1067,
+  "effective_savings": 0.0,
+  "entries": 0,
+  "protected_share": 0.0884,
+  "seconds": 0.0,
+  "top_entries": []
+ },
+ {
+  "doc": "test_docs/design_handoff_orbit_homepage/README.md",
+  "type": "readme",
+  "profile": "Qwen/Qwen2.5-7B-Instruct",
+  "notation": "mnemonic",
+  "original_tokens": 3771,
+  "envelope_tokens": 3823,
+  "payload_tokens": 3749,
+  "legend_tokens": 18,
+  "instruction_tokens": 55,
+  "savings": -0.0138,
+  "effective_savings": 0.0,
+  "entries": 2,
+  "protected_share": 0.1077,
+  "seconds": 0.03,
+  "top_entries": [
+   [
+    "Fred",
+    ") | Fredoka |",
+    3
+   ],
+   [
+    "X",
+    "|---|---|---|",
+    3
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/skills/README.md",
+  "type": "readme",
+  "profile": "Qwen/Qwen2.5-7B-Instruct",
+  "notation": "mnemonic",
+  "original_tokens": 1858,
+  "envelope_tokens": 1903,
+  "payload_tokens": 1836,
+  "legend_tokens": 11,
+  "instruction_tokens": 55,
+  "savings": -0.0242,
+  "effective_savings": 0.0,
+  "entries": 1,
+  "protected_share": 0.1895,
+  "seconds": 0.01,
+  "top_entries": [
+   [
+    "UseWhenA",
+    "- Use when: A user",
+    11
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/deployment.md",
+  "type": "guide",
+  "profile": "Qwen/Qwen2.5-7B-Instruct",
+  "notation": "mnemonic",
+  "original_tokens": 708,
+  "envelope_tokens": 764,
+  "payload_tokens": 708,
+  "legend_tokens": 0,
+  "instruction_tokens": 55,
+  "savings": -0.0791,
+  "effective_savings": 0.0,
+  "entries": 0,
+  "protected_share": 0.3045,
+  "seconds": 0.0,
+  "top_entries": []
+ },
+ {
+  "doc": "test_docs/DB_POOLING.md",
+  "type": "guide",
+  "profile": "Qwen/Qwen2.5-7B-Instruct",
+  "notation": "mnemonic",
+  "original_tokens": 3752,
+  "envelope_tokens": 3808,
+  "payload_tokens": 3752,
+  "legend_tokens": 0,
+  "instruction_tokens": 55,
+  "savings": -0.0149,
+  "effective_savings": 0.0,
+  "entries": 0,
+  "protected_share": 0.2926,
+  "seconds": 0.01,
+  "top_entries": []
+ },
+ {
+  "doc": "test_docs/testing.md",
+  "type": "guide",
+  "profile": "Qwen/Qwen2.5-7B-Instruct",
+  "notation": "mnemonic",
+  "original_tokens": 435,
+  "envelope_tokens": 491,
+  "payload_tokens": 435,
+  "legend_tokens": 0,
+  "instruction_tokens": 55,
+  "savings": -0.1287,
+  "effective_savings": 0.0,
+  "entries": 0,
+  "protected_share": 0.2677,
+  "seconds": 0.0,
+  "top_entries": []
+ },
+ {
+  "doc": "test_docs/database.md",
+  "type": "guide",
+  "profile": "Qwen/Qwen2.5-7B-Instruct",
+  "notation": "mnemonic",
+  "original_tokens": 662,
+  "envelope_tokens": 718,
+  "payload_tokens": 662,
+  "legend_tokens": 0,
+  "instruction_tokens": 55,
+  "savings": -0.0846,
+  "effective_savings": 0.0,
+  "entries": 0,
+  "protected_share": 0.2479,
+  "seconds": 0.0,
+  "top_entries": []
+ },
+ {
+  "doc": "test_docs/MIGRATION_PLAYBOOK.md",
+  "type": "guide",
+  "profile": "Qwen/Qwen2.5-7B-Instruct",
+  "notation": "mnemonic",
+  "original_tokens": 6980,
+  "envelope_tokens": 7031,
+  "payload_tokens": 6959,
+  "legend_tokens": 16,
+  "instruction_tokens": 55,
+  "savings": -0.0073,
+  "effective_savings": 0.0,
+  "entries": 2,
+  "protected_share": 0.4588,
+  "seconds": 0.03,
+  "top_entries": [
+   [
+    "X",
+    "- [ ]",
+    12
+   ],
+   [
+    "X2",
+    "|---|---|---|",
+    3
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/CODING_STANDARDS.md",
+  "type": "guide",
+  "profile": "Qwen/Qwen2.5-7B-Instruct",
+  "notation": "mnemonic",
+  "original_tokens": 2694,
+  "envelope_tokens": 2750,
+  "payload_tokens": 2694,
+  "legend_tokens": 0,
+  "instruction_tokens": 55,
+  "savings": -0.0208,
+  "effective_savings": 0.0,
+  "entries": 0,
+  "protected_share": 0.6513,
+  "seconds": 0.01,
+  "top_entries": []
+ },
+ {
+  "doc": "test_docs/product-import-matching.md",
+  "type": "guide",
+  "profile": "Qwen/Qwen2.5-7B-Instruct",
+  "notation": "mnemonic",
+  "original_tokens": 1645,
+  "envelope_tokens": 1701,
+  "payload_tokens": 1645,
+  "legend_tokens": 0,
+  "instruction_tokens": 55,
+  "savings": -0.034,
+  "effective_savings": 0.0,
+  "entries": 0,
+  "protected_share": 0.1696,
+  "seconds": 0.01,
+  "top_entries": []
+ },
+ {
+  "doc": "test_docs/lco-revert-and-idempotency.md",
+  "type": "guide",
+  "profile": "Qwen/Qwen2.5-7B-Instruct",
+  "notation": "mnemonic",
+  "original_tokens": 3087,
+  "envelope_tokens": 3150,
+  "payload_tokens": 3077,
+  "legend_tokens": 17,
+  "instruction_tokens": 55,
+  "savings": -0.0204,
+  "effective_savings": 0.0,
+  "entries": 3,
+  "protected_share": 0.2942,
+  "seconds": 0.02,
+  "top_entries": [
+   [
+    "X",
+    "- [ ]",
+    13
+   ],
+   [
+    "Card",
+    "$card-",
+    9
+   ],
+   [
+    "3",
+    "## 3",
+    6
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/PERMISSIONS.md",
+  "type": "design",
+  "profile": "Qwen/Qwen2.5-7B-Instruct",
+  "notation": "mnemonic",
+  "original_tokens": 6217,
+  "envelope_tokens": 6201,
+  "payload_tokens": 6064,
+  "legend_tokens": 81,
+  "instruction_tokens": 55,
+  "savings": 0.0026,
+  "effective_savings": 0.0,
+  "entries": 9,
+  "protected_share": 0.1743,
+  "seconds": 0.09,
+  "top_entries": [
+   [
+    "X",
+    "| – | – | – |",
+    17
+   ],
+   [
+    "A",
+    "A | – |",
+    8
+   ],
+   [
+    "X3",
+    "- ✅ *",
+    6
+   ],
+   [
+    "AA",
+    "A | A |",
+    6
+   ],
+   [
+    "Area",
+    "| area ×",
+    6
+   ],
+   [
+    "X2",
+    "--:|:--:|:",
+    3
+   ],
+   [
+    "AAA",
+    "| A | A | A | A |",
+    2
+   ],
+   [
+    "R",
+    "| – | – | R |",
+    2
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/EVENTS.md",
+  "type": "design",
+  "profile": "Qwen/Qwen2.5-7B-Instruct",
+  "notation": "mnemonic",
+  "original_tokens": 8876,
+  "envelope_tokens": 8955,
+  "payload_tokens": 8850,
+  "legend_tokens": 49,
+  "instruction_tokens": 55,
+  "savings": -0.0089,
+  "effective_savings": 0.0,
+  "entries": 7,
+  "protected_share": 0.2335,
+  "seconds": 0.07,
+  "top_entries": [
+   [
+    "3",
+    "## 3",
+    8
+   ],
+   [
+    "Done",
+    ". ✅ done —",
+    8
+   ],
+   [
+    "No",
+    "- **No",
+    6
+   ],
+   [
+    "32",
+    "** (§3",
+    4
+   ],
+   [
+    "1",
+    "1. *",
+    4
+   ],
+   [
+    "2",
+    "2. *",
+    4
+   ],
+   [
+    "33",
+    "3. *",
+    4
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/DYNAMIC_PRICING.md",
+  "type": "design",
+  "profile": "Qwen/Qwen2.5-7B-Instruct",
+  "notation": "mnemonic",
+  "original_tokens": 6890,
+  "envelope_tokens": 6961,
+  "payload_tokens": 6881,
+  "legend_tokens": 24,
+  "instruction_tokens": 55,
+  "savings": -0.0103,
+  "effective_savings": 0.0,
+  "entries": 3,
+  "protected_share": 0.1595,
+  "seconds": 0.05,
+  "top_entries": [
+   [
+    "5",
+    "## 5",
+    10
+   ],
+   [
+    "12",
+    "## 12",
+    8
+   ],
+   [
+    "X",
+    "|---|---|",
+    3
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/MAINTENANCE.md",
+  "type": "design",
+  "profile": "Qwen/Qwen2.5-7B-Instruct",
+  "notation": "mnemonic",
+  "original_tokens": 3774,
+  "envelope_tokens": 3830,
+  "payload_tokens": 3767,
+  "legend_tokens": 7,
+  "instruction_tokens": 55,
+  "savings": -0.0148,
+  "effective_savings": 0.0,
+  "entries": 1,
+  "protected_share": 0.1792,
+  "seconds": 0.03,
+  "top_entries": [
+   [
+    "Done",
+    ". ✅ done",
+    6
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/architecture.md",
+  "type": "design",
+  "profile": "Qwen/Qwen2.5-7B-Instruct",
+  "notation": "mnemonic",
+  "original_tokens": 1076,
+  "envelope_tokens": 1132,
+  "payload_tokens": 1076,
+  "legend_tokens": 0,
+  "instruction_tokens": 55,
+  "savings": -0.052,
+  "effective_savings": 0.0,
+  "entries": 0,
+  "protected_share": 0.2826,
+  "seconds": 0.0,
+  "top_entries": []
+ },
+ {
+  "doc": "adr-bundle",
+  "type": "bundle",
+  "profile": "Qwen/Qwen2.5-7B-Instruct",
+  "notation": "mnemonic",
+  "original_tokens": 2549,
+  "envelope_tokens": 2481,
+  "payload_tokens": 2359,
+  "legend_tokens": 66,
+  "instruction_tokens": 55,
+  "savings": 0.0267,
+  "effective_savings": 0.0,
+  "entries": 4,
+  "protected_share": 0.1228,
+  "seconds": 0.01,
+  "top_entries": [
+   [
+    "Cons",
+    "## Consequences",
+    10
+   ],
+   [
+    "Adr",
+    ": [adr,",
+    10
+   ],
+   [
+    "Time202606",
+    "timestamp: \"2026-06-30T06:51:14Z\"",
+    10
+   ],
+   [
+    "UseMateView",
+    ": Use Materialized Views and Timescale Retention for Reporting/Logs",
+    2
+   ]
+  ]
+ },
+ {
+  "doc": "pilot-bundle",
+  "type": "bundle",
+  "profile": "Qwen/Qwen2.5-7B-Instruct",
+  "notation": "mnemonic",
+  "original_tokens": 64938,
+  "envelope_tokens": 64897,
+  "payload_tokens": 64525,
+  "legend_tokens": 316,
+  "instruction_tokens": 55,
+  "savings": 0.0006,
+  "effective_savings": 0.0,
+  "entries": 38,
+  "protected_share": 0.2729,
+  "seconds": 0.64,
+  "top_entries": [
+   [
+    "1",
+    "1.",
+    40
+   ],
+   [
+    "3",
+    "## 3",
+    29
+   ],
+   [
+    "4",
+    "4.",
+    26
+   ],
+   [
+    "X3",
+    "- [ ]",
+    25
+   ],
+   [
+    "2",
+    "2. *",
+    21
+   ],
+   [
+    "Not",
+    "*not*",
+    19
+   ],
+   [
+    "5",
+    "## 5",
+    18
+   ],
+   [
+    "No",
+    "- **No",
+    17
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/API_PUBLIC.md",
+  "type": "api_reference",
+  "profile": "Qwen/Qwen2.5-7B-Instruct",
+  "notation": "opaque-unprotected",
+  "original_tokens": 6964,
+  "envelope_tokens": 6712,
+  "payload_tokens": 6233,
+  "legend_tokens": 423,
+  "instruction_tokens": 55,
+  "savings": 0.0362,
+  "effective_savings": 0.0,
+  "entries": 37,
+  "protected_share": 0.0,
+  "seconds": 0.1,
+  "top_entries": [
+   [
+    "0",
+    ".php`",
+    25
+   ],
+   [
+    "1",
+    "\": { \"amount\":",
+    17
+   ],
+   [
+    "2",
+    "`sapiensclient/App",
+    16
+   ],
+   [
+    "3",
+    ".00\", \"currency\": \"EUR\" },",
+    13
+   ],
+   [
+    "4",
+    "the NUC",
+    8
+   ],
+   [
+    "5",
+    "`errors: {",
+    7
+   ],
+   [
+    "6",
+    "`loyaltyCard",
+    6
+   ],
+   [
+    "7",
+    "**Response 200",
+    5
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/apis.md",
+  "type": "api_reference",
+  "profile": "Qwen/Qwen2.5-7B-Instruct",
+  "notation": "opaque-unprotected",
+  "original_tokens": 4019,
+  "envelope_tokens": 4109,
+  "payload_tokens": 3768,
+  "legend_tokens": 285,
+  "instruction_tokens": 55,
+  "savings": -0.0224,
+  "effective_savings": 0.0,
+  "entries": 30,
+  "protected_share": 0.0,
+  "seconds": 0.04,
+  "top_entries": [
+   [
+    "0",
+    ".php`",
+    15
+   ],
+   [
+    "1",
+    "/v1/technologies",
+    11
+   ],
+   [
+    "2",
+    "/api/v1",
+    10
+   ],
+   [
+    "3",
+    "/list`",
+    6
+   ],
+   [
+    "4",
+    "`list`",
+    6
+   ],
+   [
+    "5",
+    "- `src",
+    5
+   ],
+   [
+    "6",
+    "`sapienscore-technologies`",
+    5
+   ],
+   [
+    "7",
+    ":{…}",
+    4
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/README.md",
+  "type": "readme",
+  "profile": "Qwen/Qwen2.5-7B-Instruct",
+  "notation": "opaque-unprotected",
+  "original_tokens": 382,
+  "envelope_tokens": 469,
+  "payload_tokens": 393,
+  "legend_tokens": 20,
+  "instruction_tokens": 55,
+  "savings": -0.2277,
+  "effective_savings": 0.0,
+  "entries": 3,
+  "protected_share": 0.0,
+  "seconds": 0.0,
+  "top_entries": [
+   [
+    "0",
+    ".md)",
+    12
+   ],
+   [
+    "1",
+    ".php`",
+    9
+   ],
+   [
+    "2",
+    "SapiensCore LLM Wiki",
+    2
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/project-overview.md",
+  "type": "readme",
+  "profile": "Qwen/Qwen2.5-7B-Instruct",
+  "notation": "opaque-unprotected",
+  "original_tokens": 620,
+  "envelope_tokens": 690,
+  "payload_tokens": 622,
+  "legend_tokens": 12,
+  "instruction_tokens": 55,
+  "savings": -0.1129,
+  "effective_savings": 0.0,
+  "entries": 2,
+  "protected_share": 0.0,
+  "seconds": 0.01,
+  "top_entries": [
+   [
+    "0",
+    ".php`",
+    14
+   ],
+   [
+    "1",
+    ", `public",
+    7
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/iaapa/README.md",
+  "type": "readme",
+  "profile": "Qwen/Qwen2.5-7B-Instruct",
+  "notation": "opaque-unprotected",
+  "original_tokens": 525,
+  "envelope_tokens": 580,
+  "payload_tokens": 500,
+  "legend_tokens": 24,
+  "instruction_tokens": 55,
+  "savings": -0.1048,
+  "effective_savings": 0.0,
+  "entries": 2,
+  "protected_share": 0.0,
+  "seconds": 0.0,
+  "top_entries": [
+   [
+    "0",
+    "- **http://localhost:8765",
+    2
+   ],
+   [
+    "1",
+    "book_en_v2_skinned.html",
+    2
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/design_handoff_orbit_homepage/README.md",
+  "type": "readme",
+  "profile": "Qwen/Qwen2.5-7B-Instruct",
+  "notation": "opaque-unprotected",
+  "original_tokens": 3771,
+  "envelope_tokens": 3822,
+  "payload_tokens": 3573,
+  "legend_tokens": 193,
+  "instruction_tokens": 55,
+  "savings": -0.0135,
+  "effective_savings": 0.0,
+  "entries": 20,
+  "protected_share": 0.0,
+  "seconds": 0.03,
+  "top_entries": [
+   [
+    "0",
+    "` | `",
+    12
+   ],
+   [
+    "1",
+    "-col grid",
+    7
+   ],
+   [
+    "2",
+    "\"Book a visit\"",
+    4
+   ],
+   [
+    "3",
+    "Hanken Grotesk",
+    4
+   ],
+   [
+    "4",
+    "rgba(44,39,51,",
+    4
+   ],
+   [
+    "5",
+    ") | Fredoka | 600 |",
+    3
+   ],
+   [
+    "6",
+    "- **Left**:",
+    3
+   ],
+   [
+    "7",
+    "- **Loyalty card",
+    3
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/skills/README.md",
+  "type": "readme",
+  "profile": "Qwen/Qwen2.5-7B-Instruct",
+  "notation": "opaque-unprotected",
+  "original_tokens": 1858,
+  "envelope_tokens": 1834,
+  "payload_tokens": 1613,
+  "legend_tokens": 165,
+  "instruction_tokens": 55,
+  "savings": 0.0129,
+  "effective_savings": 0.0,
+  "entries": 17,
+  "protected_share": 0.0,
+  "seconds": 0.03,
+  "top_entries": [
+   [
+    "0",
+    ".md`",
+    23
+   ],
+   [
+    "1",
+    ": `.agents/skills/caveman",
+    12
+   ],
+   [
+    "2",
+    "- Purpose:",
+    11
+   ],
+   [
+    "3",
+    "- Use when: A user",
+    11
+   ],
+   [
+    "4",
+    "`/caveman",
+    7
+   ],
+   [
+    "5",
+    "### caveman",
+    6
+   ],
+   [
+    "6",
+    ", HTMX, and Alpine",
+    3
+   ],
+   [
+    "7",
+    "- Current location: `.agents/skills",
+    3
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/deployment.md",
+  "type": "guide",
+  "profile": "Qwen/Qwen2.5-7B-Instruct",
+  "notation": "opaque-unprotected",
+  "original_tokens": 708,
+  "envelope_tokens": 765,
+  "payload_tokens": 664,
+  "legend_tokens": 45,
+  "instruction_tokens": 55,
+  "savings": -0.0805,
+  "effective_savings": 0.0,
+  "entries": 5,
+  "protected_share": 0.0,
+  "seconds": 0.01,
+  "top_entries": [
+   [
+    "0",
+    "- `npm run",
+    3
+   ],
+   [
+    "1",
+    "`sapienscore",
+    3
+   ],
+   [
+    "2",
+    "`: `salvatorecampanella/core",
+    2
+   ],
+   [
+    "3",
+    "`cd utility/ && php",
+    2
+   ],
+   [
+    "4",
+    "`docker-compose.example.yaml`",
+    2
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/DB_POOLING.md",
+  "type": "guide",
+  "profile": "Qwen/Qwen2.5-7B-Instruct",
+  "notation": "opaque-unprotected",
+  "original_tokens": 3752,
+  "envelope_tokens": 3873,
+  "payload_tokens": 3569,
+  "legend_tokens": 248,
+  "instruction_tokens": 55,
+  "savings": -0.0322,
+  "effective_savings": 0.0,
+  "entries": 27,
+  "protected_share": 0.0,
+  "seconds": 0.03,
+  "top_entries": [
+   [
+    "0",
+    ".php`",
+    12
+   ],
+   [
+    "1",
+    "/docker-compose.yaml",
+    5
+   ],
+   [
+    "2",
+    "DB `command:`",
+    5
+   ],
+   [
+    "3",
+    "`statement_timeout`",
+    4
+   ],
+   [
+    "4",
+    "pgFirstConnect()",
+    4
+   ],
+   [
+    "5",
+    "scram-sha-256",
+    4
+   ],
+   [
+    "6",
+    "— PgBouncer",
+    4
+   ],
+   [
+    "7",
+    ")` (`IC.php",
+    3
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/testing.md",
+  "type": "guide",
+  "profile": "Qwen/Qwen2.5-7B-Instruct",
+  "notation": "opaque-unprotected",
+  "original_tokens": 435,
+  "envelope_tokens": 500,
+  "payload_tokens": 430,
+  "legend_tokens": 14,
+  "instruction_tokens": 55,
+  "savings": -0.1494,
+  "effective_savings": 0.0,
+  "entries": 2,
+  "protected_share": 0.0,
+  "seconds": 0.0,
+  "top_entries": [
+   [
+    "0",
+    ".php`",
+    6
+   ],
+   [
+    "1",
+    "`react/package.json` declares",
+    2
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/database.md",
+  "type": "guide",
+  "profile": "Qwen/Qwen2.5-7B-Instruct",
+  "notation": "opaque-unprotected",
+  "original_tokens": 662,
+  "envelope_tokens": 716,
+  "payload_tokens": 638,
+  "legend_tokens": 22,
+  "instruction_tokens": 55,
+  "savings": -0.0816,
+  "effective_savings": 0.0,
+  "entries": 2,
+  "protected_share": 0.0,
+  "seconds": 0.01,
+  "top_entries": [
+   [
+    "0",
+    "`App\\InstanceCollector\\IC",
+    2
+   ],
+   [
+    "1",
+    "`sqlinstall00312.sql`.",
+    2
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/MIGRATION_PLAYBOOK.md",
+  "type": "guide",
+  "profile": "Qwen/Qwen2.5-7B-Instruct",
+  "notation": "opaque-unprotected",
+  "original_tokens": 6980,
+  "envelope_tokens": 6932,
+  "payload_tokens": 6488,
+  "legend_tokens": 388,
+  "instruction_tokens": 55,
+  "savings": 0.0069,
+  "effective_savings": 0.0,
+  "entries": 34,
+  "protected_share": 0.0,
+  "seconds": 0.12,
+  "top_entries": [
+   [
+    "0",
+    "</div>",
+    27
+   ],
+   [
+    "1",
+    "<div class=",
+    25
+   ],
+   [
+    "2",
+    ".phtml`",
+    17
+   ],
+   [
+    "3",
+    ".js`",
+    13
+   ],
+   [
+    "4",
+    "<?php echo T::t('common.label",
+    12
+   ],
+   [
+    "5",
+    "/adminlte/v2",
+    10
+   ],
+   [
+    "6",
+    "$args[",
+    9
+   ],
+   [
+    "7",
+    ">` |",
+    8
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/CODING_STANDARDS.md",
+  "type": "guide",
+  "profile": "Qwen/Qwen2.5-7B-Instruct",
+  "notation": "opaque-unprotected",
+  "original_tokens": 2694,
+  "envelope_tokens": 2770,
+  "payload_tokens": 2465,
+  "legend_tokens": 249,
+  "instruction_tokens": 55,
+  "savings": -0.0282,
+  "effective_savings": 0.0,
+  "entries": 26,
+  "protected_share": 0.0,
+  "seconds": 0.03,
+  "top_entries": [
+   [
+    "0",
+    "$obj-",
+    8
+   ],
+   [
+    "1",
+    "$autoDb",
+    5
+   ],
+   [
+    "2",
+    "$this->record",
+    5
+   ],
+   [
+    "3",
+    "`sync = 1`",
+    5
+   ],
+   [
+    "4",
+    "getMoreWhere(",
+    5
+   ],
+   [
+    "5",
+    "new self(IC::adb()",
+    5
+   ],
+   [
+    "6",
+    "(self::TB_MY_MODEL",
+    4
+   ],
+   [
+    "7",
+    ", $args);",
+    4
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/product-import-matching.md",
+  "type": "guide",
+  "profile": "Qwen/Qwen2.5-7B-Instruct",
+  "notation": "opaque-unprotected",
+  "original_tokens": 1645,
+  "envelope_tokens": 1698,
+  "payload_tokens": 1615,
+  "legend_tokens": 27,
+  "instruction_tokens": 55,
+  "savings": -0.0322,
+  "effective_savings": 0.0,
+  "entries": 3,
+  "protected_share": 0.0,
+  "seconds": 0.01,
+  "top_entries": [
+   [
+    "0",
+    "`ProductImportManager:",
+    4
+   ],
+   [
+    "1",
+    "Product import — product matching and conflict resolution",
+    2
+   ],
+   [
+    "2",
+    "`TYPE_CONFLICT_SELECTION`",
+    2
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/lco-revert-and-idempotency.md",
+  "type": "guide",
+  "profile": "Qwen/Qwen2.5-7B-Instruct",
+  "notation": "opaque-unprotected",
+  "original_tokens": 3087,
+  "envelope_tokens": 3126,
+  "payload_tokens": 2788,
+  "legend_tokens": 282,
+  "instruction_tokens": 55,
+  "savings": -0.0126,
+  "effective_savings": 0.0,
+  "entries": 30,
+  "protected_share": 0.0,
+  "seconds": 0.03,
+  "top_entries": [
+   [
+    "0",
+    "$card-",
+    9
+   ],
+   [
+    "1",
+    "::getLocalSourceEquivalent",
+    7
+   ],
+   [
+    "2",
+    "## 3",
+    6
+   ],
+   [
+    "3",
+    "`LoyaltyCardSync`",
+    6
+   ],
+   [
+    "4",
+    "`id_source`",
+    6
+   ],
+   [
+    "5",
+    "## 2",
+    5
+   ],
+   [
+    "6",
+    "$operationData[",
+    5
+   ],
+   [
+    "7",
+    "LCO id",
+    5
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/PERMISSIONS.md",
+  "type": "design",
+  "profile": "Qwen/Qwen2.5-7B-Instruct",
+  "notation": "opaque-unprotected",
+  "original_tokens": 6217,
+  "envelope_tokens": 6217,
+  "payload_tokens": 5829,
+  "legend_tokens": 332,
+  "instruction_tokens": 55,
+  "savings": 0.0,
+  "effective_savings": 0.0,
+  "entries": 33,
+  "protected_share": 0.0,
+  "seconds": 0.11,
+  "top_entries": [
+   [
+    "0",
+    "| – | – | – |",
+    17
+   ],
+   [
+    "1",
+    "`LocationUser`",
+    7
+   ],
+   [
+    "2",
+    "`canAdminH",
+    7
+   ],
+   [
+    "3",
+    "- ✅ *",
+    6
+   ],
+   [
+    "4",
+    "` | area × level",
+    6
+   ],
+   [
+    "5",
+    ". This is the",
+    4
+   ],
+   [
+    "6",
+    "A | – | A |",
+    4
+   ],
+   [
+    "7",
+    "`LOCATION_FULL`",
+    4
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/EVENTS.md",
+  "type": "design",
+  "profile": "Qwen/Qwen2.5-7B-Instruct",
+  "notation": "opaque-unprotected",
+  "original_tokens": 8876,
+  "envelope_tokens": 8884,
+  "payload_tokens": 8464,
+  "legend_tokens": 364,
+  "instruction_tokens": 55,
+  "savings": -0.0009,
+  "effective_savings": 0.0,
+  "entries": 35,
+  "protected_share": 0.0,
+  "seconds": 0.14,
+  "top_entries": [
+   [
+    "0",
+    "the NUC",
+    12
+   ],
+   [
+    "1",
+    "`eventSetting",
+    11
+   ],
+   [
+    "2",
+    "## 3",
+    8
+   ],
+   [
+    "3",
+    "'none'`",
+    8
+   ],
+   [
+    "4",
+    ". ✅ done —",
+    8
+   ],
+   [
+    "5",
+    "`bookingCode`",
+    6
+   ],
+   [
+    "6",
+    "2026-07-20",
+    5
+   ],
+   [
+    "7",
+    "type = EVENT`",
+    5
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/DYNAMIC_PRICING.md",
+  "type": "design",
+  "profile": "Qwen/Qwen2.5-7B-Instruct",
+  "notation": "opaque-unprotected",
+  "original_tokens": 6890,
+  "envelope_tokens": 6982,
+  "payload_tokens": 6617,
+  "legend_tokens": 309,
+  "instruction_tokens": 55,
+  "savings": -0.0134,
+  "effective_savings": 0.0,
+  "entries": 32,
+  "protected_share": 0.0,
+  "seconds": 0.06,
+  "top_entries": [
+   [
+    "0",
+    "## 5",
+    10
+   ],
+   [
+    "1",
+    "`GamePrice`",
+    10
+   ],
+   [
+    "2",
+    "## 12",
+    8
+   ],
+   [
+    "3",
+    ", not a",
+    6
+   ],
+   [
+    "4",
+    "`DATE_RANGE`",
+    5
+   ],
+   [
+    "5",
+    "`id_period`",
+    5
+   ],
+   [
+    "6",
+    "`pricing_change_event`",
+    5
+   ],
+   [
+    "7",
+    "`pricing_rule`",
+    5
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/MAINTENANCE.md",
+  "type": "design",
+  "profile": "Qwen/Qwen2.5-7B-Instruct",
+  "notation": "opaque-unprotected",
+  "original_tokens": 3774,
+  "envelope_tokens": 3824,
+  "payload_tokens": 3560,
+  "legend_tokens": 208,
+  "instruction_tokens": 55,
+  "savings": -0.0132,
+  "effective_savings": 0.0,
+  "entries": 20,
+  "protected_share": 0.0,
+  "seconds": 0.04,
+  "top_entries": [
+   [
+    "0",
+    ". ✅ done",
+    6
+   ],
+   [
+    "1",
+    "`trace_cost`",
+    6
+   ],
+   [
+    "2",
+    "`worked_on`",
+    6
+   ],
+   [
+    "3",
+    ", and the",
+    5
+   ],
+   [
+    "4",
+    ".js`",
+    5
+   ],
+   [
+    "5",
+    "`trace_target`",
+    4
+   ],
+   [
+    "6",
+    "| GLO (",
+    4
+   ],
+   [
+    "7",
+    "`) | routine, no cost |",
+    3
+   ]
+  ]
+ },
+ {
+  "doc": "test_docs/architecture.md",
+  "type": "design",
+  "profile": "Qwen/Qwen2.5-7B-Instruct",
+  "notation": "opaque-unprotected",
+  "original_tokens": 1076,
+  "envelope_tokens": 1131,
+  "payload_tokens": 1022,
+  "legend_tokens": 53,
+  "instruction_tokens": 55,
+  "savings": -0.0511,
+  "effective_savings": 0.0,
+  "entries": 7,
+  "protected_share": 0.0,
+  "seconds": 0.02,
+  "top_entries": [
+   [
+    "0",
+    "- `App",
+    6
+   ],
+   [
+    "1",
+    ".php`",
+    6
+   ],
+   [
+    "2",
+    "- `public",
+    5
+   ],
+   [
+    "3",
+    ".php` denies access unless the current domain is",
+    4
+   ],
+   [
+    "4",
+    "/index.php`",
+    3
+   ],
+   [
+    "5",
+    "`src/settings.php`",
+    3
+   ],
+   [
+    "6",
+    "`App\\InstanceCollector\\IC",
+    2
+   ]
+  ]
+ },
+ {
+  "doc": "adr-bundle",
+  "type": "bundle",
+  "profile": "Qwen/Qwen2.5-7B-Instruct",
+  "notation": "opaque-unprotected",
+  "original_tokens": 2549,
+  "envelope_tokens": 2327,
+  "payload_tokens": 1889,
+  "legend_tokens": 382,
+  "instruction_tokens": 55,
+  "savings": 0.0871,
+  "effective_savings": 0.0871,
+  "entries": 28,
+  "protected_share": 0.0,
+  "seconds": 0.02,
+  "top_entries": [
+   [
+    "0",
+    "## Consequences",
+    10
+   ],
+   [
+    "1",
+    "description: \"Decision to",
+    10
+   ],
+   [
+    "2",
+    "source_kind: generated",
+    10
+   ],
+   [
+    "3",
+    "status: active",
+    10
+   ],
+   [
+    "4",
+    "tags: [adr,",
+    10
+   ],
+   [
+    "5",
+    "timestamp: \"2026-06-30T06:51:14Z\"",
+    10
+   ],
+   [
+    "6",
+    "type: ADR",
+    10
+   ],
+   [
+    "7",
+    "Accepted in code.",
+    9
+   ]
+  ]
+ },
+ {
+  "doc": "pilot-bundle",
+  "type": "bundle",
+  "profile": "Qwen/Qwen2.5-7B-Instruct",
+  "notation": "opaque-unprotected",
+  "original_tokens": 64938,
+  "envelope_tokens": 64164,
+  "payload_tokens": 62267,
+  "legend_tokens": 1841,
+  "instruction_tokens": 55,
+  "savings": 0.0119,
+  "effective_savings": 0.0,
+  "entries": 144,
+  "protected_share": 0.0,
+  "seconds": 2.51,
+  "top_entries": [
+   [
+    "0",
+    ".php`",
+    124
+   ],
+   [
+    "1",
+    ".md`",
+    42
+   ],
+   [
+    "2",
+    "1.",
+    40
+   ],
+   [
+    "3",
+    "## 3",
+    29
+   ],
+   [
+    "4",
+    "the NUC",
+    29
+   ],
+   [
+    "5",
+    "</div>",
+    27
+   ],
+   [
+    "6",
+    ".js`",
+    26
+   ],
+   [
+    "7",
+    ".phtml`",
+    26
+   ]
+  ]
+ }
+]
